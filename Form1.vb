@@ -20,27 +20,46 @@
         buttontab_1.selected = True
 
     End Sub
-
-    Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
+    'top right exit button
+    Private Sub topbarbutton_exit_Click(sender As Object, e As EventArgs) Handles topbarbutton_exit.Click
         Application.Exit()
-        End
     End Sub
 
+    'top right minimize button
+    Private Sub topbarbutton_min_Click(sender As Object, e As EventArgs) Handles topbarbutton_min.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 
+    'TAB BUTTONS
 
+    'Tab1
     Private Sub buttontab_1_Click(sender As Object, e As EventArgs) Handles buttontab_1.Click
 
         MetroTabControl1.SelectedTab = TabPage1
 
     End Sub
-
+    'Tab2
     Private Sub buttontab_2_Click(sender As Object, e As EventArgs) Handles buttontab_2.Click
 
         MetroTabControl1.SelectedTab = TabPage2
 
     End Sub
+    'Tab3
+    Private Sub buttontab_3_Click(sender As Object, e As EventArgs) Handles buttontab_3.Click
 
-    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+        MetroTabControl1.SelectedTab = TabPage3
+
+    End Sub
+    'Tab4
+    Private Sub buttontab_4_Click(sender As Object, e As EventArgs) Handles buttontab_4.Click
+
+        MetroTabControl1.SelectedTab = TabPage4
+
+    End Sub
+    'Tab5
+    Private Sub buttontab_5_Click(sender As Object, e As EventArgs) Handles buttontab_5.Click
+
+        MetroTabControl1.SelectedTab = TabPage5
 
     End Sub
 End Class

@@ -35,8 +35,8 @@ Partial Class Form1
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.logo = New System.Windows.Forms.PictureBox()
         Me.Header = New System.Windows.Forms.Panel()
-        Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.BunifuImageButton2 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.topbarbutton_min = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.topbarbutton_exit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
@@ -50,23 +50,29 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel_PreReleaseWarning = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Sidepanel.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
-        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
         Me.Panel_PreReleaseWarning.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,9 +92,9 @@ Partial Class Form1
         Me.Sidepanel.Controls.Add(Me.BunifuImageButton1)
         Me.Sidepanel.Controls.Add(Me.logo)
         Me.Sidepanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Sidepanel.Location = New System.Drawing.Point(0, 49)
+        Me.Sidepanel.Location = New System.Drawing.Point(0, 53)
         Me.Sidepanel.Name = "Sidepanel"
-        Me.Sidepanel.Size = New System.Drawing.Size(375, 964)
+        Me.Sidepanel.Size = New System.Drawing.Size(252, 960)
         Me.Sidepanel.TabIndex = 0
         '
         'buttontab_5
@@ -119,7 +125,7 @@ Partial Class Form1
         Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_5.selected = False
-        Me.buttontab_5.Size = New System.Drawing.Size(367, 73)
+        Me.buttontab_5.Size = New System.Drawing.Size(368, 73)
         Me.buttontab_5.TabIndex = 6
         Me.buttontab_5.Text = "              Raw"
         Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -154,7 +160,7 @@ Partial Class Form1
         Me.buttontab_4.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_4.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_4.selected = False
-        Me.buttontab_4.Size = New System.Drawing.Size(367, 73)
+        Me.buttontab_4.Size = New System.Drawing.Size(368, 73)
         Me.buttontab_4.TabIndex = 5
         Me.buttontab_4.Text = "              Infections"
         Me.buttontab_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -189,7 +195,7 @@ Partial Class Form1
         Me.buttontab_3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_3.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_3.selected = False
-        Me.buttontab_3.Size = New System.Drawing.Size(367, 73)
+        Me.buttontab_3.Size = New System.Drawing.Size(368, 73)
         Me.buttontab_3.TabIndex = 4
         Me.buttontab_3.Text = "              Body"
         Me.buttontab_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -224,7 +230,7 @@ Partial Class Form1
         Me.buttontab_2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_2.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_2.selected = False
-        Me.buttontab_2.Size = New System.Drawing.Size(367, 73)
+        Me.buttontab_2.Size = New System.Drawing.Size(368, 73)
         Me.buttontab_2.TabIndex = 3
         Me.buttontab_2.Text = "              General"
         Me.buttontab_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -259,7 +265,7 @@ Partial Class Form1
         Me.buttontab_1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_1.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_1.selected = False
-        Me.buttontab_1.Size = New System.Drawing.Size(364, 73)
+        Me.buttontab_1.Size = New System.Drawing.Size(365, 73)
         Me.buttontab_1.TabIndex = 2
         Me.buttontab_1.Text = "              Save / Load"
         Me.buttontab_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -272,7 +278,7 @@ Partial Class Form1
         Me.BunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(307, 43)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(184, 43)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
         Me.BunifuImageButton1.Size = New System.Drawing.Size(42, 39)
         Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -293,43 +299,43 @@ Partial Class Form1
         'Header
         '
         Me.Header.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Header.Controls.Add(Me.BunifuImageButton3)
-        Me.Header.Controls.Add(Me.BunifuImageButton2)
+        Me.Header.Controls.Add(Me.topbarbutton_min)
+        Me.Header.Controls.Add(Me.topbarbutton_exit)
         Me.Header.Controls.Add(Me.PictureBox2)
         Me.Header.Controls.Add(Me.BunifuCustomLabel1)
         Me.Header.Dock = System.Windows.Forms.DockStyle.Top
         Me.Header.Location = New System.Drawing.Point(0, 0)
         Me.Header.Name = "Header"
-        Me.Header.Size = New System.Drawing.Size(1422, 49)
+        Me.Header.Size = New System.Drawing.Size(1422, 53)
         Me.Header.TabIndex = 1
         '
-        'BunifuImageButton3
+        'topbarbutton_min
         '
-        Me.BunifuImageButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuImageButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuImageButton3.Image = CType(resources.GetObject("BunifuImageButton3.Image"), System.Drawing.Image)
-        Me.BunifuImageButton3.ImageActive = Nothing
-        Me.BunifuImageButton3.Location = New System.Drawing.Point(1341, 9)
-        Me.BunifuImageButton3.Name = "BunifuImageButton3"
-        Me.BunifuImageButton3.Size = New System.Drawing.Size(31, 40)
-        Me.BunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton3.TabIndex = 4
-        Me.BunifuImageButton3.TabStop = False
-        Me.BunifuImageButton3.Zoom = 20
+        Me.topbarbutton_min.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.topbarbutton_min.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.topbarbutton_min.Image = CType(resources.GetObject("topbarbutton_min.Image"), System.Drawing.Image)
+        Me.topbarbutton_min.ImageActive = Nothing
+        Me.topbarbutton_min.Location = New System.Drawing.Point(1341, 9)
+        Me.topbarbutton_min.Name = "topbarbutton_min"
+        Me.topbarbutton_min.Size = New System.Drawing.Size(31, 40)
+        Me.topbarbutton_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.topbarbutton_min.TabIndex = 4
+        Me.topbarbutton_min.TabStop = False
+        Me.topbarbutton_min.Zoom = 20
         '
-        'BunifuImageButton2
+        'topbarbutton_exit
         '
-        Me.BunifuImageButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
-        Me.BunifuImageButton2.ImageActive = Nothing
-        Me.BunifuImageButton2.Location = New System.Drawing.Point(1379, 6)
-        Me.BunifuImageButton2.Name = "BunifuImageButton2"
-        Me.BunifuImageButton2.Size = New System.Drawing.Size(31, 40)
-        Me.BunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton2.TabIndex = 3
-        Me.BunifuImageButton2.TabStop = False
-        Me.BunifuImageButton2.Zoom = 20
+        Me.topbarbutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.topbarbutton_exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.topbarbutton_exit.Image = CType(resources.GetObject("topbarbutton_exit.Image"), System.Drawing.Image)
+        Me.topbarbutton_exit.ImageActive = Nothing
+        Me.topbarbutton_exit.Location = New System.Drawing.Point(1379, 6)
+        Me.topbarbutton_exit.Name = "topbarbutton_exit"
+        Me.topbarbutton_exit.Size = New System.Drawing.Size(31, 40)
+        Me.topbarbutton_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.topbarbutton_exit.TabIndex = 3
+        Me.topbarbutton_exit.TabStop = False
+        Me.topbarbutton_exit.Zoom = 20
         '
         'PictureBox2
         '
@@ -385,12 +391,12 @@ Partial Class Form1
         Me.MetroTabControl1.FontNotSelectedTabs = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MetroTabControl1.FontSelectedTab = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MetroTabControl1.ItemSize = New System.Drawing.Size(44, 120)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(242, 49)
+        Me.MetroTabControl1.Location = New System.Drawing.Point(243, 55)
         Me.MetroTabControl1.Multiline = True
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.SelectedTabBold = False
-        Me.MetroTabControl1.Size = New System.Drawing.Size(1180, 964)
+        Me.MetroTabControl1.Size = New System.Drawing.Size(1179, 928)
         Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.MetroTabControl1.Speed = 100
         Me.MetroTabControl1.TabIndex = 2
@@ -404,7 +410,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(124, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1052, 956)
+        Me.TabPage1.Size = New System.Drawing.Size(1051, 920)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         '
@@ -525,20 +531,10 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(408, 540)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 54)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Label2"
-        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage3.Controls.Add(Me.Label4)
         Me.TabPage3.Location = New System.Drawing.Point(124, 4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(1052, 956)
@@ -548,15 +544,17 @@ Partial Class Form1
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.Label5)
         Me.TabPage4.Location = New System.Drawing.Point(124, 4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(1052, 956)
+        Me.TabPage4.Size = New System.Drawing.Size(1051, 920)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "TabPage4"
         '
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage5.Controls.Add(Me.Label6)
         Me.TabPage5.Location = New System.Drawing.Point(124, 4)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Size = New System.Drawing.Size(1052, 956)
@@ -565,12 +563,11 @@ Partial Class Form1
         '
         'Panel_PreReleaseWarning
         '
-        Me.Panel_PreReleaseWarning.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Panel_PreReleaseWarning.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.Panel_PreReleaseWarning.Controls.Add(Me.Label3)
-        Me.Panel_PreReleaseWarning.Location = New System.Drawing.Point(0, 981)
+        Me.Panel_PreReleaseWarning.Location = New System.Drawing.Point(0, 985)
         Me.Panel_PreReleaseWarning.Name = "Panel_PreReleaseWarning"
-        Me.Panel_PreReleaseWarning.Size = New System.Drawing.Size(1422, 32)
+        Me.Panel_PreReleaseWarning.Size = New System.Drawing.Size(1422, 28)
         Me.Panel_PreReleaseWarning.TabIndex = 3
         Me.Panel_PreReleaseWarning.Visible = False
         '
@@ -580,12 +577,56 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(3, 5)
+        Me.Label3.Location = New System.Drawing.Point(3, 3)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(1030, 21)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "You are running an alpha pre-release build of FlexEdit. Be warned of bugs and gli" &
     "tches. Please BACKUP any save you use with the tool!"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(36, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(381, 54)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Welcome to FlexEdit"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(36, 24)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(381, 54)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Welcome to FlexEdit"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(57, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(381, 54)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Welcome to FlexEdit"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(34, 58)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(381, 54)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "Welcome to FlexEdit"
         '
         'Form1
         '
@@ -595,9 +636,10 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1422, 1013)
         Me.Controls.Add(Me.Panel_PreReleaseWarning)
         Me.Controls.Add(Me.Sidepanel)
-        Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.MetroTabControl1)
+        Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Sidepanel.ResumeLayout(False)
@@ -605,8 +647,8 @@ Partial Class Form1
         CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
-        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -614,6 +656,12 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
         Me.Panel_PreReleaseWarning.ResumeLayout(False)
         Me.Panel_PreReleaseWarning.PerformLayout()
         Me.ResumeLayout(False)
@@ -627,7 +675,7 @@ Partial Class Form1
     Friend WithEvents Header As Panel
     Friend WithEvents buttontab_1 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents BunifuImageButton2 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents topbarbutton_exit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents buttontab_5 As Bunifu.Framework.UI.BunifuFlatButton
@@ -638,10 +686,9 @@ Partial Class Form1
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Panel_PreReleaseWarning As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents BunifuImageButton3 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents topbarbutton_min As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Panel2 As Panel
     Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents Panel1 As Panel
@@ -651,4 +698,8 @@ Partial Class Form1
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class
