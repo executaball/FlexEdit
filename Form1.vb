@@ -72,39 +72,19 @@
         textbox_saveword3.ForeColor = Color.Black
     End Sub
 
-    Private Sub textbox_saveword1_TextChanged(sender As Object, e As EventArgs) Handles textbox_saveword1.TextChanged
-        If textbox_saveword1.Text IsNot "" Then
-            metrobutton_load.Enabled = True
-            metrobutton_load.ColorScheme.AccentColor = Color.FromArgb(0, 164, 240)
-            metrobutton_load.ColorScheme.BorderColor = Color.FromArgb(98, 98, 98)
-            metrobutton_load.ColorScheme.FillColor = Color.White
-            metrobutton_load.ColorScheme.HoverFillColor = Color.White
-            metrobutton_load.ColorScheme.PressAccentColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.PressFillColor = Color.FromArgb(101, 101, 101)
-        Else
-            metrobutton_load.Enabled = False
-            metrobutton_load.ColorScheme.AccentColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.BorderColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.FillColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.HoverFillColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.PressAccentColor = Color.FromArgb(101, 101, 101)
-            metrobutton_load.ColorScheme.PressFillColor = Color.FromArgb(101, 101, 101)
-        End If
-    End Sub
-
-    Private Sub textbox_saveword2_TextChanged(sender As Object, e As EventArgs) Handles textbox_saveword2.TextChanged
-
-    End Sub
-
-    Private Sub textbox_saveword3_TextChanged(sender As Object, e As EventArgs) Handles textbox_saveword3.TextChanged
-
-    End Sub
-
-    Private Sub button_load_Click(sender As Object, e As EventArgs) Handles button_load.Click
-
-    End Sub
-
-    Private Sub button_cancel_Click(sender As Object, e As EventArgs) Handles button_cancel.Click
+    Private Sub button_cancel_Click(sender As Object, e As EventArgs)
         Me.Close()
+    End Sub
+
+    Private Sub metrobutton_load_Click(sender As Object, e As EventArgs) Handles metrobutton_load.Click
+        MainForm.SavewordText1 = textbox_saveword1.Text
+        MainForm.SavewordText2 = textbox_saveword2.Text
+        MainForm.SavewordText3 = textbox_saveword3.Text
+
+        MainForm.FUNCSavewordLoadControl()
+    End Sub
+
+    Private Sub checkbox_saveword2_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_saveword2.CheckedChanged
+
     End Sub
 End Class

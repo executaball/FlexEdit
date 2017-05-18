@@ -66,12 +66,79 @@ Partial Class MainForm
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.nudScr = New System.Windows.Forms.NumericUpDown()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.nudHum = New System.Windows.Forms.NumericUpDown()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.nudHP = New System.Windows.Forms.NumericUpDown()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.nudLvl = New System.Windows.Forms.NumericUpDown()
+        Me.nudInt = New System.Windows.Forms.NumericUpDown()
+        Me.nudPer = New System.Windows.Forms.NumericUpDown()
+        Me.nudCha = New System.Windows.Forms.NumericUpDown()
+        Me.nudSta = New System.Windows.Forms.NumericUpDown()
+        Me.nudDex = New System.Windows.Forms.NumericUpDown()
+        Me.nudStr = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.nud_body_breast_size = New System.Windows.Forms.NumericUpDown()
+        Me.nud_body_breasts = New System.Windows.Forms.NumericUpDown()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.nud_body_cock_width = New System.Windows.Forms.NumericUpDown()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.nud_body_cock_length = New System.Windows.Forms.NumericUpDown()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.nud_body_cocks = New System.Windows.Forms.NumericUpDown()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.nud_body_cunts = New System.Windows.Forms.NumericUpDown()
+        Me.nud_body_cunt_width = New System.Windows.Forms.NumericUpDown()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.nud_body_cunt_length = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.comboGENI = New System.Windows.Forms.ComboBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.comboTAIL = New System.Windows.Forms.ComboBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.comboSKIN = New System.Windows.Forms.ComboBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.comboHEAD = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.comboBODY = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.textbox_search = New System.Windows.Forms.TextBox()
+        Me.textbox_value_editor = New System.Windows.Forms.TextBox()
+        Me.DataGridViewVars = New System.Windows.Forms.DataGridView()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.button_update = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel_PreReleaseWarning = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -91,9 +158,37 @@ Partial Class MainForm
         CType(Me.picbox_status1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.nudScr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudHum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudHP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudLvl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudInt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudPer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudCha, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudSta, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudDex, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudStr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.TabControl2.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.TabPage9.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.nud_body_breast_size, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nud_body_breasts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.nud_body_cock_width, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nud_body_cock_length, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nud_body_cocks, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.nud_body_cunts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nud_body_cunt_width, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nud_body_cunt_length, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
+        CType(Me.DataGridViewVars, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_PreReleaseWarning.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -739,6 +834,26 @@ Partial Class MainForm
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.Label16)
+        Me.TabPage2.Controls.Add(Me.nudScr)
+        Me.TabPage2.Controls.Add(Me.Label15)
+        Me.TabPage2.Controls.Add(Me.nudHum)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Controls.Add(Me.nudHP)
+        Me.TabPage2.Controls.Add(Me.Label17)
+        Me.TabPage2.Controls.Add(Me.Label18)
+        Me.TabPage2.Controls.Add(Me.Label19)
+        Me.TabPage2.Controls.Add(Me.Label20)
+        Me.TabPage2.Controls.Add(Me.Label21)
+        Me.TabPage2.Controls.Add(Me.Label22)
+        Me.TabPage2.Controls.Add(Me.Label23)
+        Me.TabPage2.Controls.Add(Me.nudLvl)
+        Me.TabPage2.Controls.Add(Me.nudInt)
+        Me.TabPage2.Controls.Add(Me.nudPer)
+        Me.TabPage2.Controls.Add(Me.nudCha)
+        Me.TabPage2.Controls.Add(Me.nudSta)
+        Me.TabPage2.Controls.Add(Me.nudDex)
+        Me.TabPage2.Controls.Add(Me.nudStr)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Location = New System.Drawing.Point(124, 4)
         Me.TabPage2.Name = "TabPage2"
@@ -747,6 +862,206 @@ Partial Class MainForm
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(658, 583)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(78, 32)
+        Me.Label16.TabIndex = 39
+        Me.Label16.Text = "Score"
+        '
+        'nudScr
+        '
+        Me.nudScr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudScr.Location = New System.Drawing.Point(756, 581)
+        Me.nudScr.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudScr.Name = "nudScr"
+        Me.nudScr.Size = New System.Drawing.Size(126, 39)
+        Me.nudScr.TabIndex = 38
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(615, 509)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(127, 32)
+        Me.Label15.TabIndex = 37
+        Me.Label15.Text = "Humanity"
+        '
+        'nudHum
+        '
+        Me.nudHum.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudHum.Location = New System.Drawing.Point(756, 507)
+        Me.nudHum.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudHum.Name = "nudHum"
+        Me.nudHum.Size = New System.Drawing.Size(126, 39)
+        Me.nudHum.TabIndex = 36
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(691, 435)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(48, 32)
+        Me.Label14.TabIndex = 35
+        Me.Label14.Text = "HP"
+        '
+        'nudHP
+        '
+        Me.nudHP.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudHP.Location = New System.Drawing.Point(756, 433)
+        Me.nudHP.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudHP.Name = "nudHP"
+        Me.nudHP.Size = New System.Drawing.Size(126, 39)
+        Me.nudHP.TabIndex = 34
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(663, 355)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(73, 32)
+        Me.Label17.TabIndex = 33
+        Me.Label17.Text = "Level"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
+        Me.Label18.Location = New System.Drawing.Point(591, 281)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(149, 32)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Intelligence"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(146, 583)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(138, 32)
+        Me.Label19.TabIndex = 31
+        Me.Label19.Text = "Perception"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.White
+        Me.Label20.Location = New System.Drawing.Point(162, 507)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(120, 32)
+        Me.Label20.TabIndex = 30
+        Me.Label20.Text = "Charisma"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.White
+        Me.Label21.Location = New System.Drawing.Point(177, 435)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(106, 32)
+        Me.Label21.TabIndex = 29
+        Me.Label21.Text = "Stamina"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(177, 363)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(111, 32)
+        Me.Label22.TabIndex = 28
+        Me.Label22.Text = "Dexerity"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.White
+        Me.Label23.Location = New System.Drawing.Point(171, 285)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(112, 32)
+        Me.Label23.TabIndex = 27
+        Me.Label23.Text = "Strength"
+        '
+        'nudLvl
+        '
+        Me.nudLvl.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudLvl.Location = New System.Drawing.Point(756, 353)
+        Me.nudLvl.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudLvl.Name = "nudLvl"
+        Me.nudLvl.Size = New System.Drawing.Size(126, 39)
+        Me.nudLvl.TabIndex = 26
+        '
+        'nudInt
+        '
+        Me.nudInt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudInt.Location = New System.Drawing.Point(756, 279)
+        Me.nudInt.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudInt.Name = "nudInt"
+        Me.nudInt.Size = New System.Drawing.Size(126, 39)
+        Me.nudInt.TabIndex = 25
+        '
+        'nudPer
+        '
+        Me.nudPer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudPer.Location = New System.Drawing.Point(299, 579)
+        Me.nudPer.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudPer.Name = "nudPer"
+        Me.nudPer.Size = New System.Drawing.Size(126, 39)
+        Me.nudPer.TabIndex = 24
+        '
+        'nudCha
+        '
+        Me.nudCha.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudCha.Location = New System.Drawing.Point(299, 505)
+        Me.nudCha.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudCha.Name = "nudCha"
+        Me.nudCha.Size = New System.Drawing.Size(126, 39)
+        Me.nudCha.TabIndex = 23
+        '
+        'nudSta
+        '
+        Me.nudSta.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudSta.Location = New System.Drawing.Point(299, 431)
+        Me.nudSta.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudSta.Name = "nudSta"
+        Me.nudSta.Size = New System.Drawing.Size(126, 39)
+        Me.nudSta.TabIndex = 22
+        '
+        'nudDex
+        '
+        Me.nudDex.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudDex.Location = New System.Drawing.Point(299, 357)
+        Me.nudDex.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudDex.Name = "nudDex"
+        Me.nudDex.Size = New System.Drawing.Size(126, 39)
+        Me.nudDex.TabIndex = 21
+        '
+        'nudStr
+        '
+        Me.nudStr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nudStr.Location = New System.Drawing.Point(299, 282)
+        Me.nudStr.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
+        Me.nudStr.Name = "nudStr"
+        Me.nudStr.Size = New System.Drawing.Size(126, 39)
+        Me.nudStr.TabIndex = 20
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -754,19 +1069,311 @@ Partial Class MainForm
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(36, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(381, 54)
+        Me.Label2.Size = New System.Drawing.Size(159, 54)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Welcome to FlexEdit"
+        Me.Label2.Text = "General"
         '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage3.Controls.Add(Me.GroupBox6)
+        Me.TabPage3.Controls.Add(Me.GroupBox5)
+        Me.TabPage3.Controls.Add(Me.GroupBox4)
+        Me.TabPage3.Controls.Add(Me.GroupBox3)
         Me.TabPage3.Controls.Add(Me.Label4)
         Me.TabPage3.Location = New System.Drawing.Point(124, 4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(1051, 920)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.TabControl2)
+        Me.GroupBox6.ForeColor = System.Drawing.Color.White
+        Me.GroupBox6.Location = New System.Drawing.Point(511, 473)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(476, 356)
+        Me.GroupBox6.TabIndex = 10
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Helper"
+        '
+        'TabControl2
+        '
+        Me.TabControl2.Controls.Add(Me.TabPage6)
+        Me.TabControl2.Controls.Add(Me.TabPage9)
+        Me.TabControl2.Controls.Add(Me.TabPage7)
+        Me.TabControl2.Controls.Add(Me.TabPage8)
+        Me.TabControl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl2.Location = New System.Drawing.Point(18, 30)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(387, 299)
+        Me.TabControl2.TabIndex = 0
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.RichTextBox1)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage6.TabIndex = 0
+        Me.TabPage6.Text = "Cock L"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(373, 258)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
+        'TabPage9
+        '
+        Me.TabPage9.Controls.Add(Me.RichTextBox4)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage9.Name = "TabPage9"
+        Me.TabPage9.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage9.TabIndex = 3
+        Me.TabPage9.Text = "Cock W"
+        Me.TabPage9.UseVisualStyleBackColor = True
+        '
+        'RichTextBox4
+        '
+        Me.RichTextBox4.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox4.Name = "RichTextBox4"
+        Me.RichTextBox4.ReadOnly = True
+        Me.RichTextBox4.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox4.TabIndex = 1
+        Me.RichTextBox4.Text = resources.GetString("RichTextBox4.Text")
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.RichTextBox2)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage7.TabIndex = 1
+        Me.TabPage7.Text = "Cunt L"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox2.TabIndex = 1
+        Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
+        '
+        'TabPage8
+        '
+        Me.TabPage8.Controls.Add(Me.RichTextBox3)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 31)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage8.TabIndex = 2
+        Me.TabPage8.Text = "Breasts"
+        Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'RichTextBox3
+        '
+        Me.RichTextBox3.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.ReadOnly = True
+        Me.RichTextBox3.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox3.TabIndex = 1
+        Me.RichTextBox3.Text = resources.GetString("RichTextBox3.Text")
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Label27)
+        Me.GroupBox5.Controls.Add(Me.nud_body_breast_size)
+        Me.GroupBox5.Controls.Add(Me.nud_body_breasts)
+        Me.GroupBox5.Controls.Add(Me.Label28)
+        Me.GroupBox5.ForeColor = System.Drawing.Color.White
+        Me.GroupBox5.Location = New System.Drawing.Point(23, 473)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(471, 356)
+        Me.GroupBox5.TabIndex = 9
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Breasts"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(146, 122)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(43, 25)
+        Me.Label27.TabIndex = 9
+        Me.Label27.Text = "Size"
+        '
+        'nud_body_breast_size
+        '
+        Me.nud_body_breast_size.Location = New System.Drawing.Point(215, 120)
+        Me.nud_body_breast_size.Name = "nud_body_breast_size"
+        Me.nud_body_breast_size.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_breast_size.TabIndex = 8
+        '
+        'nud_body_breasts
+        '
+        Me.nud_body_breasts.Location = New System.Drawing.Point(215, 63)
+        Me.nud_body_breasts.Name = "nud_body_breasts"
+        Me.nud_body_breasts.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_breasts.TabIndex = 6
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(28, 65)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(161, 25)
+        Me.Label28.TabIndex = 7
+        Me.Label28.Text = "Number of breasts"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label29)
+        Me.GroupBox4.Controls.Add(Me.Label24)
+        Me.GroupBox4.Controls.Add(Me.nud_body_cock_width)
+        Me.GroupBox4.Controls.Add(Me.Label25)
+        Me.GroupBox4.Controls.Add(Me.nud_body_cock_length)
+        Me.GroupBox4.Controls.Add(Me.Label26)
+        Me.GroupBox4.Controls.Add(Me.nud_body_cocks)
+        Me.GroupBox4.ForeColor = System.Drawing.Color.White
+        Me.GroupBox4.Location = New System.Drawing.Point(23, 92)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(471, 364)
+        Me.GroupBox4.TabIndex = 8
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Male Organs"
+        '
+        'Label29
+        '
+        Me.Label29.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(29, 273)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(425, 68)
+        Me.Label29.TabIndex = 6
+        Me.Label29.Text = "Width affects cum load size as well as ball size. Please consult Helper for addit" &
+    "ional info."
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(129, 174)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(60, 25)
+        Me.Label24.TabIndex = 5
+        Me.Label24.Text = "Width"
+        '
+        'nud_body_cock_width
+        '
+        Me.nud_body_cock_width.Location = New System.Drawing.Point(215, 169)
+        Me.nud_body_cock_width.Name = "nud_body_cock_width"
+        Me.nud_body_cock_width.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cock_width.TabIndex = 4
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(119, 116)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(66, 25)
+        Me.Label25.TabIndex = 3
+        Me.Label25.Text = "Length"
+        '
+        'nud_body_cock_length
+        '
+        Me.nud_body_cock_length.Location = New System.Drawing.Point(215, 111)
+        Me.nud_body_cock_length.Name = "nud_body_cock_length"
+        Me.nud_body_cock_length.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cock_length.TabIndex = 2
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(37, 59)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(148, 25)
+        Me.Label26.TabIndex = 1
+        Me.Label26.Text = "Number of cocks"
+        '
+        'nud_body_cocks
+        '
+        Me.nud_body_cocks.Location = New System.Drawing.Point(215, 54)
+        Me.nud_body_cocks.Name = "nud_body_cocks"
+        Me.nud_body_cocks.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cocks.TabIndex = 0
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label30)
+        Me.GroupBox3.Controls.Add(Me.nud_body_cunts)
+        Me.GroupBox3.Controls.Add(Me.nud_body_cunt_width)
+        Me.GroupBox3.Controls.Add(Me.Label31)
+        Me.GroupBox3.Controls.Add(Me.Label32)
+        Me.GroupBox3.Controls.Add(Me.nud_body_cunt_length)
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.GroupBox3.Location = New System.Drawing.Point(511, 92)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(476, 362)
+        Me.GroupBox3.TabIndex = 7
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Female Organs"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(103, 174)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(60, 25)
+        Me.Label30.TabIndex = 11
+        Me.Label30.Text = "Width"
+        '
+        'nud_body_cunts
+        '
+        Me.nud_body_cunts.Location = New System.Drawing.Point(189, 54)
+        Me.nud_body_cunts.Name = "nud_body_cunts"
+        Me.nud_body_cunts.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunts.TabIndex = 6
+        '
+        'nud_body_cunt_width
+        '
+        Me.nud_body_cunt_width.Location = New System.Drawing.Point(189, 169)
+        Me.nud_body_cunt_width.Name = "nud_body_cunt_width"
+        Me.nud_body_cunt_width.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunt_width.TabIndex = 10
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(-21, 59)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(164, 25)
+        Me.Label31.TabIndex = 7
+        Me.Label31.Text = "Number of vaginas"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(93, 116)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(66, 25)
+        Me.Label32.TabIndex = 9
+        Me.Label32.Text = "Length"
+        '
+        'nud_body_cunt_length
+        '
+        Me.nud_body_cunt_length.Location = New System.Drawing.Point(189, 111)
+        Me.nud_body_cunt_length.Name = "nud_body_cunt_length"
+        Me.nud_body_cunt_length.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunt_length.TabIndex = 8
         '
         'Label4
         '
@@ -775,13 +1382,23 @@ Partial Class MainForm
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(36, 24)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(381, 54)
+        Me.Label4.Size = New System.Drawing.Size(112, 54)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Welcome to FlexEdit"
+        Me.Label4.Text = "Body"
         '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.Label33)
+        Me.TabPage4.Controls.Add(Me.comboGENI)
+        Me.TabPage4.Controls.Add(Me.Label34)
+        Me.TabPage4.Controls.Add(Me.comboTAIL)
+        Me.TabPage4.Controls.Add(Me.Label35)
+        Me.TabPage4.Controls.Add(Me.comboSKIN)
+        Me.TabPage4.Controls.Add(Me.Label36)
+        Me.TabPage4.Controls.Add(Me.comboHEAD)
+        Me.TabPage4.Controls.Add(Me.Label37)
+        Me.TabPage4.Controls.Add(Me.comboBODY)
         Me.TabPage4.Controls.Add(Me.Label5)
         Me.TabPage4.Location = New System.Drawing.Point(124, 4)
         Me.TabPage4.Name = "TabPage4"
@@ -789,20 +1406,127 @@ Partial Class MainForm
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "TabPage4"
         '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.Color.White
+        Me.Label33.Location = New System.Drawing.Point(848, 141)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(93, 30)
+        Me.Label33.TabIndex = 19
+        Me.Label33.Text = "Genitals"
+        '
+        'comboGENI
+        '
+        Me.comboGENI.FormattingEnabled = True
+        Me.comboGENI.Items.AddRange(New Object() {"Amazonian", "Anthro Shaft Beast", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Ahsen Breeder", "Awesome tree", "Bear", "Bovine", "butterfly", "centaur", "Chocolate Lab", "cock cannon", "collie", "Cute Chinchilla Woman", "doe", "deer", "Demon Brute", "dolphin", "Donkeywoman", "Dragon", "ewe", "elf", "equinoid", "felinoid", "Female Slut", "feral sea dragon", "feral wolf", "ferret", "fox", "gazelle", "german sheperd", "goo", "Greek Nymph", "gryphon", "harpy", "hawkman", "human", "husky", "Hyena matriarch", "hyena", "horse", "jackalman", "jackalboy", "kangaroo", "latex fox", "Leopardmen", "lizard girl", "Male Slut", "Mareslut", "moth", "mouse", "naga", "Nightmare", "Ninja Cat", "otter", "Orc Breeder", "Orc Warrior", "Painted Wolf herm", "Panda", "pantherherm", "Panther Taur", "Parasitic Plant", "peacock", "pit bull", "messy pig", "piggy", "plush lion", "rabbit", "raccoon", "Rubber tigress", "Sabretooth", "Satyr", "sewer gator", "shark", "Siamese Cat", "skunk", "Slut Rat", "snow leopard", "sphinx", "spider", "sprite", "Stallionboi", "Succubus", "tanuki", "teddy", "Tentacle Horror", "The Mistress", "Tiger Cop", "tigertaur", "Tigress Hooker", "Tree Nymph", "Triceratops", "Tristian", "twisted pimp", "Unicorn", "vixen", "wasp", "Wolftaur", "Wolverine Guard", "Wrestling Wolf", "wyvern", "Yamato Dragon", "Yamato Dragoness", "Zebra"})
+        Me.comboGENI.Location = New System.Drawing.Point(852, 182)
+        Me.comboGENI.Name = "comboGENI"
+        Me.comboGENI.Size = New System.Drawing.Size(166, 33)
+        Me.comboGENI.TabIndex = 18
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.ForeColor = System.Drawing.Color.White
+        Me.Label34.Location = New System.Drawing.Point(648, 141)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(46, 30)
+        Me.Label34.TabIndex = 17
+        Me.Label34.Text = "Tail"
+        '
+        'comboTAIL
+        '
+        Me.comboTAIL.FormattingEnabled = True
+        Me.comboTAIL.Items.AddRange(New Object() {"Amazonian", "Anthro Shaft Beast", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Ahsen Breeder", "Awesome tree", "Bear", "Bovine", "butterfly", "centaur", "Chocolate Lab", "cock cannon", "collie", "Cute Chinchilla Woman", "doe", "deer", "Demon Brute", "dolphin", "Donkeywoman", "Dragon", "ewe", "elf", "equinoid", "felinoid", "Female Slut", "feral sea dragon", "feral wolf", "ferret", "fox", "gazelle", "german sheperd", "goo", "Greek Nymph", "gryphon", "harpy", "hawkman", "human", "husky", "Hyena matriarch", "hyena", "horse", "jackalman", "jackalboy", "kangaroo", "latex fox", "Leopardmen", "lizard girl", "Male Slut", "Mareslut", "moth", "mouse", "naga", "Nightmare", "Ninja Cat", "otter", "Orc Breeder", "Orc Warrior", "Painted Wolf herm", "Panda", "pantherherm", "Panther Taur", "Parasitic Plant", "peacock", "pit bull", "messy pig", "piggy", "plush lion", "rabbit", "raccoon", "Rubber tigress", "Sabretooth", "Satyr", "sewer gator", "shark", "Siamese Cat", "skunk", "Slut Rat", "snow leopard", "sphinx", "spider", "sprite", "Stallionboi", "Succubus", "tanuki", "teddy", "Tentacle Horror", "The Mistress", "Tiger Cop", "tigertaur", "Tigress Hooker", "Tree Nymph", "Triceratops", "Tristian", "twisted pimp", "Unicorn", "vixen", "wasp", "Wolftaur", "Wolverine Guard", "Wrestling Wolf", "wyvern", "Yamato Dragon", "Yamato Dragoness", "Zebra"})
+        Me.comboTAIL.Location = New System.Drawing.Point(652, 182)
+        Me.comboTAIL.Name = "comboTAIL"
+        Me.comboTAIL.Size = New System.Drawing.Size(166, 33)
+        Me.comboTAIL.TabIndex = 16
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.Color.White
+        Me.Label35.Location = New System.Drawing.Point(448, 141)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(56, 30)
+        Me.Label35.TabIndex = 15
+        Me.Label35.Text = "Skin"
+        '
+        'comboSKIN
+        '
+        Me.comboSKIN.FormattingEnabled = True
+        Me.comboSKIN.Items.AddRange(New Object() {"Amazonian", "Anthro Shaft Beast", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Ahsen Breeder", "Awesome tree", "Bear", "Bovine", "butterfly", "centaur", "Chocolate Lab", "cock cannon", "collie", "Cute Chinchilla Woman", "doe", "deer", "Demon Brute", "dolphin", "Donkeywoman", "Dragon", "ewe", "elf", "equinoid", "felinoid", "Female Slut", "feral sea dragon", "feral wolf", "ferret", "fox", "gazelle", "german sheperd", "goo", "Greek Nymph", "gryphon", "harpy", "hawkman", "human", "husky", "Hyena matriarch", "hyena", "horse", "jackalman", "jackalboy", "kangaroo", "latex fox", "Leopardmen", "lizard girl", "Male Slut", "Mareslut", "moth", "mouse", "naga", "Nightmare", "Ninja Cat", "otter", "Orc Breeder", "Orc Warrior", "Painted Wolf herm", "Panda", "pantherherm", "Panther Taur", "Parasitic Plant", "peacock", "pit bull", "messy pig", "piggy", "plush lion", "rabbit", "raccoon", "Rubber tigress", "Sabretooth", "Satyr", "sewer gator", "shark", "Siamese Cat", "skunk", "Slut Rat", "snow leopard", "sphinx", "spider", "sprite", "Stallionboi", "Succubus", "tanuki", "teddy", "Tentacle Horror", "The Mistress", "Tiger Cop", "tigertaur", "Tigress Hooker", "Tree Nymph", "Triceratops", "Tristian", "twisted pimp", "Unicorn", "vixen", "wasp", "Wolftaur", "Wolverine Guard", "Wrestling Wolf", "wyvern", "Yamato Dragon", "Yamato Dragoness", "Zebra"})
+        Me.comboSKIN.Location = New System.Drawing.Point(452, 182)
+        Me.comboSKIN.Name = "comboSKIN"
+        Me.comboSKIN.Size = New System.Drawing.Size(166, 33)
+        Me.comboSKIN.TabIndex = 14
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.ForeColor = System.Drawing.Color.White
+        Me.Label36.Location = New System.Drawing.Point(248, 141)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(65, 30)
+        Me.Label36.TabIndex = 13
+        Me.Label36.Text = "Head"
+        '
+        'comboHEAD
+        '
+        Me.comboHEAD.FormattingEnabled = True
+        Me.comboHEAD.Items.AddRange(New Object() {"Amazonian", "Anthro Shaft Beast", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Ahsen Breeder", "Awesome tree", "Bear", "Bovine", "butterfly", "centaur", "Chocolate Lab", "cock cannon", "collie", "Cute Chinchilla Woman", "doe", "deer", "Demon Brute", "dolphin", "Donkeywoman", "Dragon", "ewe", "elf", "equinoid", "felinoid", "Female Slut", "feral sea dragon", "feral wolf", "ferret", "fox", "gazelle", "german sheperd", "goo", "Greek Nymph", "gryphon", "harpy", "hawkman", "human", "husky", "Hyena matriarch", "hyena", "horse", "jackalman", "jackalboy", "kangaroo", "latex fox", "Leopardmen", "lizard girl", "Male Slut", "Mareslut", "moth", "mouse", "naga", "Nightmare", "Ninja Cat", "otter", "Orc Breeder", "Orc Warrior", "Painted Wolf herm", "Panda", "pantherherm", "Panther Taur", "Parasitic Plant", "peacock", "pit bull", "messy pig", "piggy", "plush lion", "rabbit", "raccoon", "Rubber tigress", "Sabretooth", "Satyr", "sewer gator", "shark", "Siamese Cat", "skunk", "Slut Rat", "snow leopard", "sphinx", "spider", "sprite", "Stallionboi", "Succubus", "tanuki", "teddy", "Tentacle Horror", "The Mistress", "Tiger Cop", "tigertaur", "Tigress Hooker", "Tree Nymph", "Triceratops", "Tristian", "twisted pimp", "Unicorn", "vixen", "wasp", "Wolftaur", "Wolverine Guard", "Wrestling Wolf", "wyvern", "Yamato Dragon", "Yamato Dragoness", "Zebra"})
+        Me.comboHEAD.Location = New System.Drawing.Point(252, 182)
+        Me.comboHEAD.Name = "comboHEAD"
+        Me.comboHEAD.Size = New System.Drawing.Size(166, 33)
+        Me.comboHEAD.TabIndex = 12
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.White
+        Me.Label37.Location = New System.Drawing.Point(48, 141)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(63, 30)
+        Me.Label37.TabIndex = 11
+        Me.Label37.Text = "Body"
+        '
+        'comboBODY
+        '
+        Me.comboBODY.FormattingEnabled = True
+        Me.comboBODY.Items.AddRange(New Object() {"Amazonian", "Anthro Shaft Beast", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "Ahsen Breeder", "Awesome tree", "Bear", "Bovine", "butterfly", "centaur", "Chocolate Lab", "cock cannon", "collie", "Cute Chinchilla Woman", "doe", "deer", "Demon Brute", "dolphin", "Donkeywoman", "Dragon", "ewe", "elf", "equinoid", "felinoid", "Female Slut", "feral sea dragon", "feral wolf", "ferret", "fox", "gazelle", "german sheperd", "goo", "Greek Nymph", "gryphon", "harpy", "hawkman", "human", "husky", "Hyena matriarch", "hyena", "horse", "jackalman", "jackalboy", "kangaroo", "latex fox", "Leopardmen", "lizard girl", "Male Slut", "Mareslut", "moth", "mouse", "naga", "Nightmare", "Ninja Cat", "otter", "Orc Breeder", "Orc Warrior", "Painted Wolf herm", "Panda", "pantherherm", "Panther Taur", "Parasitic Plant", "peacock", "pit bull", "messy pig", "piggy", "plush lion", "rabbit", "raccoon", "Rubber tigress", "Sabretooth", "Satyr", "sewer gator", "shark", "Siamese Cat", "skunk", "Slut Rat", "snow leopard", "sphinx", "spider", "sprite", "Stallionboi", "Succubus", "tanuki", "teddy", "Tentacle Horror", "The Mistress", "Tiger Cop", "tigertaur", "Tigress Hooker", "Tree Nymph", "Triceratops", "Tristian", "twisted pimp", "Unicorn", "vixen", "wasp", "Wolftaur", "Wolverine Guard", "Wrestling Wolf", "wyvern", "Yamato Dragon", "Yamato Dragoness", "Zebra"})
+        Me.comboBODY.Location = New System.Drawing.Point(52, 182)
+        Me.comboBODY.Name = "comboBODY"
+        Me.comboBODY.Size = New System.Drawing.Size(166, 33)
+        Me.comboBODY.TabIndex = 10
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(57, 41)
+        Me.Label5.Location = New System.Drawing.Point(36, 24)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(381, 54)
+        Me.Label5.Size = New System.Drawing.Size(196, 54)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Welcome to FlexEdit"
+        Me.Label5.Text = "Infections"
         '
         'TabPage5
         '
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TabPage5.Controls.Add(Me.Label38)
+        Me.TabPage5.Controls.Add(Me.Label39)
+        Me.TabPage5.Controls.Add(Me.textbox_search)
+        Me.TabPage5.Controls.Add(Me.textbox_value_editor)
+        Me.TabPage5.Controls.Add(Me.DataGridViewVars)
+        Me.TabPage5.Controls.Add(Me.Label40)
+        Me.TabPage5.Controls.Add(Me.button_update)
         Me.TabPage5.Controls.Add(Me.Label6)
         Me.TabPage5.Location = New System.Drawing.Point(124, 4)
         Me.TabPage5.Name = "TabPage5"
@@ -810,16 +1534,82 @@ Partial Class MainForm
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "TabPage5"
         '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.ForeColor = System.Drawing.Color.White
+        Me.Label38.Location = New System.Drawing.Point(739, 239)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(71, 27)
+        Me.Label38.TabIndex = 13
+        Me.Label38.Text = "Value"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.White
+        Me.Label39.Location = New System.Drawing.Point(71, 239)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(88, 27)
+        Me.Label39.TabIndex = 12
+        Me.Label39.Text = "Search"
+        '
+        'textbox_search
+        '
+        Me.textbox_search.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textbox_search.Location = New System.Drawing.Point(165, 231)
+        Me.textbox_search.Name = "textbox_search"
+        Me.textbox_search.Size = New System.Drawing.Size(262, 40)
+        Me.textbox_search.TabIndex = 11
+        '
+        'textbox_value_editor
+        '
+        Me.textbox_value_editor.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textbox_value_editor.Location = New System.Drawing.Point(816, 231)
+        Me.textbox_value_editor.Name = "textbox_value_editor"
+        Me.textbox_value_editor.Size = New System.Drawing.Size(168, 40)
+        Me.textbox_value_editor.TabIndex = 10
+        '
+        'DataGridViewVars
+        '
+        Me.DataGridViewVars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewVars.Location = New System.Drawing.Point(76, 319)
+        Me.DataGridViewVars.Name = "DataGridViewVars"
+        Me.DataGridViewVars.RowTemplate.Height = 28
+        Me.DataGridViewVars.Size = New System.Drawing.Size(908, 516)
+        Me.DataGridViewVars.TabIndex = 9
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.ForeColor = System.Drawing.Color.White
+        Me.Label40.Location = New System.Drawing.Point(488, 113)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(306, 25)
+        Me.Label40.TabIndex = 8
+        Me.Label40.Text = "Click to see changes from other tabs "
+        '
+        'button_update
+        '
+        Me.button_update.Location = New System.Drawing.Point(816, 106)
+        Me.button_update.Name = "button_update"
+        Me.button_update.Size = New System.Drawing.Size(168, 39)
+        Me.button_update.TabIndex = 7
+        Me.button_update.Text = "Update"
+        Me.button_update.UseVisualStyleBackColor = True
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(34, 58)
+        Me.Label6.Location = New System.Drawing.Point(36, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(381, 54)
+        Me.Label6.Size = New System.Drawing.Size(96, 54)
         Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Welcome to FlexEdit"
+        Me.Label6.Text = "Raw"
         '
         'Panel_PreReleaseWarning
         '
@@ -878,12 +1668,43 @@ Partial Class MainForm
         Me.Panel2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.nudScr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudHum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudHP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudLvl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudInt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudPer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCha, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudSta, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudDex, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudStr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.TabControl2.ResumeLayout(False)
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage9.ResumeLayout(False)
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage8.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        CType(Me.nud_body_breast_size, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nud_body_breasts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        CType(Me.nud_body_cock_width, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nud_body_cock_length, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nud_body_cocks, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.nud_body_cunts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nud_body_cunt_width, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nud_body_cunt_length, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
+        CType(Me.DataGridViewVars, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_PreReleaseWarning.ResumeLayout(False)
         Me.Panel_PreReleaseWarning.PerformLayout()
         Me.ResumeLayout(False)
@@ -940,4 +1761,71 @@ Partial Class MainForm
     Friend WithEvents picbox_status1 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents nudScr As NumericUpDown
+    Friend WithEvents Label15 As Label
+    Friend WithEvents nudHum As NumericUpDown
+    Friend WithEvents Label14 As Label
+    Friend WithEvents nudHP As NumericUpDown
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents nudLvl As NumericUpDown
+    Friend WithEvents nudInt As NumericUpDown
+    Friend WithEvents nudPer As NumericUpDown
+    Friend WithEvents nudCha As NumericUpDown
+    Friend WithEvents nudSta As NumericUpDown
+    Friend WithEvents nudDex As NumericUpDown
+    Friend WithEvents nudStr As NumericUpDown
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents TabControl2 As TabControl
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents TabPage9 As TabPage
+    Friend WithEvents RichTextBox4 As RichTextBox
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents TabPage8 As TabPage
+    Friend WithEvents RichTextBox3 As RichTextBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents nud_body_breast_size As NumericUpDown
+    Friend WithEvents nud_body_breasts As NumericUpDown
+    Friend WithEvents Label28 As Label
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents nud_body_cock_width As NumericUpDown
+    Friend WithEvents Label25 As Label
+    Friend WithEvents nud_body_cock_length As NumericUpDown
+    Friend WithEvents Label26 As Label
+    Friend WithEvents nud_body_cocks As NumericUpDown
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents nud_body_cunts As NumericUpDown
+    Friend WithEvents nud_body_cunt_width As NumericUpDown
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents nud_body_cunt_length As NumericUpDown
+    Friend WithEvents Label33 As Label
+    Friend WithEvents comboGENI As ComboBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents comboTAIL As ComboBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents comboSKIN As ComboBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents comboHEAD As ComboBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents comboBODY As ComboBox
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents textbox_search As TextBox
+    Friend WithEvents textbox_value_editor As TextBox
+    Friend WithEvents DataGridViewVars As DataGridView
+    Friend WithEvents Label40 As Label
+    Friend WithEvents button_update As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim MainColorScheme2 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
@@ -36,8 +36,6 @@ Partial Class Form1
         Me.textbox_saveword2 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.textbox_saveword3 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.metrobutton_cancel = New MetroSuite.MetroButton()
-        Me.button_load = New System.Windows.Forms.Button()
-        Me.button_cancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,14 +96,13 @@ Partial Class Form1
         '
         'metrobutton_load
         '
-        MainColorScheme2.AccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme2.FillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme2.HoverFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme2.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme2.FillColor = System.Drawing.Color.White
+        MainColorScheme2.HoverFillColor = System.Drawing.Color.White
         MainColorScheme2.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
         MainColorScheme2.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
         Me.metrobutton_load.ColorScheme = MainColorScheme2
-        Me.metrobutton_load.Enabled = False
         Me.metrobutton_load.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_load.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_load.Location = New System.Drawing.Point(588, 367)
@@ -166,34 +163,11 @@ Partial Class Form1
         Me.metrobutton_cancel.TabIndex = 12
         Me.metrobutton_cancel.Text = "Cancel"
         '
-        'button_load
-        '
-        Me.button_load.BackColor = System.Drawing.Color.White
-        Me.button_load.Enabled = False
-        Me.button_load.Location = New System.Drawing.Point(245, 367)
-        Me.button_load.Name = "button_load"
-        Me.button_load.Size = New System.Drawing.Size(147, 38)
-        Me.button_load.TabIndex = 13
-        Me.button_load.Text = "Button1"
-        Me.button_load.UseVisualStyleBackColor = False
-        '
-        'button_cancel
-        '
-        Me.button_cancel.BackColor = System.Drawing.Color.White
-        Me.button_cancel.Location = New System.Drawing.Point(72, 367)
-        Me.button_cancel.Name = "button_cancel"
-        Me.button_cancel.Size = New System.Drawing.Size(147, 38)
-        Me.button_cancel.TabIndex = 14
-        Me.button_cancel.Text = "Button2"
-        Me.button_cancel.UseVisualStyleBackColor = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(770, 444)
-        Me.Controls.Add(Me.button_cancel)
-        Me.Controls.Add(Me.button_load)
         Me.Controls.Add(Me.metrobutton_cancel)
         Me.Controls.Add(Me.textbox_saveword3)
         Me.Controls.Add(Me.textbox_saveword2)
@@ -223,6 +197,4 @@ Partial Class Form1
     Friend WithEvents textbox_saveword2 As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents metrobutton_cancel As MetroSuite.MetroButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents button_load As Button
-    Friend WithEvents button_cancel As Button
 End Class

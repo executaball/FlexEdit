@@ -2295,6 +2295,64 @@
         rkJggg==
 </value>
   </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Less than 3 - Tiny, Very Small, Puny
+3 to 5 - Smaller than average, small or below average
+6 to 7 - Average in size, Normal sized
+8 to 11 - Large, sizable, well-built, longer than average
+12 exact - Foot long
+13 to 17 - Huge, Heavy, Ponderous, Massive, Forearm length
+18 to 24 - Giant, Hulking, Hypertrophied, Elephantine, Monstrous, Towering
+Larger than 25 - Mammoth, Gigantic, Colossal, Titanic, Third leg, devastating
+
+</value>
+  </data>
+  <data name="RichTextBox4.Text" xml:space="preserve">
+    <value>BALL DESC
+Less than 3 - Marble-sized, Tiny, Very Small
+3 to 5 - Plum-sized, Golf-ball-sized, Apricot-sized, Average
+6 to 11 - Lemon-sized, Large
+12 to 15 - Baseball-sized, Orange-sized, Hand-filling
+16 to 19 - Grapfruit-sized, Massive
+20 to 24 - Cantaloupe-sized, Giant, Knee-knocking
+25 to 31 - Basketball-sized, Ginormous, Super-inflated, Watermelon-huge
+More than 32 - Floor-dragging, Beachball-sized, Gargatuan, Ground-hanging
+
+CUM DESC
+Less than 3 - Piddling, Tiny, Minuscule, Feeble, Small, Meager
+3 to 5 - Average, Normal-sized, Fair-sized, Moderate,  Adequate, Regular-sized
+6 to 11 - Triple-dose, Half-cup, Cupfull, Ample, Above-average, Generous, Sizable
+12 to 15 - Half-litre, Considerable, Impressive, Pint-full, Copious, Substantial, Large, Abundant, Plentiful 
+16 to 19 - One-litre, Flowing, Heavy, Quart-sized, Drenching, Jumbo, Whopping
+20 to 24 - Two-litre, Half-gallon, Giant, Huge, Blasting, Enormous, Immense
+25 to 31 - Overflowing, Bucket-filling, Excessive, Gushing, Massive
+More than 32 - Torrential, Monumental, Colossal, Gigantic, Immeasurable, Devastating, Near-unending,
+</value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value>Less than 3 - Infantile, Extremely small, Puny
+3 to 6 - Small than average, Small, Below average
+6 to 8 - Average, Normal sized
+8 to 12 - Large, Thick lipped, Above average
+12 to 18 - Belly bulgingly huge, Inhumanly deep, Forearm length
+18 to 25 - Titanic, Astonishingly deep, Elephantine
+Larger than 25 - Cavernous, Seemingly bottomless, Canyonlike
+
+</value>
+  </data>
+  <data name="RichTextBox3.Text" xml:space="preserve">
+    <value>Less than 1 - Nonexistent, entirely flat, manly
+1 - 2 - Palmable, small, dainty, slender, perky
+3 - reasonably-sized, average, moderate
+4 - eye-catching, substantive, shapely
+5 - average sized, normal-sized, healthy-sized
+5-6 - large, jiggling, well-shaped, plump
+7-8 - massive, huge, heavy
+9-11 - Enormous, giant, hulking, basketball sized
+Larger - Gargantuan, beachball sized, mountainous, colossal, gigantic
+
+</value>
+  </data>
   <data name="topbarbutton_min.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
