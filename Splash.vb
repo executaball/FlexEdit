@@ -34,7 +34,9 @@
     Private Sub SplashScreen1_Load(ByVal sender As Object,
                                        ByVal e As System.EventArgs) Handles Me.Load
         'Me.ProgressBar1.Step = 1
+        Me.CenterToScreen()
         VersionL.Text = System.String.Format(VersionL.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build)
+
     End Sub
 
     Public Sub IncrementProgress()

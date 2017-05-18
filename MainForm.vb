@@ -3,6 +3,10 @@
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
 
+    'States that will be controlled by checkboxes
+    Public saveword2enabled As Boolean = False
+    Public saveword3enabled As Boolean = False
+
     'increment splash screen progress bar function
     Public Sub ConsolSplashIncrement()
         mySplashScreen.Invoke(New MethodInvoker(AddressOf mySplashScreen.IncrementProgress))
@@ -42,6 +46,7 @@
             funcdelay100()
         Next
 
+        Me.CenterToScreen()
 
     End Sub
 
@@ -181,23 +186,7 @@
     'Load saveword button
     Private Sub BunifuTileButton3_Click(sender As Object, e As EventArgs) Handles BunifuTileButton3.Click
 
-        Dim message, title, defaultValue As String
-        Dim myValue As Object
-        ' Set prompt.
-        message = "Enter a value between 1 and 3"
-        ' Set title.
-        title = "InputBox Demo"
-        defaultValue = "1"   ' Set default value.
-
-        ' Display message, title, and default value.
-        myValue = InputBox(message, title, defaultValue)
-        ' If user has clicked Cancel, set myValue to defaultValue 
-        If myValue Is "" Then myValue = defaultValue
-
-        ' Display dialog box at position 100, 100.
-        myValue = InputBox(message, title, defaultValue, 100, 100)
-        ' If user has clicked Cancel, set myValue to defaultValue 
-        If myValue Is "" Then myValue = defaultValue
+        Form1.ShowDialog()
 
     End Sub
 

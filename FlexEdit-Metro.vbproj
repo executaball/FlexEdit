@@ -132,10 +132,10 @@
       <DependentUpon>FlexEdit.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InputBase.Designer.vb">
-      <DependentUpon>InputBase.vb</DependentUpon>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="InputBase.vb">
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
@@ -170,8 +170,8 @@
     <EmbeddedResource Include="FlexEdit.resx">
       <DependentUpon>FlexEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputBase.resx">
-      <DependentUpon>InputBase.vb</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -203,6 +203,8 @@
     <Content Include="form.ico" />
     <Content Include="f_icon.ico" />
     <Content Include="README.txt" />
+    <None Include="Resources\wt cross-symbol.png" />
+    <None Include="Resources\wt success.png" />
     <None Include="Resources\full success.png" />
     <None Include="Resources\redfull error.png" />
   </ItemGroup>
