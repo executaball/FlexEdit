@@ -99,43 +99,59 @@
     'Tab1
     Private Sub buttontab_1_Click(sender As Object, e As EventArgs) Handles buttontab_1.Click
 
-        MetroTabControl1.SelectedTab = TabPage1
+        MetroTabControl1.SelectedTab = Tab1Save
 
     End Sub
     'Tab2
     Private Sub buttontab_2_Click(sender As Object, e As EventArgs) Handles buttontab_2.Click
 
-        MetroTabControl1.SelectedTab = TabPage2
+        MetroTabControl1.SelectedTab = Tab2Gen
 
     End Sub
     'Tab3
     Private Sub buttontab_3_Click(sender As Object, e As EventArgs) Handles buttontab_3.Click
 
-        MetroTabControl1.SelectedTab = TabPage3
+        MetroTabControl1.SelectedTab = Tab3Body
 
     End Sub
     'Tab4
     Private Sub buttontab_4_Click(sender As Object, e As EventArgs) Handles buttontab_4.Click
 
-        MetroTabControl1.SelectedTab = TabPage4
+        MetroTabControl1.SelectedTab = Tab4Infect
 
     End Sub
-    'Tab5 (special logic for showing notice prompt)
+    'Tab5 (Not enabled yet)
     Private Sub buttontab_5_Click(sender As Object, e As EventArgs) Handles buttontab_5.Click
+
+        'MetroTabControl1.SelectedTab = Tab5Inv
+        MsgBox("Sorry, inventory edits aren't supported yet in this version of FlexEdit.", vbInformation, "FlexEdit")
+
+    End Sub
+    'Tab6 (Not enabled yet)
+    Private Sub buttontab_6_Click(sender As Object, e As EventArgs) Handles buttontab_6.Click
+
+        'MetroTabControl1.SelectedTab = Tab6Store
+        MsgBox("Sorry, storage edits aren't supported yet in this version of FlexEdit.", vbInformation, "FlexEdit")
+
+    End Sub
+
+
+    'Tab7 (special logic for showing notice prompt)
+    Private Sub buttontab_7_Click(sender As Object, e As EventArgs) Handles buttontab_7.Click
         If AcceptedRawTerms = False Then
 
 
             Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing saveword variables can seriously break your story and even Flexible Surival developers cannot fix a badly broken saveword.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                 Case MsgBoxResult.Yes
                     AcceptedRawTerms = True
-                    MetroTabControl1.SelectedTab = TabPage5
+                    MetroTabControl1.SelectedTab = Tab7Raw
             ' Do something if yes
                 Case MsgBoxResult.No
                     'do nothing if user does not accept
             End Select
 
         ElseIf AcceptedRawTerms = True Then
-            MetroTabControl1.SelectedTab = TabPage5
+            MetroTabControl1.SelectedTab = Tab7Raw
         End If
 
     End Sub
