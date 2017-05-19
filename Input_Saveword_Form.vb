@@ -74,6 +74,8 @@
         MainForm.SavewordText3 = textbox_saveword3.Text
 
         MainForm.RunLoadSaveword()
+
+        Me.Close()
     End Sub
 
     Private Sub metrobutton_cancel_Click(sender As Object, e As EventArgs) Handles metrobutton_cancel.Click

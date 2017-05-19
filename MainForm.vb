@@ -344,7 +344,6 @@ Public Class MainForm
 
     Public Sub RunLoadSaveword()
 
-        Input_Saveword_Form.Close()
         'funcdelay100()
 
 
@@ -1013,25 +1012,68 @@ Public Class MainForm
     End Sub
 
     Private Sub FolderBrowserDialog1_Disposed(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
-        MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
+        'MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
         directory1 = FolderBrowserDialog1.SelectedPath.ToString
-        PROJECT()
+        GlkdataREADER()
+        GlkdataREADER2()
+        GlkdataREADER3()
+        RunLoadSaveword()
     End Sub
 
-    Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
-        Return lines(lineNumber - 1)
-    End Function
-
-    Private Sub PROJECT()
+    'Glk data readers
+    Private Sub GlkdataREADER()
         Dim reader As New System.IO.StreamReader(directory1 + "\txsave.glkdata")
         Dim allLines As List(Of String) = New List(Of String)
         Do While Not reader.EndOfStream
             allLines.Add(reader.ReadLine())
         Loop
         reader.Close()
-        Dim FloatVar As String = ReadLine(2, allLines)
+        Dim EndVar As String = ReadLine(2, allLines)
 
-        MsgBox(FloatVar)
+
+        'MsgBox(EndVar)
+
+        SavewordText1 = EndVar
+
     End Sub
+
+    Private Sub GlkdataREADER2()
+        Dim reader As New System.IO.StreamReader(directory1 + "\txsave2.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim EndVar As String = ReadLine(2, allLines)
+
+
+        'MsgBox(EndVar)
+
+        SavewordText2 = EndVar
+        saveword2enabled = True
+
+    End Sub
+
+    Private Sub GlkdataREADER3()
+        Dim reader As New System.IO.StreamReader(directory1 + "\txsave3.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim EndVar As String = ReadLine(2, allLines)
+
+
+        'MsgBox(EndVar)
+
+        SavewordText3 = EndVar
+        saveword3enabled = True
+
+    End Sub
+
+    'Function needed in glkdata reader sub (incremental)
+    Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
+        Return lines(lineNumber - 1)
+    End Function
 End Class
 
