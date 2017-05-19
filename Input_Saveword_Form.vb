@@ -1,8 +1,4 @@
-﻿Public Class Form1
-
-    Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles metrobutton_cancel.Click
-        Me.Close()
-    End Sub
+﻿Public Class Input_Saveword_Form
 
     Private Sub checkbox_saveword2_Click(sender As Object, e As EventArgs) Handles checkbox_saveword2.Click
 
@@ -72,19 +68,15 @@
         textbox_saveword3.ForeColor = Color.Black
     End Sub
 
-    Private Sub button_cancel_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
-
     Private Sub metrobutton_load_Click(sender As Object, e As EventArgs) Handles metrobutton_load.Click
         MainForm.SavewordText1 = textbox_saveword1.Text
         MainForm.SavewordText2 = textbox_saveword2.Text
         MainForm.SavewordText3 = textbox_saveword3.Text
 
-        MainForm.FUNCSavewordLoadControl()
+        MainForm.RunLoadSaveword()
     End Sub
 
-    Private Sub checkbox_saveword2_CheckedChanged(sender As Object, e As EventArgs) Handles checkbox_saveword2.CheckedChanged
-
+    Private Sub metrobutton_cancel_Click(sender As Object, e As EventArgs) Handles metrobutton_cancel.Click
+        Me.Close()
     End Sub
 End Class

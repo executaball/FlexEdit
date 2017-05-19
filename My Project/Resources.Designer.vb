@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property material_do_not_disturb() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("material do not disturb", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property redfull_error() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("redfull error", resourceCulture)

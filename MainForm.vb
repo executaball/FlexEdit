@@ -1,4 +1,10 @@
-﻿Public Class MainForm
+﻿Imports System
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports System.IO
+Imports System.Data.DataTable
+
+Public Class MainForm
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
 
@@ -14,6 +20,12 @@
     Public SavewordText2 As String
     Public SavewordText3 As String
 
+    'Save saveword TO (Export Form)
+
+    Public EXPORTSavewordText1 As String
+    Public EXPORTSavewordText2 As String
+    Public EXPORTSavewordText3 As String
+
     'Status to be used with update function for main page
     Public Status1 As Boolean = False
     Public Status2 As Boolean = False
@@ -21,7 +33,12 @@
     Public Status4 As Boolean = False
     Public Status5 As Boolean = False
 
+    Private _datapath As String = "storage.xml"
+
+    Private directory1 As String
+
     'Datatable
+    'Dim data As New DataSet1
     Dim table As New DataTable("Table")
 
 
@@ -70,6 +87,12 @@
 
         'assinging the datagridview to use 'table' as data source
         DataGridViewVars.DataSource = table
+
+        'calling function to resize, will use function in all edits
+        resizeDataTable()
+        Me.DataGridViewVars.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        DataGridViewVars.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
+
         ConsolSplashIncrement()
 
         textbox_value_editor.DataBindings.Add("Text", table, "Value")
@@ -77,6 +100,24 @@
 
         Me.CenterToScreen()
         ConsolSplashIncrement()
+
+    End Sub
+
+    'resize function to be used in all edits
+    Private Sub resizeDataTable()
+
+        DataGridViewVars.AutoResizeColumns()
+
+        ' Configure the details DataGridView so that its columns automatically
+        ' adjust their widths when the data changes.
+        'DataGridViewVars.AutoSizeColumnsMode =
+        'DataGridViewAutoSizeColumnsMode.AllCells
+
+        With DataGridViewVars
+            '.Columns(0).Width = 100
+            '.Columns(1).Width = 200
+            .Columns(2).Width = .Width - .Columns(0).Width - .Columns(1).Width
+        End With
 
     End Sub
 
@@ -289,9 +330,11 @@
     'FUNCTIONS over
 
     'Load saveword button
+
+    'Opens input window and waits for function call
     Private Sub BunifuTileButton3_Click(sender As Object, e As EventArgs) Handles BunifuTileButton3.Click
 
-        Form1.ShowDialog()
+        Input_Saveword_Form.ShowDialog()
 
     End Sub
 
@@ -299,9 +342,9 @@
 
     'Load saveword control sub
 
-    Public Sub FUNCSavewordLoadControl()
+    Public Sub RunLoadSaveword()
 
-        Form1.Close()
+        Input_Saveword_Form.Close()
         'funcdelay100()
 
 
@@ -533,6 +576,12 @@
 
         End If
 
+        If SaveLoadCompleted1 = True Or SaveLoadCompleted2 = True Or SaveLoadCompleted3 = True Then
+
+            resizeDataTable()
+
+        End If
+
         '(IMPORTANT!!) Updates the labels
         StatusUPDATE()
 
@@ -752,5 +801,237 @@
         'empty
     End Sub
 
+    Private Sub BunifuTileButton4_Click(sender As Object, e As EventArgs) Handles BunifuTileButton4.Click
+
+        RunExportSaveword()
+
+    End Sub
+
+    Private Sub RunExportSaveword()
+
+        'Terminate if detected database is empty (2.0 safeguard) (improved from v1.0.6)
+
+        If Status1 = False Then
+
+            MsgBox("No saveword detected in memory. Please load a saveword first.", vbExclamation, "Error")
+
+            Return
+
+        Else
+
+
+            'Firstly join textboxes into database
+
+            RunUpdateTextBoxPriority() 'call function to do so
+
+            'variables
+            Dim sval As String = "You should not be seeing this, something has gone horribly wrong. Error Code (1)"
+            Dim ngxcounter As Integer = 1
+
+            Dim sval2 As String = "You should not be seeing this, something has gone horribly wrong. Error Code (2)"
+            Dim ngxcounter2 As Integer = 60 'literally first term, starting with 1 
+
+            Dim sval3 As String = "You should not be seeing this, something has gone horribly wrong. Error Code (3)"
+            Dim ngxcounter3 As Integer = 162
+
+            'do some cleanup, then set failsafe conditions
+            EXPORTSavewordText1 = ""
+            EXPORTSavewordText2 = ""
+            EXPORTSavewordText3 = ""
+
+
+            'before real processing, assimilate textfields to database (IMPORTANT)
+
+
+
+            'Start real processing
+
+
+            Try
+
+                Do Until ngxcounter = 60
+
+                    Dim row As DataRow = table.Select("Id = " & ngxcounter).FirstOrDefault()
+                    If Not row Is Nothing Then
+                        sval = row.Item("Value")
+                    End If
+
+                    Inc(ngxcounter)
+
+                    If ngxcounter < 60 Then
+
+                        EXPORTSavewordText1 = EXPORTSavewordText1 + sval & "}"
+
+                    ElseIf ngxcounter = 60 Then
+                        EXPORTSavewordText1 = EXPORTSavewordText1 + sval
+
+                    ElseIf ngxcounter > 60 Then
+                        MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 1, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                        End
+
+                    End If
+
+
+                Loop
+
+            Catch z As Exception
+
+                MsgBox("Error recreating saveword 1. Exception details: " & z.Message, vbCritical, "Critical Error")
+
+            End Try
+
+            'Only runs when loading 2 or 3 savewords. Exports saveword 2
+            If saveword2enabled = True Then
+
+                EXPORTSavewordText2 = "chantpartA}" 'first time, out of the loop
+
+                Try
+
+                    Do Until ngxcounter2 = 162 'final value is 161 on table, but because counting from 0, add one
+
+                        Dim row As DataRow = table.Select("Id = " & ngxcounter2).FirstOrDefault()
+                        If Not row Is Nothing Then
+                            sval2 = row.Item("Value")
+                        End If
+
+                        Inc(ngxcounter2)
+
+
+                        If ngxcounter2 < 162 Then
+
+                            EXPORTSavewordText2 = EXPORTSavewordText2 + sval2 & "}"
+
+                        ElseIf ngxcounter2 = 162 Then
+                            EXPORTSavewordText2 = EXPORTSavewordText2 + sval2
+
+                        ElseIf ngxcounter2 > 162 Then
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                            End
+
+                        End If
+
+
+                    Loop
+
+                Catch z As Exception
+
+                    MsgBox("Error recreating saveword 2. Exception details: " & z.Message, vbCritical, "Critical Error")
+
+                End Try
+
+            End If
+
+            'Only runs when loading 2 or 3 savewords. Exports saveword 3
+            If saveword3enabled = True Then
+
+                EXPORTSavewordText3 = "chantpartB}" 'first time, out of the loop
+
+                Try
+
+                    Do Until ngxcounter3 = 225 'final value is 161 on table, but because counting from 0, add one
+
+                        Dim row As DataRow = table.Select("Id = " & ngxcounter3).FirstOrDefault()
+                        If Not row Is Nothing Then
+                            sval3 = row.Item("Value")
+                        End If
+
+                        Inc(ngxcounter3)
+
+
+                        If ngxcounter3 < 225 Then
+
+                            EXPORTSavewordText3 = EXPORTSavewordText3 + sval3 & "}"
+
+                        ElseIf ngxcounter3 = 225 Then
+                            EXPORTSavewordText3 = EXPORTSavewordText3 + sval3
+
+                        ElseIf ngxcounter3 > 225 Then
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 3, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                            End
+
+                        End If
+
+
+                    Loop
+
+                Catch z As Exception
+
+                    MsgBox("Error recreating saveword 3. Exception details: " & z.Message, vbCritical, "Critical Error")
+
+                End Try
+
+            End If
+
+            'Export ok
+
+            MsgBox("Saveword successfully exported.", vbInformation, "Export success")
+
+            Output_Saveword_Form.ShowDialog()
+
+
+        End If
+
+
+
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Me.table.WriteXml(_datapath)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+        Me.table.ReadXml(_datapath)
+    End Sub
+
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
+        Info.ShowDialog()
+    End Sub
+
+    Private Sub textbox_search_TextChanged(sender As Object, e As EventArgs) Handles textbox_search.TextChanged
+
+        Dim srch As String
+        Dim irowindex As Integer
+        srch = textbox_search.Text
+
+        DataGridViewVars.ClearSelection()
+        For i As Integer = 0 To DataGridViewVars.Rows.Count - 1
+            If DataGridViewVars.Rows(i).Cells(0).Value IsNot Nothing Then
+                If DataGridViewVars.Rows(i).Cells(2).Value.ToString.ToUpper.StartsWith(srch.ToUpper) Then
+                    DataGridViewVars.Rows(i).Selected = True
+                    irowindex = DataGridViewVars.SelectedCells.Item(0).Value
+                    'MessageBox.Show(irowindex)
+                    Exit For
+                End If
+            End If
+        Next
+
+    End Sub
+
+    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+        FolderBrowserDialog1.ShowDialog()
+    End Sub
+
+    Private Sub FolderBrowserDialog1_Disposed(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+        MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
+        directory1 = FolderBrowserDialog1.SelectedPath.ToString
+        PROJECT()
+    End Sub
+
+    Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
+        Return lines(lineNumber - 1)
+    End Function
+
+    Private Sub PROJECT()
+        Dim reader As New System.IO.StreamReader(directory1 + "\txsave.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim FloatVar As String = ReadLine(2, allLines)
+
+        MsgBox(FloatVar)
+    End Sub
 End Class
 

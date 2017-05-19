@@ -132,10 +132,22 @@
       <DependentUpon>FlexEdit.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Info.Designer.vb">
+      <DependentUpon>Info.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Output_Saveword_Form.Designer.vb">
+      <DependentUpon>Output_Saveword_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Output_Saveword_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input_Saveword_Form.Designer.vb">
+      <DependentUpon>Input_Saveword_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Saveword_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
@@ -170,11 +182,17 @@
     <EmbeddedResource Include="FlexEdit.resx">
       <DependentUpon>FlexEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input_Saveword_Form.resx">
+      <DependentUpon>Input_Saveword_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Output_Saveword_Form.resx">
+      <DependentUpon>Output_Saveword_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
@@ -203,6 +221,7 @@
     <Content Include="form.ico" />
     <Content Include="f_icon.ico" />
     <Content Include="README.txt" />
+    <None Include="Resources\material do not disturb.png" />
     <None Include="Resources\wt cross-symbol.png" />
     <None Include="Resources\wt success.png" />
     <None Include="Resources\full success.png" />

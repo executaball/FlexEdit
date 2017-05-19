@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Input_Saveword_Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -163,7 +163,7 @@ Partial Class Form1
         Me.metrobutton_cancel.TabIndex = 12
         Me.metrobutton_cancel.Text = "Cancel"
         '
-        'Form1
+        'Input_Saveword_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -177,7 +177,7 @@ Partial Class Form1
         Me.Controls.Add(Me.checkbox_saveword2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
+        Me.Name = "Input_Saveword_Form"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

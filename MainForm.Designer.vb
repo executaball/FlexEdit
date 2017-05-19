@@ -23,10 +23,12 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme1 As MetroSuite.MetroTabControl.MainColorScheme = New MetroSuite.MetroTabControl.MainColorScheme()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
+        Dim MainColorScheme1 As MetroSuite.MetroTabControl.MainColorScheme = New MetroSuite.MetroTabControl.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Sidepanel = New System.Windows.Forms.Panel()
+        Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_5 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_7 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_4 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_3 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -131,6 +133,8 @@ Partial Class MainForm
         Me.Label37 = New System.Windows.Forms.Label()
         Me.comboBODY = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Tab5Inv = New System.Windows.Forms.TabPage()
+        Me.Tab6Store = New System.Windows.Forms.TabPage()
         Me.Tab7Raw = New System.Windows.Forms.TabPage()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
@@ -142,10 +146,7 @@ Partial Class MainForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel_PreReleaseWarning = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.buttontab_5 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.Tab5Inv = New System.Windows.Forms.TabPage()
-        Me.Tab6Store = New System.Windows.Forms.TabPage()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Sidepanel.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,10 +215,80 @@ Partial Class MainForm
         Me.Sidepanel.Controls.Add(Me.BunifuImageButton1)
         Me.Sidepanel.Controls.Add(Me.logo)
         Me.Sidepanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Sidepanel.Location = New System.Drawing.Point(0, 53)
+        Me.Sidepanel.Location = New System.Drawing.Point(0, 49)
         Me.Sidepanel.Name = "Sidepanel"
-        Me.Sidepanel.Size = New System.Drawing.Size(252, 960)
+        Me.Sidepanel.Size = New System.Drawing.Size(252, 964)
         Me.Sidepanel.TabIndex = 0
+        '
+        'buttontab_6
+        '
+        Me.buttontab_6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_6.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_6.BorderRadius = 0
+        Me.buttontab_6.ButtonText = "              Storage"
+        Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
+        Me.buttontab_6.Iconimage_right = Nothing
+        Me.buttontab_6.Iconimage_right_Selected = Nothing
+        Me.buttontab_6.Iconimage_Selected = Nothing
+        Me.buttontab_6.IconMarginLeft = 0
+        Me.buttontab_6.IconMarginRight = 0
+        Me.buttontab_6.IconRightVisible = True
+        Me.buttontab_6.IconRightZoom = 0R
+        Me.buttontab_6.IconVisible = True
+        Me.buttontab_6.IconZoom = 50.0R
+        Me.buttontab_6.IsTab = True
+        Me.buttontab_6.Location = New System.Drawing.Point(0, 636)
+        Me.buttontab_6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_6.Name = "buttontab_6"
+        Me.buttontab_6.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_6.selected = False
+        Me.buttontab_6.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_6.TabIndex = 8
+        Me.buttontab_6.Text = "              Storage"
+        Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_6.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_5
+        '
+        Me.buttontab_5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_5.BorderRadius = 0
+        Me.buttontab_5.ButtonText = "              Inventory"
+        Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
+        Me.buttontab_5.Iconimage_right = Nothing
+        Me.buttontab_5.Iconimage_right_Selected = Nothing
+        Me.buttontab_5.Iconimage_Selected = Nothing
+        Me.buttontab_5.IconMarginLeft = 0
+        Me.buttontab_5.IconMarginRight = 0
+        Me.buttontab_5.IconRightVisible = True
+        Me.buttontab_5.IconRightZoom = 0R
+        Me.buttontab_5.IconVisible = True
+        Me.buttontab_5.IconZoom = 50.0R
+        Me.buttontab_5.IsTab = True
+        Me.buttontab_5.Location = New System.Drawing.Point(0, 553)
+        Me.buttontab_5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_5.Name = "buttontab_5"
+        Me.buttontab_5.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_5.selected = False
+        Me.buttontab_5.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_5.TabIndex = 7
+        Me.buttontab_5.Text = "              Inventory"
+        Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_5.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_7
         '
@@ -400,9 +471,9 @@ Partial Class MainForm
         Me.BunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(184, 43)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(188, 47)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(42, 39)
+        Me.BunifuImageButton1.Size = New System.Drawing.Size(43, 49)
         Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BunifuImageButton1.TabIndex = 1
         Me.BunifuImageButton1.TabStop = False
@@ -428,7 +499,7 @@ Partial Class MainForm
         Me.Header.Dock = System.Windows.Forms.DockStyle.Top
         Me.Header.Location = New System.Drawing.Point(0, 0)
         Me.Header.Name = "Header"
-        Me.Header.Size = New System.Drawing.Size(1422, 53)
+        Me.Header.Size = New System.Drawing.Size(1422, 49)
         Me.Header.TabIndex = 1
         '
         'topbarbutton_min
@@ -437,7 +508,7 @@ Partial Class MainForm
         Me.topbarbutton_min.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.topbarbutton_min.Image = CType(resources.GetObject("topbarbutton_min.Image"), System.Drawing.Image)
         Me.topbarbutton_min.ImageActive = Nothing
-        Me.topbarbutton_min.Location = New System.Drawing.Point(1341, 9)
+        Me.topbarbutton_min.Location = New System.Drawing.Point(1345, 10)
         Me.topbarbutton_min.Name = "topbarbutton_min"
         Me.topbarbutton_min.Size = New System.Drawing.Size(31, 40)
         Me.topbarbutton_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -451,9 +522,9 @@ Partial Class MainForm
         Me.topbarbutton_exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.topbarbutton_exit.Image = CType(resources.GetObject("topbarbutton_exit.Image"), System.Drawing.Image)
         Me.topbarbutton_exit.ImageActive = Nothing
-        Me.topbarbutton_exit.Location = New System.Drawing.Point(1379, 6)
+        Me.topbarbutton_exit.Location = New System.Drawing.Point(1385, 16)
         Me.topbarbutton_exit.Name = "topbarbutton_exit"
-        Me.topbarbutton_exit.Size = New System.Drawing.Size(31, 40)
+        Me.topbarbutton_exit.Size = New System.Drawing.Size(25, 25)
         Me.topbarbutton_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.topbarbutton_exit.TabIndex = 3
         Me.topbarbutton_exit.TabStop = False
@@ -462,7 +533,7 @@ Partial Class MainForm
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(31, 10)
+        Me.PictureBox2.Location = New System.Drawing.Point(25, 10)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(23, 34)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -473,8 +544,8 @@ Partial Class MainForm
         '
         Me.BunifuCustomLabel1.AutoSize = True
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(216, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(68, 7)
+        Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(49, 7)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(117, 34)
         Me.BunifuCustomLabel1.TabIndex = 2
@@ -515,12 +586,12 @@ Partial Class MainForm
         Me.MetroTabControl1.FontNotSelectedTabs = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MetroTabControl1.FontSelectedTab = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MetroTabControl1.ItemSize = New System.Drawing.Size(44, 120)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(243, 55)
+        Me.MetroTabControl1.Location = New System.Drawing.Point(243, 49)
         Me.MetroTabControl1.Multiline = True
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.SelectedTabBold = False
-        Me.MetroTabControl1.Size = New System.Drawing.Size(1179, 928)
+        Me.MetroTabControl1.Size = New System.Drawing.Size(1179, 934)
         Me.MetroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.MetroTabControl1.Speed = 100
         Me.MetroTabControl1.TabIndex = 2
@@ -548,7 +619,7 @@ Partial Class MainForm
         Me.Tab1Save.Location = New System.Drawing.Point(124, 4)
         Me.Tab1Save.Name = "Tab1Save"
         Me.Tab1Save.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab1Save.Size = New System.Drawing.Size(1051, 920)
+        Me.Tab1Save.Size = New System.Drawing.Size(1051, 926)
         Me.Tab1Save.TabIndex = 0
         Me.Tab1Save.Text = "TabPage1"
         '
@@ -559,9 +630,9 @@ Partial Class MainForm
         Me.label_status5.ForeColor = System.Drawing.Color.White
         Me.label_status5.Location = New System.Drawing.Point(566, 440)
         Me.label_status5.Name = "label_status5"
-        Me.label_status5.Size = New System.Drawing.Size(173, 45)
+        Me.label_status5.Size = New System.Drawing.Size(197, 45)
         Me.label_status5.TabIndex = 17
-        Me.label_status5.Text = "Not loaded"
+        Me.label_status5.Text = "Not available"
         '
         'label_status4
         '
@@ -570,9 +641,9 @@ Partial Class MainForm
         Me.label_status4.ForeColor = System.Drawing.Color.White
         Me.label_status4.Location = New System.Drawing.Point(566, 370)
         Me.label_status4.Name = "label_status4"
-        Me.label_status4.Size = New System.Drawing.Size(173, 45)
+        Me.label_status4.Size = New System.Drawing.Size(197, 45)
         Me.label_status4.TabIndex = 16
-        Me.label_status4.Text = "Not loaded"
+        Me.label_status4.Text = "Not available"
         '
         'label_status3
         '
@@ -609,7 +680,7 @@ Partial Class MainForm
         '
         'picbox_status5
         '
-        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.redfull_error
+        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.material_do_not_disturb
         Me.picbox_status5.Location = New System.Drawing.Point(499, 440)
         Me.picbox_status5.Name = "picbox_status5"
         Me.picbox_status5.Size = New System.Drawing.Size(54, 49)
@@ -619,7 +690,7 @@ Partial Class MainForm
         '
         'picbox_status4
         '
-        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.redfull_error
+        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.material_do_not_disturb
         Me.picbox_status4.Location = New System.Drawing.Point(499, 370)
         Me.picbox_status4.Name = "picbox_status4"
         Me.picbox_status4.Size = New System.Drawing.Size(54, 49)
@@ -814,7 +885,6 @@ Partial Class MainForm
         Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Enabled = False
         Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
         Me.BunifuTileButton1.Image = CType(resources.GetObject("BunifuTileButton1.Image"), System.Drawing.Image)
@@ -866,7 +936,7 @@ Partial Class MainForm
         Me.Tab2Gen.Location = New System.Drawing.Point(124, 4)
         Me.Tab2Gen.Name = "Tab2Gen"
         Me.Tab2Gen.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab2Gen.Size = New System.Drawing.Size(1051, 920)
+        Me.Tab2Gen.Size = New System.Drawing.Size(1051, 926)
         Me.Tab2Gen.TabIndex = 1
         Me.Tab2Gen.Text = "TabPage2"
         '
@@ -1091,7 +1161,7 @@ Partial Class MainForm
         Me.Tab3Body.Controls.Add(Me.Label4)
         Me.Tab3Body.Location = New System.Drawing.Point(124, 4)
         Me.Tab3Body.Name = "Tab3Body"
-        Me.Tab3Body.Size = New System.Drawing.Size(1051, 920)
+        Me.Tab3Body.Size = New System.Drawing.Size(1051, 926)
         Me.Tab3Body.TabIndex = 2
         Me.Tab3Body.Text = "TabPage3"
         '
@@ -1410,7 +1480,7 @@ Partial Class MainForm
         Me.Tab4Infect.Controls.Add(Me.Label5)
         Me.Tab4Infect.Location = New System.Drawing.Point(124, 4)
         Me.Tab4Infect.Name = "Tab4Infect"
-        Me.Tab4Infect.Size = New System.Drawing.Size(1051, 920)
+        Me.Tab4Infect.Size = New System.Drawing.Size(1051, 926)
         Me.Tab4Infect.TabIndex = 3
         Me.Tab4Infect.Text = "TabPage4"
         '
@@ -1525,6 +1595,24 @@ Partial Class MainForm
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Infections"
         '
+        'Tab5Inv
+        '
+        Me.Tab5Inv.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Tab5Inv.Location = New System.Drawing.Point(124, 4)
+        Me.Tab5Inv.Name = "Tab5Inv"
+        Me.Tab5Inv.Size = New System.Drawing.Size(1051, 926)
+        Me.Tab5Inv.TabIndex = 5
+        Me.Tab5Inv.Text = "TabPage10"
+        '
+        'Tab6Store
+        '
+        Me.Tab6Store.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Tab6Store.Location = New System.Drawing.Point(124, 4)
+        Me.Tab6Store.Name = "Tab6Store"
+        Me.Tab6Store.Size = New System.Drawing.Size(1051, 926)
+        Me.Tab6Store.TabIndex = 6
+        Me.Tab6Store.Text = "TabPage11"
+        '
         'Tab7Raw
         '
         Me.Tab7Raw.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
@@ -1538,7 +1626,7 @@ Partial Class MainForm
         Me.Tab7Raw.Controls.Add(Me.Label6)
         Me.Tab7Raw.Location = New System.Drawing.Point(124, 4)
         Me.Tab7Raw.Name = "Tab7Raw"
-        Me.Tab7Raw.Size = New System.Drawing.Size(1051, 920)
+        Me.Tab7Raw.Size = New System.Drawing.Size(1051, 926)
         Me.Tab7Raw.TabIndex = 4
         Me.Tab7Raw.Text = "TabPage5"
         '
@@ -1569,7 +1657,7 @@ Partial Class MainForm
         Me.textbox_search.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textbox_search.Location = New System.Drawing.Point(165, 231)
         Me.textbox_search.Name = "textbox_search"
-        Me.textbox_search.Size = New System.Drawing.Size(262, 40)
+        Me.textbox_search.Size = New System.Drawing.Size(386, 40)
         Me.textbox_search.TabIndex = 11
         '
         'textbox_value_editor
@@ -1582,11 +1670,16 @@ Partial Class MainForm
         '
         'DataGridViewVars
         '
+        Me.DataGridViewVars.AllowUserToAddRows = False
+        Me.DataGridViewVars.AllowUserToDeleteRows = False
         Me.DataGridViewVars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewVars.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.DataGridViewVars.GridColor = System.Drawing.Color.DarkGray
+        Me.DataGridViewVars.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.DataGridViewVars.Location = New System.Drawing.Point(76, 319)
         Me.DataGridViewVars.Name = "DataGridViewVars"
         Me.DataGridViewVars.RowTemplate.Height = 28
-        Me.DataGridViewVars.Size = New System.Drawing.Size(908, 516)
+        Me.DataGridViewVars.Size = New System.Drawing.Size(908, 548)
         Me.DataGridViewVars.TabIndex = 9
         '
         'Label40
@@ -1641,94 +1734,6 @@ Partial Class MainForm
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "You are running an alpha pre-release build of FlexEdit. Be warned of bugs and gli" &
     "tches. Please BACKUP any save you use with the tool!"
-        '
-        'buttontab_5
-        '
-        Me.buttontab_5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_5.BorderRadius = 0
-        Me.buttontab_5.ButtonText = "              Inventory"
-        Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
-        Me.buttontab_5.Iconimage_right = Nothing
-        Me.buttontab_5.Iconimage_right_Selected = Nothing
-        Me.buttontab_5.Iconimage_Selected = Nothing
-        Me.buttontab_5.IconMarginLeft = 0
-        Me.buttontab_5.IconMarginRight = 0
-        Me.buttontab_5.IconRightVisible = True
-        Me.buttontab_5.IconRightZoom = 0R
-        Me.buttontab_5.IconVisible = True
-        Me.buttontab_5.IconZoom = 50.0R
-        Me.buttontab_5.IsTab = True
-        Me.buttontab_5.Location = New System.Drawing.Point(0, 553)
-        Me.buttontab_5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_5.Name = "buttontab_5"
-        Me.buttontab_5.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_5.selected = False
-        Me.buttontab_5.Size = New System.Drawing.Size(368, 73)
-        Me.buttontab_5.TabIndex = 7
-        Me.buttontab_5.Text = "              Inventory"
-        Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_5.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_6
-        '
-        Me.buttontab_6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_6.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_6.BorderRadius = 0
-        Me.buttontab_6.ButtonText = "              Storage"
-        Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
-        Me.buttontab_6.Iconimage_right = Nothing
-        Me.buttontab_6.Iconimage_right_Selected = Nothing
-        Me.buttontab_6.Iconimage_Selected = Nothing
-        Me.buttontab_6.IconMarginLeft = 0
-        Me.buttontab_6.IconMarginRight = 0
-        Me.buttontab_6.IconRightVisible = True
-        Me.buttontab_6.IconRightZoom = 0R
-        Me.buttontab_6.IconVisible = True
-        Me.buttontab_6.IconZoom = 50.0R
-        Me.buttontab_6.IsTab = True
-        Me.buttontab_6.Location = New System.Drawing.Point(0, 636)
-        Me.buttontab_6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_6.Name = "buttontab_6"
-        Me.buttontab_6.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_6.selected = False
-        Me.buttontab_6.Size = New System.Drawing.Size(368, 73)
-        Me.buttontab_6.TabIndex = 8
-        Me.buttontab_6.Text = "              Storage"
-        Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_6.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'Tab5Inv
-        '
-        Me.Tab5Inv.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Tab5Inv.Location = New System.Drawing.Point(124, 4)
-        Me.Tab5Inv.Name = "Tab5Inv"
-        Me.Tab5Inv.Size = New System.Drawing.Size(1051, 920)
-        Me.Tab5Inv.TabIndex = 5
-        Me.Tab5Inv.Text = "TabPage10"
-        '
-        'Tab6Store
-        '
-        Me.Tab6Store.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Tab6Store.Location = New System.Drawing.Point(124, 4)
-        Me.Tab6Store.Name = "Tab6Store"
-        Me.Tab6Store.Size = New System.Drawing.Size(1051, 920)
-        Me.Tab6Store.TabIndex = 6
-        Me.Tab6Store.Text = "TabPage11"
         '
         'MainForm
         '
@@ -1928,4 +1933,5 @@ Partial Class MainForm
     Friend WithEvents buttontab_5 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Tab5Inv As TabPage
     Friend WithEvents Tab6Store As TabPage
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class
