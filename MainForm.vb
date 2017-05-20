@@ -33,9 +33,12 @@ Public Class MainForm
     Public Status4 As Boolean = False
     Public Status5 As Boolean = False
 
+    'Temp datapath variable
     Private _datapath As String = "storage.xml"
 
-    Private directory1 As String
+    'Check file exist, number of files that don't exist
+    Public CheckFileExistErrorCounter As Int32 = 0
+    Public FileOK As Boolean = True
 
     'Datatable
     'Dim data As New DataSet1
@@ -43,13 +46,7 @@ Public Class MainForm
 
 
 
-    'increment splash screen progress bar function
-    Public Sub ConsolSplashIncrement()
-        mySplashScreen.Invoke(New MethodInvoker(AddressOf mySplashScreen.IncrementProgress))
-    End Sub
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         'Dim mySplashScreen = DirectCast(My.Application.SplashScreen, Form2)
         'My.Application.mySplashScreen.Invoke(New MethodInvoker(AddressOf My.Application.mySplashScreen.IncrementProgress))
 
@@ -60,8 +57,25 @@ Public Class MainForm
             MetroTabControl1.SelectedIndex = i
         Next
         MetroTabControl1.SelectedIndex = 0 : MetroTabControl1.Speed = speed
+        'Bugfix over
 
-        ConsolSplashIncrement()
+        'SHOW PRE-RELEASE WARNING
+        Panel_PreReleaseWarning.Visible = True
+
+        'Highlight first option
+        buttontab_1.selected = True
+
+        'Do datatable tasks
+        Load_DoDatabaseTasks()
+
+        'Do DPI scaling
+        Load_DoScaling()
+        'Center main form to screen
+        Me.CenterToScreen()
+
+    End Sub
+
+    Private Sub Load_DoScaling()
 
         'Moves sidepanel to correct position (because moved out of way for development)
 
@@ -86,30 +100,31 @@ Public Class MainForm
         'Dim SideBarVar As Integer = 184860 / Me.Width
         Dim SideBarVar As Integer = 130
         Panel1.Width = Me.Width - ButtonWidth + SideBarVar
-        ConsolSplashIncrement()
 
-        MsgBox("Panel width")
-        MsgBox(Panel1.Width)
+        'MsgBox("Panel width")
+        'MsgBox(Panel1.Width)
 
-        MsgBox("Side width")
-        MsgBox(Sidepanel.Width)
+        'MsgBox("Side width")
+        'MsgBox(Sidepanel.Width)
 
-        'SHOW PRE-RELEASE WARNING
-        Panel_PreReleaseWarning.Visible = True
+        '(Debug msgbox for scaling work)
 
-        ConsolSplashIncrement()
-        'Highlight first option
-        buttontab_1.selected = True
 
-        ConsolSplashIncrement()
+        'WORK SCALING BUTTONS
+        Dim TotalWidth As Int32 = Panel2.Width
+        Dim ButtonSize As Int32 = TotalWidth * 0.2
+
+        'BunifuTileButton1.Size = ButtonSize, ButtonSize
+
+
+    End Sub
+
+    Private Sub Load_DoDatabaseTasks()
 
         'Initial setup - fills the tables with names (will clear later)
         table.Columns.Add("Id", Type.GetType("System.Int32"))
-        ConsolSplashIncrement()
         table.Columns.Add("Value", Type.GetType("System.String"))
-        ConsolSplashIncrement()
         table.Columns.Add("Name", Type.GetType("System.String"))
-        ConsolSplashIncrement()
 
         'assinging the datagridview to use 'table' as data source
         DataGridViewVars.DataSource = table
@@ -119,13 +134,7 @@ Public Class MainForm
         Me.DataGridViewVars.Font = New Font("Segoe UI", 10, FontStyle.Regular)
         DataGridViewVars.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
 
-        ConsolSplashIncrement()
-
         textbox_value_editor.DataBindings.Add("Text", table, "Value")
-        ConsolSplashIncrement()
-
-        Me.CenterToScreen()
-        ConsolSplashIncrement()
 
     End Sub
 
@@ -285,9 +294,11 @@ Public Class MainForm
 
     Public Sub Status4toUNLOAD()
 
-        label_status4.Text = "Not loaded"
+        'label_status4.Text = "Not loaded"
 
-        picbox_status4.Image = My.Resources.Resources.redfull_error
+        'picbox_status4.Image = My.Resources.Resources.redfull_error
+
+        '!! TEMP DISABLED
 
     End Sub
 
@@ -301,9 +312,11 @@ Public Class MainForm
 
     Public Sub Status5toUNLOAD()
 
-        label_status5.Text = "Not loaded"
+        'label_status5.Text = "Not loaded"
 
-        picbox_status5.Image = My.Resources.Resources.redfull_error
+        'picbox_status5.Image = My.Resources.Resources.redfull_error
+
+        '!! TEMP DISABLED
 
     End Sub
 
@@ -1009,6 +1022,7 @@ Public Class MainForm
         Me.table.ReadXml(_datapath)
     End Sub
 
+    'Info button
     Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
         Info.ShowDialog()
     End Sub
@@ -1033,22 +1047,169 @@ Public Class MainForm
 
     End Sub
 
+    'Folder load
     Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
-        FolderBrowserDialog1.ShowDialog()
+        'UNS FolderBrowserDialog1.ShowDialog()
+        'UNS End Sub
+
+        'UNS Private Sub FolderBrowserDialog1_Disposed(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+
+        'Dim folderDlg As New FolderBrowserDialog
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        If PersistentUserDirectory = "" Then
+
+            MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+            TriggerLoadDialog()
+
+        Else
+
+            Select Case MsgBox("Do you wish to continue using the stored directory? " & PersistentUserDirectory, MsgBoxStyle.YesNo + vbInformation, "FlexEdit")
+                Case MsgBoxResult.Yes
+
+                    CheckExist()
+
+                    If FileOK = True Then
+
+                        FileOK = False
+
+                        GlkdataREADER()
+                        GlkdataREADER2()
+                        GlkdataREADER3()
+                        RunLoadSaveword()
+
+                    Else
+
+                        My.Settings.FlexUserDirectory = ""
+                        'saving
+                        My.Settings.Save()
+
+                    End If
+
+                Case MsgBoxResult.No
+
+                    My.Settings.FlexUserDirectory = ""
+                    'saving
+                    My.Settings.Save()
+
+                    MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+                    TriggerLoadDialog()
+
+            End Select
+
+        End If
     End Sub
 
-    Private Sub FolderBrowserDialog1_Disposed(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
-        'MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
-        directory1 = FolderBrowserDialog1.SelectedPath.ToString
-        GlkdataREADER()
-        GlkdataREADER2()
-        GlkdataREADER3()
-        RunLoadSaveword()
+    Private Sub TriggerLoadDialog()
+
+        If (FolderBrowserDialog1.ShowDialog() = DialogResult.OK) Then
+
+            'MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
+            'Setting persistent user setting to path AND using it as normal variable
+            My.Settings.FlexUserDirectory = FolderBrowserDialog1.SelectedPath.ToString
+            'saving
+            My.Settings.Save()
+
+            CheckExist()
+
+            If FileOK = True Then
+
+                FileOK = False
+
+                GlkdataREADER()
+                GlkdataREADER2()
+                GlkdataREADER3()
+                RunLoadSaveword()
+
+            Else
+
+                My.Settings.FlexUserDirectory = ""
+                'saving
+                My.Settings.Save()
+
+            End If
+
+        End If
+
     End Sub
+
+    'Check if file exists
+    Private Sub CheckExist()
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim SavePath1 As String = PersistentUserDirectory + "\txsave.glkdata"
+        Dim SavePath2 As String = PersistentUserDirectory + "\txsave2.glkdata"
+        Dim SavePath3 As String = PersistentUserDirectory + "\txsave3.glkdata"
+        Dim SavePathINV As String = PersistentUserDirectory + "\invsave.glkdata"
+        Dim SavePathSTR As String = PersistentUserDirectory + "\storsave.glkdata"
+
+        'Dim saveword1_exists As Boolean = False
+        'Dim saveword2_exists As Boolean = False
+        'Dim saveword3_exists As Boolean = False
+        'Dim savewordINV_exists As Boolean = False
+        'Dim savewordSTR_exists As Boolean = False
+
+        'Dim CheckFileExistErrorCounter As Int32 = 0
+        '(Transferred to global)
+
+        If System.IO.File.Exists(SavePath1) Then
+            'The file exists
+        Else
+            CheckFileExistErrorCounter += 1
+        End If
+
+        If System.IO.File.Exists(SavePath2) Then
+            'The file exists
+        Else
+            CheckFileExistErrorCounter += 1
+        End If
+
+        If System.IO.File.Exists(SavePath3) Then
+            'The file exists
+        Else
+            CheckFileExistErrorCounter += 1
+        End If
+
+        If System.IO.File.Exists(SavePathINV) Then
+            'The file exists
+        Else
+            CheckFileExistErrorCounter += 1
+        End If
+
+        If System.IO.File.Exists(SavePathSTR) Then
+            'The file exists
+        Else
+            CheckFileExistErrorCounter += 1
+        End If
+
+        If CheckFileExistErrorCounter = 0 Then
+
+            FileOK = True
+
+        ElseIf CheckFileExistErrorCounter > 1 Then
+
+            FileOK = False
+            MsgBox("One or more saveword files could not be found in the directory, please make sure all 5 '.glkdata' files are present in the chosen folder.", vbExclamation, "Error")
+
+        End If
+
+        'Clears counter for next use
+        CheckFileExistErrorCounter = 0
+
+    End Sub
+
 
     'Glk data readers
     Private Sub GlkdataREADER()
-        Dim reader As New System.IO.StreamReader(directory1 + "\txsave.glkdata")
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave.glkdata")
         Dim allLines As List(Of String) = New List(Of String)
         Do While Not reader.EndOfStream
             allLines.Add(reader.ReadLine())
@@ -1064,7 +1225,11 @@ Public Class MainForm
     End Sub
 
     Private Sub GlkdataREADER2()
-        Dim reader As New System.IO.StreamReader(directory1 + "\txsave2.glkdata")
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave2.glkdata")
         Dim allLines As List(Of String) = New List(Of String)
         Do While Not reader.EndOfStream
             allLines.Add(reader.ReadLine())
@@ -1081,7 +1246,11 @@ Public Class MainForm
     End Sub
 
     Private Sub GlkdataREADER3()
-        Dim reader As New System.IO.StreamReader(directory1 + "\txsave3.glkdata")
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave3.glkdata")
         Dim allLines As List(Of String) = New List(Of String)
         Do While Not reader.EndOfStream
             allLines.Add(reader.ReadLine())

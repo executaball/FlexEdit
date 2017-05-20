@@ -28,8 +28,8 @@ Partial Class Splash
         Me.Label1 = New System.Windows.Forms.Label()
         Me.VersionL = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BunifuProgressBar1 = New Bunifu.Framework.UI.BunifuProgressBar()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,19 +70,6 @@ Partial Class Splash
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'BunifuProgressBar1
-        '
-        Me.BunifuProgressBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuProgressBar1.BorderRadius = 5
-        Me.BunifuProgressBar1.Location = New System.Drawing.Point(20, 257)
-        Me.BunifuProgressBar1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.BunifuProgressBar1.MaximumValue = 100
-        Me.BunifuProgressBar1.Name = "BunifuProgressBar1"
-        Me.BunifuProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.BunifuProgressBar1.Size = New System.Drawing.Size(556, 16)
-        Me.BunifuProgressBar1.TabIndex = 3
-        Me.BunifuProgressBar1.Value = 0
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -94,14 +81,21 @@ Partial Class Splash
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Loading..."
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(20, 256)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(556, 19)
+        Me.ProgressBar1.TabIndex = 5
+        '
         'Splash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(597, 324)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.BunifuProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.VersionL)
         Me.Controls.Add(Me.Label1)
@@ -118,6 +112,6 @@ Partial Class Splash
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents VersionL As Label
-    Private WithEvents BunifuProgressBar1 As Bunifu.Framework.UI.BunifuProgressBar
     Friend WithEvents Label2 As Label
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

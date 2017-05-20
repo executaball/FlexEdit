@@ -52,6 +52,18 @@ Partial Friend NotInheritable Class Settings
             Return defaultInstance
         End Get
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property FlexUserDirectory() As String
+        Get
+            Return CType(Me("FlexUserDirectory"),String)
+        End Get
+        Set
+            Me("FlexUserDirectory") = value
+        End Set
+    End Property
 End Class
 
 Namespace My

@@ -37,17 +37,22 @@
         Me.CenterToScreen()
         VersionL.Text = System.String.Format(VersionL.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build)
 
-    End Sub
 
-    Public Sub IncrementProgress()
-        'If Me.ProgressBar1.Value < Me.ProgressBar1.Maximum Then Me.ProgressBar1.Value = Me.ProgressBar1.Value + 10
-
-        If Me.BunifuProgressBar1.Value < Me.BunifuProgressBar1.MaximumValue Then Me.BunifuProgressBar1.Value = Me.BunifuProgressBar1.Value + 10
-
-        'If Me.MetroProgressbar1.Value < Me.MetroProgressbar1.Maximum Then Me.MetroProgressbar1.Value = Me.MetroProgressbar1.Value + 10
-
+        ProgressBar1.MarqueeAnimationSpeed = 40
+        ProgressBar1.Style = ProgressBarStyle.Marquee
 
     End Sub
+
+    'Public Sub IncrementProgress()
+    'If Me.ProgressBar1.Value < Me.ProgressBar1.Maximum Then Me.ProgressBar1.Value = Me.ProgressBar1.Value + 10
+
+    'If Me.BunifuProgressBar1.Value < Me.BunifuProgressBar1.MaximumValue Then Me.BunifuProgressBar1.Value = Me.BunifuProgressBar1.Value + 10
+
+    'If Me.MetroProgressbar1.Value < Me.MetroProgressbar1.Maximum Then Me.MetroProgressbar1.Value = Me.MetroProgressbar1.Value + 10
+
+
+    'End Sub
+
 
 
 
