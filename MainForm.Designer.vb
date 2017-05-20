@@ -139,8 +139,6 @@ Partial Class MainForm
         Me.textbox_search = New System.Windows.Forms.TextBox()
         Me.textbox_value_editor = New System.Windows.Forms.TextBox()
         Me.DataGridViewVars = New System.Windows.Forms.DataGridView()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.button_update = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel_PreReleaseWarning = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -1153,7 +1151,7 @@ Partial Class MainForm
         '
         Me.GroupBox6.Controls.Add(Me.TabControl2)
         Me.GroupBox6.ForeColor = System.Drawing.Color.White
-        Me.GroupBox6.Location = New System.Drawing.Point(511, 473)
+        Me.GroupBox6.Location = New System.Drawing.Point(536, 484)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(476, 356)
         Me.GroupBox6.TabIndex = 10
@@ -1167,7 +1165,7 @@ Partial Class MainForm
         Me.TabControl2.Controls.Add(Me.TabPage7)
         Me.TabControl2.Controls.Add(Me.TabPage8)
         Me.TabControl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl2.Location = New System.Drawing.Point(18, 30)
+        Me.TabControl2.Location = New System.Drawing.Point(37, 30)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.Size = New System.Drawing.Size(387, 299)
@@ -1259,7 +1257,7 @@ Partial Class MainForm
         Me.GroupBox5.Controls.Add(Me.nud_body_breasts)
         Me.GroupBox5.Controls.Add(Me.Label28)
         Me.GroupBox5.ForeColor = System.Drawing.Color.White
-        Me.GroupBox5.Location = New System.Drawing.Point(23, 473)
+        Me.GroupBox5.Location = New System.Drawing.Point(48, 484)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(471, 356)
         Me.GroupBox5.TabIndex = 9
@@ -1269,7 +1267,7 @@ Partial Class MainForm
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(146, 122)
+        Me.Label27.Location = New System.Drawing.Point(200, 116)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(43, 25)
         Me.Label27.TabIndex = 9
@@ -1277,22 +1275,22 @@ Partial Class MainForm
         '
         'nud_body_breast_size
         '
-        Me.nud_body_breast_size.Location = New System.Drawing.Point(215, 120)
+        Me.nud_body_breast_size.Location = New System.Drawing.Point(265, 116)
         Me.nud_body_breast_size.Name = "nud_body_breast_size"
-        Me.nud_body_breast_size.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_breast_size.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_breast_size.TabIndex = 8
         '
         'nud_body_breasts
         '
-        Me.nud_body_breasts.Location = New System.Drawing.Point(215, 63)
+        Me.nud_body_breasts.Location = New System.Drawing.Point(265, 59)
         Me.nud_body_breasts.Name = "nud_body_breasts"
-        Me.nud_body_breasts.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_breasts.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_breasts.TabIndex = 6
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(28, 65)
+        Me.Label28.Location = New System.Drawing.Point(82, 59)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(161, 25)
         Me.Label28.TabIndex = 7
@@ -1308,7 +1306,7 @@ Partial Class MainForm
         Me.GroupBox4.Controls.Add(Me.Label26)
         Me.GroupBox4.Controls.Add(Me.nud_body_cocks)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(23, 92)
+        Me.GroupBox4.Location = New System.Drawing.Point(48, 103)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(471, 364)
         Me.GroupBox4.TabIndex = 8
@@ -1328,7 +1326,7 @@ Partial Class MainForm
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(129, 174)
+        Me.Label24.Location = New System.Drawing.Point(174, 176)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(60, 25)
         Me.Label24.TabIndex = 5
@@ -1336,15 +1334,15 @@ Partial Class MainForm
         '
         'nud_body_cock_width
         '
-        Me.nud_body_cock_width.Location = New System.Drawing.Point(215, 169)
+        Me.nud_body_cock_width.Location = New System.Drawing.Point(265, 174)
         Me.nud_body_cock_width.Name = "nud_body_cock_width"
-        Me.nud_body_cock_width.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cock_width.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cock_width.TabIndex = 4
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(119, 116)
+        Me.Label25.Location = New System.Drawing.Point(164, 118)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(66, 25)
         Me.Label25.TabIndex = 3
@@ -1352,15 +1350,15 @@ Partial Class MainForm
         '
         'nud_body_cock_length
         '
-        Me.nud_body_cock_length.Location = New System.Drawing.Point(215, 111)
+        Me.nud_body_cock_length.Location = New System.Drawing.Point(265, 116)
         Me.nud_body_cock_length.Name = "nud_body_cock_length"
-        Me.nud_body_cock_length.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cock_length.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cock_length.TabIndex = 2
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(37, 59)
+        Me.Label26.Location = New System.Drawing.Point(82, 61)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(148, 25)
         Me.Label26.TabIndex = 1
@@ -1368,9 +1366,9 @@ Partial Class MainForm
         '
         'nud_body_cocks
         '
-        Me.nud_body_cocks.Location = New System.Drawing.Point(215, 54)
+        Me.nud_body_cocks.Location = New System.Drawing.Point(265, 59)
         Me.nud_body_cocks.Name = "nud_body_cocks"
-        Me.nud_body_cocks.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cocks.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cocks.TabIndex = 0
         '
         'GroupBox3
@@ -1382,7 +1380,7 @@ Partial Class MainForm
         Me.GroupBox3.Controls.Add(Me.Label32)
         Me.GroupBox3.Controls.Add(Me.nud_body_cunt_length)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(511, 92)
+        Me.GroupBox3.Location = New System.Drawing.Point(536, 103)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(476, 362)
         Me.GroupBox3.TabIndex = 7
@@ -1392,7 +1390,7 @@ Partial Class MainForm
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(103, 174)
+        Me.Label30.Location = New System.Drawing.Point(168, 174)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(60, 25)
         Me.Label30.TabIndex = 11
@@ -1400,22 +1398,22 @@ Partial Class MainForm
         '
         'nud_body_cunts
         '
-        Me.nud_body_cunts.Location = New System.Drawing.Point(189, 54)
+        Me.nud_body_cunts.Location = New System.Drawing.Point(249, 59)
         Me.nud_body_cunts.Name = "nud_body_cunts"
-        Me.nud_body_cunts.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunts.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cunts.TabIndex = 6
         '
         'nud_body_cunt_width
         '
-        Me.nud_body_cunt_width.Location = New System.Drawing.Point(189, 169)
+        Me.nud_body_cunt_width.Location = New System.Drawing.Point(249, 174)
         Me.nud_body_cunt_width.Name = "nud_body_cunt_width"
-        Me.nud_body_cunt_width.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunt_width.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cunt_width.TabIndex = 10
         '
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(-21, 59)
+        Me.Label31.Location = New System.Drawing.Point(60, 59)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(164, 25)
         Me.Label31.TabIndex = 7
@@ -1424,7 +1422,7 @@ Partial Class MainForm
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(93, 116)
+        Me.Label32.Location = New System.Drawing.Point(162, 116)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(66, 25)
         Me.Label32.TabIndex = 9
@@ -1432,9 +1430,9 @@ Partial Class MainForm
         '
         'nud_body_cunt_length
         '
-        Me.nud_body_cunt_length.Location = New System.Drawing.Point(189, 111)
+        Me.nud_body_cunt_length.Location = New System.Drawing.Point(249, 116)
         Me.nud_body_cunt_length.Name = "nud_body_cunt_length"
-        Me.nud_body_cunt_length.Size = New System.Drawing.Size(216, 31)
+        Me.nud_body_cunt_length.Size = New System.Drawing.Size(104, 31)
         Me.nud_body_cunt_length.TabIndex = 8
         '
         'Label4
@@ -1605,8 +1603,6 @@ Partial Class MainForm
         Me.Tab7Raw.Controls.Add(Me.textbox_search)
         Me.Tab7Raw.Controls.Add(Me.textbox_value_editor)
         Me.Tab7Raw.Controls.Add(Me.DataGridViewVars)
-        Me.Tab7Raw.Controls.Add(Me.Label40)
-        Me.Tab7Raw.Controls.Add(Me.button_update)
         Me.Tab7Raw.Controls.Add(Me.Label6)
         Me.Tab7Raw.Location = New System.Drawing.Point(124, 4)
         Me.Tab7Raw.Name = "Tab7Raw"
@@ -1619,7 +1615,7 @@ Partial Class MainForm
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(739, 239)
+        Me.Label38.Location = New System.Drawing.Point(739, 157)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(71, 27)
         Me.Label38.TabIndex = 13
@@ -1630,7 +1626,7 @@ Partial Class MainForm
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.Color.White
-        Me.Label39.Location = New System.Drawing.Point(71, 239)
+        Me.Label39.Location = New System.Drawing.Point(71, 157)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(88, 27)
         Me.Label39.TabIndex = 12
@@ -1639,7 +1635,7 @@ Partial Class MainForm
         'textbox_search
         '
         Me.textbox_search.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textbox_search.Location = New System.Drawing.Point(165, 231)
+        Me.textbox_search.Location = New System.Drawing.Point(165, 149)
         Me.textbox_search.Name = "textbox_search"
         Me.textbox_search.Size = New System.Drawing.Size(386, 40)
         Me.textbox_search.TabIndex = 11
@@ -1647,7 +1643,7 @@ Partial Class MainForm
         'textbox_value_editor
         '
         Me.textbox_value_editor.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textbox_value_editor.Location = New System.Drawing.Point(816, 231)
+        Me.textbox_value_editor.Location = New System.Drawing.Point(816, 149)
         Me.textbox_value_editor.Name = "textbox_value_editor"
         Me.textbox_value_editor.Size = New System.Drawing.Size(168, 40)
         Me.textbox_value_editor.TabIndex = 10
@@ -1660,30 +1656,11 @@ Partial Class MainForm
         Me.DataGridViewVars.Cursor = System.Windows.Forms.Cursors.Cross
         Me.DataGridViewVars.GridColor = System.Drawing.Color.DarkGray
         Me.DataGridViewVars.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DataGridViewVars.Location = New System.Drawing.Point(76, 319)
+        Me.DataGridViewVars.Location = New System.Drawing.Point(76, 225)
         Me.DataGridViewVars.Name = "DataGridViewVars"
         Me.DataGridViewVars.RowTemplate.Height = 28
-        Me.DataGridViewVars.Size = New System.Drawing.Size(908, 548)
+        Me.DataGridViewVars.Size = New System.Drawing.Size(908, 642)
         Me.DataGridViewVars.TabIndex = 9
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.ForeColor = System.Drawing.Color.White
-        Me.Label40.Location = New System.Drawing.Point(488, 113)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(306, 25)
-        Me.Label40.TabIndex = 8
-        Me.Label40.Text = "Click to see changes from other tabs "
-        '
-        'button_update
-        '
-        Me.button_update.Location = New System.Drawing.Point(816, 106)
-        Me.button_update.Name = "button_update"
-        Me.button_update.Size = New System.Drawing.Size(168, 39)
-        Me.button_update.TabIndex = 7
-        Me.button_update.Text = "Update"
-        Me.button_update.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -1922,8 +1899,6 @@ Partial Class MainForm
     Friend WithEvents textbox_search As TextBox
     Friend WithEvents textbox_value_editor As TextBox
     Friend WithEvents DataGridViewVars As DataGridView
-    Friend WithEvents Label40 As Label
-    Friend WithEvents button_update As Button
     Friend WithEvents buttontab_6 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents buttontab_5 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Tab5Inv As TabPage

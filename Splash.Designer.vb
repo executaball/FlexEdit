@@ -100,6 +100,7 @@ Partial Class Splash
         Me.Controls.Add(Me.VersionL)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Splash"
         Me.Text = "Form2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

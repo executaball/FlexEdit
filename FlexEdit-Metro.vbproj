@@ -125,13 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="FlexEdit.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FlexEdit.Designer.vb">
-      <DependentUpon>FlexEdit.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Info.Designer.vb">
       <DependentUpon>Info.vb</DependentUpon>
     </Compile>
@@ -179,9 +172,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FlexEdit.resx">
-      <DependentUpon>FlexEdit.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Info.resx">
       <DependentUpon>Info.vb</DependentUpon>
     </EmbeddedResource>

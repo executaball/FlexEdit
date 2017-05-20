@@ -180,18 +180,36 @@ Public Class MainForm
     End Sub
     'Tab2
     Private Sub buttontab_2_Click(sender As Object, e As EventArgs) Handles buttontab_2.Click
+        If Status1 = False Then
+            MsgBox("Please load a saveword first", vbInformation, "FlexEdit")
+            'Highlight first option
+            buttontab_1.selected = True
+            Return
+        End If
 
         MetroTabControl1.SelectedTab = Tab2Gen
 
     End Sub
     'Tab3
     Private Sub buttontab_3_Click(sender As Object, e As EventArgs) Handles buttontab_3.Click
+        If Status1 = False Then
+            MsgBox("Please load a saveword first", vbInformation, "FlexEdit")
+            'Highlight first option
+            buttontab_1.selected = True
+            Return
+        End If
 
         MetroTabControl1.SelectedTab = Tab3Body
 
     End Sub
     'Tab4
     Private Sub buttontab_4_Click(sender As Object, e As EventArgs) Handles buttontab_4.Click
+        If Status1 = False Then
+            MsgBox("Please load a saveword first", vbInformation, "FlexEdit")
+            'Highlight first option
+            buttontab_1.selected = True
+            Return
+        End If
 
         MetroTabControl1.SelectedTab = Tab4Infect
 
@@ -214,12 +232,21 @@ Public Class MainForm
 
     'Tab7 (special logic for showing notice prompt)
     Private Sub buttontab_7_Click(sender As Object, e As EventArgs) Handles buttontab_7.Click
+
+        If Status1 = False Then
+            MsgBox("Please load a saveword first", vbInformation, "FlexEdit")
+            'Highlight first option
+            buttontab_1.selected = True
+            Return
+        End If
+
         If AcceptedRawTerms = False Then
 
 
             Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing saveword variables can seriously break your story and even Flexible Surival developers cannot fix a badly broken saveword.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                 Case MsgBoxResult.Yes
                     AcceptedRawTerms = True
+                    RunUpdateTextBoxPriority()
                     MetroTabControl1.SelectedTab = Tab7Raw
             ' Do something if yes
                 Case MsgBoxResult.No
@@ -227,7 +254,9 @@ Public Class MainForm
             End Select
 
         ElseIf AcceptedRawTerms = True Then
+            RunUpdateTextBoxPriority()
             MetroTabControl1.SelectedTab = Tab7Raw
+
         End If
 
     End Sub
@@ -1366,59 +1395,20 @@ Public Class MainForm
     End Function
 
     Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles BunifuTileButton2.Click
+        If Status1 = False Or Status2 = False Or Status3 = False Then
 
-        If My.Settings.FlexUserDirectory = "" Then
+            MsgBox("All 3 saveword parts must be loaded. Please load them first.", vbExclamation, "Error")
 
-            MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
-            TriggerEXPORTDialog()
-
-            If ExportDialogOK = True Then
-
-                CheckExist()
-
-                If FileOK = True Then
-
-                    FileOK = False
-
-                    RunExportSaveword()
-
-                    If SavewordExportOK = True Then
-
-                        GlkdataWRITER()
-                        GlkdataWRITER2()
-                        GlkdataWRITER3()
-
-                        If WriteOK = 3 Then
-                            MsgBox("Saveword successfully saved to file.", vbInformation, "Save to File success")
-
-                        Else
-
-                            MsgBox("Saveword did not successfully save to file", vbCritical, "Save to File error")
-
-                        End If
-
-                        WriteOK = 0
-                    Else
-
-                        My.Settings.FlexUserDirectory = ""
-                        'saving
-                        My.Settings.Save()
-
-                    End If
-                Else
-
-                    My.Settings.FlexUserDirectory = ""
-                    'saving
-                    My.Settings.Save()
-
-                End If
-
-            End If
+            Return
 
         Else
 
-            Select Case MsgBox("Do you wish to continue using the stored directory? " & My.Settings.FlexUserDirectory, MsgBoxStyle.YesNo + vbInformation, "FlexEdit")
-                Case MsgBoxResult.Yes
+            If My.Settings.FlexUserDirectory = "" Then
+
+                MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+                TriggerEXPORTDialog()
+
+                If ExportDialogOK = True Then
 
                     CheckExist()
 
@@ -1451,19 +1441,20 @@ Public Class MainForm
                             My.Settings.Save()
 
                         End If
+                    Else
+
+                        My.Settings.FlexUserDirectory = ""
+                        'saving
+                        My.Settings.Save()
 
                     End If
 
-                Case MsgBoxResult.No
+                End If
 
-                    My.Settings.FlexUserDirectory = ""
-                    'saving
-                    My.Settings.Save()
+            Else
 
-                    MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
-                    TriggerEXPORTDialog()
-
-                    If ExportDialogOK = True Then
+                Select Case MsgBox("Do you wish to continue using the stored directory? " & My.Settings.FlexUserDirectory, MsgBoxStyle.YesNo + vbInformation, "FlexEdit")
+                    Case MsgBoxResult.Yes
 
                         CheckExist()
 
@@ -1497,16 +1488,63 @@ Public Class MainForm
 
                             End If
 
-                        Else
-
-                            My.Settings.FlexUserDirectory = ""
-                            'saving
-                            My.Settings.Save()
-
                         End If
 
-                    End If
-            End Select
+                    Case MsgBoxResult.No
+
+                        My.Settings.FlexUserDirectory = ""
+                        'saving
+                        My.Settings.Save()
+
+                        MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+                        TriggerEXPORTDialog()
+
+                        If ExportDialogOK = True Then
+
+                            CheckExist()
+
+                            If FileOK = True Then
+
+                                FileOK = False
+
+                                RunExportSaveword()
+
+                                If SavewordExportOK = True Then
+
+                                    GlkdataWRITER()
+                                    GlkdataWRITER2()
+                                    GlkdataWRITER3()
+
+                                    If WriteOK = 3 Then
+                                        MsgBox("Saveword successfully saved to file.", vbInformation, "Save to File success")
+
+                                    Else
+
+                                        MsgBox("Saveword did not successfully save to file", vbCritical, "Save to File error")
+
+                                    End If
+
+                                    WriteOK = 0
+                                Else
+
+                                    My.Settings.FlexUserDirectory = ""
+                                    'saving
+                                    My.Settings.Save()
+
+                                End If
+
+                            Else
+
+                                My.Settings.FlexUserDirectory = ""
+                                'saving
+                                My.Settings.Save()
+
+                            End If
+
+                        End If
+                End Select
+
+            End If
 
         End If
 
