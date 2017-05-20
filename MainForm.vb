@@ -843,9 +843,18 @@ Public Class MainForm
 
         RunExportSaveword()
 
+
+        If SavewordExportOK = True Then
+            Output_Saveword_Form.ShowDialog()
+        End If
+
     End Sub
 
+    Private SavewordExportOK As Boolean
+
     Private Sub RunExportSaveword()
+
+        SavewordExportOK = False
 
         'Terminate if detected database is empty (2.0 safeguard) (improved from v1.0.6)
 
@@ -1004,7 +1013,7 @@ Public Class MainForm
 
             MsgBox("Saveword successfully exported.", vbInformation, "Export success")
 
-            Output_Saveword_Form.ShowDialog()
+            SavewordExportOK = True
 
 
         End If
@@ -1130,6 +1139,25 @@ Public Class MainForm
                 My.Settings.Save()
 
             End If
+
+        End If
+
+    End Sub
+
+    Private ExportDialogOK As Boolean = False
+    Private Sub TriggerEXPORTDialog()
+
+        ExportDialogOK = False
+
+        If (FolderBrowserDialog1.ShowDialog() = DialogResult.OK) Then
+
+            'MsgBox(FolderBrowserDialog1.SelectedPath.ToString)
+            'Setting persistent user setting to path AND using it as normal variable
+            My.Settings.FlexUserDirectory = FolderBrowserDialog1.SelectedPath.ToString
+            'saving
+            My.Settings.Save()
+
+            ExportDialogOK = True
 
         End If
 
@@ -1266,10 +1294,222 @@ Public Class MainForm
 
     End Sub
 
+    'Glk data writers
+
+    'Glk success
+
+    Private WriteOK As Int32 = 0
+
+    Private Sub GlkdataWRITER()
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim filePath As String = PersistentUserDirectory + "\txsave.glkdata"
+        Dim lines() As String = System.IO.File.ReadAllLines(filePath)
+        If lines.Length > 1 Then
+            lines(1) = EXPORTSavewordText1
+            System.IO.File.WriteAllLines(filePath, lines)
+
+        Else
+
+            'throw error, wrong file type?
+
+        End If
+
+        WriteOK += 1
+
+    End Sub
+
+    Private Sub GlkdataWRITER2()
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim filePath As String = PersistentUserDirectory + "\txsave2.glkdata"
+        Dim lines() As String = System.IO.File.ReadAllLines(filePath)
+        If lines.Length > 1 Then
+            lines(1) = EXPORTSavewordText2
+            System.IO.File.WriteAllLines(filePath, lines)
+
+        Else
+
+            'throw error, wrong file type?
+
+        End If
+
+        WriteOK += 1
+
+    End Sub
+
+    Private Sub GlkdataWRITER3()
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim filePath As String = PersistentUserDirectory + "\txsave3.glkdata"
+        Dim lines() As String = System.IO.File.ReadAllLines(filePath)
+        If lines.Length > 1 Then
+            lines(1) = EXPORTSavewordText3
+            System.IO.File.WriteAllLines(filePath, lines)
+
+        Else
+
+            'throw error, wrong file type?
+
+        End If
+
+        WriteOK += 1
+
+    End Sub
+
     'Function needed in glkdata reader sub (incremental)
     Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
         Return lines(lineNumber - 1)
     End Function
 
+    Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles BunifuTileButton2.Click
+
+        If My.Settings.FlexUserDirectory = "" Then
+
+            MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+            TriggerEXPORTDialog()
+
+            If ExportDialogOK = True Then
+
+                CheckExist()
+
+                If FileOK = True Then
+
+                    FileOK = False
+
+                    RunExportSaveword()
+
+                    If SavewordExportOK = True Then
+
+                        GlkdataWRITER()
+                        GlkdataWRITER2()
+                        GlkdataWRITER3()
+
+                        If WriteOK = 3 Then
+                            MsgBox("Saveword successfully saved to file.", vbInformation, "Save to File success")
+
+                        Else
+
+                            MsgBox("Saveword did not successfully save to file", vbCritical, "Save to File error")
+
+                        End If
+
+                        WriteOK = 0
+                    Else
+
+                        My.Settings.FlexUserDirectory = ""
+                        'saving
+                        My.Settings.Save()
+
+                    End If
+                Else
+
+                    My.Settings.FlexUserDirectory = ""
+                    'saving
+                    My.Settings.Save()
+
+                End If
+
+            End If
+
+        Else
+
+            Select Case MsgBox("Do you wish to continue using the stored directory? " & My.Settings.FlexUserDirectory, MsgBoxStyle.YesNo + vbInformation, "FlexEdit")
+                Case MsgBoxResult.Yes
+
+                    CheckExist()
+
+                    If FileOK = True Then
+
+                        FileOK = False
+
+                        RunExportSaveword()
+
+                        If SavewordExportOK = True Then
+
+                            GlkdataWRITER()
+                            GlkdataWRITER2()
+                            GlkdataWRITER3()
+
+                            If WriteOK = 3 Then
+                                MsgBox("Saveword successfully saved to file.", vbInformation, "Save to File success")
+
+                            Else
+
+                                MsgBox("Saveword did not successfully save to file", vbCritical, "Save to File error")
+
+                            End If
+
+                            WriteOK = 0
+                        Else
+
+                            My.Settings.FlexUserDirectory = ""
+                            'saving
+                            My.Settings.Save()
+
+                        End If
+
+                    End If
+
+                Case MsgBoxResult.No
+
+                    My.Settings.FlexUserDirectory = ""
+                    'saving
+                    My.Settings.Save()
+
+                    MsgBox("Please choose the folder where the ""Flexible Survival.gblorb"" is in. This path will be remembered next time you load by file.", vbInformation, "FlexEdit")
+                    TriggerEXPORTDialog()
+
+                    If ExportDialogOK = True Then
+
+                        CheckExist()
+
+                        If FileOK = True Then
+
+                            FileOK = False
+
+                            RunExportSaveword()
+
+                            If SavewordExportOK = True Then
+
+                                GlkdataWRITER()
+                                GlkdataWRITER2()
+                                GlkdataWRITER3()
+
+                                If WriteOK = 3 Then
+                                    MsgBox("Saveword successfully saved to file.", vbInformation, "Save to File success")
+
+                                Else
+
+                                    MsgBox("Saveword did not successfully save to file", vbCritical, "Save to File error")
+
+                                End If
+
+                                WriteOK = 0
+                            Else
+
+                                My.Settings.FlexUserDirectory = ""
+                                'saving
+                                My.Settings.Save()
+
+                            End If
+
+                        Else
+
+                            My.Settings.FlexUserDirectory = ""
+                            'saving
+                            My.Settings.Save()
+
+                        End If
+
+                    End If
+            End Select
+
+        End If
+
+    End Sub
 End Class
 
