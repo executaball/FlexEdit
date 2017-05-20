@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -9,7 +10,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("FlexEdit")>
-<Assembly: AssemblyDescription("'Saveword' Editor")>
+<Assembly: AssemblyDescription("Saveword Editor")>
 <Assembly: AssemblyCompany("REDACTED")>
 <Assembly: AssemblyProduct("FlexEdit")>
 <Assembly: AssemblyCopyright("Copyright executaball © 2017")>
@@ -31,5 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.6.0")>
-<Assembly: AssemblyFileVersion("1.0.6.0")>
+<Assembly: AssemblyVersion("2.0.14.0")>
+<Assembly: AssemblyFileVersion("2.0.14.0")>
+<Assembly: NeutralResourcesLanguage("en")>

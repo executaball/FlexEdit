@@ -64,9 +64,35 @@ Public Class MainForm
         ConsolSplashIncrement()
 
         'Moves sidepanel to correct position (because moved out of way for development)
-        Sidepanel.Width = 367
 
+        Sidepanel.Width = 0.26 * Me.Width
+
+        Dim ButtonWidth As Integer
+
+        ButtonWidth = Sidepanel.Width
+
+        buttontab_1.Width = ButtonWidth
+        buttontab_2.Width = ButtonWidth
+        buttontab_3.Width = ButtonWidth
+        buttontab_4.Width = ButtonWidth
+        buttontab_5.Width = ButtonWidth
+        buttontab_6.Width = ButtonWidth
+        buttontab_7.Width = ButtonWidth
+
+
+        'MetroTabControl1.Width = 0.75 * Me.Width + 125
+        'Panel1.Width = 0.75 * Me.Width + 113
+        '160686
+        'Dim SideBarVar As Integer = 184860 / Me.Width
+        Dim SideBarVar As Integer = 130
+        Panel1.Width = Me.Width - ButtonWidth + SideBarVar
         ConsolSplashIncrement()
+
+        MsgBox("Panel width")
+        MsgBox(Panel1.Width)
+
+        MsgBox("Side width")
+        MsgBox(Sidepanel.Width)
 
         'SHOW PRE-RELEASE WARNING
         Panel_PreReleaseWarning.Visible = True
@@ -1075,5 +1101,6 @@ Public Class MainForm
     Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
         Return lines(lineNumber - 1)
     End Function
+
 End Class
 

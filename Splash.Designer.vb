@@ -74,7 +74,7 @@ Partial Class Splash
         '
         Me.BunifuProgressBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BunifuProgressBar1.BorderRadius = 5
-        Me.BunifuProgressBar1.Location = New System.Drawing.Point(28, 257)
+        Me.BunifuProgressBar1.Location = New System.Drawing.Point(20, 257)
         Me.BunifuProgressBar1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BunifuProgressBar1.MaximumValue = 100
         Me.BunifuProgressBar1.Name = "BunifuProgressBar1"
@@ -88,7 +88,7 @@ Partial Class Splash
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(250, 278)
+        Me.Label2.Location = New System.Drawing.Point(248, 278)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 28)
         Me.Label2.TabIndex = 4
