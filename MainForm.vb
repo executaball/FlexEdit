@@ -243,7 +243,7 @@ Public Class MainForm
         If AcceptedRawTerms = False Then
 
 
-            Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing saveword variables can seriously break your story and even Flexible Surival developers cannot fix a badly broken saveword.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+            Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing values in these variables can easily break whole quest chains irreversibily for your current play-through. Not even FS writers can fix a broken saveword. You will have to start a new game if that happens. IF YOU DECIDE TO USE THIS, PLEASE BACKUP YOUR SAVES.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                 Case MsgBoxResult.Yes
                     AcceptedRawTerms = True
                     RunUpdateTextBoxPriority()

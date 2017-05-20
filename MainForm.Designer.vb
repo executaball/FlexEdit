@@ -1690,10 +1690,10 @@ Partial Class MainForm
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(5, 6)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(1030, 21)
+        Me.Label3.Size = New System.Drawing.Size(1011, 21)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "You are running an alpha pre-release build of FlexEdit. Be warned of bugs and gli" &
-    "tches. Please BACKUP any save you use with the tool!"
+        Me.Label3.Text = "You are running a beta pre-release build of FlexEdit. Be warned of bugs and glitc" &
+    "hes. Please BACKUP any save you use with the tool!"
         '
         'Panel1
         '

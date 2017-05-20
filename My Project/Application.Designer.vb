@@ -20,23 +20,16 @@ Namespace My
     ' Solution Explorer), and make changes on the Application tab.
     '
     Partial Friend Class MyApplication
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Public Sub New()
             MyBase.New(Global.Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.Windows)
-            If (Environment.OSVersion.Version.Major >= 6) Then
-                SetProcessDPIAware()
-            End If
-            Me.IsSingleInstance = True
-            Me.EnableVisualStyles = True
-            Me.SaveMySettingsOnExit = True
+            Me.IsSingleInstance = true
+            Me.EnableVisualStyles = false
+            Me.SaveMySettingsOnExit = true
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
-
-        <System.Runtime.InteropServices.DllImport(“user32.dll”)>
-        Private Shared Function SetProcessDPIAware() As Boolean
-        End Function
-
+        
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
             Me.MainForm = Global.FlexEdit.MainForm

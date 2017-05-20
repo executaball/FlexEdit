@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>A:\VSPublish\FlexEditMETRO\SecondTest\</PublishUrl>
+    <PublishUrl>A:\VSPublish\FlexEditMETRO\FinalX\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,8 +27,8 @@
     <ProductName>FlexEdit</ProductName>
     <PublisherName>executaball</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>12</ApplicationRevision>
-    <ApplicationVersion>0.2.1.%2a</ApplicationVersion>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>2.0.14.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
