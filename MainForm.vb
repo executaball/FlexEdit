@@ -5,6 +5,7 @@ Imports System.IO
 Imports System.Data.DataTable
 
 Public Class MainForm
+    'Vars
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
 
@@ -33,8 +34,8 @@ Public Class MainForm
     Public Status4 As Boolean = False
     Public Status5 As Boolean = False
 
-    'Temp datapath variable
-    Private _datapath As String = "storage.xml"
+    'Temp datapath variable (UNUSED)
+    'Private _datapath As String = "storage.xml"
 
     'Check file exist, number of files that don't exist
     Public CheckFileExistErrorCounter As Int32 = 0
@@ -75,6 +76,7 @@ Public Class MainForm
 
     End Sub
 
+    'Does scaling of UI elements (critical) (called by Form1_Load)
     Private Sub Load_DoScaling()
 
         'Moves sidepanel to correct position (because moved out of way for development)
@@ -119,6 +121,7 @@ Public Class MainForm
 
     End Sub
 
+    'Does database related tasks (called by Form1_Load)
     Private Sub Load_DoDatabaseTasks()
 
         'Initial setup - fills the tables with names (will clear later)
@@ -138,7 +141,7 @@ Public Class MainForm
 
     End Sub
 
-    'resize function to be used in all edits
+    'Table resize function (can be called in all edits)
     Private Sub resizeDataTable()
 
         DataGridViewVars.AutoResizeColumns()
@@ -156,6 +159,7 @@ Public Class MainForm
 
     End Sub
 
+    'Simple delay function
     Private Sub funcdelay100()
         Threading.Thread.Sleep(100)
     End Sub
@@ -228,8 +232,6 @@ Public Class MainForm
         MsgBox("Sorry, storage edits aren't supported yet in this version of FlexEdit.", vbInformation, "FlexEdit")
 
     End Sub
-
-
     'Tab7 (special logic for showing notice prompt)
     Private Sub buttontab_7_Click(sender As Object, e As EventArgs) Handles buttontab_7.Click
 
@@ -400,16 +402,13 @@ Public Class MainForm
     'Load saveword button
 
     'Opens input window and waits for function call
-    Private Sub BunifuTileButton3_Click(sender As Object, e As EventArgs) Handles BunifuTileButton3.Click
+    Private Sub TileLoadFromCode_Click(sender As Object, e As EventArgs) Handles TileLoadFromCode.Click
 
         Input_Saveword_Form.ShowDialog()
 
     End Sub
 
-
-
     'Load saveword control sub
-
     Public Sub RunLoadSaveword()
 
         'funcdelay100()
@@ -657,7 +656,6 @@ Public Class MainForm
     End Sub
 
     'Simple Increment Function
-
     Private Sub Inc(ByRef i As Integer)
         Try
             i += 1
@@ -868,7 +866,7 @@ Public Class MainForm
         'empty
     End Sub
 
-    Private Sub BunifuTileButton4_Click(sender As Object, e As EventArgs) Handles BunifuTileButton4.Click
+    Private Sub BunifuTileButton4_Click(sender As Object, e As EventArgs) Handles TileLoadToCode.Click
 
         RunExportSaveword()
 
@@ -1051,15 +1049,6 @@ Public Class MainForm
 
     End Sub
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Me.table.WriteXml(_datapath)
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Me.table.ReadXml(_datapath)
-    End Sub
-
     'Info button
     Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
         Info.ShowDialog()
@@ -1086,7 +1075,7 @@ Public Class MainForm
     End Sub
 
     'Folder load
-    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles TileLoadFromFile.Click
         'UNS FolderBrowserDialog1.ShowDialog()
         'UNS End Sub
 
@@ -1394,7 +1383,7 @@ Public Class MainForm
         Return lines(lineNumber - 1)
     End Function
 
-    Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles BunifuTileButton2.Click
+    Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles TileSaveToFile.Click
         If Status1 = False Or Status2 = False Or Status3 = False Then
 
             MsgBox("All 3 saveword parts must be loaded. Please load them first.", vbExclamation, "Error")

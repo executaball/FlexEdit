@@ -60,10 +60,10 @@ Partial Class MainForm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.BunifuTileButton4 = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BunifuTileButton3 = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BunifuTileButton2 = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileLoadToCode = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileLoadFromCode = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileSaveToFile = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileLoadFromFile = New Bunifu.Framework.UI.BunifuTileButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Tab2Gen = New System.Windows.Forms.TabPage()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -786,99 +786,99 @@ Partial Class MainForm
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(41, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.BunifuTileButton4)
-        Me.Panel2.Controls.Add(Me.BunifuTileButton3)
-        Me.Panel2.Controls.Add(Me.BunifuTileButton2)
-        Me.Panel2.Controls.Add(Me.BunifuTileButton1)
+        Me.Panel2.Controls.Add(Me.TileLoadToCode)
+        Me.Panel2.Controls.Add(Me.TileLoadFromCode)
+        Me.Panel2.Controls.Add(Me.TileSaveToFile)
+        Me.Panel2.Controls.Add(Me.TileLoadFromFile)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(3, 595)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1048, 358)
         Me.Panel2.TabIndex = 2
         '
-        'BunifuTileButton4
+        'TileLoadToCode
         '
-        Me.BunifuTileButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuTileButton4.AutoSize = True
-        Me.BunifuTileButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton4.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton4.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuTileButton4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTileButton4.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton4.Image = CType(resources.GetObject("BunifuTileButton4.Image"), System.Drawing.Image)
-        Me.BunifuTileButton4.ImagePosition = 15
-        Me.BunifuTileButton4.ImageZoom = 50
-        Me.BunifuTileButton4.LabelPosition = 32
-        Me.BunifuTileButton4.LabelText = "Save to Code"
-        Me.BunifuTileButton4.Location = New System.Drawing.Point(788, 72)
-        Me.BunifuTileButton4.Margin = New System.Windows.Forms.Padding(4)
-        Me.BunifuTileButton4.Name = "BunifuTileButton4"
-        Me.BunifuTileButton4.Size = New System.Drawing.Size(214, 214)
-        Me.BunifuTileButton4.TabIndex = 3
+        Me.TileLoadToCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadToCode.AutoSize = True
+        Me.TileLoadToCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadToCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadToCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadToCode.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadToCode.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadToCode.ForeColor = System.Drawing.Color.White
+        Me.TileLoadToCode.Image = CType(resources.GetObject("TileLoadToCode.Image"), System.Drawing.Image)
+        Me.TileLoadToCode.ImagePosition = 15
+        Me.TileLoadToCode.ImageZoom = 50
+        Me.TileLoadToCode.LabelPosition = 32
+        Me.TileLoadToCode.LabelText = "Save to Code"
+        Me.TileLoadToCode.Location = New System.Drawing.Point(788, 72)
+        Me.TileLoadToCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadToCode.Name = "TileLoadToCode"
+        Me.TileLoadToCode.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadToCode.TabIndex = 3
         '
-        'BunifuTileButton3
+        'TileLoadFromCode
         '
-        Me.BunifuTileButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuTileButton3.AutoSize = True
-        Me.BunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton3.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTileButton3.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton3.Image = CType(resources.GetObject("BunifuTileButton3.Image"), System.Drawing.Image)
-        Me.BunifuTileButton3.ImagePosition = 15
-        Me.BunifuTileButton3.ImageZoom = 50
-        Me.BunifuTileButton3.LabelPosition = 32
-        Me.BunifuTileButton3.LabelText = "Load from Code"
-        Me.BunifuTileButton3.Location = New System.Drawing.Point(541, 72)
-        Me.BunifuTileButton3.Margin = New System.Windows.Forms.Padding(4)
-        Me.BunifuTileButton3.Name = "BunifuTileButton3"
-        Me.BunifuTileButton3.Size = New System.Drawing.Size(214, 214)
-        Me.BunifuTileButton3.TabIndex = 2
+        Me.TileLoadFromCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadFromCode.AutoSize = True
+        Me.TileLoadFromCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadFromCode.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadFromCode.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromCode.ForeColor = System.Drawing.Color.White
+        Me.TileLoadFromCode.Image = CType(resources.GetObject("TileLoadFromCode.Image"), System.Drawing.Image)
+        Me.TileLoadFromCode.ImagePosition = 15
+        Me.TileLoadFromCode.ImageZoom = 50
+        Me.TileLoadFromCode.LabelPosition = 32
+        Me.TileLoadFromCode.LabelText = "Load from Code"
+        Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 72)
+        Me.TileLoadFromCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadFromCode.Name = "TileLoadFromCode"
+        Me.TileLoadFromCode.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadFromCode.TabIndex = 2
         '
-        'BunifuTileButton2
+        'TileSaveToFile
         '
-        Me.BunifuTileButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuTileButton2.AutoSize = True
-        Me.BunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton2.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton2.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTileButton2.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton2.Image = CType(resources.GetObject("BunifuTileButton2.Image"), System.Drawing.Image)
-        Me.BunifuTileButton2.ImagePosition = 15
-        Me.BunifuTileButton2.ImageZoom = 50
-        Me.BunifuTileButton2.LabelPosition = 32
-        Me.BunifuTileButton2.LabelText = "Save to File"
-        Me.BunifuTileButton2.Location = New System.Drawing.Point(294, 72)
-        Me.BunifuTileButton2.Margin = New System.Windows.Forms.Padding(4)
-        Me.BunifuTileButton2.Name = "BunifuTileButton2"
-        Me.BunifuTileButton2.Size = New System.Drawing.Size(214, 214)
-        Me.BunifuTileButton2.TabIndex = 1
+        Me.TileSaveToFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileSaveToFile.AutoSize = True
+        Me.TileSaveToFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileSaveToFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileSaveToFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileSaveToFile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileSaveToFile.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileSaveToFile.ForeColor = System.Drawing.Color.White
+        Me.TileSaveToFile.Image = CType(resources.GetObject("TileSaveToFile.Image"), System.Drawing.Image)
+        Me.TileSaveToFile.ImagePosition = 15
+        Me.TileSaveToFile.ImageZoom = 50
+        Me.TileSaveToFile.LabelPosition = 32
+        Me.TileSaveToFile.LabelText = "Save to File"
+        Me.TileSaveToFile.Location = New System.Drawing.Point(294, 72)
+        Me.TileSaveToFile.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileSaveToFile.Name = "TileSaveToFile"
+        Me.TileSaveToFile.Size = New System.Drawing.Size(214, 214)
+        Me.TileSaveToFile.TabIndex = 1
         '
-        'BunifuTileButton1
+        'TileLoadFromFile
         '
-        Me.BunifuTileButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuTileButton1.AutoSize = True
-        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton1.Image = CType(resources.GetObject("BunifuTileButton1.Image"), System.Drawing.Image)
-        Me.BunifuTileButton1.ImagePosition = 15
-        Me.BunifuTileButton1.ImageZoom = 50
-        Me.BunifuTileButton1.LabelPosition = 32
-        Me.BunifuTileButton1.LabelText = "Load from File"
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(47, 72)
-        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(214, 214)
-        Me.BunifuTileButton1.TabIndex = 0
+        Me.TileLoadFromFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadFromFile.AutoSize = True
+        Me.TileLoadFromFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadFromFile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadFromFile.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromFile.ForeColor = System.Drawing.Color.White
+        Me.TileLoadFromFile.Image = CType(resources.GetObject("TileLoadFromFile.Image"), System.Drawing.Image)
+        Me.TileLoadFromFile.ImagePosition = 15
+        Me.TileLoadFromFile.ImageZoom = 50
+        Me.TileLoadFromFile.LabelPosition = 32
+        Me.TileLoadFromFile.LabelText = "Load from File"
+        Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 72)
+        Me.TileLoadFromFile.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadFromFile.Name = "TileLoadFromFile"
+        Me.TileLoadFromFile.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadFromFile.TabIndex = 0
         '
         'Label1
         '
@@ -1808,10 +1808,10 @@ Partial Class MainForm
     Friend WithEvents Label3 As Label
     Friend WithEvents topbarbutton_min As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
-    Friend WithEvents BunifuTileButton4 As Bunifu.Framework.UI.BunifuTileButton
-    Friend WithEvents BunifuTileButton3 As Bunifu.Framework.UI.BunifuTileButton
-    Friend WithEvents BunifuTileButton2 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents TileLoadFromFile As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents TileLoadToCode As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents TileLoadFromCode As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents TileSaveToFile As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents Tab3Body As TabPage
     Friend WithEvents Tab4Infect As TabPage
     Friend WithEvents Tab7Raw As TabPage
