@@ -1,8 +1,4 @@
-﻿FlexEdit Version 1.0.7 hotfix (ALPHA) by executaball
-
-Disclaimer: Prerelease alpha builds have basic framework functioning but major functions may be missing. I suggest you wait for the first beta version (coming soon)
-
-Please email at 'executaball@yahoo.com' for problems / bugs. (Probably has many)
+﻿FlexEdit M Version 2.0.15 (Beta) by executaball
 
 
 *INSTRUCTIONS*
@@ -18,6 +14,10 @@ The program can then be uninstalled easily by visiting 'Uninstall a Program or f
 
 
 *CHANGELOG*
+
+5/28/2017 - v2.0.15 beta -> Rewritten code in preparation for update system, icon and ui changes, revamped annotation system, numerous bug fixes.
+
+5/21/2017 - v2.0.14 beta -> Major UI overhaul, file save/load system, many other additions
 
 5/11/2017 - v1.0.7 alpha -> HOTFIX build. Fixed major issue of crashing when clicking export button with an empty database (saveword not loaded). Improved general error handling as well. Using official microsoft API now. Still wouldn't call error handling 'robust' though.
 
