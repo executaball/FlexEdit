@@ -1166,10 +1166,10 @@ Partial Class MainForm
         Me.TabControl2.Controls.Add(Me.TabPage7)
         Me.TabControl2.Controls.Add(Me.TabPage8)
         Me.TabControl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl2.Location = New System.Drawing.Point(37, 30)
+        Me.TabControl2.Location = New System.Drawing.Point(20, 30)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(387, 299)
+        Me.TabControl2.Size = New System.Drawing.Size(436, 308)
         Me.TabControl2.TabIndex = 0
         '
         'TabPage6
@@ -1178,7 +1178,7 @@ Partial Class MainForm
         Me.TabPage6.Location = New System.Drawing.Point(4, 31)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage6.Size = New System.Drawing.Size(428, 273)
         Me.TabPage6.TabIndex = 0
         Me.TabPage6.Text = "Cock L"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -1189,7 +1189,7 @@ Partial Class MainForm
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(373, 258)
+        Me.RichTextBox1.Size = New System.Drawing.Size(422, 267)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
@@ -1198,17 +1198,18 @@ Partial Class MainForm
         Me.TabPage9.Controls.Add(Me.RichTextBox4)
         Me.TabPage9.Location = New System.Drawing.Point(4, 31)
         Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage9.Size = New System.Drawing.Size(428, 273)
         Me.TabPage9.TabIndex = 3
         Me.TabPage9.Text = "Cock W"
         Me.TabPage9.UseVisualStyleBackColor = True
         '
         'RichTextBox4
         '
-        Me.RichTextBox4.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox4.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.ReadOnly = True
-        Me.RichTextBox4.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox4.Size = New System.Drawing.Size(428, 273)
         Me.RichTextBox4.TabIndex = 1
         Me.RichTextBox4.Text = resources.GetString("RichTextBox4.Text")
         '
@@ -1218,17 +1219,18 @@ Partial Class MainForm
         Me.TabPage7.Location = New System.Drawing.Point(4, 31)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage7.Size = New System.Drawing.Size(428, 273)
         Me.TabPage7.TabIndex = 1
         Me.TabPage7.Text = "Cunt L"
         Me.TabPage7.UseVisualStyleBackColor = True
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox2.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = True
-        Me.RichTextBox2.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox2.Size = New System.Drawing.Size(422, 267)
         Me.RichTextBox2.TabIndex = 1
         Me.RichTextBox2.Text = resources.GetString("RichTextBox2.Text")
         '
@@ -1237,17 +1239,18 @@ Partial Class MainForm
         Me.TabPage8.Controls.Add(Me.RichTextBox3)
         Me.TabPage8.Location = New System.Drawing.Point(4, 31)
         Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(379, 264)
+        Me.TabPage8.Size = New System.Drawing.Size(428, 273)
         Me.TabPage8.TabIndex = 2
         Me.TabPage8.Text = "Breasts"
         Me.TabPage8.UseVisualStyleBackColor = True
         '
         'RichTextBox3
         '
-        Me.RichTextBox3.Location = New System.Drawing.Point(1, 3)
+        Me.RichTextBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox3.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.ReadOnly = True
-        Me.RichTextBox3.Size = New System.Drawing.Size(538, 278)
+        Me.RichTextBox3.Size = New System.Drawing.Size(428, 273)
         Me.RichTextBox3.TabIndex = 1
         Me.RichTextBox3.Text = resources.GetString("RichTextBox3.Text")
         '
@@ -1319,7 +1322,7 @@ Partial Class MainForm
         Me.Label29.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.Location = New System.Drawing.Point(29, 273)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(425, 68)
+        Me.Label29.Size = New System.Drawing.Size(436, 68)
         Me.Label29.TabIndex = 6
         Me.Label29.Text = "Width affects cum load size as well as ball size. Please consult Helper for addit" &
     "ional info."

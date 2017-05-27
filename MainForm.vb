@@ -1572,5 +1572,9 @@ Public Class MainForm
         End If
 
     End Sub
+
+    Private Sub Tab3Body_Click(sender As Object, e As EventArgs) Handles Tab3Body.Click
+
+    End Sub
 End Class
 
