@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property full_success() As System.Drawing.Bitmap
+        Friend ReadOnly Property Checkmark() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("full success", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Checkmark", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property material_do_not_disturb() As System.Drawing.Bitmap
+        Friend ReadOnly Property Do_Not_Disturb() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("material do not disturb", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Do_Not_Disturb", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property redfull_error() As System.Drawing.Bitmap
+        Friend ReadOnly Property Red_Cross() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("redfull error", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Red_Cross", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -93,9 +93,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property wt_cross_symbol() As System.Drawing.Bitmap
+        Friend ReadOnly Property White_Cross() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("wt cross-symbol", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("White_Cross", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -103,9 +103,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property wt_success() As System.Drawing.Bitmap
+        Friend ReadOnly Property White_Success() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("wt success", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("White_Success", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -271,7 +271,7 @@ Public Class MainForm
 
         label_status1.Text = "Loaded"
 
-        picbox_status1.Image = My.Resources.Resources.full_success
+        picbox_status1.Image = My.Resources.Resources.Checkmark
 
     End Sub
 
@@ -279,7 +279,7 @@ Public Class MainForm
 
         label_status1.Text = "Not loaded"
 
-        picbox_status1.Image = My.Resources.Resources.redfull_error
+        picbox_status1.Image = My.Resources.Resources.Red_Cross
 
     End Sub
 
@@ -287,7 +287,7 @@ Public Class MainForm
 
         label_status2.Text = "Loaded"
 
-        picbox_status2.Image = My.Resources.Resources.full_success
+        picbox_status2.Image = My.Resources.Resources.Checkmark
 
     End Sub
 
@@ -295,7 +295,7 @@ Public Class MainForm
 
         label_status2.Text = "Not loaded"
 
-        picbox_status2.Image = My.Resources.Resources.redfull_error
+        picbox_status2.Image = My.Resources.Resources.Red_Cross
 
     End Sub
 
@@ -303,7 +303,7 @@ Public Class MainForm
 
         label_status3.Text = "Loaded"
 
-        picbox_status3.Image = My.Resources.Resources.full_success
+        picbox_status3.Image = My.Resources.Resources.Checkmark
 
     End Sub
 
@@ -311,7 +311,7 @@ Public Class MainForm
 
         label_status3.Text = "Not loaded"
 
-        picbox_status3.Image = My.Resources.Resources.redfull_error
+        picbox_status3.Image = My.Resources.Resources.Red_Cross
 
     End Sub
 
@@ -319,7 +319,7 @@ Public Class MainForm
 
         label_status4.Text = "Loaded"
 
-        picbox_status4.Image = My.Resources.Resources.full_success
+        picbox_status4.Image = My.Resources.Resources.Checkmark
 
     End Sub
 
@@ -337,7 +337,7 @@ Public Class MainForm
 
         label_status5.Text = "Loaded"
 
-        picbox_status5.Image = My.Resources.Resources.full_success
+        picbox_status5.Image = My.Resources.Resources.Checkmark
 
     End Sub
 
@@ -611,7 +611,8 @@ Public Class MainForm
             MsgBox("Saveword Part 1 import complete!", vbInformation, "Import success")
             Status1 = True
 
-            RunAnnotateVars()
+            'RunAnnotateVars()
+            NGXAnnote()
 
 
         End If
@@ -623,7 +624,7 @@ Public Class MainForm
             MsgBox("Saveword Part 2 import complete!", vbInformation, "Import success")
             Status2 = True
 
-            RunAnnotateVars2()
+            'RunAnnotateVars2()
 
         End If
 
@@ -634,7 +635,7 @@ Public Class MainForm
             MsgBox("Saveword Part 3 import complete!", vbInformation, "Import success")
             Status3 = True
 
-            RunAnnotateVars3()
+            'RunAnnotateVars3()
 
         ElseIf SaveLoadCompleted3 = False And saveword3enabled = True Then
 
@@ -707,10 +708,28 @@ Public Class MainForm
 
     End Sub
 
+
+
+    Private Sub NGXAnnote()
+
+        Dim rawAnnotation As String
+        'rawAnnotation = My.Settings.Annotation1
+        rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width (Also affects cum and ball size),Cunt Length,Cunt Width,Equipped Weapon,franksex,frankmalesex,Snow special (annote),REMOVED (value always 0),Coleen special (annote),coleentalk,coleenfound,coleencollared,coleenalpha,coleenslut,coleenspray,hp of doctor mouse,coonstatus,featunlock,butterflymagic? wth is this,catnum,mateable,gryphoncomforted,shiftable,medeaget,mtp,hyg,nes,mtrp,boristalk,borisquest,progress of alex,angiehappy,angietalk,deerconsent,hp  of Susan,mattcollection"
+        Dim fAnnote() As String = rawAnnotation.Split(",")
+        For count = 0 To fAnnote.Length - 1
+            DataGridViewVars.Rows(count).Cells(2).Value = fAnnote(count)
+        Next
+
+    End Sub
+
+
+
     'Annotation Functions
     Private Sub RunAnnotateVars()
 
         Dim index As Integer = 0
+
+
 
         DataGridViewVars.Rows(index).Cells(2).Value = "Strength"
         Inc(index)

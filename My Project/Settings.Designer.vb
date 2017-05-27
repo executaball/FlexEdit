@@ -64,6 +64,27 @@ Partial Friend NotInheritable Class Settings
             Me("FlexUserDirectory") = value
         End Set
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score"& _ 
+        ",hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,G"& _ 
+        "enital Infection,SatisfiedTanuki,hospquest,Cocks (Number of cocks),Breasts (Numb"& _ 
+        "er of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width (Also a"& _ 
+        "ffects cum and ball size),Cunt Length,Cunt Width,Equipped Weapon,franksex,frankm"& _ 
+        "alesex,Snow special (annote),REMOVED (value always 0),Coleen special (annote),co"& _ 
+        "leentalk,coleenfound,coleencollared,coleenalpha,coleenslut,coleenspray,hp of doc"& _ 
+        "tor mouse,coonstatus,featunlock,butterflymagic? wth is this,catnum,mateable,gryp"& _ 
+        "honcomforted,shiftable,medeaget,mtp,hyg,nes,mtrp,boristalk,borisquest,progress o"& _ 
+        "f alex,angiehappy,angietalk,deerconsent,hp  of Susan,mattcollection")>  _
+    Public Property Annotation1() As String
+        Get
+            Return CType(Me("Annotation1"),String)
+        End Get
+        Set
+            Me("Annotation1") = value
+        End Set
+    End Property
 End Class
 
 Namespace My

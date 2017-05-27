@@ -680,7 +680,7 @@ Partial Class MainForm
         '
         'picbox_status5
         '
-        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.material_do_not_disturb
+        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
         Me.picbox_status5.Location = New System.Drawing.Point(499, 440)
         Me.picbox_status5.Name = "picbox_status5"
         Me.picbox_status5.Size = New System.Drawing.Size(54, 49)
@@ -690,7 +690,7 @@ Partial Class MainForm
         '
         'picbox_status4
         '
-        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.material_do_not_disturb
+        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
         Me.picbox_status4.Location = New System.Drawing.Point(499, 370)
         Me.picbox_status4.Name = "picbox_status4"
         Me.picbox_status4.Size = New System.Drawing.Size(54, 49)
@@ -700,7 +700,7 @@ Partial Class MainForm
         '
         'picbox_status3
         '
-        Me.picbox_status3.Image = Global.FlexEdit.My.Resources.Resources.redfull_error
+        Me.picbox_status3.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
         Me.picbox_status3.Location = New System.Drawing.Point(499, 300)
         Me.picbox_status3.Name = "picbox_status3"
         Me.picbox_status3.Size = New System.Drawing.Size(54, 49)
@@ -710,7 +710,7 @@ Partial Class MainForm
         '
         'picbox_status2
         '
-        Me.picbox_status2.Image = Global.FlexEdit.My.Resources.Resources.redfull_error
+        Me.picbox_status2.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
         Me.picbox_status2.Location = New System.Drawing.Point(499, 230)
         Me.picbox_status2.Name = "picbox_status2"
         Me.picbox_status2.Size = New System.Drawing.Size(54, 49)
@@ -720,7 +720,7 @@ Partial Class MainForm
         '
         'picbox_status1
         '
-        Me.picbox_status1.Image = Global.FlexEdit.My.Resources.Resources.redfull_error
+        Me.picbox_status1.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
         Me.picbox_status1.Location = New System.Drawing.Point(499, 160)
         Me.picbox_status1.Name = "picbox_status1"
         Me.picbox_status1.Size = New System.Drawing.Size(54, 49)
@@ -1115,6 +1115,7 @@ Partial Class MainForm
         '
         'nudStr
         '
+        Me.nudStr.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.nudStr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudStr.Location = New System.Drawing.Point(299, 282)
         Me.nudStr.Maximum = New Decimal(New Integer() {2147483647, 0, 0, 0})
