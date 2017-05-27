@@ -625,6 +625,7 @@ Public Class MainForm
             Status2 = True
 
             'RunAnnotateVars2()
+            NGXAnnote2()
 
         End If
 
@@ -714,10 +715,24 @@ Public Class MainForm
 
         Dim rawAnnotation As String
         'rawAnnotation = My.Settings.Annotation1
-        rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width (Also affects cum and ball size),Cunt Length,Cunt Width,Equipped Weapon,franksex,frankmalesex,Snow special (annote),REMOVED (value always 0),Coleen special (annote),coleentalk,coleenfound,coleencollared,coleenalpha,coleenslut,coleenspray,hp of doctor mouse,coonstatus,featunlock,butterflymagic? wth is this,catnum,mateable,gryphoncomforted,shiftable,medeaget,mtp,hyg,nes,mtrp,boristalk,borisquest,progress of alex,angiehappy,angietalk,deerconsent,hp  of Susan,mattcollection"
+        'rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width (Also affects cum and ball size),Cunt Length,Cunt Width,Equipped Weapon,franksex,frankmalesex,Snow special (annote),REMOVED (value always 0),Coleen special (annote),coleentalk,coleenfound,coleencollared,coleenalpha,coleenslut,coleenspray,hp of doctor mouse,coonstatus,featunlock,butterflymagic? wth is this,catnum,mateable,gryphoncomforted,shiftable,medeaget,mtp,hyg,nes,mtrp,boristalk,borisquest,progress of alex,angiehappy,angietalk,deerconsent,hp  of Susan,mattcollection"
+        'above is backup from v2.0.14
+        rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,Hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width,Cunt Length,Cunt Width,Equipped Weapon,Frank M/F,Frank M/M,Hyper Squirrel Resolved,REMOVED (value always 0),Coleen Location,Coleen Talk,Coleen Found,Coleen Collared,Coleen Alpha,Coleen Slut,Coleen Spray,HP of Dr Mouse,Candy(coonstatus),featunlock,Butterfly,Catnum,Mateable,gryphoncomforted,shiftable,Medea,MTP,HYG,NES,MTRP,Boristalk,Borisquest,progress of alex,Angiehappy,Angietalk,deerconsent,HP of Susan,mattcollection"
         Dim fAnnote() As String = rawAnnotation.Split(",")
         For count = 0 To fAnnote.Length - 1
             DataGridViewVars.Rows(count).Cells(2).Value = fAnnote(count)
+        Next
+
+    End Sub
+
+    Private Sub NGXAnnote2()
+
+        Dim rawAnnotation As String
+        rawAnnotation = "Not Finished"
+
+        Dim fAnnote() As String = rawAnnotation.Split(",")
+        For count = 0 To fAnnote.Length - 1
+            DataGridViewVars.Rows(count + 59).Cells(2).Value = fAnnote(count)
         Next
 
     End Sub

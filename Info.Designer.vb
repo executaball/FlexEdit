@@ -23,7 +23,7 @@ Partial Class Info
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme3 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme1 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,6 +36,7 @@ Partial Class Info
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -78,13 +79,13 @@ Partial Class Info
         'metrobutton_exit
         '
         Me.metrobutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme3.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme3.FillColor = System.Drawing.Color.White
-        MainColorScheme3.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme3.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme3.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_exit.ColorScheme = MainColorScheme3
+        MainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme1.FillColor = System.Drawing.Color.White
+        MainColorScheme1.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_exit.ColorScheme = MainColorScheme1
         Me.metrobutton_exit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_exit.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_exit.Location = New System.Drawing.Point(624, 460)
@@ -161,11 +162,22 @@ Partial Class Info
         Me.BunifuDragControl1.TargetControl = Me.Header
         Me.BunifuDragControl1.Vertical = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(27, 460)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(124, 28)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "v2.0.15 BETA"
+        '
         'Info
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
@@ -197,4 +209,5 @@ Partial Class Info
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
+    Friend WithEvents Label6 As Label
 End Class
