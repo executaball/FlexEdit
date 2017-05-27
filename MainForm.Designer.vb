@@ -216,7 +216,7 @@ Partial Class MainForm
         Me.Sidepanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.Sidepanel.Location = New System.Drawing.Point(0, 49)
         Me.Sidepanel.Name = "Sidepanel"
-        Me.Sidepanel.Size = New System.Drawing.Size(327, 964)
+        Me.Sidepanel.Size = New System.Drawing.Size(320, 964)
         Me.Sidepanel.TabIndex = 0
         '
         'buttontab_6
@@ -470,7 +470,7 @@ Partial Class MainForm
         Me.BunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(263, 47)
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(256, 47)
         Me.BunifuImageButton1.Name = "BunifuImageButton1"
         Me.BunifuImageButton1.Size = New System.Drawing.Size(43, 49)
         Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
