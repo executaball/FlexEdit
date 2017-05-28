@@ -46,4 +46,4 @@ FlexEdit is very much in beta and many features are incomplete. Below are the to
 * Better search function
 
 
-### Please leave a comment to let me know what you think! Even if you did not download the program! You can reach with a PM or email 'executaball@yahoo.com' for faster response! If you decide to get it and encounter a problem, I will try to assist you in every way possible! Please send me a message!
+### Please send me a message to let me know what you think! Even if you did not download the program! You can reach me with a PM on the FS Forums or email to 'executaball@yahoo.com' for faster response! If you decide to get it and encounter a problem, I will try to assist you in every way possible! 
