@@ -1,6 +1,6 @@
 Welcome to FlexEdit! A lightweight program designed to help you easily and safely edit Flexible Survival savewords. Click on the 'Releases' button to get started! 
 
-More information is in the README. **The program does not have to be 'installed' to run. However you do need Microsoft .NET Framework 4.7 ** (If you are running Windows 10 Creators Update and above, you already have this.) **If you do not have this, use the following link** https://www.microsoft.com/en-us/download/details.aspx?id=55170
+More information is in the README. **The program does not have to be 'installed' to run. However you do need Microsoft .NET Framework 4.7** (If you are running Windows 10 Creators Update and above, you already have this.) **If you do not have this, use the following link** https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 # [](#Description)Description
 A few weeks ago I set out to create an editor to make 'save editing' simple and safe. Finally I've got something I feel like can be released, so here is the first public beta release of FlexEdit.
