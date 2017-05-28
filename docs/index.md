@@ -8,9 +8,9 @@ A few weeks ago I set out to create an editor to make 'save editing' simple and 
 # [](#How_to_use)How to use
 Simply click any of the 4 buttons to load a saveword for editing. You can either enter the saveword manually or simply point a path to your Flexible Survival folder and load all saveword files at the press of a button. 
 
-Simply navigate using the tabs on the side to edit all aspects of the saveword. Raw edits directly edit game variables in the saveword, [u]please note that this is not recommended unless you are a developer that knows what you're doing. Changing values here can easily break story lines and result in you having to restart your story. Variable naming is kind of weird in FS, I seriously don't recommend this unless you really know what you are doing.[/u]
+Simply navigate using the tabs on the side to edit all aspects of the saveword. Raw edits directly edit game variables in the saveword, **please note that this is not recommended unless you are a developer that knows what you're doing. Changing values here can easily break story lines and result in you having to restart your story.**
 
-Regardless of how you imported a saveword, you can choose to either export using the old copy & paste method, or directly write to the files [b](! Please backup your files before doing this !)[/b]
+Regardless of how you imported a saveword, you can choose to either export using the old copy & paste method, or directly write to the files **(! Please backup your files before doing this !)**
 
 # [](#Screenshots)Screenshots
 
