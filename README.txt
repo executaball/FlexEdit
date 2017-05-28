@@ -1,4 +1,5 @@
-﻿FlexEdit M Version 2.0.15 (Beta) by executaball
+﻿FlexEdit Version 2.0.16 (Beta) by executaball
+https://executaball.github.io/FlexEdit/
 
 
 *INSTRUCTIONS*
@@ -7,13 +8,13 @@ Requires microsoft .NET Framework 4.7 to work.
 
 If you already have .NET Framework 4.7, go to /Application Files/FlexEdit_version#/ and simply run "FlexEdit.exe". You do not need to install it.
 
-If you do not have .NET, please run the installer 'setup.exe'
-
-The program can then be uninstalled easily by visiting 'Uninstall a Program or feature"
-
+If you do not have .NET 4.7, simply get it here:
+https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 
 *CHANGELOG*
+
+5/28/2017 - v2.0.16 beta -> Fixed a potential bug that blocked app startup, preparations for autoupdater (not yet included)
 
 5/28/2017 - v2.0.15 beta -> Rewritten code in preparation for update system, icon and ui changes, revamped annotation system, numerous bug fixes.
 
