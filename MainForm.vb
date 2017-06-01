@@ -27,6 +27,15 @@ Public Class MainForm
     Public EXPORTSavewordText2 As String
     Public EXPORTSavewordText3 As String
 
+    'Saveword Export Backup
+
+    Public EXPORT_BACKUP_1 As String
+    Public EXPORT_BACKUP_2 As String
+    Public EXPORT_BACKUP_3 As String
+    Public EXPORT_BACKUP_INV As String
+    Public EXPORT_BACKUP_STR As String
+
+
     'Status to be used with update function for main page
     Public Status1 As Boolean = False
     Public Status2 As Boolean = False
@@ -43,6 +52,7 @@ Public Class MainForm
 
     'Updater
     Private updaterModulePath As String
+
 
     'Datatable
     'Dim data As New DataSet1
@@ -922,7 +932,7 @@ Public Class MainForm
         'empty
     End Sub
 
-    Private Sub BunifuTileButton4_Click(sender As Object, e As EventArgs) Handles TileLoadToCode.Click
+    Private Sub ButtonLoadToCode_Click(sender As Object, e As EventArgs) Handles TileLoadToCode.Click
 
         RunExportSaveword()
 
@@ -1094,8 +1104,6 @@ Public Class MainForm
 
             'Export ok
 
-            MsgBox("Saveword successfully exported.", vbInformation, "Export success")
-
             SavewordExportOK = True
 
 
@@ -1105,19 +1113,23 @@ Public Class MainForm
 
     End Sub
 
+    'TOP BAR BUTTONS
+
     'Info button
     Private Sub BarImageButton_Info_Click(sender As Object, e As EventArgs) Handles BarImageButton_Info.Click
         Info.ShowDialog()
     End Sub
-
+    'Update button
     Private Sub BarImageButton_Update_Click(sender As Object, e As EventArgs) Handles BarImageButton_Update.Click
         CheckForUpdates()
     End Sub
-
+    'Settings button
     Private Sub BarImageButton_Cog_Click(sender As Object, e As EventArgs) Handles BarImageButton_Cog.Click
         SettingsForm.ShowDialog()
     End Sub
 
+
+    'Search Function
     Private Sub textbox_search_TextChanged(sender As Object, e As EventArgs) Handles textbox_search.TextChanged
 
         Dim srch As String
@@ -1139,7 +1151,7 @@ Public Class MainForm
     End Sub
 
     'Folder load
-    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles TileLoadFromFile.Click
+    Private Sub ButtonLoadFromFile_Click(sender As Object, e As EventArgs) Handles TileLoadFromFile.Click
         'UNS FolderBrowserDialog1.ShowDialog()
         'UNS End Sub
 
@@ -1376,12 +1388,70 @@ Public Class MainForm
 
     End Sub
 
-    'Glk data writers
+    'Glk Backup Readers
+    Private Sub BACKUP_READER()
 
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim EndVar As String = ReadLine(2, allLines)
+
+
+        'MsgBox(EndVar)
+
+        EXPORT_BACKUP_1 = EndVar
+
+    End Sub
+
+    Private Sub BACKUP_READER2()
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave2.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim EndVar As String = ReadLine(2, allLines)
+
+
+        'MsgBox(EndVar)
+
+        EXPORT_BACKUP_2 = EndVar
+
+    End Sub
+
+    Private Sub BACKUP_READER3()
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave3.glkdata")
+        Dim allLines As List(Of String) = New List(Of String)
+        Do While Not reader.EndOfStream
+            allLines.Add(reader.ReadLine())
+        Loop
+        reader.Close()
+        Dim EndVar As String = ReadLine(2, allLines)
+
+
+        'MsgBox(EndVar)
+
+        EXPORT_BACKUP_3 = EndVar
+
+    End Sub
     'Glk success
-
     Private WriteOK As Int32 = 0
 
+    'Glk data writers
     Private Sub GlkdataWRITER()
         'DECLARING PERSISTENT settings
         Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
@@ -1442,12 +1512,141 @@ Public Class MainForm
 
     End Sub
 
+    'Glk backup success indicator
+    Private BackupOK As Boolean = False
+    'Glk backup
+    Private Sub BackupWRITER()
+
+        'DECLARING PERSISTENT settings
+        Dim PersistentUserDirectory As String = My.Settings.FlexUserDirectory 'direct var of directory (load)
+
+        'Time code
+        Dim MyFileName As String
+        MyFileName = System.DateTime.Now.ToString
+        For i = 1 To Len(MyFileName)
+            If Mid$(MyFileName$, i, 1) = " " Then Mid$(MyFileName$, i, 1) = "_"
+            If Mid$(MyFileName$, i, 1) = "/" Or Mid$(MyFileName$, i, 1) = ":" Then _
+    Mid$(MyFileName$, i, 1) = "-"
+        Next i
+        'Time code finish
+
+        'Changes lines if null / empty
+        If String.IsNullOrEmpty(EXPORT_BACKUP_INV) Then
+            EXPORT_BACKUP_INV = "Not accessed"
+        End If
+        If String.IsNullOrEmpty(EXPORT_BACKUP_STR) Then
+            EXPORT_BACKUP_STR = "Not accessed"
+        End If
+
+        Dim filePath As String = PersistentUserDirectory + "\" & "FlexEditBackup_" & MyFileName & ".txt"
+
+        Try
+            'Make file
+            If Not System.IO.File.Exists(filePath) Then
+                System.IO.File.Create(filePath).Dispose()
+            End If
+            'End make
+        Catch z As Exception
+            MsgBox("Error creating backup file. Exception details: " & z.Message, vbCritical, "Critical Error")
+            BackupOK = False
+        End Try
+
+        'Dim lines() As String = System.IO.File.ReadAllLines(filePath)
+
+
+        'lines(0) = "FlexEdit Backup File - " & System.DateTime.Now.ToString
+        'lines(1) = "This is the contents of all 6 .glkdata files before FlexEdit performed overwrite"
+
+        'lines(3) = "Saveword Part 1"
+        'lines(4) = EXPORT_BACKUP_1
+
+        'lines(6) = "Saveword Part 2"
+        'lines(7) = EXPORT_BACKUP_2
+
+        'lines(9) = "Saveword Part 3"
+        'lines(10) = EXPORT_BACKUP_3
+
+        ''lines(12) = "Inventory"
+        ''lines(13) = EXPORT_BACKUP_INV
+
+        ''lines(15) = "Storage"
+        ''lines(16) = EXPORT_BACKUP_STR
+
+        ''System.IO.File.WriteAllLines(filePath, lines)
+        Try
+            Dim file As System.IO.StreamWriter
+            file = My.Computer.FileSystem.OpenTextFileWriter(filePath, True)
+            file.WriteLine("FlexEdit Backup File - " & System.DateTime.Now.ToString)
+            file.WriteLine("This is the contents of all 6 .glkdata files before FlexEdit performed overwrite")
+            file.WriteLine("")
+            file.WriteLine("Saveword Part 1")
+            file.WriteLine(EXPORT_BACKUP_1)
+            file.WriteLine("")
+            file.WriteLine("Saveword Part 2")
+            file.WriteLine(EXPORT_BACKUP_2)
+            file.WriteLine("")
+            file.WriteLine("Saveword Part 3")
+            file.WriteLine(EXPORT_BACKUP_3)
+            file.WriteLine("")
+            file.WriteLine("Inventory")
+            file.WriteLine(EXPORT_BACKUP_INV)
+            file.WriteLine("")
+            file.WriteLine("Storage")
+            file.WriteLine(EXPORT_BACKUP_STR)
+            file.Close()
+
+            BackupOK = True
+
+        Catch z As Exception
+            MsgBox("Error writing to backup file. Exception details: " & z.Message, vbCritical, "Critical Error")
+            BackupOK = False
+        End Try
+
+    End Sub
+
+    Function BACKUPNullCheck()
+
+        If String.IsNullOrEmpty(EXPORT_BACKUP_1) Then
+            Return 1
+        End If
+        If String.IsNullOrEmpty(EXPORT_BACKUP_2) Then
+            Return 1
+        End If
+        If String.IsNullOrEmpty(EXPORT_BACKUP_3) Then
+            Return 1
+        End If
+
+        Return 0
+    End Function
+
+    'Glk backup CONSOLIDATION
+    Private Sub BACKUP_Consolidation()
+        If My.Settings.MakeBackupsOnSave = False Then
+            Return
+        End If
+        BACKUP_READER()
+        BACKUP_READER2()
+        BACKUP_READER3()
+
+        'Stops if strings empty (safeguard)
+        If BACKUPNullCheck() = 1 Then
+            MsgBox("Backup failed. Save will now be attempted.", vbCritical, "Backup error")
+            Return
+        End If
+
+        BackupWRITER()
+        If BackupOK = True Then
+            MsgBox("A backup file has been made in the game directory. This behaviour can be changed in settings.", vbInformation, "FlexEdit")
+        Else
+            MsgBox("Backup failed. Save will now be attempted.", vbCritical, "Backup error")
+        End If
+    End Sub
     'Function needed in glkdata reader sub (incremental)
     Public Function ReadLine(lineNumber As Integer, lines As List(Of String)) As String
         Return lines(lineNumber - 1)
     End Function
 
-    Private Sub BunifuTileButton2_Click(sender As Object, e As EventArgs) Handles TileSaveToFile.Click
+    Private Sub ButtonSaveToFile_Click(sender As Object, e As EventArgs) Handles TileSaveToFile.Click
         If Status1 = False Or Status2 = False Or Status3 = False Then
 
             MsgBox("All 3 saveword parts must be loaded. Please load them first.", vbExclamation, "Error")
@@ -1455,6 +1654,16 @@ Public Class MainForm
             Return
 
         Else
+
+            'Safeguard for empty file
+            'Stops if files empty (safeguard)
+            FileOK = False
+            CheckExist()
+            If FileOK = False Then
+                MsgBox("Error, FlexEdit did not find existing '.glkdata' files. FlexEdit cannot create files as each file is specific to the game. Save to file has failed.", vbCritical, "Save error")
+                Return
+            End If
+            'Safeguard ok
 
             If My.Settings.FlexUserDirectory = "" Then
 
@@ -1473,6 +1682,7 @@ Public Class MainForm
 
                         If SavewordExportOK = True Then
 
+                            BACKUP_Consolidation()
                             GlkdataWRITER()
                             GlkdataWRITER2()
                             GlkdataWRITER3()
@@ -1495,6 +1705,7 @@ Public Class MainForm
 
                         End If
                     Else
+                        MsgBox("Error, FlexEdit did not find existing '.glkdata' files. FlexEdit cannot create files as each file is specific to the game. Save to file has failed.", vbCritical, "Save error")
 
                         My.Settings.FlexUserDirectory = ""
                         'saving
@@ -1519,6 +1730,7 @@ Public Class MainForm
 
                             If SavewordExportOK = True Then
 
+                                BACKUP_Consolidation()
                                 GlkdataWRITER()
                                 GlkdataWRITER2()
                                 GlkdataWRITER3()
@@ -1540,6 +1752,14 @@ Public Class MainForm
                                 My.Settings.Save()
 
                             End If
+
+                        Else
+
+                            MsgBox("Error, FlexEdit did not find existing '.glkdata' files. FlexEdit cannot create files as each file is specific to the game. Save to file has failed.", vbCritical, "Save error")
+
+                            My.Settings.FlexUserDirectory = ""
+                            'saving
+                            My.Settings.Save()
 
                         End If
 
@@ -1564,6 +1784,7 @@ Public Class MainForm
 
                                 If SavewordExportOK = True Then
 
+                                    BACKUP_Consolidation()
                                     GlkdataWRITER()
                                     GlkdataWRITER2()
                                     GlkdataWRITER3()
@@ -1587,6 +1808,7 @@ Public Class MainForm
                                 End If
 
                             Else
+                                MsgBox("Error, FlexEdit did not find existing '.glkdata' files. FlexEdit cannot create files as each file is specific to the game. Save to file has failed.", vbCritical, "Save error")
 
                                 My.Settings.FlexUserDirectory = ""
                                 'saving
@@ -1603,8 +1825,5 @@ Public Class MainForm
 
     End Sub
 
-    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
 
