@@ -11,9 +11,10 @@
     <AssemblyName>FlexEdit</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>A:\VSPublish\FlexEditMETRO\Final%282.1.0%29\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
