@@ -125,6 +125,7 @@ Partial Class SettingsForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.Label3.Location = New System.Drawing.Point(110, 139)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(382, 32)
@@ -141,7 +142,6 @@ Partial Class SettingsForm
         MainColorScheme3.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         MainColorScheme3.FillColor = System.Drawing.SystemColors.Control
         Me.MetroSwitch2.ColorScheme = MainColorScheme3
-        Me.MetroSwitch2.Enabled = False
         Me.MetroSwitch2.Location = New System.Drawing.Point(36, 142)
         Me.MetroSwitch2.Name = "MetroSwitch2"
         Me.MetroSwitch2.Size = New System.Drawing.Size(68, 28)

@@ -34,8 +34,6 @@
                         MetroSwitch1.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
                 End Select
 
-            ElseIf My.Settings.RawEditsEnable = True Then
-
             End If
 
         End If
@@ -43,6 +41,43 @@
         If MetroSwitch1.Status = MetroSuite.MetroSwitch.CurrentStatus.Left Then
 
             My.Settings.RawEditsEnable = False
+            'saving
+            My.Settings.Save()
+
+        End If
+
+    End Sub
+
+    Private Sub MetroSwitch2_Click(sender As Object, e As EventArgs) Handles MetroSwitch2.Click
+        MsgBox("Sorry, Saveword versioning is not implemented yet.", vbInformation, "FlexEdit")
+        MetroSwitch2.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+    End Sub
+
+    Private Sub MetroSwitch3_Click(sender As Object, e As EventArgs) Handles MetroSwitch3.Click
+
+
+        If MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Left Then
+
+            If My.Settings.MakeBackupsOnSave = True Then
+
+                Select Case MsgBox("FlexEdit is still in beta and mistakes can happen. If you make raw variable edits you are also highly advised to check this backup option. FlexEdit overwrites your save files directly. Are you sure you want to disable the creation of backup files on saving?", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+                    Case MsgBoxResult.Yes
+                        My.Settings.MakeBackupsOnSave = False
+                        'saving
+                        My.Settings.Save()
+            ' Do something if yes
+                    Case MsgBoxResult.No
+                        'if user does not agree, change button back
+                        MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
+                End Select
+
+            End If
+
+        End If
+
+        If MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right Then
+
+            My.Settings.MakeBackupsOnSave = True
             'saving
             My.Settings.Save()
 

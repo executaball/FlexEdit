@@ -5,6 +5,9 @@
 
     Private Sub Info_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
+
+        Label6.Text = System.String.Format(Label6.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build)
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
