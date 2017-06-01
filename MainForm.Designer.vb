@@ -27,6 +27,8 @@ Partial Class MainForm
         Dim MainColorScheme1 As MetroSuite.MetroTabControl.MainColorScheme = New MetroSuite.MetroTabControl.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Sidepanel = New System.Windows.Forms.Panel()
+        Me.BarImageButton_Update = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.BarImageButton_Cog = New Bunifu.Framework.UI.BunifuImageButton()
         Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_5 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_7 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -34,7 +36,7 @@ Partial Class MainForm
         Me.buttontab_3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.buttontab_1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.BarImageButton_Info = New Bunifu.Framework.UI.BunifuImageButton()
         Me.logo = New System.Windows.Forms.PictureBox()
         Me.Header = New System.Windows.Forms.Panel()
         Me.topbarbutton_min = New Bunifu.Framework.UI.BunifuImageButton()
@@ -145,8 +147,15 @@ Partial Class MainForm
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Sidepanel.SuspendLayout()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
         CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -194,6 +203,7 @@ Partial Class MainForm
         CType(Me.DataGridViewVars, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_PreReleaseWarning.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -204,6 +214,8 @@ Partial Class MainForm
         'Sidepanel
         '
         Me.Sidepanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Sidepanel.Controls.Add(Me.BarImageButton_Update)
+        Me.Sidepanel.Controls.Add(Me.BarImageButton_Cog)
         Me.Sidepanel.Controls.Add(Me.buttontab_6)
         Me.Sidepanel.Controls.Add(Me.buttontab_5)
         Me.Sidepanel.Controls.Add(Me.buttontab_7)
@@ -211,13 +223,43 @@ Partial Class MainForm
         Me.Sidepanel.Controls.Add(Me.buttontab_3)
         Me.Sidepanel.Controls.Add(Me.buttontab_2)
         Me.Sidepanel.Controls.Add(Me.buttontab_1)
-        Me.Sidepanel.Controls.Add(Me.BunifuImageButton1)
+        Me.Sidepanel.Controls.Add(Me.BarImageButton_Info)
         Me.Sidepanel.Controls.Add(Me.logo)
         Me.Sidepanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.Sidepanel.Location = New System.Drawing.Point(0, 49)
         Me.Sidepanel.Name = "Sidepanel"
         Me.Sidepanel.Size = New System.Drawing.Size(320, 964)
         Me.Sidepanel.TabIndex = 0
+        '
+        'BarImageButton_Update
+        '
+        Me.BarImageButton_Update.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Update.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Update.Image = CType(resources.GetObject("BarImageButton_Update.Image"), System.Drawing.Image)
+        Me.BarImageButton_Update.ImageActive = Nothing
+        Me.BarImageButton_Update.Location = New System.Drawing.Point(207, 47)
+        Me.BarImageButton_Update.Name = "BarImageButton_Update"
+        Me.BarImageButton_Update.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Update.TabIndex = 10
+        Me.BarImageButton_Update.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Update, "Check for updates")
+        Me.BarImageButton_Update.Zoom = 10
+        '
+        'BarImageButton_Cog
+        '
+        Me.BarImageButton_Cog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Cog.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Cog.Image = CType(resources.GetObject("BarImageButton_Cog.Image"), System.Drawing.Image)
+        Me.BarImageButton_Cog.ImageActive = Nothing
+        Me.BarImageButton_Cog.Location = New System.Drawing.Point(158, 47)
+        Me.BarImageButton_Cog.Name = "BarImageButton_Cog"
+        Me.BarImageButton_Cog.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Cog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Cog.TabIndex = 9
+        Me.BarImageButton_Cog.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Cog, "Settings")
+        Me.BarImageButton_Cog.Zoom = 10
         '
         'buttontab_6
         '
@@ -464,19 +506,20 @@ Partial Class MainForm
         Me.buttontab_1.Textcolor = System.Drawing.Color.Silver
         Me.buttontab_1.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuImageButton1
+        'BarImageButton_Info
         '
-        Me.BunifuImageButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(256, 47)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(43, 49)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 1
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 10
+        Me.BarImageButton_Info.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Info.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Info.Image = CType(resources.GetObject("BarImageButton_Info.Image"), System.Drawing.Image)
+        Me.BarImageButton_Info.ImageActive = Nothing
+        Me.BarImageButton_Info.Location = New System.Drawing.Point(256, 47)
+        Me.BarImageButton_Info.Name = "BarImageButton_Info"
+        Me.BarImageButton_Info.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Info.TabIndex = 1
+        Me.BarImageButton_Info.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Info, "FlexEdit info")
+        Me.BarImageButton_Info.Zoom = 10
         '
         'logo
         '
@@ -1712,6 +1755,31 @@ Partial Class MainForm
         '
         Me.BackgroundWorker1.WorkerReportsProgress = True
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(229, 94)
+        '
+        'InfoToolStripMenuItem
+        '
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
+        Me.InfoToolStripMenuItem.Text = "Info"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
@@ -1727,7 +1795,9 @@ Partial Class MainForm
         Me.Name = "MainForm"
         Me.Text = "Form1"
         Me.Sidepanel.ResumeLayout(False)
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
@@ -1786,13 +1856,14 @@ Partial Class MainForm
         Me.Panel_PreReleaseWarning.ResumeLayout(False)
         Me.Panel_PreReleaseWarning.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents Sidepanel As Panel
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents BarImageButton_Info As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents logo As PictureBox
     Friend WithEvents Header As Panel
     Friend WithEvents buttontab_1 As Bunifu.Framework.UI.BunifuFlatButton
@@ -1910,4 +1981,11 @@ Partial Class MainForm
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BarImageButton_Update As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents BarImageButton_Cog As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents InfoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

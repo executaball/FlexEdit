@@ -85,6 +85,18 @@ Partial Friend NotInheritable Class Settings
             Me("Annotation1") = value
         End Set
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+    Public Property RawEditsEnable() As Boolean
+        Get
+            Return CType(Me("RawEditsEnable"),Boolean)
+        End Get
+        Set
+            Me("RawEditsEnable") = value
+        End Set
+    End Property
 End Class
 
 Namespace My

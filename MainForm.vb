@@ -234,7 +234,7 @@ Public Class MainForm
     End Sub
     'Tab7 (special logic for showing notice prompt)
     Private Sub buttontab_7_Click(sender As Object, e As EventArgs) Handles buttontab_7.Click
-
+        'End sub if no saveword loaded, this results in no execution of the accepted terms logic
         If Status1 = False Then
             MsgBox("Please load a saveword first", vbInformation, "FlexEdit")
             'Highlight first option
@@ -242,20 +242,11 @@ Public Class MainForm
             Return
         End If
 
-        If AcceptedRawTerms = False Then
+        If My.Settings.RawEditsEnable = False Then
 
+            MsgBox("Raw variable edits is a developer feature only as incorrect edits can easily break quest chains. Visit settings for more info and to enable.", vbExclamation, "Warning")
 
-            Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing values in these variables can easily break whole quest chains irreversibily for your current play-through. Not even FS writers can fix a broken saveword. You will have to start a new game if that happens. IF YOU DECIDE TO USE THIS, PLEASE BACKUP YOUR SAVES.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
-                Case MsgBoxResult.Yes
-                    AcceptedRawTerms = True
-                    RunUpdateTextBoxPriority()
-                    MetroTabControl1.SelectedTab = Tab7Raw
-            ' Do something if yes
-                Case MsgBoxResult.No
-                    'do nothing if user does not accept
-            End Select
-
-        ElseIf AcceptedRawTerms = True Then
+        ElseIf My.Settings.RawEditsEnable = True Then
             RunUpdateTextBoxPriority()
             MetroTabControl1.SelectedTab = Tab7Raw
 
@@ -1084,8 +1075,16 @@ Public Class MainForm
     End Sub
 
     'Info button
-    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
+    Private Sub BarImageButton_Info_Click(sender As Object, e As EventArgs) Handles BarImageButton_Info.Click
         Info.ShowDialog()
+    End Sub
+
+    Private Sub BarImageButton_Update_Click(sender As Object, e As EventArgs) Handles BarImageButton_Update.Click
+
+    End Sub
+
+    Private Sub BarImageButton_Cog_Click(sender As Object, e As EventArgs) Handles BarImageButton_Cog.Click
+        SettingsForm.ShowDialog()
     End Sub
 
     Private Sub textbox_search_TextChanged(sender As Object, e As EventArgs) Handles textbox_search.TextChanged
@@ -1573,5 +1572,8 @@ Public Class MainForm
 
     End Sub
 
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
 

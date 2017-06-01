@@ -51,6 +51,16 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
+
+        textbox_saveword1.Text = "Saveword Part 1"
+        textbox_saveword1.ForeColor = Color.DarkGray
+
+        textbox_saveword2.Text = "Saveword Part 2"
+        textbox_saveword2.ForeColor = Color.DarkGray
+
+        textbox_saveword3.Text = "Saveword Part 3"
+        textbox_saveword3.ForeColor = Color.DarkGray
+
     End Sub
 
     Private Sub textbox_saveword1_Click(sender As Object, e As EventArgs) Handles textbox_saveword1.Click
@@ -81,4 +91,6 @@
     Private Sub metrobutton_cancel_Click(sender As Object, e As EventArgs) Handles metrobutton_cancel.Click
         Me.Close()
     End Sub
+
+
 End Class
