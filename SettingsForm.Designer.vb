@@ -23,10 +23,11 @@ Partial Class SettingsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme4 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme5 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme4 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme3 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme2 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
-        Dim MainColorScheme1 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
+        Dim MainColorScheme1 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -38,6 +39,7 @@ Partial Class SettingsForm
         Me.MetroSwitch2 = New MetroSuite.MetroSwitch()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.MetroSwitch3 = New MetroSuite.MetroSwitch()
+        Me.MetroButton1 = New MetroSuite.MetroButton()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,13 +72,13 @@ Partial Class SettingsForm
         'metrobutton_exit
         '
         Me.metrobutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme4.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme4.FillColor = System.Drawing.Color.White
-        MainColorScheme4.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme4.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme4.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_exit.ColorScheme = MainColorScheme4
+        MainColorScheme5.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme5.FillColor = System.Drawing.Color.White
+        MainColorScheme5.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme5.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme5.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_exit.ColorScheme = MainColorScheme5
         Me.metrobutton_exit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_exit.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_exit.Location = New System.Drawing.Point(624, 460)
@@ -94,14 +96,14 @@ Partial Class SettingsForm
         '
         'MetroSwitch1
         '
-        MainColorScheme3.BackColor = System.Drawing.SystemColors.Control
-        MainColorScheme3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme3.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme3.ColorLeft = System.Drawing.SystemColors.Control
-        MainColorScheme3.ColorRight = System.Drawing.SystemColors.Control
-        MainColorScheme3.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme3.FillColor = System.Drawing.SystemColors.Control
-        Me.MetroSwitch1.ColorScheme = MainColorScheme3
+        MainColorScheme4.BackColor = System.Drawing.SystemColors.Control
+        MainColorScheme4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme4.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme4.ColorLeft = System.Drawing.SystemColors.Control
+        MainColorScheme4.ColorRight = System.Drawing.SystemColors.Control
+        MainColorScheme4.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme4.FillColor = System.Drawing.SystemColors.Control
+        Me.MetroSwitch1.ColorScheme = MainColorScheme4
         Me.MetroSwitch1.Location = New System.Drawing.Point(36, 73)
         Me.MetroSwitch1.Name = "MetroSwitch1"
         Me.MetroSwitch1.Size = New System.Drawing.Size(68, 28)
@@ -123,7 +125,7 @@ Partial Class SettingsForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(110, 120)
+        Me.Label3.Location = New System.Drawing.Point(110, 139)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(382, 32)
         Me.Label3.TabIndex = 21
@@ -131,16 +133,16 @@ Partial Class SettingsForm
         '
         'MetroSwitch2
         '
-        MainColorScheme2.BackColor = System.Drawing.SystemColors.Control
-        MainColorScheme2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme2.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme2.ColorLeft = System.Drawing.SystemColors.Control
-        MainColorScheme2.ColorRight = System.Drawing.SystemColors.Control
-        MainColorScheme2.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme2.FillColor = System.Drawing.SystemColors.Control
-        Me.MetroSwitch2.ColorScheme = MainColorScheme2
+        MainColorScheme3.BackColor = System.Drawing.SystemColors.Control
+        MainColorScheme3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme3.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme3.ColorLeft = System.Drawing.SystemColors.Control
+        MainColorScheme3.ColorRight = System.Drawing.SystemColors.Control
+        MainColorScheme3.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme3.FillColor = System.Drawing.SystemColors.Control
+        Me.MetroSwitch2.ColorScheme = MainColorScheme3
         Me.MetroSwitch2.Enabled = False
-        Me.MetroSwitch2.Location = New System.Drawing.Point(36, 123)
+        Me.MetroSwitch2.Location = New System.Drawing.Point(36, 142)
         Me.MetroSwitch2.Name = "MetroSwitch2"
         Me.MetroSwitch2.Size = New System.Drawing.Size(68, 28)
         Me.MetroSwitch2.TabIndex = 20
@@ -151,7 +153,7 @@ Partial Class SettingsForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(110, 173)
+        Me.Label4.Location = New System.Drawing.Point(110, 208)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(337, 32)
         Me.Label4.TabIndex = 23
@@ -159,26 +161,45 @@ Partial Class SettingsForm
         '
         'MetroSwitch3
         '
-        MainColorScheme1.BackColor = System.Drawing.SystemColors.Control
-        MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme1.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme1.ColorLeft = System.Drawing.SystemColors.Control
-        MainColorScheme1.ColorRight = System.Drawing.SystemColors.Control
-        MainColorScheme1.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        MainColorScheme1.FillColor = System.Drawing.SystemColors.Control
-        Me.MetroSwitch3.ColorScheme = MainColorScheme1
-        Me.MetroSwitch3.Location = New System.Drawing.Point(36, 176)
+        MainColorScheme2.BackColor = System.Drawing.SystemColors.Control
+        MainColorScheme2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme2.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme2.ColorLeft = System.Drawing.SystemColors.Control
+        MainColorScheme2.ColorRight = System.Drawing.SystemColors.Control
+        MainColorScheme2.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme2.FillColor = System.Drawing.SystemColors.Control
+        Me.MetroSwitch3.ColorScheme = MainColorScheme2
+        Me.MetroSwitch3.Location = New System.Drawing.Point(36, 211)
         Me.MetroSwitch3.Name = "MetroSwitch3"
         Me.MetroSwitch3.Size = New System.Drawing.Size(68, 28)
         Me.MetroSwitch3.TabIndex = 22
         Me.MetroSwitch3.UseFixedSwitchSize = False
         Me.MetroSwitch3.UseMiddleStatus = False
         '
+        'MetroButton1
+        '
+        Me.MetroButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        MainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme1.FillColor = System.Drawing.Color.White
+        MainColorScheme1.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.MetroButton1.ColorScheme = MainColorScheme1
+        Me.MetroButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.MetroButton1.ForeColor = System.Drawing.Color.Black
+        Me.MetroButton1.Location = New System.Drawing.Point(36, 460)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(191, 38)
+        Me.MetroButton1.TabIndex = 24
+        Me.MetroButton1.Text = "Configure updater"
+        '
         'SettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.MetroSwitch3)
         Me.Controls.Add(Me.Label3)
@@ -208,4 +229,5 @@ Partial Class SettingsForm
     Friend WithEvents MetroSwitch3 As MetroSuite.MetroSwitch
     Friend WithEvents Label3 As Label
     Friend WithEvents MetroSwitch2 As MetroSuite.MetroSwitch
+    Friend WithEvents MetroButton1 As MetroSuite.MetroButton
 End Class

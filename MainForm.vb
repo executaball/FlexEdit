@@ -3,6 +3,9 @@ Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.IO
 Imports System.Data.DataTable
+'Updater (Major Update 1)
+Imports System.Threading
+Imports System.Diagnostics
 
 Public Class MainForm
     'Vars
@@ -12,9 +15,6 @@ Public Class MainForm
     'States that will be controlled by checkboxes
     Public saveword2enabled As Boolean = False
     Public saveword3enabled As Boolean = False
-
-    'Checks whether user has accepted the agreement for raw edits (prompt)
-    Dim AcceptedRawTerms As Boolean = False
 
     'Load saveword form vars
     Public SavewordText1 As String
@@ -40,6 +40,9 @@ Public Class MainForm
     'Check file exist, number of files that don't exist
     Public CheckFileExistErrorCounter As Int32 = 0
     Public FileOK As Boolean = True
+
+    'Updater
+    Private updaterModulePath As String
 
     'Datatable
     'Dim data As New DataSet1
@@ -71,9 +74,37 @@ Public Class MainForm
 
         'Do DPI scaling
         Load_DoScaling()
+
+        'Run Updater tasks
+        Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
+        thread.Start()
+
+        'Compute the updater.exe path relative to the application main module path
+        updaterModulePath = Path.Combine(Application.StartupPath, "updater.exe")
+
         'Center main form to screen
         Me.CenterToScreen()
 
+    End Sub
+
+    'Updater Silent operations
+    Public Sub StartSilent()
+        Thread.Sleep(10000)
+        Dim proc As Process = Process.Start(updaterModulePath, "/silent")
+        proc.Close()
+    End Sub
+
+    'Updater Hooks
+    'This handler should be associated with a menu item that launches the updater's configuration dialog.
+    Public Sub UpdaterOptions() '(sender As System.Object, e As System.EventArgs) 'Handles UpdaterOptionsMenuItem.Click
+        Dim proc As Process = Process.Start(updaterModulePath, "/configure")
+        proc.Close()
+    End Sub
+
+    'This handler should be associated with a menu item that launches the updater in check now mode (usually from  Help submenu)
+    Public Sub CheckForUpdates() '(sender As System.Object, e As System.EventArgs) 'Handles CheckForUpdatesMenuItem.Click
+        Dim proc As Process = Process.Start(updaterModulePath, "/checknow")
+        proc.Close()
     End Sub
 
     'Does scaling of UI elements (critical) (called by Form1_Load)
@@ -1080,7 +1111,7 @@ Public Class MainForm
     End Sub
 
     Private Sub BarImageButton_Update_Click(sender As Object, e As EventArgs) Handles BarImageButton_Update.Click
-
+        CheckForUpdates()
     End Sub
 
     Private Sub BarImageButton_Cog_Click(sender As Object, e As EventArgs) Handles BarImageButton_Cog.Click
