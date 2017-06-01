@@ -95,6 +95,13 @@ Public Class MainForm
         'Center main form to screen
         Me.CenterToScreen()
 
+        'Welcome message
+        If My.Settings.FlexBoot = 0 Then
+            'MsgBox("Welcome to FlexEdit. For more info please visit https://executaball.github.io/FlexEdit/ You can always email me at 'executaball@yahoo.com' for support / suggestions!", vbInformation, "Welcome to FlexEdit")
+        End If
+
+        My.Settings.FlexBoot += 1
+        My.Settings.Save()
     End Sub
 
     'Updater Silent operations
@@ -640,7 +647,6 @@ Public Class MainForm
         'determine finishing tasks whether saveword loaded or not
         If SaveLoadCompleted1 = True Then
 
-            MsgBox("Saveword Part 1 import complete!", vbInformation, "Import success")
             Status1 = True
 
             'RunAnnotateVars()
@@ -653,7 +659,6 @@ Public Class MainForm
 
         If SaveLoadCompleted2 = True AndAlso saveword2enabled = True Then
 
-            MsgBox("Saveword Part 2 import complete!", vbInformation, "Import success")
             Status2 = True
 
             'RunAnnotateVars2()
@@ -665,7 +670,6 @@ Public Class MainForm
 
         If SaveLoadCompleted3 = True AndAlso saveword3enabled = True Then
 
-            MsgBox("Saveword Part 3 import complete!", vbInformation, "Import success")
             Status3 = True
 
             'RunAnnotateVars3()
@@ -680,6 +684,14 @@ Public Class MainForm
 
             resizeDataTable()
 
+        End If
+
+        If Status3 = True Then
+            MsgBox("All Saveword parts import complete!", vbInformation, "Import success")
+        ElseIf Status2 = True And saveword3enabled = False Then
+            MsgBox("Savewords Part 1 and 2 has been imported!", vbInformation, "Import success")
+        ElseIf Status1 = True And saveword3enabled = False Then
+            MsgBox("Savewords Part 1 has been imported!", vbInformation, "Import success")
         End If
 
         '(IMPORTANT!!) Updates the labels

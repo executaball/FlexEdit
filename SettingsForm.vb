@@ -6,8 +6,11 @@
     Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
 
-        MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
-
+        If My.Settings.MakeBackupsOnSave = True Then
+            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
+        Else
+            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+        End If
         If My.Settings.RawEditsEnable = True Then
             MetroSwitch1.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
         Else
