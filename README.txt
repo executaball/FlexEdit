@@ -1,5 +1,4 @@
 ﻿FlexEdit Version 2.0.16 (Beta) by executaball
-https://executaball.github.io/FlexEdit/
 
 
 *INSTRUCTIONS*
