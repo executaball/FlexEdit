@@ -85,12 +85,14 @@ Public Class MainForm
         'Do DPI scaling
         Load_DoScaling()
 
-        'Run Updater tasks
-        Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
-        thread.Start()
-
         'Compute the updater.exe path relative to the application main module path
-        updaterModulePath = Path.Combine(Application.StartupPath, "updater.exe")
+        updaterModulePath = Path.Combine(Application.StartupPath, "wyUpdate.exe")
+
+        If My.Settings.AutoupdatePref = True Then
+            'Run Updater tasks
+            Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
+            thread.Start()
+        End If
 
         'Center main form to screen
         Me.CenterToScreen()
@@ -100,6 +102,7 @@ Public Class MainForm
             'MsgBox("Welcome to FlexEdit. For more info please visit https://executaball.github.io/FlexEdit/ You can always email me at 'executaball@yahoo.com' for support / suggestions!", vbInformation, "Welcome to FlexEdit")
         End If
 
+        'increment flex boot counter
         My.Settings.FlexBoot += 1
         My.Settings.Save()
     End Sub
@@ -107,21 +110,23 @@ Public Class MainForm
     'Updater Silent operations
     Public Sub StartSilent()
         Thread.Sleep(10000)
-        Dim proc As Process = Process.Start(updaterModulePath, "/silent")
-        proc.Close()
+        Try
+            Dim proc As Process = Process.Start(updaterModulePath, "/quickcheck")
+            proc.Close()
+        Catch z As Exception
+            MsgBox("Error checking for updates. Please make sure 'wyUpdate.exe' is in the same directory as FlexEdit. " & z.Message, vbCritical, "Error")
+        End Try
     End Sub
 
-    'Updater Hooks
-    'This handler should be associated with a menu item that launches the updater's configuration dialog.
-    Public Sub UpdaterOptions() '(sender As System.Object, e As System.EventArgs) 'Handles UpdaterOptionsMenuItem.Click
-        Dim proc As Process = Process.Start(updaterModulePath, "/configure")
-        proc.Close()
-    End Sub
 
     'This handler should be associated with a menu item that launches the updater in check now mode (usually from  Help submenu)
     Public Sub CheckForUpdates() '(sender As System.Object, e As System.EventArgs) 'Handles CheckForUpdatesMenuItem.Click
-        Dim proc As Process = Process.Start(updaterModulePath, "/checknow")
-        proc.Close()
+        Try
+            Dim proc As Process = Process.Start(updaterModulePath)
+            proc.Close()
+        Catch z As Exception
+            MsgBox("Error launching updater. Please check if 'wyUpdate.exe' is in the same directory as FlexEdit. " & z.Message, vbCritical, "Error")
+        End Try
     End Sub
 
     'Does scaling of UI elements (critical) (called by Form1_Load)

@@ -13,6 +13,8 @@ https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 *CHANGELOG*
 
+6/4/2017 - v2.1.1 beta -> Implemented updater, settings screen, and automatic backups on save to file. Raw variable edits, backup file creation, and autoupdates can all now be configured in the settings screen.
+
 5/28/2017 - v2.0.16 beta -> Fixed a potential bug that blocked app startup, preparations for autoupdater (not yet included)
 
 5/28/2017 - v2.0.15 beta -> Rewritten code in preparation for update system, icon and ui changes, revamped annotation system, numerous bug fixes.

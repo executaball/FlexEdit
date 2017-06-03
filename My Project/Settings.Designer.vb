@@ -121,6 +121,18 @@ Partial Friend NotInheritable Class Settings
             Me("FlexBoot") = value
         End Set
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+    Public Property AutoupdatePref() As Boolean
+        Get
+            Return CType(Me("AutoupdatePref"),Boolean)
+        End Get
+        Set
+            Me("AutoupdatePref") = value
+        End Set
+    End Property
 End Class
 
 Namespace My

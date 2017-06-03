@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SettingsForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class SettingsForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim MainColorScheme5 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
         Dim MainColorScheme4 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme3 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme2 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
-        Dim MainColorScheme1 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme1 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,7 +39,8 @@ Partial Class SettingsForm
         Me.MetroSwitch2 = New MetroSuite.MetroSwitch()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.MetroSwitch3 = New MetroSuite.MetroSwitch()
-        Me.MetroButton1 = New MetroSuite.MetroButton()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MetroSwitch4 = New MetroSuite.MetroSwitch()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -176,30 +177,40 @@ Partial Class SettingsForm
         Me.MetroSwitch3.UseFixedSwitchSize = False
         Me.MetroSwitch3.UseMiddleStatus = False
         '
-        'MetroButton1
+        'Label5
         '
-        Me.MetroButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(110, 284)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(587, 32)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Check for updates on app startup (prompt to install)"
+        '
+        'MetroSwitch4
+        '
+        MainColorScheme1.BackColor = System.Drawing.SystemColors.Control
         MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme1.FillColor = System.Drawing.Color.White
-        MainColorScheme1.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.MetroButton1.ColorScheme = MainColorScheme1
-        Me.MetroButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.MetroButton1.ForeColor = System.Drawing.Color.Black
-        Me.MetroButton1.Location = New System.Drawing.Point(36, 460)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(191, 38)
-        Me.MetroButton1.TabIndex = 24
-        Me.MetroButton1.Text = "Configure updater"
+        MainColorScheme1.BorderColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme1.ColorLeft = System.Drawing.SystemColors.Control
+        MainColorScheme1.ColorRight = System.Drawing.SystemColors.Control
+        MainColorScheme1.ColorSwitch = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        MainColorScheme1.FillColor = System.Drawing.SystemColors.Control
+        Me.MetroSwitch4.ColorScheme = MainColorScheme1
+        Me.MetroSwitch4.Location = New System.Drawing.Point(36, 287)
+        Me.MetroSwitch4.Name = "MetroSwitch4"
+        Me.MetroSwitch4.Size = New System.Drawing.Size(68, 28)
+        Me.MetroSwitch4.TabIndex = 24
+        Me.MetroSwitch4.UseFixedSwitchSize = False
+        Me.MetroSwitch4.UseMiddleStatus = False
         '
         'SettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
-        Me.Controls.Add(Me.MetroButton1)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.MetroSwitch4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.MetroSwitch3)
         Me.Controls.Add(Me.Label3)
@@ -229,5 +240,6 @@ Partial Class SettingsForm
     Friend WithEvents MetroSwitch3 As MetroSuite.MetroSwitch
     Friend WithEvents Label3 As Label
     Friend WithEvents MetroSwitch2 As MetroSuite.MetroSwitch
-    Friend WithEvents MetroButton1 As MetroSuite.MetroButton
+    Friend WithEvents Label5 As Label
+    Friend WithEvents MetroSwitch4 As MetroSuite.MetroSwitch
 End Class

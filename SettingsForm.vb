@@ -6,16 +6,24 @@
     Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToParent()
 
-        If My.Settings.MakeBackupsOnSave = True Then
-            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
-        Else
-            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
-        End If
         If My.Settings.RawEditsEnable = True Then
             MetroSwitch1.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
         Else
             MetroSwitch1.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
         End If
+
+        If My.Settings.MakeBackupsOnSave = True Then
+            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
+        Else
+            MetroSwitch3.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+        End If
+
+        If My.Settings.AutoupdatePref = True Then
+            MetroSwitch4.Status = MetroSuite.MetroSwitch.CurrentStatus.Right
+        Else
+            MetroSwitch4.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+        End If
+
 
     End Sub
 
@@ -88,7 +96,31 @@
 
     End Sub
 
-    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
-        MainForm.UpdaterOptions()
+    Private Sub MetroSwitch4_Click(sender As Object, e As EventArgs) Handles MetroSwitch4.Click
+
+
+        If MetroSwitch4.Status = MetroSuite.MetroSwitch.CurrentStatus.Left Then
+
+            If My.Settings.AutoupdatePref = True Then
+
+                MsgBox("Checking for updates on app startup is now disabled. You can still check for updates by clicking the 'update' menu button.", vbInformation, "Autoupdates disabled")
+
+                My.Settings.AutoupdatePref = False
+                'saving
+                My.Settings.Save()
+
+            End If
+
+        End If
+
+        If MetroSwitch4.Status = MetroSuite.MetroSwitch.CurrentStatus.Right Then
+
+            My.Settings.AutoupdatePref = True
+            'saving
+            My.Settings.Save()
+
+        End If
+
     End Sub
+
 End Class
