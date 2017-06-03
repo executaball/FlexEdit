@@ -11,11 +11,11 @@
     <AssemblyName>FlexEdit</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>A:\VSPublish\FlexEditMETRO\Final210 %28update 1%29\</PublishUrl>
+    <PublishUrl>A:\VSPublish\FlexEditMETRO\Final210 %28update 2%29\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,11 +25,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>https://www.google.com.hk/search%3fq=Assets&amp;oq=Assets&amp;aqs=chrome..69i57j0l5.761j0j4&amp;sourceid=chrome&amp;ie=UTF-8/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
     <ProductName>FlexEdit</ProductName>
     <PublisherName>executaball</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>2.1.1.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
