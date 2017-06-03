@@ -1,4 +1,4 @@
-﻿FlexEdit Version 2.0.16 (Beta) by executaball
+﻿FlexEdit Version 2.1.1 (Beta) by executaball
 
 
 *INSTRUCTIONS*
