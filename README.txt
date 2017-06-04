@@ -1,4 +1,4 @@
-﻿FlexEdit Version 2.1.1 (Beta) by executaball
+﻿FlexEdit Version 2.1.2 by executaball
 
 
 *INSTRUCTIONS*
@@ -12,6 +12,8 @@ https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 
 *CHANGELOG*
+
+6/4/2017 - v2.1.2 -> Finishes annotations and variable naming for all 3 saveword parts. Bug fixes and legacy code cleanup. First release version. (Can be installed via autoupdater starting from v2.1.1-beta)
 
 6/4/2017 - v2.1.1 beta -> Implemented updater, settings screen, and automatic backups on save to file. Raw variable edits, backup file creation, and autoupdates can all now be configured in the settings screen.
 
