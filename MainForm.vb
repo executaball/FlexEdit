@@ -74,7 +74,8 @@ Public Class MainForm
         'bugfix over
 
         'show pre-release warning
-        Panel_PreReleaseWarning.Visible = True
+        'Panel_PreReleaseWarning.Visible = True
+        '(Out of beta!)
 
         'highlight first option
         buttontab_1.selected = True
@@ -171,6 +172,8 @@ Public Class MainForm
 
         'BunifuTileButton1.Size = ButtonSize, ButtonSize
 
+        MetroTabControl1.Margin = New Padding(0)
+        Panel1.Margin = New Padding(0)
 
     End Sub
 

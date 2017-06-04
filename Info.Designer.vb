@@ -169,9 +169,9 @@ Partial Class Info
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(27, 460)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(219, 28)
+        Me.Label6.Size = New System.Drawing.Size(168, 28)
         Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Version {0}.{1}.{2} BETA"
+        Me.Label6.Text = "Version {0}.{1}.{2}"
         '
         'Label7
         '

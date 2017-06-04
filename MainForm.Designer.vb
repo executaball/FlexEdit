@@ -630,6 +630,7 @@ Partial Class MainForm
         Me.MetroTabControl1.FontSelectedTab = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MetroTabControl1.ItemSize = New System.Drawing.Size(44, 120)
         Me.MetroTabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.MetroTabControl1.Margin = New System.Windows.Forms.Padding(0)
         Me.MetroTabControl1.Multiline = True
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
@@ -828,15 +829,16 @@ Partial Class MainForm
         '
         'Panel2
         '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(41, Byte), Integer))
         Me.Panel2.Controls.Add(Me.TileLoadToCode)
         Me.Panel2.Controls.Add(Me.TileLoadFromCode)
         Me.Panel2.Controls.Add(Me.TileSaveToFile)
         Me.Panel2.Controls.Add(Me.TileLoadFromFile)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(3, 595)
+        Me.Panel2.Location = New System.Drawing.Point(0, 595)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1048, 358)
+        Me.Panel2.Size = New System.Drawing.Size(1058, 365)
         Me.Panel2.TabIndex = 2
         '
         'TileLoadToCode
@@ -854,10 +856,10 @@ Partial Class MainForm
         Me.TileLoadToCode.ImageZoom = 50
         Me.TileLoadToCode.LabelPosition = 32
         Me.TileLoadToCode.LabelText = "Save to Code"
-        Me.TileLoadToCode.Location = New System.Drawing.Point(788, 72)
+        Me.TileLoadToCode.Location = New System.Drawing.Point(788, 75)
         Me.TileLoadToCode.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadToCode.Name = "TileLoadToCode"
-        Me.TileLoadToCode.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadToCode.Size = New System.Drawing.Size(224, 214)
         Me.TileLoadToCode.TabIndex = 3
         '
         'TileLoadFromCode
@@ -875,10 +877,10 @@ Partial Class MainForm
         Me.TileLoadFromCode.ImageZoom = 50
         Me.TileLoadFromCode.LabelPosition = 32
         Me.TileLoadFromCode.LabelText = "Load from Code"
-        Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 72)
+        Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 75)
         Me.TileLoadFromCode.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadFromCode.Name = "TileLoadFromCode"
-        Me.TileLoadFromCode.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadFromCode.Size = New System.Drawing.Size(224, 214)
         Me.TileLoadFromCode.TabIndex = 2
         '
         'TileSaveToFile
@@ -896,10 +898,10 @@ Partial Class MainForm
         Me.TileSaveToFile.ImageZoom = 50
         Me.TileSaveToFile.LabelPosition = 32
         Me.TileSaveToFile.LabelText = "Save to File"
-        Me.TileSaveToFile.Location = New System.Drawing.Point(294, 72)
+        Me.TileSaveToFile.Location = New System.Drawing.Point(294, 75)
         Me.TileSaveToFile.Margin = New System.Windows.Forms.Padding(4)
         Me.TileSaveToFile.Name = "TileSaveToFile"
-        Me.TileSaveToFile.Size = New System.Drawing.Size(214, 214)
+        Me.TileSaveToFile.Size = New System.Drawing.Size(224, 214)
         Me.TileSaveToFile.TabIndex = 1
         '
         'TileLoadFromFile
@@ -917,10 +919,10 @@ Partial Class MainForm
         Me.TileLoadFromFile.ImageZoom = 50
         Me.TileLoadFromFile.LabelPosition = 32
         Me.TileLoadFromFile.LabelText = "Load from File"
-        Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 72)
+        Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 75)
         Me.TileLoadFromFile.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadFromFile.Name = "TileLoadFromFile"
-        Me.TileLoadFromFile.Size = New System.Drawing.Size(214, 214)
+        Me.TileLoadFromFile.Size = New System.Drawing.Size(224, 214)
         Me.TileLoadFromFile.TabIndex = 0
         '
         'Label1
@@ -1747,6 +1749,7 @@ Partial Class MainForm
         Me.Panel1.Controls.Add(Me.MetroTabControl1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel1.Location = New System.Drawing.Point(240, 49)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1182, 964)
         Me.Panel1.TabIndex = 4

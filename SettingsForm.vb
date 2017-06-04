@@ -71,7 +71,7 @@
 
             If My.Settings.MakeBackupsOnSave = True Then
 
-                Select Case MsgBox("FlexEdit is still in beta and mistakes can happen. If you make raw variable edits you are also highly advised to check this backup option. FlexEdit overwrites your save files directly. Are you sure you want to disable the creation of backup files on saving?", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+                Select Case MsgBox("Unexpected errors can happen on saving. If you make raw variable edits you are also highly advised to check this backup option. FlexEdit overwrites your save files directly. Are you sure you want to disable the creation of backup files on saving?", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                     Case MsgBoxResult.Yes
                         My.Settings.MakeBackupsOnSave = False
                         'saving
