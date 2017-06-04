@@ -654,7 +654,6 @@ Public Class MainForm
 
             Status1 = True
 
-            'RunAnnotateVars()
             NGXAnnote()
 
 
@@ -666,7 +665,6 @@ Public Class MainForm
 
             Status2 = True
 
-            'RunAnnotateVars2()
             NGXAnnote2()
 
         End If
@@ -677,7 +675,7 @@ Public Class MainForm
 
             Status3 = True
 
-            'RunAnnotateVars3()
+            NGXAnnote3()
 
         ElseIf SaveLoadCompleted3 = False And saveword3enabled = True Then
 
@@ -777,11 +775,23 @@ Public Class MainForm
     Private Sub NGXAnnote2()
 
         Dim rawAnnotation As String
-        rawAnnotation = "Not Finished"
+        rawAnnotation = "Orthas HP,Stables Fancy Quest,Sven HP,Sven Lust,Sarah Slut,Sarah Talk,Sarah Pups,Null (Does nothing),Brunc w/ Alex,Treasure Found,Treasure Hunt (tmapfound),Sandra HP,Frank Libido,Fang HP,Fang Libido,Philip (pigfed),Philip (pigfucked),Pet Cute Crab Resolved,Pet Exotic Bird Resolved,Pet Felinoid Companion Resolved,Pet bee girl Resolved,Pet house cat Resolved,Pet little fox Resolved,Pet skunk kit Resolved,Pet helper dog Resolved,Pet Rachel Mouse Resolved,Elijah HP,Elijah Interactions (npcEint),Latex Husky Mode,Parasitic Larva,Leonard HP,Solstice HP,Ronda the Slut Rat,Athanasia HP,Skunkbeast Lord Status,Kitsune (ktp),Release Number,Kara (Tattohunter),Kara (tatsave),Kara (piercesave),Diego (diegochanged),Eric HP,Christy HP,Christy Dragontype,Christy dragonessfuck,Doctor Medea HP,Doctor Moffatt HP,Lucy HP,David Thirst,David Lust,David HP,Adam HP,Alexandra HP,Larissa HP,Sam HP,Wereraptor curse status,Wereraptor cure nermine,Doctor Utah HP,Mike HP,Xerxes HP,Helen HP,Helen Libido,Rex HP,Karen HP,Francois HP,Fancois Libido,Alexandra Level,Thomas HP,Thomas Libido,Thomas Lust,ThomasQuestVar,Rubber Tigress HP,Septus HP,Xerxes Lust,Helen Lust,Tristian HP,Icarus HP,Joanna HP,Joanna Lust,Angie Aroused,DBCaptureQuestVar (Demon Brute),DemonBruteStatus (Gender),Lilith HP,LilithKidCounter,Felix HP,Felix Libido,Sonya VikingRelationship,Sonya VikingKidCounter,MovingOrwell,Jimmy HP,David libido,Amy HP,Amy Libido,SquadEncounters,Corbin Thirst,Corbin HP,CorbinKidCounter,Anthony HP,Duke HP,Duke Thirst,Zigor HP,Amy Thirst"
 
         Dim fAnnote() As String = rawAnnotation.Split(",")
         For count = 0 To fAnnote.Length - 1
             DataGridViewVars.Rows(count + 59).Cells(2).Value = fAnnote(count)
+        Next
+
+    End Sub
+
+    Private Sub NGXAnnote3()
+
+        Dim rawAnnotation As String
+        rawAnnotation = "Nadia HP,NadiaFertilityCounter,NadiaChickCounter,Nadia (npcNadiaint),Amy Level,Amy XP,Amy Dexterity,SvenAmySex,BrutusAmySex,Zephias Lust,Ares HP,Hayato HP,Tehuantl HP,Carl HP,Carl Level,Kristen HP,Kristen Libido,Brooke HP,Bubble HP,Newt HP,Null (Does nothing),Piginitiation,Gillian HP,Stella HP,Null (Does nothing),OrcSlaverStatus,CellDoorStatus,Onyx XP,Val HP,Val Thirst,ValPregCounter,ValPregnancy,SlaveRaidEncounters,Chris HP,Vanessa HP,Vanessa XP,Meredith HP,Meredith level,Gwen HP,Rane HP,Elijah Thirst,SpidertaurRelationship,CatgirlFucked,FionaFangStatus,FionaCarlStatus,Gabriel HP,Erica HP,Erica Thirst,Police Station Population,Police Station infpop,Null (Does nothing),Null (Does nothing),Hadiya Hp,Gobby HP,Sidney HP,Sidney level,Sidney XP,Micaela HP,Micaela Level,Micaela XP,Macadamia HP,Yolanda HP,SarahCured"
+
+        Dim fAnnote() As String = rawAnnotation.Split(",")
+        For count = 0 To fAnnote.Length - 1
+            DataGridViewVars.Rows(count + 161).Cells(2).Value = fAnnote(count)
         Next
 
     End Sub
