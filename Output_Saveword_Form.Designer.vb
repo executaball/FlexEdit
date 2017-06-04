@@ -23,10 +23,11 @@ Partial Class Output_Saveword_Form
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme3 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
-        Dim MainColorScheme2 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
-        Dim MainColorScheme1 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
-        Dim MainColorScheme4 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme7 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme6 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme5 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim MainColorScheme8 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Output_Saveword_Form))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -124,13 +125,13 @@ Partial Class Output_Saveword_Form
         Me.metrobutton_copy1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme3.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme3.FillColor = System.Drawing.Color.White
-        MainColorScheme3.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme3.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme3.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_copy1.ColorScheme = MainColorScheme3
+        MainColorScheme7.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme7.FillColor = System.Drawing.Color.White
+        MainColorScheme7.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme7.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme7.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_copy1.ColorScheme = MainColorScheme7
         Me.metrobutton_copy1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_copy1.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_copy1.Location = New System.Drawing.Point(624, 98)
@@ -144,13 +145,13 @@ Partial Class Output_Saveword_Form
         Me.metrobutton_copy2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme2.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme2.FillColor = System.Drawing.Color.White
-        MainColorScheme2.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme2.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme2.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_copy2.ColorScheme = MainColorScheme2
+        MainColorScheme6.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme6.FillColor = System.Drawing.Color.White
+        MainColorScheme6.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme6.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme6.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_copy2.ColorScheme = MainColorScheme6
         Me.metrobutton_copy2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_copy2.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_copy2.Location = New System.Drawing.Point(624, 183)
@@ -164,13 +165,13 @@ Partial Class Output_Saveword_Form
         Me.metrobutton_copy3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme1.FillColor = System.Drawing.Color.White
-        MainColorScheme1.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_copy3.ColorScheme = MainColorScheme1
+        MainColorScheme5.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme5.FillColor = System.Drawing.Color.White
+        MainColorScheme5.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme5.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme5.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_copy3.ColorScheme = MainColorScheme5
         Me.metrobutton_copy3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_copy3.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_copy3.Location = New System.Drawing.Point(624, 268)
@@ -182,13 +183,13 @@ Partial Class Output_Saveword_Form
         'metrobutton_exit
         '
         Me.metrobutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme4.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme4.FillColor = System.Drawing.Color.White
-        MainColorScheme4.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme4.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme4.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_exit.ColorScheme = MainColorScheme4
+        MainColorScheme8.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
+        MainColorScheme8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
+        MainColorScheme8.FillColor = System.Drawing.Color.White
+        MainColorScheme8.HoverFillColor = System.Drawing.Color.White
+        MainColorScheme8.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        MainColorScheme8.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
+        Me.metrobutton_exit.ColorScheme = MainColorScheme8
         Me.metrobutton_exit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.metrobutton_exit.ForeColor = System.Drawing.Color.Black
         Me.metrobutton_exit.Location = New System.Drawing.Point(588, 367)
@@ -223,6 +224,7 @@ Partial Class Output_Saveword_Form
         Me.Controls.Add(Me.metrobutton_exit)
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Output_Saveword_Form"
         Me.Text = "FlexEdit - Export"
         Me.Header.ResumeLayout(False)

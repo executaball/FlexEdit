@@ -28,6 +28,7 @@ Partial Class SettingsForm
         Dim MainColorScheme3 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme2 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme1 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SettingsForm))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -220,6 +221,7 @@ Partial Class SettingsForm
         Me.Controls.Add(Me.metrobutton_exit)
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SettingsForm"
         Me.Text = "FlexEdit - Settings"
         Me.Header.ResumeLayout(False)
