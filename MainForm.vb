@@ -60,46 +60,46 @@ Public Class MainForm
 
 
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim mySplashScreen = DirectCast(My.Application.SplashScreen, Form2)
-        'My.Application.mySplashScreen.Invoke(New MethodInvoker(AddressOf My.Application.mySplashScreen.IncrementProgress))
+    Private Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'dim mysplashscreen = directcast(my.application.splashscreen, form2)
+        'my.application.mysplashscreen.invoke(new methodinvoker(addressof my.application.mysplashscreen.incrementprogress))
 
 
-        'Bugfix 1 for metrotab
+        'bugfix 1 for metrotab
         Dim speed As Integer = MetroTabControl1.Speed : MetroTabControl1.Speed = 20
         For i As Integer = 0 To MetroTabControl1.TabPages.Count
             MetroTabControl1.SelectedIndex = i
         Next
         MetroTabControl1.SelectedIndex = 0 : MetroTabControl1.Speed = speed
-        'Bugfix over
+        'bugfix over
 
-        'SHOW PRE-RELEASE WARNING
+        'show pre-release warning
         Panel_PreReleaseWarning.Visible = True
 
-        'Highlight first option
+        'highlight first option
         buttontab_1.selected = True
 
-        'Do datatable tasks
+        'do datatable tasks
         Load_DoDatabaseTasks()
 
-        'Do DPI scaling
+        'do dpi scaling
         Load_DoScaling()
 
-        'Compute the updater.exe path relative to the application main module path
-        updaterModulePath = Path.Combine(Application.StartupPath, "wyUpdate.exe")
+        'compute the updater.exe path relative to the application main module path
+        updaterModulePath = Path.Combine(Application.StartupPath, "wyupdate.exe")
 
         If My.Settings.AutoupdatePref = True Then
-            'Run Updater tasks
+            'run updater tasks
             Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
             thread.Start()
         End If
 
-        'Center main form to screen
+        'center main form to screen
         Me.CenterToScreen()
 
-        'Welcome message
+        'welcome message
         If My.Settings.FlexBoot = 0 Then
-            'MsgBox("Welcome to FlexEdit. For more info please visit https://executaball.github.io/FlexEdit/ You can always email me at 'executaball@yahoo.com' for support / suggestions!", vbInformation, "Welcome to FlexEdit")
+            'msgbox("welcome to flexedit. for more info please visit https://executaball.github.io/flexedit/ you can always email me at 'executaball@yahoo.com' for support / suggestions!", vbinformation, "welcome to flexedit")
         End If
 
         'increment flex boot counter
@@ -1671,16 +1671,6 @@ Public Class MainForm
             Return
 
         Else
-
-            'Safeguard for empty file
-            'Stops if files empty (safeguard)
-            FileOK = False
-            CheckExist()
-            If FileOK = False Then
-                MsgBox("Error, FlexEdit did not find existing '.glkdata' files. FlexEdit cannot create files as each file is specific to the game. Save to file has failed.", vbCritical, "Save error")
-                Return
-            End If
-            'Safeguard ok
 
             If My.Settings.FlexUserDirectory = "" Then
 
