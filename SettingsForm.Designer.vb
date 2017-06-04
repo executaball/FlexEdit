@@ -221,7 +221,7 @@ Partial Class SettingsForm
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SettingsForm"
-        Me.Text = "SettingsForm"
+        Me.Text = "FlexEdit - Settings"
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
         Me.ResumeLayout(False)

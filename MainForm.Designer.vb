@@ -1796,7 +1796,7 @@ Partial Class MainForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MainForm"
-        Me.Text = "Form1"
+        Me.Text = "FlexEdit"
         Me.Sidepanel.ResumeLayout(False)
         CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).EndInit()

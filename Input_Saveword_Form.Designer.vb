@@ -178,7 +178,7 @@ Partial Class Input_Saveword_Form
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Input_Saveword_Form"
-        Me.Text = "Form1"
+        Me.Text = "FlexEdit - Input"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
