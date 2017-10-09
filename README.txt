@@ -1,9 +1,9 @@
-﻿FlexEdit Version 2.1.2 by executaball
+﻿FlexEdit Version 2.1.3 by executaball
 
 
 *INSTRUCTIONS*
 
-Requires microsoft .NET Framework 4.7 to work.
+Requires microsoft .NET Framework 4.7 to work. (Included in the Win 10 "Creators" Update)
 
 If you already have .NET Framework 4.7, go to /Application Files/FlexEdit_version#/ and simply run "FlexEdit.exe". You do not need to install it.
 
@@ -12,6 +12,8 @@ https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 
 *CHANGELOG*
+
+10/9/2017 - v2.1.3 -> Updated for September 2017 release of Flexible Survival
 
 6/4/2017 - v2.1.2 -> Finished annotations and variable naming for all 3 saveword parts. Bug fixes and legacy code cleanup. First release version. (Can be installed via autoupdater starting from v2.1.1-beta)
 

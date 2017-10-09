@@ -53,6 +53,10 @@ Public Class MainForm
     'Updater
     Private updaterModulePath As String
 
+    'Saveword EVO helper (IMPORTANT) (Used in counters for processing all saveword exports/imports)
+    Private saveword1stringlimit As Integer = 56
+    Private saveword2stringlimit As Integer = 69
+    Private saveword3stringlimit As Integer = 232
 
     'Datatable
     'Dim data As New DataSet1
@@ -1682,6 +1686,5 @@ Public Class MainForm
         End If
 
     End Sub
-
 End Class
 
