@@ -12,6 +12,9 @@ Public Class MainForm
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
 
+    'Version of FS this was built for
+    Public fsversion As String = "September 2017"
+
     'States that will be controlled by checkboxes
     Public saveword2enabled As Boolean = False
     Public saveword3enabled As Boolean = False
@@ -54,9 +57,13 @@ Public Class MainForm
     Private updaterModulePath As String
 
     'Saveword EVO helper (IMPORTANT) (Used in counters for processing all saveword exports/imports)
-    Private saveword1stringlimit As Integer = 56
-    Private saveword2stringlimit As Integer = 69
-    Private saveword3stringlimit As Integer = 232
+    Private saveword1stringlimit As Integer = 0
+    Private saveword2stringlimit As Integer = 59
+    Private saveword3stringlimit As Integer = 161
+    Private saveword3endlimit As Integer = 226 'original 224, add 2 for compatibility with Sept 2017, equal 227
+
+    'Explanation: string limits are the position at which they will start counting, basically saveword2stringlimit is when saveword 1 ends in the table. etc. saveword3endlimit is where saveword 3 ends. If FS adds any more, this number will inc up.
+
 
     'Datatable
     'Dim data As New DataSet1
@@ -78,7 +85,7 @@ Public Class MainForm
         'bugfix over
 
         'show pre-release warning
-        'Panel_PreReleaseWarning.Visible = True
+        Panel_PreReleaseWarning.Visible = True
         '(Out of beta!)
 
         'highlight first option
@@ -304,7 +311,9 @@ Public Class MainForm
 
         If My.Settings.RawEditsEnable = False Then
 
-            MsgBox("Raw variable edits is a developer feature only as incorrect edits can easily break quest chains. Visit settings for more info and to enable.", vbExclamation, "Warning")
+            MsgBox("Careful! Incorrectly modifying FS saveword variables can easily break quest chains. I recommend you read up the Github code on what you are editing and know full well what you are doing.  (This warning can be disabled in the settings menu)", vbExclamation, "Warning")
+            RunUpdateTextBoxPriority()
+            MetroTabControl1.SelectedTab = Tab7Raw
 
         ElseIf My.Settings.RawEditsEnable = True Then
             RunUpdateTextBoxPriority()
@@ -577,7 +586,7 @@ Public Class MainForm
 
             SaveLoadCompleted2 = False
 
-            MsgBox("Saveword Part 1 has not been loaded. Savewords Part 2 and Part 3 will not be attempted.", vbExclamation, "Caution")
+            MsgBox("Saveword Part 1 has failed to load. Savewords Part 2 and Part 3 will not be attempted.", vbExclamation, "Caution")
 
 
             'disabling tabs and buttons
@@ -595,7 +604,7 @@ Public Class MainForm
                 Dim yValues() As String = rinput.Split("}")
                 For count = 0 To yValues.Length - 1
                     If count > 0 Then
-                        table.Rows.Add(count + 59, yValues(count))
+                        table.Rows.Add(count + saveword2stringlimit, yValues(count)) 'saveword2stringlimit is a fixed var, currently 59, might change in future
                     End If
 
                 Next 'ends sub here
@@ -610,7 +619,7 @@ Public Class MainForm
 
                 SaveLoadCompleted2 = False
 
-                MsgBox("Saveword Part 2 has not been loaded. Saveword Part 3 will not be attempted.", vbExclamation, "Caution")
+                MsgBox("Saveword Part 2 has failed to load. Saveword Part 3 will not be attempted.", vbExclamation, "Caution")
 
                 'disabling tabs and buttons
 
@@ -628,7 +637,7 @@ Public Class MainForm
                 Dim zValues() As String = rinput.Split("}")
                 For count = 0 To zValues.Length - 1
                     If count > 0 Then
-                        table.Rows.Add(count + 161, zValues(count))
+                        table.Rows.Add(count + saveword3stringlimit, zValues(count)) 'saveword3stringlimit is a fixed var, currently 161, might change in future
                     End If
 
                 Next
@@ -644,7 +653,7 @@ Public Class MainForm
 
                 SaveLoadCompleted3 = False
 
-                MsgBox("Saveword Part 3 has not been loaded.")
+                MsgBox("Saveword Part 3 has failed to load.")
 
                 'disabling tabs and buttons
 
@@ -686,7 +695,7 @@ Public Class MainForm
 
         ElseIf SaveLoadCompleted3 = False And saveword3enabled = True Then
 
-            MsgBox("Saveword 3 has not been loaded. Savewords 1 and 2 are loaded normally. You can use the program as is or try loading saveword 3 again.", vbExclamation, "Caution")
+            MsgBox("Saveword 3 has not been loaded. Savewords 1 and 2 are loaded normally. You can use the program as is or try loading the savewords again.", vbExclamation, "Caution")
 
         End If
 
@@ -771,8 +780,10 @@ Public Class MainForm
         'rawAnnotation = My.Settings.Annotation1
         'rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width (Also affects cum and ball size),Cunt Length,Cunt Width,Equipped Weapon,franksex,frankmalesex,Snow special (annote),REMOVED (value always 0),Coleen special (annote),coleentalk,coleenfound,coleencollared,coleenalpha,coleenslut,coleenspray,hp of doctor mouse,coonstatus,featunlock,butterflymagic? wth is this,catnum,mateable,gryphoncomforted,shiftable,medeaget,mtp,hyg,nes,mtrp,boristalk,borisquest,progress of alex,angiehappy,angietalk,deerconsent,hp  of Susan,mattcollection"
         'above is backup from v2.0.14
-        rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,Hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width,Cunt Length,Cunt Width,Equipped Weapon,Frank M/F,Frank M/M,Hyper Squirrel Resolved,REMOVED (value always 0),Coleen Location,Coleen Talk,Coleen Found,Coleen Collared,Coleen Alpha,Coleen Slut,Coleen Spray,HP of Dr Mouse,Candy(coonstatus),featunlock,Butterfly,Catnum,Mateable,gryphoncomforted,shiftable,Medea,MTP,HYG,NES,MTRP,Boristalk,Borisquest,progress of alex,Angiehappy,Angietalk,deerconsent,HP of Susan,mattcollection"
-        Dim fAnnote() As String = rawAnnotation.Split(",")
+        'rawAnnotation = "Strength,Dexerity,Stamina,Charisma,Perception,Intelligent,Level,HP,Humanity,Score,hp of doctor matt,Body infection,Head infection,Skin infection,Tail infection,Genital Infection,SatisfiedTanuki,Hospquest,Cocks (Number of cocks),Breasts (Number of breast),Cunts (Number of cunts),Breast Size,Cock Length,Cock Width,Cunt Length,Cunt Width,Equipped Weapon,Frank M/F,Frank M/M,Hyper Squirrel Resolved,REMOVED (value always 0),Coleen Location,Coleen Talk,Coleen Found,Coleen Collared,Coleen Alpha,Coleen Slut,Coleen Spray,HP of Dr Mouse,Candy(coonstatus),featunlock,Butterfly,Catnum,Mateable,gryphoncomforted,shiftable,Medea,MTP,HYG,NES,MTRP,Boristalk,Borisquest,progress of alex,Angiehappy,Angietalk,deerconsent,HP of Susan,mattcollection"
+        rawAnnotation = "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}0}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[NESProgress]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[hp of Susan]}[mattcollection]"
+
+        Dim fAnnote() As String = rawAnnotation.Split("}")
         For count = 0 To fAnnote.Length - 1
             DataGridViewVars.Rows(count).Cells(2).Value = fAnnote(count)
         Next
@@ -782,11 +793,12 @@ Public Class MainForm
     Private Sub NGXAnnote2()
 
         Dim rawAnnotation As String
-        rawAnnotation = "Orthas HP,Stables Fancy Quest,Sven HP,Sven Lust,Sarah Slut,Sarah Talk,Sarah Pups,Null (Does nothing),Brunc w/ Alex,Treasure Found,Treasure Hunt (tmapfound),Sandra HP,Frank Libido,Fang HP,Fang Libido,Philip (pigfed),Philip (pigfucked),Pet Cute Crab Resolved,Pet Exotic Bird Resolved,Pet Felinoid Companion Resolved,Pet bee girl Resolved,Pet house cat Resolved,Pet little fox Resolved,Pet skunk kit Resolved,Pet helper dog Resolved,Pet Rachel Mouse Resolved,Elijah HP,Elijah Interactions (npcEint),Latex Husky Mode,Parasitic Larva,Leonard HP,Solstice HP,Ronda the Slut Rat,Athanasia HP,Skunkbeast Lord Status,Kitsune (ktp),Release Number,Kara (Tattohunter),Kara (tatsave),Kara (piercesave),Diego (diegochanged),Eric HP,Christy HP,Christy Dragontype,Christy dragonessfuck,Doctor Medea HP,Doctor Moffatt HP,Lucy HP,David Thirst,David Lust,David HP,Adam HP,Alexandra HP,Larissa HP,Sam HP,Wereraptor curse status,Wereraptor cure nermine,Doctor Utah HP,Mike HP,Xerxes HP,Helen HP,Helen Libido,Rex HP,Karen HP,Francois HP,Fancois Libido,Alexandra Level,Thomas HP,Thomas Libido,Thomas Lust,ThomasQuestVar,Rubber Tigress HP,Septus HP,Xerxes Lust,Helen Lust,Tristian HP,Icarus HP,Joanna HP,Joanna Lust,Angie Aroused,DBCaptureQuestVar (Demon Brute),DemonBruteStatus (Gender),Lilith HP,LilithKidCounter,Felix HP,Felix Libido,Sonya VikingRelationship,Sonya VikingKidCounter,MovingOrwell,Jimmy HP,David libido,Amy HP,Amy Libido,SquadEncounters,Corbin Thirst,Corbin HP,CorbinKidCounter,Anthony HP,Duke HP,Duke Thirst,Zigor HP,Amy Thirst"
+        'rawAnnotation = "Orthas HP,Stables Fancy Quest,Sven HP,Sven Lust,Sarah Slut,Sarah Talk,Sarah Pups,Null (Does nothing),Brunc w/ Alex,Treasure Found,Treasure Hunt (tmapfound),Sandra HP,Frank Libido,Fang HP,Fang Libido,Philip (pigfed),Philip (pigfucked),Pet Cute Crab Resolved,Pet Exotic Bird Resolved,Pet Felinoid Companion Resolved,Pet bee girl Resolved,Pet house cat Resolved,Pet little fox Resolved,Pet skunk kit Resolved,Pet helper dog Resolved,Pet Rachel Mouse Resolved,Elijah HP,Elijah Interactions (npcEint),Latex Husky Mode,Parasitic Larva,Leonard HP,Solstice HP,Ronda the Slut Rat,Athanasia HP,Skunkbeast Lord Status,Kitsune (ktp),Release Number,Kara (Tattohunter),Kara (tatsave),Kara (piercesave),Diego (diegochanged),Eric HP,Christy HP,Christy Dragontype,Christy dragonessfuck,Doctor Medea HP,Doctor Moffatt HP,Lucy HP,David Thirst,David Lust,David HP,Adam HP,Alexandra HP,Larissa HP,Sam HP,Wereraptor curse status,Wereraptor cure nermine,Doctor Utah HP,Mike HP,Xerxes HP,Helen HP,Helen Libido,Rex HP,Karen HP,Francois HP,Fancois Libido,Alexandra Level,Thomas HP,Thomas Libido,Thomas Lust,ThomasQuestVar,Rubber Tigress HP,Septus HP,Xerxes Lust,Helen Lust,Tristian HP,Icarus HP,Joanna HP,Joanna Lust,Angie Aroused,DBCaptureQuestVar (Demon Brute),DemonBruteStatus (Gender),Lilith HP,LilithKidCounter,Felix HP,Felix Libido,Sonya VikingRelationship,Sonya VikingKidCounter,MovingOrwell,Jimmy HP,David libido,Amy HP,Amy Libido,SquadEncounters,Corbin Thirst,Corbin HP,CorbinKidCounter,Anthony HP,Duke HP,Duke Thirst,Zigor HP,Amy Thirst"
+        rawAnnotation = "[hp of Orthas]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[libido of Frank]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[hp of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]}[hp of Sam]}[wrcursestatus]}[wrcurseNermine]}[hp of Doctor Utah]}[hp of Mike]}[hp of Xerxes]}[hp of Helen]}[libido of Helen]}[hp of Rex]}[hp of Karen]}[hp of François]}[libido of François]}[level of Alexandra]}[hp of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[hp of rubber tigress]}[hp of Septus]}[lust of Xerxes]}[lust of Helen]}[hp of tristian]}[hp of Icarus]}[hp of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[hp of Lilith]}[LilithKidCounter]}[hp of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[hp of Jimmy]}[libido of David]}[hp of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[hp of Corbin]}[CorbinKidCounter]}[hp of Anthony]}[hp of Duke]}[thirst of Duke]}[hp of Zigor]}[thirst of Amy]"
 
-        Dim fAnnote() As String = rawAnnotation.Split(",")
+        Dim fAnnote() As String = rawAnnotation.Split("}")
         For count = 0 To fAnnote.Length - 1
-            DataGridViewVars.Rows(count + 59).Cells(2).Value = fAnnote(count)
+            DataGridViewVars.Rows(count + saveword2stringlimit).Cells(2).Value = fAnnote(count) 'stringlimit 59
         Next
 
     End Sub
@@ -794,11 +806,12 @@ Public Class MainForm
     Private Sub NGXAnnote3()
 
         Dim rawAnnotation As String
-        rawAnnotation = "Nadia HP,NadiaFertilityCounter,NadiaChickCounter,Nadia (npcNadiaint),Amy Level,Amy XP,Amy Dexterity,SvenAmySex,BrutusAmySex,Zephias Lust,Ares HP,Hayato HP,Tehuantl HP,Carl HP,Carl Level,Kristen HP,Kristen Libido,Brooke HP,Bubble HP,Newt HP,Null (Does nothing),Piginitiation,Gillian HP,Stella HP,Null (Does nothing),OrcSlaverStatus,CellDoorStatus,Onyx XP,Val HP,Val Thirst,ValPregCounter,ValPregnancy,SlaveRaidEncounters,Chris HP,Vanessa HP,Vanessa XP,Meredith HP,Meredith level,Gwen HP,Rane HP,Elijah Thirst,SpidertaurRelationship,CatgirlFucked,FionaFangStatus,FionaCarlStatus,Gabriel HP,Erica HP,Erica Thirst,Police Station Population,Police Station infpop,Null (Does nothing),Null (Does nothing),Hadiya Hp,Gobby HP,Sidney HP,Sidney level,Sidney XP,Micaela HP,Micaela Level,Micaela XP,Macadamia HP,Yolanda HP,SarahCured"
+        'rawAnnotation = "Nadia HP,NadiaFertilityCounter,NadiaChickCounter,Nadia (npcNadiaint),Amy Level,Amy XP,Amy Dexterity,SvenAmySex,BrutusAmySex,Zephias Lust,Ares HP,Hayato HP,Tehuantl HP,Carl HP,Carl Level,Kristen HP,Kristen Libido,Brooke HP,Bubble HP,Newt HP,Null (Does nothing),Piginitiation,Gillian HP,Stella HP,Null (Does nothing),OrcSlaverStatus,CellDoorStatus,Onyx XP,Val HP,Val Thirst,ValPregCounter,ValPregnancy,SlaveRaidEncounters,Chris HP,Vanessa HP,Vanessa XP,Meredith HP,Meredith level,Gwen HP,Rane HP,Elijah Thirst,SpidertaurRelationship,CatgirlFucked,FionaFangStatus,FionaCarlStatus,Gabriel HP,Erica HP,Erica Thirst,Police Station Population,Police Station infpop,Null (Does nothing),Null (Does nothing),Hadiya Hp,Gobby HP,Sidney HP,Sidney level,Sidney XP,Micaela HP,Micaela Level,Micaela XP,Macadamia HP,Yolanda HP,SarahCured"
+        rawAnnotation = "[hp of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[hp of Ares]}[if hp of hayato is 30]20[else][hp of Hayato][end if]}[hp of Tehuantl]}[hp of Carl]}[level of Carl]}[hp of Kristen]}[libido of Kristen]}[hp of Brooke]}[hp of Bubble]}[hp of Newt]}0}[piginitiation]}[hp of Gillian]}[hp of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[xp of Onyx]}[hp of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[hp of Chris]}[hp of Vanessa]}[xp of Vanessa]}[hp of Meredith]}[level of Meredith]}[hp of Gwen]}[hp of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[hp of Gabriel]}[hp of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[hp of Hadiya]}[hp of Gobby]}[hp of Sidney]}[level of Sidney]}[xp of Sidney]}[hp of Micaela]}[level of Micaela]}[xp of Micaela]}[hp of Macadamia]}[hp of Yolanda]}[SarahCured]}[libido of chris]}[dexterity of chris]"
 
-        Dim fAnnote() As String = rawAnnotation.Split(",")
+        Dim fAnnote() As String = rawAnnotation.Split("}")
         For count = 0 To fAnnote.Length - 1
-            DataGridViewVars.Rows(count + 161).Cells(2).Value = fAnnote(count)
+            DataGridViewVars.Rows(count + saveword3stringlimit).Cells(2).Value = fAnnote(count) 'String limit 161
         Next
 
     End Sub
@@ -841,10 +854,12 @@ Public Class MainForm
             Dim ngxcounter As Integer = 1
 
             Dim sval2 As String = "You should not be seeing this, something has gone horribly wrong. Error Code (2)"
-            Dim ngxcounter2 As Integer = 60 'literally first term, starting with 1 
+            Dim ngxcounter2 As Integer = saveword2stringlimit + 1 'literally first term, starting with 1 
 
             Dim sval3 As String = "You should not be seeing this, something has gone horribly wrong. Error Code (3)"
-            Dim ngxcounter3 As Integer = 162
+            Dim ngxcounter3 As Integer = saveword3stringlimit + 1
+
+            Dim ngxcounter_end_3 As Integer = saveword3endlimit + 1
 
             'do some cleanup, then set failsafe conditions
             EXPORTSavewordText1 = ""
@@ -861,7 +876,7 @@ Public Class MainForm
 
             Try
 
-                Do Until ngxcounter = 60
+                Do Until ngxcounter = ngxcounter2 'ngxcounter 2 should be 60
 
                     Dim row As DataRow = table.Select("Id = " & ngxcounter).FirstOrDefault()
                     If Not row Is Nothing Then
@@ -870,15 +885,15 @@ Public Class MainForm
 
                     Inc(ngxcounter)
 
-                    If ngxcounter < 60 Then
+                    If ngxcounter < ngxcounter2 Then
 
                         EXPORTSavewordText1 = EXPORTSavewordText1 + sval & "}"
 
-                    ElseIf ngxcounter = 60 Then
+                    ElseIf ngxcounter = ngxcounter2 Then
                         EXPORTSavewordText1 = EXPORTSavewordText1 + sval
 
-                    ElseIf ngxcounter > 60 Then
-                        MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 1, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                    ElseIf ngxcounter > ngxcounter2 Then
+                        MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues. This should never happen, please copy the following numbers and submit a bug report- c1:" & ngxcounter & " c2:" & ngxcounter2, vbCritical, "FATAL ERROR")
                         End
 
                     End If
@@ -899,7 +914,7 @@ Public Class MainForm
 
                 Try
 
-                    Do Until ngxcounter2 = 162 'final value is 161 on table, but because counting from 0, add one
+                    Do Until ngxcounter2 = ngxcounter3 'final value is 161 on table, but because counting from 0, add one
 
                         Dim row As DataRow = table.Select("Id = " & ngxcounter2).FirstOrDefault()
                         If Not row Is Nothing Then
@@ -909,15 +924,15 @@ Public Class MainForm
                         Inc(ngxcounter2)
 
 
-                        If ngxcounter2 < 162 Then
+                        If ngxcounter2 < ngxcounter3 Then
 
                             EXPORTSavewordText2 = EXPORTSavewordText2 + sval2 & "}"
 
-                        ElseIf ngxcounter2 = 162 Then
+                        ElseIf ngxcounter2 = ngxcounter3 Then
                             EXPORTSavewordText2 = EXPORTSavewordText2 + sval2
 
-                        ElseIf ngxcounter2 > 162 Then
-                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                        ElseIf ngxcounter2 > ngxcounter3 Then
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues. This should never happen, please copy the following numbers and submit a bug report- c2:" & ngxcounter2 & " c3:" & ngxcounter3, vbCritical, "FATAL ERROR")
                             End
 
                         End If
@@ -940,7 +955,7 @@ Public Class MainForm
 
                 Try
 
-                    Do Until ngxcounter3 = 225 'final value is 161 on table, but because counting from 0, add one
+                    Do Until ngxcounter3 = ngxcounter_end_3 'final value is 161 on table, but because counting from 0, add one
 
                         Dim row As DataRow = table.Select("Id = " & ngxcounter3).FirstOrDefault()
                         If Not row Is Nothing Then
@@ -950,15 +965,15 @@ Public Class MainForm
                         Inc(ngxcounter3)
 
 
-                        If ngxcounter3 < 225 Then
+                        If ngxcounter3 < ngxcounter_end_3 Then
 
                             EXPORTSavewordText3 = EXPORTSavewordText3 + sval3 & "}"
 
-                        ElseIf ngxcounter3 = 225 Then
+                        ElseIf ngxcounter3 = ngxcounter_end_3 Then
                             EXPORTSavewordText3 = EXPORTSavewordText3 + sval3
 
-                        ElseIf ngxcounter3 > 225 Then
-                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 3, program terminating to avoid further issues.", vbCritical, "FATAL ERROR")
+                        ElseIf ngxcounter3 > ngxcounter_end_3 Then
+                            MsgBox("FATAL ERROR: Counter overflow occured when processing saveword 2, program terminating to avoid further issues. This should never happen, please copy the following numbers and submit a bug report- c3:" & ngxcounter3 & " ce3:" & ngxcounter_end_3, vbCritical, "FATAL ERROR")
                             End
 
                         End If

@@ -119,9 +119,9 @@ Partial Class SettingsForm
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(110, 70)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(292, 32)
+        Me.Label1.Size = New System.Drawing.Size(378, 32)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Enable Raw Variable Edits"
+        Me.Label1.Text = "Disable raw variable edit warning"
         '
         'Label3
         '
@@ -184,9 +184,9 @@ Partial Class SettingsForm
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(110, 284)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(587, 32)
+        Me.Label5.Size = New System.Drawing.Size(539, 32)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Check for updates on app startup (prompt to install)"
+        Me.Label5.Text = "Check for updates on app startup (prompt only)"
         '
         'MetroSwitch4
         '
@@ -223,7 +223,7 @@ Partial Class SettingsForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SettingsForm"
-        Me.Text = "FlexEdit - Settings"
+        Me.Text = "t"
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
         Me.ResumeLayout(False)

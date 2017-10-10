@@ -34,7 +34,7 @@
 
             If My.Settings.RawEditsEnable = False Then
 
-                Select Case MsgBox("Raw edits is a developer feature only and should not be used without knowledge of the game code. Editing values in these variables can easily break whole quest chains irreversibily for your current play-through. Not even FS writers can fix a broken saveword. You will have to start a new game if that happens. IF YOU DECIDE TO USE THIS, PLEASE BACKUP YOUR SAVES.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+                Select Case MsgBox("Are you sure you want to disable the raw variable edit warning prompt? Please backup your saves before editing any variables.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                     Case MsgBoxResult.Yes
                         My.Settings.RawEditsEnable = True
                         'saving
@@ -71,7 +71,7 @@
 
             If My.Settings.MakeBackupsOnSave = True Then
 
-                Select Case MsgBox("Unexpected errors can happen on saving. If you make raw variable edits you are also highly advised to check this backup option. FlexEdit overwrites your save files directly. Are you sure you want to disable the creation of backup files on saving?", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+                Select Case MsgBox("FlexEdit overwrites your saveword files directly. Are you sure you want to disable the creation of backup files (txt files created alongside an export) on saving?", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
                     Case MsgBoxResult.Yes
                         My.Settings.MakeBackupsOnSave = False
                         'saving
