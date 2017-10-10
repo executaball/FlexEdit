@@ -1,4 +1,6 @@
-Welcome to FlexEdit! A lightweight program designed to help you easily and safely edit Flexible Survival savewords. Click on the 'Releases' button to get started! 
+### Please click on the 'Releases' button to download FlexEdit
+
+Welcome to FlexEdit! A lightweight program designed to help you easily and safely edit Flexible Survival savewords.
 
 ### You can reach me at executaball@yahoo.com for any questions. 
 ### Bugs Reports / Suggestions should be directed here: https://goo.gl/forms/WzwLbmHFyapcO2Z23
