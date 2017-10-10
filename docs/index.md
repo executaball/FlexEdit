@@ -8,15 +8,15 @@ Welcome to FlexEdit! A lightweight program designed to help you easily and safel
 More information is in the README. **The program does not have to be 'installed' to run. However you do need Microsoft .NET Framework 4.7** (If you are running Windows 10 Creators Update and above, you already have this.) **If you do not have this, use the following link** https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
 # [](#How_to_use)How to use
-There are 2 ways to load a saveword:
+## There are 2 ways to load a saveword:
 'Load from Code' - You can load a saveword directly by pasting its parts into the prompt.
 'Load from file' - Simply point to where your Flexible Survival gblorb file is (as well as .txsave files). FlexEdit will automatically extract the saveword information, with less chance of errors. 
 
-There are 2 ways to export a saveword:
+## There are 2 ways to export a saveword:
 'Save to Code' - FlexEdit will export the saveword for you to copy and paste into Flexible Survival
 'Save to file' - FlexEdit will override the '.txsave' files in your Flexible Survival directory. You will then have to perform 'recite txsave(1,2,3)' for all three saveword parts. This is a much easier and safer way to export savewords. **By default FlexEdit will create a txt backup alongside the txsave files it overrides, so there is no need to worry.**
 
-To use:
+## To use:
 Simply navigate using the tabs on the side to edit all aspects of the saveword. 'Raw edits' directly edit game variables that are stored in the saveword, **this is a very powerful tool and can modify all aspects of the saveword (including questlines, characters, companions, etc.) but be warned that incorrect edits here may lead to broken quest lines. Please backup before attempting to edit**
 
 # [](#Screenshots)Screenshots
