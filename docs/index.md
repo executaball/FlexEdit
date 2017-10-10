@@ -1,12 +1,18 @@
 Welcome to FlexEdit! A lightweight program designed to help you easily and safely edit Flexible Survival savewords. Click on the 'Releases' button to get started! 
 
+### You can reach me at executaball@yahoo.com for any questions. 
+### Bugs Reports / Suggestions should be directed here: https://goo.gl/forms/WzwLbmHFyapcO2Z23
+
 More information is in the README. **The program does not have to be 'installed' to run. However you do need Microsoft .NET Framework 4.7** (If you are running Windows 10 Creators Update and above, you already have this.) **If you do not have this, use the following link** https://www.microsoft.com/en-us/download/details.aspx?id=55170
 
-# [](#Description)Description
-A few weeks ago I set out to create an editor to make 'save editing' simple and safe. Finally I've got something I feel like can be released, so here is the first public beta release of FlexEdit.
-
 # [](#How_to_use)How to use
-Simply click any of the 4 buttons to load a saveword for editing. You can either enter the saveword manually or simply point a path to your Flexible Survival folder and load all saveword files at the press of a button. 
+There are 2 ways to load a saveword.
+'Load from Code' - You can load a saveword directly by pasting its parts into the prompt.
+'Load from file' - Simply point to where your Flexible Survival gblorb file is (as well as .txsave files). FlexEdit will automatically extract the saveword information, with less chance of errors. 
+
+There are 2 ways to export a saveword.
+'Save to Code' - FlexEdit will export the saveword for you to copy and paste into Flexible Survival
+'Save to file' - FlexEdit will override the '.txsave' files in your Flexible Survival directory. You will then have to perform 'recite txsave(1,2,3)' for all three saveword parts. This is a much easier and safer way to export savewords. **By default FlexEdit will create a txt backup alongside the txsave files it overrides, so there is no need to worry.**
 
 Simply navigate using the tabs on the side to edit all aspects of the saveword. Raw edits directly edit game variables in the saveword, **please note that this is not recommended unless you are a developer that knows what you're doing. Changing values here can easily break story lines and result in you having to restart your story.**
 
@@ -24,6 +30,11 @@ Regardless of how you imported a saveword, you can choose to either export using
 ![](http://i.imgur.com/uMRaY3W.jpg)
 
 # [](#Changelog)Changelog
+>10/9/2017 - v2.1.3 -> Updated for September 2017 release of Flexible Survival. Added new, clearer annotations. Multiple Bug fixes. New infection list.
+
+>6/4/2017 - v2.1.2 -> Finished annotations and variable naming for all 3 saveword parts. Bug fixes and legacy code cleanup. First release version. (Can be installed via autoupdater starting from v2.1.1-beta)
+
+>6/4/2017 - v2.1.1 beta -> Implemented updater, settings screen, and automatic backups on save to file. Raw variable edits, backup file creation, and autoupdates can all now be configured in the settings screen.
 
 >5/28/2017 - v2.0.16 beta -> Fixed a potential bug that blocked app startup, preparations for autoupdater (not yet included)
 
@@ -38,12 +49,6 @@ Regardless of how you imported a saveword, you can choose to either export using
 
 # [](#To-Do)To-Do
 FlexEdit is very much in beta and many features are incomplete. Below are the to-do for future updates
-* Complete annotations of raw edits
-* Auto updater
 * Saveword versioning integration for future updates
-* More robust error handling
 * Database enhancements
 * Better search function
-
-
-### Please send me a message to let me know what you think! Even if you did not download the program! You can reach me with a PM on the FS Forums or email to 'executaball@yahoo.com' for faster response! If you decide to get it and encounter a problem, I will try to assist you in every way possible! 
