@@ -26,9 +26,17 @@
         End Try
     End Sub
 
-    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         Try
             System.Diagnostics.Process.Start("https://github.com/Nuku/Flexible-Survival")
+        Catch
+            'Code to handle the error.
+        End Try
+    End Sub
+
+    Private Sub LinkLabel4_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
+        Try
+            System.Diagnostics.Process.Start("https://goo.gl/forms/WzwLbmHFyapcO2Z23")
         Catch
             'Code to handle the error.
         End Try

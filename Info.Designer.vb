@@ -35,10 +35,11 @@ Partial Class Info
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -108,7 +109,7 @@ Partial Class Info
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 198)
+        Me.Label4.Location = New System.Drawing.Point(26, 247)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(743, 36)
         Me.Label4.TabIndex = 18
@@ -116,10 +117,10 @@ Partial Class Info
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(27, 327)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(28, 409)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(664, 115)
+        Me.Label5.Size = New System.Drawing.Size(664, 48)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "All icon assets are used under Creative Commons — Attribution 3.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Icon Authors: " &
     "Google Material Design, Freepik, GraphicsBay, Madebyoliver, Vectors market"
@@ -139,23 +140,12 @@ Partial Class Info
         '
         Me.LinkLabel2.AutoSize = True
         Me.LinkLabel2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.LinkLabel2.Location = New System.Drawing.Point(27, 234)
+        Me.LinkLabel2.Location = New System.Drawing.Point(26, 283)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(292, 28)
         Me.LinkLabel2.TabIndex = 21
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "http://blog.flexiblesurvival.com/"
-        '
-        'LinkLabel3
-        '
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.LinkLabel3.Location = New System.Drawing.Point(27, 271)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(383, 28)
-        Me.LinkLabel3.TabIndex = 22
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "https://github.com/Nuku/Flexible-Survival"
         '
         'BunifuDragControl1
         '
@@ -183,14 +173,35 @@ Partial Class Info
         Me.Label7.TabIndex = 24
         Me.Label7.Text = "You can reach me at: executaball@yahoo.com"
         '
+        'LinkLabel4
+        '
+        Me.LinkLabel4.AutoSize = True
+        Me.LinkLabel4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LinkLabel4.Location = New System.Drawing.Point(26, 187)
+        Me.LinkLabel4.Name = "LinkLabel4"
+        Me.LinkLabel4.Size = New System.Drawing.Size(404, 28)
+        Me.LinkLabel4.TabIndex = 25
+        Me.LinkLabel4.TabStop = True
+        Me.LinkLabel4.Text = "https://goo.gl/forms/WzwLbmHFyapcO2Z23"
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(436, 187)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(323, 38)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "(Suggestions / Bug Report Survey)"
+        '
         'Info
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.LinkLabel4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label5)
@@ -215,7 +226,6 @@ Partial Class Info
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents metrobutton_exit As MetroSuite.MetroButton
-    Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label5 As Label
@@ -224,4 +234,6 @@ Partial Class Info
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents LinkLabel4 As LinkLabel
 End Class
