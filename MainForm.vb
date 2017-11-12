@@ -6,6 +6,9 @@ Imports System.Data.DataTable
 'Updater (Major Update 1)
 Imports System.Threading
 Imports System.Diagnostics
+'Connectivity
+Imports System.Text
+Imports System.Net
 
 Public Class MainForm
     'Vars
@@ -14,6 +17,13 @@ Public Class MainForm
 
     'Version of FS this was built for
     Public fsversion As String = "September 2017"
+
+    'Var checked in sub threads for app emergency abort
+    Public FlexAbort As Boolean = False
+
+    'Connectivity
+    Public GrabAddress As String = "http://goo.gl/8d2xXV"
+    Public AllRefDownload As String = ""
 
     'States that will be controlled by checkboxes
     Public saveword2enabled As Boolean = False
@@ -100,6 +110,31 @@ Public Class MainForm
         'compute the updater.exe path relative to the application main module path
         updaterModulePath = Path.Combine(Application.StartupPath, "wyupdate.exe")
 
+        'TESTONLY
+        My.Settings.FlexBoot = 0
+        My.Settings.AutoupdatePref = True
+
+        'Autoupdater consent
+        If My.Settings.FlexBoot = 0 Then
+            Select Case MsgBox("FlexEdit uses an Autoupdater that periodically accesses its Github page to check for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "Use autoupdater?")
+                Case MsgBoxResult.Yes
+                    'Do nothing, carry on
+                Case MsgBoxResult.No
+                    My.Settings.AutoupdatePref = False
+                    My.Settings.Save()
+            End Select
+        End If
+
+        'Check if updater exists first, before actually attempting update.
+        If System.IO.File.Exists(updaterModulePath) Then
+            'Do nothing, the file exists
+        Else
+            'the file doesn't exist
+            My.Settings.AutoupdatePref = False
+            My.Settings.Save()
+            MsgBox("Error checking for updates. Please make sure 'wyUpdate.exe' is in the same directory as FlexEdit. Autoupdates have now been disabled. You can re-enable in settings. ", vbExclamation, "Updater error")
+        End If
+
         If My.Settings.AutoupdatePref = True Then
             'run updater tasks
             Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
@@ -111,8 +146,14 @@ Public Class MainForm
 
         'welcome message
         If My.Settings.FlexBoot = 0 Then
-            'msgbox("welcome to flexedit. for more info please visit https://executaball.github.io/flexedit/ you can always email me at 'executaball@yahoo.com' for support / suggestions!", vbinformation, "welcome to flexedit")
+            MsgBox("Welcome to FlexEdit. You can send bug reports / suggestions via the survey (click the info button). Or just poke @executaball on the Flexible Survival official Discord!", vbInformation, "Welcome to FlexEdit")
+            MsgBox("Disclaimer: FlexEdit may from time to time check an online text file in the FlexEdit Github. This may cause pop-ups from your Firewall. Please click 'allow' if any such windows show up. FlexEdit does not upload any user information nor download any files. It *literally* just reads a text file to ensure compatibility with future savewords.", vbExclamation, "Notice")
         End If
+
+        'Updates versioning bar in relation to web update
+        Load_UpdateComptBar()
+
+
 
         'increment flex boot counter
         My.Settings.FlexBoot += 1
@@ -139,6 +180,51 @@ Public Class MainForm
         Catch z As Exception
             MsgBox("Error launching updater. Please check if 'wyUpdate.exe' is in the same directory as FlexEdit. " & z.Message, vbCritical, "Error")
         End Try
+    End Sub
+
+    Public Sub Load_UpdateComptBar() 'updates the bottom bar
+        'Connectivity Update
+        Dim client As WebClient = New WebClient()
+        WebBrowser1.Visible = False
+        WebBrowser1.Navigate(New Uri(GrabAddress))
+        WebBrowser1.Visible = False
+        Try
+            Dim reader As StreamReader = New StreamReader(client.OpenRead(GrabAddress))
+            'AllRefDownload = reader.ReadToEnd
+            Dim allLines As List(Of String) = New List(Of String)
+            Do While Not reader.EndOfStream
+                allLines.Add(reader.ReadLine())
+            Loop
+            reader.Close()
+            Dim EndVar As String = ReadLine(2, allLines)
+
+
+            MsgBox(EndVar)
+
+            'SavewordText1 = EndVar
+        Catch z As Exception
+            MsgBox("Error updating the FlexEdit saveword resolution database. Error: " & z.Message, vbCritical, "Error")
+        End Try
+        'MsgBox(AllRefDownload)
+
+        My.Settings.AllRefLatest = AllRefDownload
+        My.Settings.Save()
+
+        'Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave.glkdata")
+        'Dim allLines As List(Of String) = New List(Of String)
+        'Do While Not reader.EndOfStream
+        '    allLines.Add(reader.ReadLine())
+        'Loop
+        'reader.Close()
+        'Dim EndVar As String = ReadLine(2, allLines)
+
+
+        ''MsgBox(EndVar)
+
+        'SavewordText1 = EndVar
+
+
+
     End Sub
 
     'Does scaling of UI elements (critical) (called by Form1_Load)
@@ -233,6 +319,7 @@ Public Class MainForm
 
     'top right exit button
     Private Sub topbarbutton_exit_Click(sender As Object, e As EventArgs) Handles topbarbutton_exit.Click
+        FlexAbort = True
         Application.Exit()
     End Sub
 

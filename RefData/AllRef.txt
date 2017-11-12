@@ -5,24 +5,34 @@
 //action reference: [1 = Advisory on startup]
 =ACTIONchart=
 
-FSVersion=1.2.3,1.2.5,1.2.5
-Action=NA,NA,NA,1
-Message=NA,NA,NA,
+FSVersion=
+2.1.4,2.1.5
+Action=
+NA,NA
+Message=
+NA,NA
 
 =COMPATIBILITY CHECKER SERIAL=
 
-FSVersion=1.2.3,1.2.4,1.2.5
-EarliestVersion=101001,101001,010101
-FailVersion=101010,10001,1000,NONE
+FSVersion=
+2.1.4,2.1.5
+EarliestVersion=
+x,x
+FailVersion=
+NA,NA
 
 =COMPATIBILITY SW VER=
 
-FSVersion=1.2.3,1.2.4,1.2.5
-
-EarliestVersion=23,23,23,24
-FailVersion=24,24,24,NONE
+FSVersion=
+2.1.4,2.1.5
+EarliestVersion=
+x,x
+FailVersion=
+NA,NA
 
 =SW AND SERIAL REFERENCE TABLE=
 
-SerialData=101323,13013,123023,10238
-SavewordVersionData=23,23,23,23,24
+SerialData=
+x,x
+SavewordVersionData=
+x,x

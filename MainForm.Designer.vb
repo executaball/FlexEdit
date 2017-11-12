@@ -152,6 +152,7 @@ Partial Class MainForm
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Sidepanel.SuspendLayout()
         CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -650,6 +651,7 @@ Partial Class MainForm
         'Tab1Save
         '
         Me.Tab1Save.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Tab1Save.Controls.Add(Me.WebBrowser1)
         Me.Tab1Save.Controls.Add(Me.label_status5)
         Me.Tab1Save.Controls.Add(Me.label_status4)
         Me.Tab1Save.Controls.Add(Me.label_status3)
@@ -1790,6 +1792,15 @@ Partial Class MainForm
         Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
         Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(968, 17)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(65, 61)
+        Me.WebBrowser1.TabIndex = 4
+        Me.WebBrowser1.Visible = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
@@ -1998,4 +2009,5 @@ Partial Class MainForm
     Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckForUpdatesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents WebBrowser1 As WebBrowser
 End Class
