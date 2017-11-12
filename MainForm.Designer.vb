@@ -270,6 +270,7 @@ Partial Class MainForm
         Me.buttontab_6.ButtonText = "              Storage"
         Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_6.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
         Me.buttontab_6.Iconimage_right = Nothing
@@ -294,7 +295,7 @@ Partial Class MainForm
         Me.buttontab_6.Text = "              Storage"
         Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_6.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_6.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_5
         '
@@ -305,6 +306,7 @@ Partial Class MainForm
         Me.buttontab_5.ButtonText = "              Inventory"
         Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_5.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
         Me.buttontab_5.Iconimage_right = Nothing
@@ -329,7 +331,7 @@ Partial Class MainForm
         Me.buttontab_5.Text = "              Inventory"
         Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_5.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_5.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_7
         '
@@ -340,6 +342,7 @@ Partial Class MainForm
         Me.buttontab_7.ButtonText = "              Raw"
         Me.buttontab_7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_7.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_7.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_7.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_7.Iconimage = CType(resources.GetObject("buttontab_7.Iconimage"), System.Drawing.Image)
         Me.buttontab_7.Iconimage_right = Nothing
@@ -364,7 +367,7 @@ Partial Class MainForm
         Me.buttontab_7.Text = "              Raw"
         Me.buttontab_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_7.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_7.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_7.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_4
         '
@@ -375,6 +378,7 @@ Partial Class MainForm
         Me.buttontab_4.ButtonText = "              Infections"
         Me.buttontab_4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_4.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_4.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_4.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_4.Iconimage = CType(resources.GetObject("buttontab_4.Iconimage"), System.Drawing.Image)
         Me.buttontab_4.Iconimage_right = Nothing
@@ -399,7 +403,7 @@ Partial Class MainForm
         Me.buttontab_4.Text = "              Infections"
         Me.buttontab_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_4.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_4.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_3
         '
@@ -410,6 +414,7 @@ Partial Class MainForm
         Me.buttontab_3.ButtonText = "              Body"
         Me.buttontab_3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_3.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_3.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_3.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_3.Iconimage = CType(resources.GetObject("buttontab_3.Iconimage"), System.Drawing.Image)
         Me.buttontab_3.Iconimage_right = Nothing
@@ -434,7 +439,7 @@ Partial Class MainForm
         Me.buttontab_3.Text = "              Body"
         Me.buttontab_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_3.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_3.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_2
         '
@@ -445,6 +450,7 @@ Partial Class MainForm
         Me.buttontab_2.ButtonText = "              General"
         Me.buttontab_2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_2.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_2.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_2.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_2.Iconimage = CType(resources.GetObject("buttontab_2.Iconimage"), System.Drawing.Image)
         Me.buttontab_2.Iconimage_right = Nothing
@@ -469,7 +475,7 @@ Partial Class MainForm
         Me.buttontab_2.Text = "              General"
         Me.buttontab_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_2.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_2.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_1
         '
@@ -477,9 +483,10 @@ Partial Class MainForm
         Me.buttontab_1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.buttontab_1.BorderRadius = 0
-        Me.buttontab_1.ButtonText = "              Save / Load"
+        Me.buttontab_1.ButtonText = "              Import/Export"
         Me.buttontab_1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_1.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_1.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_1.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_1.Iconimage = CType(resources.GetObject("buttontab_1.Iconimage"), System.Drawing.Image)
         Me.buttontab_1.Iconimage_right = Nothing
@@ -501,10 +508,10 @@ Partial Class MainForm
         Me.buttontab_1.selected = False
         Me.buttontab_1.Size = New System.Drawing.Size(365, 73)
         Me.buttontab_1.TabIndex = 2
-        Me.buttontab_1.Text = "              Save / Load"
+        Me.buttontab_1.Text = "              Import/Export"
         Me.buttontab_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_1.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_1.TextFont = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BarImageButton_Info
         '
@@ -585,11 +592,11 @@ Partial Class MainForm
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Century Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(49, 7)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(47, 10)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(117, 34)
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(127, 32)
         Me.BunifuCustomLabel1.TabIndex = 2
         Me.BunifuCustomLabel1.Text = "FlexEdit"
         '
@@ -672,7 +679,7 @@ Partial Class MainForm
         Me.label_status5.AutoSize = True
         Me.label_status5.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_status5.ForeColor = System.Drawing.Color.White
-        Me.label_status5.Location = New System.Drawing.Point(566, 440)
+        Me.label_status5.Location = New System.Drawing.Point(571, 440)
         Me.label_status5.Name = "label_status5"
         Me.label_status5.Size = New System.Drawing.Size(197, 45)
         Me.label_status5.TabIndex = 17
@@ -683,7 +690,7 @@ Partial Class MainForm
         Me.label_status4.AutoSize = True
         Me.label_status4.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_status4.ForeColor = System.Drawing.Color.White
-        Me.label_status4.Location = New System.Drawing.Point(566, 370)
+        Me.label_status4.Location = New System.Drawing.Point(571, 370)
         Me.label_status4.Name = "label_status4"
         Me.label_status4.Size = New System.Drawing.Size(197, 45)
         Me.label_status4.TabIndex = 16
@@ -694,7 +701,7 @@ Partial Class MainForm
         Me.label_status3.AutoSize = True
         Me.label_status3.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_status3.ForeColor = System.Drawing.Color.White
-        Me.label_status3.Location = New System.Drawing.Point(566, 300)
+        Me.label_status3.Location = New System.Drawing.Point(571, 300)
         Me.label_status3.Name = "label_status3"
         Me.label_status3.Size = New System.Drawing.Size(173, 45)
         Me.label_status3.TabIndex = 15
@@ -705,7 +712,7 @@ Partial Class MainForm
         Me.label_status2.AutoSize = True
         Me.label_status2.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_status2.ForeColor = System.Drawing.Color.White
-        Me.label_status2.Location = New System.Drawing.Point(566, 230)
+        Me.label_status2.Location = New System.Drawing.Point(571, 230)
         Me.label_status2.Name = "label_status2"
         Me.label_status2.Size = New System.Drawing.Size(173, 45)
         Me.label_status2.TabIndex = 14
@@ -716,7 +723,7 @@ Partial Class MainForm
         Me.label_status1.AutoSize = True
         Me.label_status1.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label_status1.ForeColor = System.Drawing.Color.White
-        Me.label_status1.Location = New System.Drawing.Point(566, 160)
+        Me.label_status1.Location = New System.Drawing.Point(571, 160)
         Me.label_status1.Name = "label_status1"
         Me.label_status1.Size = New System.Drawing.Size(173, 45)
         Me.label_status1.TabIndex = 13
@@ -775,55 +782,55 @@ Partial Class MainForm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(354, 440)
+        Me.Label11.Location = New System.Drawing.Point(337, 438)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(132, 45)
+        Me.Label11.Size = New System.Drawing.Size(139, 43)
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Storage"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(331, 370)
+        Me.Label10.Location = New System.Drawing.Point(308, 367)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(160, 45)
+        Me.Label10.Size = New System.Drawing.Size(168, 43)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Inventory"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(234, 300)
+        Me.Label9.Location = New System.Drawing.Point(211, 298)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(257, 45)
+        Me.Label9.Size = New System.Drawing.Size(271, 43)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Saveword Part 3"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(234, 230)
+        Me.Label8.Location = New System.Drawing.Point(211, 229)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(257, 45)
+        Me.Label8.Size = New System.Drawing.Size(271, 43)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Saveword Part 2"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(234, 160)
+        Me.Label7.Location = New System.Drawing.Point(211, 160)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(252, 45)
+        Me.Label7.Size = New System.Drawing.Size(271, 43)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Saveword Part 1"
         '
@@ -849,13 +856,13 @@ Partial Class MainForm
         Me.TileLoadToCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.TileLoadToCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.TileLoadToCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadToCode.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadToCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileLoadToCode.ForeColor = System.Drawing.Color.White
         Me.TileLoadToCode.Image = CType(resources.GetObject("TileLoadToCode.Image"), System.Drawing.Image)
-        Me.TileLoadToCode.ImagePosition = 15
+        Me.TileLoadToCode.ImagePosition = 17
         Me.TileLoadToCode.ImageZoom = 50
-        Me.TileLoadToCode.LabelPosition = 32
-        Me.TileLoadToCode.LabelText = "Save to Code"
+        Me.TileLoadToCode.LabelPosition = 36
+        Me.TileLoadToCode.LabelText = "Export to Code"
         Me.TileLoadToCode.Location = New System.Drawing.Point(788, 75)
         Me.TileLoadToCode.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadToCode.Name = "TileLoadToCode"
@@ -870,13 +877,13 @@ Partial Class MainForm
         Me.TileLoadFromCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.TileLoadFromCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.TileLoadFromCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadFromCode.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileLoadFromCode.ForeColor = System.Drawing.Color.White
         Me.TileLoadFromCode.Image = CType(resources.GetObject("TileLoadFromCode.Image"), System.Drawing.Image)
-        Me.TileLoadFromCode.ImagePosition = 15
+        Me.TileLoadFromCode.ImagePosition = 17
         Me.TileLoadFromCode.ImageZoom = 50
-        Me.TileLoadFromCode.LabelPosition = 32
-        Me.TileLoadFromCode.LabelText = "Load from Code"
+        Me.TileLoadFromCode.LabelPosition = 36
+        Me.TileLoadFromCode.LabelText = "Import from Code"
         Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 75)
         Me.TileLoadFromCode.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadFromCode.Name = "TileLoadFromCode"
@@ -891,13 +898,13 @@ Partial Class MainForm
         Me.TileSaveToFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.TileSaveToFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.TileSaveToFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileSaveToFile.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileSaveToFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileSaveToFile.ForeColor = System.Drawing.Color.White
         Me.TileSaveToFile.Image = CType(resources.GetObject("TileSaveToFile.Image"), System.Drawing.Image)
-        Me.TileSaveToFile.ImagePosition = 15
+        Me.TileSaveToFile.ImagePosition = 17
         Me.TileSaveToFile.ImageZoom = 50
-        Me.TileSaveToFile.LabelPosition = 32
-        Me.TileSaveToFile.LabelText = "Save to File"
+        Me.TileSaveToFile.LabelPosition = 36
+        Me.TileSaveToFile.LabelText = "Export to File"
         Me.TileSaveToFile.Location = New System.Drawing.Point(294, 75)
         Me.TileSaveToFile.Margin = New System.Windows.Forms.Padding(4)
         Me.TileSaveToFile.Name = "TileSaveToFile"
@@ -912,13 +919,13 @@ Partial Class MainForm
         Me.TileLoadFromFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.TileLoadFromFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.TileLoadFromFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadFromFile.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TileLoadFromFile.ForeColor = System.Drawing.Color.White
         Me.TileLoadFromFile.Image = CType(resources.GetObject("TileLoadFromFile.Image"), System.Drawing.Image)
-        Me.TileLoadFromFile.ImagePosition = 15
+        Me.TileLoadFromFile.ImagePosition = 17
         Me.TileLoadFromFile.ImageZoom = 50
-        Me.TileLoadFromFile.LabelPosition = 32
-        Me.TileLoadFromFile.LabelText = "Load from File"
+        Me.TileLoadFromFile.LabelPosition = 36
+        Me.TileLoadFromFile.LabelText = "Import from File"
         Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 75)
         Me.TileLoadFromFile.Margin = New System.Windows.Forms.Padding(4)
         Me.TileLoadFromFile.Name = "TileLoadFromFile"
