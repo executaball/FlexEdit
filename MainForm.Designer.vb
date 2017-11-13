@@ -27,6 +27,7 @@ Partial Class MainForm
         Dim MainColorScheme1 As MetroSuite.MetroTabControl.MainColorScheme = New MetroSuite.MetroTabControl.MainColorScheme()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Sidepanel = New System.Windows.Forms.Panel()
+        Me.SecretTables = New System.Windows.Forms.Button()
         Me.BarImageButton_Update = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BarImageButton_Cog = New Bunifu.Framework.UI.BunifuImageButton()
         Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -142,6 +143,10 @@ Partial Class MainForm
         Me.textbox_value_editor = New System.Windows.Forms.TextBox()
         Me.DataGridViewVars = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Tab8Secret = New System.Windows.Forms.TabPage()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.DataGridViewVars3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewVars2 = New System.Windows.Forms.DataGridView()
         Me.Panel_PreReleaseWarning = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
@@ -152,11 +157,6 @@ Partial Class MainForm
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Tab8Secret = New System.Windows.Forms.TabPage()
-        Me.DataGridViewVars2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewVars3 = New System.Windows.Forms.DataGridView()
-        Me.SecretTables = New System.Windows.Forms.Button()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Sidepanel.SuspendLayout()
         CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -206,12 +206,12 @@ Partial Class MainForm
         Me.Tab4Infect.SuspendLayout()
         Me.Tab7Raw.SuspendLayout()
         CType(Me.DataGridViewVars, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tab8Secret.SuspendLayout()
+        CType(Me.DataGridViewVars3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewVars2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_PreReleaseWarning.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
-        Me.Tab8Secret.SuspendLayout()
-        CType(Me.DataGridViewVars2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridViewVars3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -239,6 +239,16 @@ Partial Class MainForm
         Me.Sidepanel.Name = "Sidepanel"
         Me.Sidepanel.Size = New System.Drawing.Size(320, 964)
         Me.Sidepanel.TabIndex = 0
+        '
+        'SecretTables
+        '
+        Me.SecretTables.Location = New System.Drawing.Point(53, 836)
+        Me.SecretTables.Name = "SecretTables"
+        Me.SecretTables.Size = New System.Drawing.Size(184, 60)
+        Me.SecretTables.TabIndex = 11
+        Me.SecretTables.Text = "SecretTables"
+        Me.SecretTables.UseVisualStyleBackColor = True
+        Me.SecretTables.Visible = False
         '
         'BarImageButton_Update
         '
@@ -1739,6 +1749,56 @@ Partial Class MainForm
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Raw"
         '
+        'Tab8Secret
+        '
+        Me.Tab8Secret.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Tab8Secret.Controls.Add(Me.WebBrowser1)
+        Me.Tab8Secret.Controls.Add(Me.DataGridViewVars3)
+        Me.Tab8Secret.Controls.Add(Me.DataGridViewVars2)
+        Me.Tab8Secret.Location = New System.Drawing.Point(124, 4)
+        Me.Tab8Secret.Name = "Tab8Secret"
+        Me.Tab8Secret.Padding = New System.Windows.Forms.Padding(3)
+        Me.Tab8Secret.Size = New System.Drawing.Size(1054, 956)
+        Me.Tab8Secret.TabIndex = 7
+        Me.Tab8Secret.Text = "Tab8Secret"
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(628, 63)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(395, 829)
+        Me.WebBrowser1.TabIndex = 12
+        Me.WebBrowser1.Visible = False
+        '
+        'DataGridViewVars3
+        '
+        Me.DataGridViewVars3.AllowUserToAddRows = False
+        Me.DataGridViewVars3.AllowUserToDeleteRows = False
+        Me.DataGridViewVars3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewVars3.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.DataGridViewVars3.GridColor = System.Drawing.Color.DarkGray
+        Me.DataGridViewVars3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DataGridViewVars3.Location = New System.Drawing.Point(76, 485)
+        Me.DataGridViewVars3.Name = "DataGridViewVars3"
+        Me.DataGridViewVars3.RowTemplate.Height = 28
+        Me.DataGridViewVars3.Size = New System.Drawing.Size(528, 407)
+        Me.DataGridViewVars3.TabIndex = 11
+        '
+        'DataGridViewVars2
+        '
+        Me.DataGridViewVars2.AllowUserToAddRows = False
+        Me.DataGridViewVars2.AllowUserToDeleteRows = False
+        Me.DataGridViewVars2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewVars2.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.DataGridViewVars2.GridColor = System.Drawing.Color.DarkGray
+        Me.DataGridViewVars2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DataGridViewVars2.Location = New System.Drawing.Point(76, 63)
+        Me.DataGridViewVars2.Name = "DataGridViewVars2"
+        Me.DataGridViewVars2.RowTemplate.Height = 28
+        Me.DataGridViewVars2.Size = New System.Drawing.Size(528, 407)
+        Me.DataGridViewVars2.TabIndex = 10
+        '
         'Panel_PreReleaseWarning
         '
         Me.Panel_PreReleaseWarning.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(30, Byte), Integer))
@@ -1799,66 +1859,6 @@ Partial Class MainForm
         Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
         Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
         Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
-        '
-        'Tab8Secret
-        '
-        Me.Tab8Secret.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Tab8Secret.Controls.Add(Me.WebBrowser1)
-        Me.Tab8Secret.Controls.Add(Me.DataGridViewVars3)
-        Me.Tab8Secret.Controls.Add(Me.DataGridViewVars2)
-        Me.Tab8Secret.Location = New System.Drawing.Point(124, 4)
-        Me.Tab8Secret.Name = "Tab8Secret"
-        Me.Tab8Secret.Padding = New System.Windows.Forms.Padding(3)
-        Me.Tab8Secret.Size = New System.Drawing.Size(1054, 956)
-        Me.Tab8Secret.TabIndex = 7
-        Me.Tab8Secret.Text = "Tab8Secret"
-        '
-        'DataGridViewVars2
-        '
-        Me.DataGridViewVars2.AllowUserToAddRows = False
-        Me.DataGridViewVars2.AllowUserToDeleteRows = False
-        Me.DataGridViewVars2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewVars2.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.DataGridViewVars2.GridColor = System.Drawing.Color.DarkGray
-        Me.DataGridViewVars2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DataGridViewVars2.Location = New System.Drawing.Point(76, 63)
-        Me.DataGridViewVars2.Name = "DataGridViewVars2"
-        Me.DataGridViewVars2.RowTemplate.Height = 28
-        Me.DataGridViewVars2.Size = New System.Drawing.Size(528, 407)
-        Me.DataGridViewVars2.TabIndex = 10
-        '
-        'DataGridViewVars3
-        '
-        Me.DataGridViewVars3.AllowUserToAddRows = False
-        Me.DataGridViewVars3.AllowUserToDeleteRows = False
-        Me.DataGridViewVars3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewVars3.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.DataGridViewVars3.GridColor = System.Drawing.Color.DarkGray
-        Me.DataGridViewVars3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DataGridViewVars3.Location = New System.Drawing.Point(76, 485)
-        Me.DataGridViewVars3.Name = "DataGridViewVars3"
-        Me.DataGridViewVars3.RowTemplate.Height = 28
-        Me.DataGridViewVars3.Size = New System.Drawing.Size(528, 407)
-        Me.DataGridViewVars3.TabIndex = 11
-        '
-        'SecretTables
-        '
-        Me.SecretTables.Location = New System.Drawing.Point(53, 836)
-        Me.SecretTables.Name = "SecretTables"
-        Me.SecretTables.Size = New System.Drawing.Size(184, 60)
-        Me.SecretTables.TabIndex = 11
-        Me.SecretTables.Text = "SecretTables"
-        Me.SecretTables.UseVisualStyleBackColor = True
-        Me.SecretTables.Visible = False
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Location = New System.Drawing.Point(628, 63)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(395, 829)
-        Me.WebBrowser1.TabIndex = 12
-        Me.WebBrowser1.Visible = False
         '
         'MainForm
         '
@@ -1933,13 +1933,13 @@ Partial Class MainForm
         Me.Tab7Raw.ResumeLayout(False)
         Me.Tab7Raw.PerformLayout()
         CType(Me.DataGridViewVars, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Tab8Secret.ResumeLayout(False)
+        CType(Me.DataGridViewVars3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewVars2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_PreReleaseWarning.ResumeLayout(False)
         Me.Panel_PreReleaseWarning.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.Tab8Secret.ResumeLayout(False)
-        CType(Me.DataGridViewVars2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridViewVars3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
