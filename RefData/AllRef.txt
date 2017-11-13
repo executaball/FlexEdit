@@ -27,3 +27,11 @@ SerialData=
 x,x
 SavewordVersionData=
 x,x
+
+=ANNOTATION REFERENCE=
+
+ref-x
+example,example
+
+ref-x2
+example,example
