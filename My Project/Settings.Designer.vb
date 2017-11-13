@@ -136,21 +136,61 @@ Partial Friend NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("//This file is for internal usage by the FlexEdit Program."&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"//File Versioning (In"& _ 
-        "dependent from variables remotely accessible by FlexEdit)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"//ver_1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"//action r"& _ 
-        "eference: [1 = Advisory on startup]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"=ACTIONchart="&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FSVersion=1.2.3,1.2.5,1.2."& _ 
-        "5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Action=NA,NA,NA,1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Message=NA,NA,NA,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"=COMPATIBILITY CHECKER SERIAL="&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FSV"& _ 
-        "ersion=1.2.3,1.2.4,1.2.5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"EarliestVersion=101001,101001,010101"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FailVersion=1010"& _ 
-        "10,10001,1000,NONE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"=COMPATIBILITY SW VER="&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FSVersion=1.2.3,1.2.4,1.2.5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"E"& _ 
-        "arliestVersion=23,23,23,24"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FailVersion=24,24,24,NONE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"=SW AND SERIAL REFERENC"& _ 
-        "E TABLE="&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SerialData=101323,13013,123023,10238"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SavewordVersionData=23,23,23,2"& _ 
-        "3,24")>  _
-    Public Property AllRefLatest() As String
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property ckSWV_FEVersion() As String
         Get
-            Return CType(Me("AllRefLatest"),String)
+            Return CType(Me("ckSWV_FEVersion"),String)
         End Get
         Set
-            Me("AllRefLatest") = value
+            Me("ckSWV_FEVersion") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property ckSWV_EarliestVersion() As String
+        Get
+            Return CType(Me("ckSWV_EarliestVersion"),String)
+        End Get
+        Set
+            Me("ckSWV_EarliestVersion") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property ckSWV_FailVersion() As String
+        Get
+            Return CType(Me("ckSWV_FailVersion"),String)
+        End Get
+        Set
+            Me("ckSWV_FailVersion") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property ckRefTable_SerialData() As String
+        Get
+            Return CType(Me("ckRefTable_SerialData"),String)
+        End Get
+        Set
+            Me("ckRefTable_SerialData") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property ckRefTable_SavewordVersionData() As String
+        Get
+            Return CType(Me("ckRefTable_SavewordVersionData"),String)
+        End Get
+        Set
+            Me("ckRefTable_SavewordVersionData") = value
         End Set
     End Property
 End Class

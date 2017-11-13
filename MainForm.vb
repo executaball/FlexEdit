@@ -11,6 +11,8 @@ Imports System.Text
 Imports System.Net
 
 Public Class MainForm
+    'Secret Debug Mode
+    Public SecretDebugMode As Boolean = True
     'Vars
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
@@ -24,6 +26,14 @@ Public Class MainForm
     'Connectivity
     Public GrabAddress As String = "http://goo.gl/8d2xXV"
     Public AllRefDownload As String = ""
+
+    'Connectivity EXPORTS
+    Public ckSWV_FEVersion As String
+    Public ckSWV_EarliestVersion As String
+    Public ckSWV_FailVersion As String
+
+    Public ckRefTable_SerialData As String
+    Public ckRefTable_SavewordVersionData As String
 
     'States that will be controlled by checkboxes
     Public saveword2enabled As Boolean = False
@@ -78,13 +88,13 @@ Public Class MainForm
     'Datatable
     'Dim data As New DataSet1
     Dim table As New DataTable("Table")
-
+    Dim RefTable As New DataTable("RefTable")
+    Dim Ref2Table As New DataTable("Ref2Table")
 
 
     Private Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
         'dim mysplashscreen = directcast(my.application.splashscreen, form2)
         'my.application.mysplashscreen.invoke(new methodinvoker(addressof my.application.mysplashscreen.incrementprogress))
-
 
         'bugfix 1 for metrotab
         Dim speed As Integer = MetroTabControl1.Speed : MetroTabControl1.Speed = 20
@@ -110,54 +120,64 @@ Public Class MainForm
         'compute the updater.exe path relative to the application main module path
         updaterModulePath = Path.Combine(Application.StartupPath, "wyupdate.exe")
 
-        'TESTONLY
-        My.Settings.FlexBoot = 0
-        My.Settings.AutoupdatePref = True
-
-        'Autoupdater consent
-        If My.Settings.FlexBoot = 0 Then
-            Select Case MsgBox("FlexEdit uses an Autoupdater that periodically accesses its Github page to check for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "Use autoupdater?")
-                Case MsgBoxResult.Yes
-                    'Do nothing, carry on
-                Case MsgBoxResult.No
-                    My.Settings.AutoupdatePref = False
-                    My.Settings.Save()
-            End Select
+        'Checks debug mode, and enables the respective controls
+        If SecretDebugMode = True Then
+            My.Settings.FlexBoot = 0
+            My.Settings.AutoupdatePref = True
         End If
+
+        'First boot welcome
+        If My.Settings.FlexBoot = 0 Then
+            FirstStart()
+        End If
+
 
         'Check if updater exists first, before actually attempting update.
-        If System.IO.File.Exists(updaterModulePath) Then
-            'Do nothing, the file exists
-        Else
-            'the file doesn't exist
-            My.Settings.AutoupdatePref = False
-            My.Settings.Save()
-            MsgBox("Error checking for updates. Please make sure 'wyUpdate.exe' is in the same directory as FlexEdit. Autoupdates have now been disabled. You can re-enable in settings. ", vbExclamation, "Updater error")
-        End If
-
         If My.Settings.AutoupdatePref = True Then
-            'run updater tasks
-            Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
-            thread.Start()
+            If System.IO.File.Exists(updaterModulePath) Then
+                'File exists. Run updater tasks
+                Dim thread As Thread = New Thread(New ThreadStart(AddressOf StartSilent))
+                thread.Start()
+            Else
+                'The file doesn't exist
+                My.Settings.AutoupdatePref = False
+                My.Settings.Save()
+                MsgBox("Error checking for updates. Please make sure 'wyUpdate.exe' is in the same directory as FlexEdit. Autoupdates have now been disabled. You can re-enable in settings. ", vbExclamation, "Updater error")
+            End If
         End If
 
         'center main form to screen
         Me.CenterToScreen()
 
-        'welcome message
-        If My.Settings.FlexBoot = 0 Then
-            MsgBox("Welcome to FlexEdit. You can send bug reports / suggestions via the survey (click the info button). Or just poke @executaball on the Flexible Survival official Discord!", vbInformation, "Welcome to FlexEdit")
-            MsgBox("Disclaimer: FlexEdit may from time to time check an online text file in the FlexEdit Github. This may cause pop-ups from your Firewall. Please click 'allow' if any such windows show up. FlexEdit does not upload any user information nor download any files. It *literally* just reads a text file to ensure compatibility with future savewords.", vbExclamation, "Notice")
-        End If
-
         'Updates versioning bar in relation to web update
-        Load_UpdateComptBar()
+        Load_Metrics()
 
-
+        'Debugging stuff
+        If SecretDebugMode = True Then
+            SecretTables.Visible = True
+        End If
 
         'increment flex boot counter
         My.Settings.FlexBoot += 1
         My.Settings.Save()
+    End Sub
+
+    'First boot operations
+    Private Sub FirstStart()
+
+        'Welcome message
+        MsgBox("Welcome to FlexEdit. You can send bug reports / suggestions via the survey (click the info button). Or just poke @executaball on the Flexible Survival official Discord!", vbInformation, "Welcome to FlexEdit")
+        MsgBox("Disclaimer: FlexEdit may from time to time check an online text file in the FlexEdit Github. This may cause pop-ups from your Firewall. Please click 'allow' if any such windows show up. FlexEdit does not upload any user information nor download any files. It *literally* just reads a text file to ensure compatibility with future savewords.", vbExclamation, "Notice")
+
+        'Autoupdater consent
+        Select Case MsgBox("FlexEdit uses an Autoupdater that periodically accesses its Github page to check for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "Use autoupdater?")
+            Case MsgBoxResult.Yes
+                    'Do nothing, carry on
+            Case MsgBoxResult.No
+                My.Settings.AutoupdatePref = False
+                My.Settings.Save()
+        End Select
+
     End Sub
 
     'Updater Silent operations
@@ -171,7 +191,6 @@ Public Class MainForm
         End Try
     End Sub
 
-
     'This handler should be associated with a menu item that launches the updater in check now mode (usually from  Help submenu)
     Public Sub CheckForUpdates() '(sender As System.Object, e As System.EventArgs) 'Handles CheckForUpdatesMenuItem.Click
         Try
@@ -182,10 +201,9 @@ Public Class MainForm
         End Try
     End Sub
 
-    Public Sub Load_UpdateComptBar() 'updates the bottom bar
+    Private Sub Load_Metrics() 'Github data update
         'Connectivity Update
         Dim client As WebClient = New WebClient()
-        WebBrowser1.Visible = False
         WebBrowser1.Navigate(New Uri(GrabAddress))
         WebBrowser1.Visible = False
         Try
@@ -196,32 +214,59 @@ Public Class MainForm
                 allLines.Add(reader.ReadLine())
             Loop
             reader.Close()
-            Dim EndVar As String = ReadLine(2, allLines)
 
+            'Fill variables
 
-            MsgBox(EndVar)
+            ckSWV_FEVersion = ReadLine(18, allLines)
+            ckSWV_EarliestVersion = ReadLine(20, allLines)
+            ckSWV_FailVersion = ReadLine(22, allLines)
 
-            'SavewordText1 = EndVar
+            ckRefTable_SerialData = ReadLine(27, allLines)
+            ckRefTable_SavewordVersionData = ReadLine(29, allLines)
+
+            'Vars into SETTINGS (persistent)
+
+            My.Settings.ckSWV_FEVersion = ckSWV_FEVersion
+            My.Settings.ckSWV_EarliestVersion = ckSWV_EarliestVersion
+            My.Settings.ckSWV_FailVersion = ckSWV_FailVersion
+
+            My.Settings.ckRefTable_SerialData = ckRefTable_SerialData
+            My.Settings.ckRefTable_SavewordVersionData = ckRefTable_SavewordVersionData
+
+            My.Settings.Save()
+
         Catch z As Exception
-            MsgBox("Error updating the FlexEdit saveword resolution database. Error: " & z.Message, vbCritical, "Error")
+            MsgBox("Error updating the FlexEdit saveword resolution database. Are you offline? FlexEdit can still be used but may not resolve savewords correctly for newer versions of Flexible Survival. Please get online soon." & z.Message, vbCritical, "Error")
         End Try
         'MsgBox(AllRefDownload)
 
-        My.Settings.AllRefLatest = AllRefDownload
-        My.Settings.Save()
-
-        'Dim reader As New System.IO.StreamReader(PersistentUserDirectory + "\txsave.glkdata")
-        'Dim allLines As List(Of String) = New List(Of String)
-        'Do While Not reader.EndOfStream
-        '    allLines.Add(reader.ReadLine())
-        'Loop
-        'reader.Close()
-        'Dim EndVar As String = ReadLine(2, allLines)
+        'now set the tables, not part of try because we do this even when error ( since we cleared the table at startup )
 
 
-        ''MsgBox(EndVar)
+        Dim rinput As String = My.Settings.ckSWV_FEVersion
+        Dim yValues() As String = rinput.Split(",")
 
-        'SavewordText1 = EndVar
+        Dim r2input As String = My.Settings.ckSWV_EarliestVersion
+        Dim y2Values() As String = r2input.Split(",")
+
+        Dim r3input As String = My.Settings.ckSWV_FailVersion
+        Dim y3Values() As String = r3input.Split(",")
+
+        For count = 0 To yValues.Length - 1
+            If count >= 0 Then
+                RefTable.Rows.Add(yValues(count), y2Values(count), y3Values(count))
+            End If
+        Next
+        'second line onwards
+
+        'Dim ln2() As String = My.Settings.ckSWV_EarliestVersion.Split("}")
+        'For count = 0 To ln2.Length - 1
+        '    RefTable.Rows(count).Cells(2).Value = ln2(count)
+        '    DataSet.RefTable(0).Rows(4).Item(0) = "Updated Company Name"
+        '    DataSet.RefTable(0).Rows(4).Item(1) = "Seattle"
+        'Next
+
+        'ok now that's all over... actually set the bottom bar (logic handling below)
 
 
 
@@ -284,13 +329,43 @@ Public Class MainForm
 
         'assinging the datagridview to use 'table' as data source
         DataGridViewVars.DataSource = table
+        DataGridViewVars2.DataSource = RefTable
+        DataGridViewVars3.DataSource = Ref2Table
 
         'calling function to resize, will use function in all edits
         resizeDataTable()
         Me.DataGridViewVars.Font = New Font("Segoe UI", 10, FontStyle.Regular)
         DataGridViewVars.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
 
+        Me.DataGridViewVars2.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        DataGridViewVars2.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
+
+        Me.DataGridViewVars3.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        DataGridViewVars3.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
+
         textbox_value_editor.DataBindings.Add("Text", table, "Value")
+
+
+        'OK, now RefTable tasks
+
+        RefTable.Columns.Add("ckSWV_FEVersion", Type.GetType("System.String"))
+        RefTable.Columns.Add("ckSWV_EarliestVersion", Type.GetType("System.String"))
+        RefTable.Columns.Add("ckSWV_FailVersion", Type.GetType("System.String"))
+
+        Ref2Table.Columns.Add("ckRefTable_SerialData", Type.GetType("System.String"))
+        Ref2Table.Columns.Add("ckRefTable_SavewordVersionData", Type.GetType("System.String"))
+
+        'before doing anything, we assume user is doing this second time.
+        'perform cleanup for datatable here
+        'Care errors, added error handling as of rev 3
+        Try
+            RefTable.Clear()
+            Ref2Table.Clear()
+        Catch f As DataException
+            ' Process exception below
+            MsgBox("Exception occurred while setting up RefTables 1 and 2. Please report this to the developer. Error Msg:",
+           f.GetType().ToString())
+        End Try
 
     End Sub
 
@@ -409,7 +484,10 @@ Public Class MainForm
         End If
 
     End Sub
-
+    'Secret
+    Private Sub SecretTables_Click(sender As Object, e As EventArgs) Handles SecretTables.Click
+        MetroTabControl1.SelectedTab = Tab8Secret
+    End Sub
 
 
     'FUNCTIONS to DISPLAY status of saveword
@@ -1788,5 +1866,6 @@ Public Class MainForm
         End If
 
     End Sub
+
 End Class
 
