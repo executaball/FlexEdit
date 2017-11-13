@@ -123,7 +123,7 @@ Partial Class Info
         Me.Label5.Size = New System.Drawing.Size(664, 48)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "All icon assets are used under Creative Commons — Attribution 3.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Icon Authors: " &
-    "Google Material Design, Freepik, GraphicsBay, Madebyoliver, Vectors market"
+    "Google Material Design"
         '
         'LinkLabel1
         '

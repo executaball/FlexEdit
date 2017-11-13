@@ -165,12 +165,10 @@ Public Class MainForm
     'First boot operations
     Private Sub FirstStart()
 
-        'Welcome message
-        MsgBox("Welcome to FlexEdit. You can send bug reports / suggestions via the survey (click the info button). Or just poke @executaball on the Flexible Survival official Discord!", vbInformation, "Welcome to FlexEdit")
-        MsgBox("Disclaimer: FlexEdit may from time to time check an online text file in the FlexEdit Github. This may cause pop-ups from your Firewall. Please click 'allow' if any such windows show up. FlexEdit does not upload any user information nor download any files. It *literally* just reads a text file to ensure compatibility with future savewords.", vbExclamation, "Notice")
+        Startup.ShowDialog()
 
         'Autoupdater consent
-        Select Case MsgBox("FlexEdit uses an Autoupdater that periodically accesses its Github page to check for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "Use autoupdater?")
+        Select Case MsgBox("FlexEdit uses an Autoupdater that checks for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "One last thing...")
             Case MsgBoxResult.Yes
                     'Do nothing, carry on
             Case MsgBoxResult.No
@@ -1173,7 +1171,14 @@ Public Class MainForm
     End Sub
     'Update button
     Private Sub BarImageButton_Update_Click(sender As Object, e As EventArgs) Handles BarImageButton_Update.Click
-        CheckForUpdates()
+        If System.IO.File.Exists(updaterModulePath) Then
+            'File exists. Run updater tasks
+            CheckForUpdates()
+        Else
+            'The file doesn't exist
+            MsgBox("Error checking for updates. Please make sure 'wyUpdate.exe' is in the same directory as FlexEdit.", vbExclamation, "Updater error")
+        End If
+
     End Sub
     'Settings button
     Private Sub BarImageButton_Cog_Click(sender As Object, e As EventArgs) Handles BarImageButton_Cog.Click

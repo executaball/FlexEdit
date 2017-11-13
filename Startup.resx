@@ -123,4 +123,7 @@
   <metadata name="BunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>189, 19</value>
   </metadata>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>FlexEdit may from time to time check an online text file in the FlexEdit Github. This may cause pop-ups from your Firewall. Please click 'allow' if any such windows show up. At the moment, in the interest of compatibility, this function cannot be disabled. FlexEdit can still be used offline, as it memorizes the saveword handling instructions from the last time it checked with its Github. However, savewords from newer versions of FS cannot be loaded.</value>
+  </data>
 </root>

@@ -37,7 +37,6 @@
         Me.CenterToScreen()
         VersionL.Text = System.String.Format(VersionL.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build)
 
-
         ProgressBar1.MarqueeAnimationSpeed = 40
         ProgressBar1.Style = ProgressBarStyle.Marquee
 

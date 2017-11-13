@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Splash
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Splash
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Splash))
@@ -35,7 +35,7 @@ Partial Class Splash
         '
         'BunifuElipse1
         '
-        Me.BunifuElipse1.ElipseRadius = 5
+        Me.BunifuElipse1.ElipseRadius = 10
         Me.BunifuElipse1.TargetControl = Me
         '
         'Label1
@@ -83,7 +83,7 @@ Partial Class Splash
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(20, 256)
+        Me.ProgressBar1.Location = New System.Drawing.Point(20, 251)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(556, 19)
         Me.ProgressBar1.TabIndex = 5
