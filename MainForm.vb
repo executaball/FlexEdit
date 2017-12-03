@@ -28,12 +28,11 @@ Public Class MainForm
     Public AllRefDownload As String = ""
 
     'Connectivity EXPORTS
-    Public ckSWV_FEVersion As String
-    Public ckSWV_EarliestVersion As String
-    Public ckSWV_FailVersion As String
-
-    Public ckRefTable_SerialData As String
-    Public ckRefTable_SavewordVersionData As String
+    Public Supported_SWVersion As String
+    Public HandlingInstructions_StringLimit1 As String
+    Public HandlingInstructions_StringLimit2 As String
+    Public HandlingInstructions_StringLimit3 As String
+    Public HandlingInstructions_StringLimit4 As String
 
     'States that will be controlled by checkboxes
     Public saveword2enabled As Boolean = False
@@ -216,21 +215,20 @@ Public Class MainForm
 
             'Fill variables
 
-            ckSWV_FEVersion = ReadLine(18, allLines)
-            ckSWV_EarliestVersion = ReadLine(20, allLines)
-            ckSWV_FailVersion = ReadLine(22, allLines)
-
-            ckRefTable_SerialData = ReadLine(27, allLines)
-            ckRefTable_SavewordVersionData = ReadLine(29, allLines)
+            Supported_SWVersion = ReadLine(8, allLines)
+            HandlingInstructions_StringLimit1 = ReadLine(11, allLines)
+            HandlingInstructions_StringLimit2 = ReadLine(14, allLines)
+            HandlingInstructions_StringLimit3 = ReadLine(17, allLines)
+            HandlingInstructions_StringLimit4 = ReadLine(20, allLines)
 
             'Vars into SETTINGS (persistent)
 
-            My.Settings.ckSWV_FEVersion = ckSWV_FEVersion
-            My.Settings.ckSWV_EarliestVersion = ckSWV_EarliestVersion
-            My.Settings.ckSWV_FailVersion = ckSWV_FailVersion
+            My.Settings.Supported_SWVersion = Supported_SWVersion
+            My.Settings.HandlingInstructions_StringLimit1 = HandlingInstructions_StringLimit1
+            My.Settings.HandlingInstructions_StringLimit2 = HandlingInstructions_StringLimit2
 
-            My.Settings.ckRefTable_SerialData = ckRefTable_SerialData
-            My.Settings.ckRefTable_SavewordVersionData = ckRefTable_SavewordVersionData
+            My.Settings.HandlingInstructions_StringLimit3 = HandlingInstructions_StringLimit3
+            My.Settings.HandlingInstructions_StringLimit4 = HandlingInstructions_StringLimit4
 
             My.Settings.Save()
 
@@ -242,13 +240,13 @@ Public Class MainForm
         'now set the tables, not part of try because we do this even when error ( since we cleared the table at startup )
 
 
-        Dim rinput As String = My.Settings.ckSWV_FEVersion
+        Dim rinput As String = My.Settings.Supported_SWVersion
         Dim yValues() As String = rinput.Split(",")
 
-        Dim r2input As String = My.Settings.ckSWV_EarliestVersion
+        Dim r2input As String = My.Settings.HandlingInstructions_StringLimit1
         Dim y2Values() As String = r2input.Split(",")
 
-        Dim r3input As String = My.Settings.ckSWV_FailVersion
+        Dim r3input As String = My.Settings.HandlingInstructions_StringLimit2
         Dim y3Values() As String = r3input.Split(",")
 
         For count = 0 To yValues.Length - 1
@@ -347,12 +345,11 @@ Public Class MainForm
 
         'OK, now RefTable tasks
 
-        RefTable.Columns.Add("ckSWV_FEVersion", Type.GetType("System.String"))
-        RefTable.Columns.Add("ckSWV_EarliestVersion", Type.GetType("System.String"))
-        RefTable.Columns.Add("ckSWV_FailVersion", Type.GetType("System.String"))
-
-        Ref2Table.Columns.Add("ckRefTable_SerialData", Type.GetType("System.String"))
-        Ref2Table.Columns.Add("ckRefTable_SavewordVersionData", Type.GetType("System.String"))
+        RefTable.Columns.Add("Supported_SWVersion", Type.GetType("System.String"))
+        RefTable.Columns.Add("HandlingInstructions_StringLimit1", Type.GetType("System.String"))
+        RefTable.Columns.Add("HandlingInstructions_StringLimit2", Type.GetType("System.String"))
+        RefTable.Columns.Add("HandlingInstructions_StringLimit3", Type.GetType("System.String"))
+        RefTable.Columns.Add("HandlingInstructions_StringLimit4", Type.GetType("System.String"))
 
         'before doing anything, we assume user is doing this second time.
         'perform cleanup for datatable here

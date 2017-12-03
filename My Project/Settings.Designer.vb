@@ -149,48 +149,48 @@ Partial Friend NotInheritable Class Settings
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ckSWV_EarliestVersion() As String
+    Public Property HandlingInstructions_StringLimit1() As String
         Get
-            Return CType(Me("ckSWV_EarliestVersion"),String)
+            Return CType(Me("HandlingInstructions_StringLimit1"),String)
         End Get
         Set
-            Me("ckSWV_EarliestVersion") = value
+            Me("HandlingInstructions_StringLimit1") = value
         End Set
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ckSWV_FailVersion() As String
+    Public Property HandlingInstructions_StringLimit2() As String
         Get
-            Return CType(Me("ckSWV_FailVersion"),String)
+            Return CType(Me("HandlingInstructions_StringLimit2"),String)
         End Get
         Set
-            Me("ckSWV_FailVersion") = value
+            Me("HandlingInstructions_StringLimit2") = value
         End Set
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ckRefTable_SerialData() As String
+    Public Property HandlingInstructions_StringLimit3() As String
         Get
-            Return CType(Me("ckRefTable_SerialData"),String)
+            Return CType(Me("HandlingInstructions_StringLimit3"),String)
         End Get
         Set
-            Me("ckRefTable_SerialData") = value
+            Me("HandlingInstructions_StringLimit3") = value
         End Set
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ckRefTable_SavewordVersionData() As String
+    Public Property HandlingInstructions_StringLimit4() As String
         Get
-            Return CType(Me("ckRefTable_SavewordVersionData"),String)
+            Return CType(Me("HandlingInstructions_StringLimit4"),String)
         End Get
         Set
-            Me("ckRefTable_SavewordVersionData") = value
+            Me("HandlingInstructions_StringLimit4") = value
         End Set
     End Property
 End Class

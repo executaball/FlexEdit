@@ -20,19 +20,19 @@
     <Setting Name="AutoupdatePref" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="ckSWV_FEVersion" Type="System.String" Scope="User">
+    <Setting Name="Supported_SWVersion" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ckSWV_EarliestVersion" Type="System.String" Scope="User">
+    <Setting Name="HandlingInstructions_StringLimit1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ckSWV_FailVersion" Type="System.String" Scope="User">
+    <Setting Name="HandlingInstructions_StringLimit2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ckRefTable_SerialData" Type="System.String" Scope="User">
+    <Setting Name="HandlingInstructions_StringLimit3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ckRefTable_SavewordVersionData" Type="System.String" Scope="User">
+    <Setting Name="HandlingInstructions_StringLimit4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
