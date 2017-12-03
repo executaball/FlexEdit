@@ -105,7 +105,7 @@ Public Class MainForm
         'bugfix over
 
         'show pre-release warning
-        Panel_PreReleaseWarning.Visible = True
+        Panel_PreReleaseWarning.Visible = False
         '(Out of beta!)
 
         'highlight first option
@@ -148,6 +148,9 @@ Public Class MainForm
 
         'center main form to screen
         Me.CenterToScreen()
+
+        'Counter
+        WebBrowser1.Navigate(New Uri(GrabAddress))
 
         'Updates versioning bar in relation to web update
         Load_Metrics()
@@ -201,10 +204,8 @@ Public Class MainForm
 
     Private Sub Load_Metrics() 'Github data update
         'Connectivity Update
-        Dim client As WebClient = New WebClient()
-        WebBrowser1.Navigate(New Uri(GrabAddress))
-        WebBrowser1.Visible = False
         Try
+            Dim client As WebClient = New WebClient()
             Dim reader As StreamReader = New StreamReader(client.OpenRead(GrabAddress))
             'AllRefDownload = reader.ReadToEnd
             Dim allLines As List(Of String) = New List(Of String)
@@ -234,7 +235,7 @@ Public Class MainForm
             My.Settings.Save()
 
         Catch z As Exception
-            MsgBox("Error updating the FlexEdit saveword resolution database. Are you offline? FlexEdit can still be used but may not resolve savewords correctly for newer versions of Flexible Survival. Please get online soon." & z.Message, vbCritical, "Error")
+            MsgBox("FlexEdit has failed to update its saveword resolution database. Either you're not connected to the internet or Google services are inaccessible from your location. FlexEdit can still be used but will not be updated to support newer FS savewords.", vbCritical, "Error")
         End Try
         'MsgBox(AllRefDownload)
 

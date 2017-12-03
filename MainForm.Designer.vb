@@ -266,11 +266,11 @@ Partial Class MainForm
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Google Sans", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.White
         Me.BunifuCustomLabel1.Location = New System.Drawing.Point(47, 10)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(127, 32)
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(123, 35)
         Me.BunifuCustomLabel1.TabIndex = 2
         Me.BunifuCustomLabel1.Text = "FlexEdit"
         '
@@ -353,7 +353,7 @@ Partial Class MainForm
         '
         Me.label_status5.AutoSize = True
         Me.label_status5.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_status5.ForeColor = System.Drawing.Color.White
+        Me.label_status5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.label_status5.Location = New System.Drawing.Point(571, 440)
         Me.label_status5.Name = "label_status5"
         Me.label_status5.Size = New System.Drawing.Size(197, 45)
@@ -364,7 +364,7 @@ Partial Class MainForm
         '
         Me.label_status4.AutoSize = True
         Me.label_status4.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_status4.ForeColor = System.Drawing.Color.White
+        Me.label_status4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.label_status4.Location = New System.Drawing.Point(571, 370)
         Me.label_status4.Name = "label_status4"
         Me.label_status4.Size = New System.Drawing.Size(197, 45)
@@ -375,7 +375,7 @@ Partial Class MainForm
         '
         Me.label_status3.AutoSize = True
         Me.label_status3.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_status3.ForeColor = System.Drawing.Color.White
+        Me.label_status3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.label_status3.Location = New System.Drawing.Point(571, 300)
         Me.label_status3.Name = "label_status3"
         Me.label_status3.Size = New System.Drawing.Size(173, 45)
@@ -386,7 +386,7 @@ Partial Class MainForm
         '
         Me.label_status2.AutoSize = True
         Me.label_status2.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_status2.ForeColor = System.Drawing.Color.White
+        Me.label_status2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.label_status2.Location = New System.Drawing.Point(571, 230)
         Me.label_status2.Name = "label_status2"
         Me.label_status2.Size = New System.Drawing.Size(173, 45)
@@ -397,7 +397,7 @@ Partial Class MainForm
         '
         Me.label_status1.AutoSize = True
         Me.label_status1.Font = New System.Drawing.Font("Segoe UI Semilight", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_status1.ForeColor = System.Drawing.Color.White
+        Me.label_status1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.label_status1.Location = New System.Drawing.Point(571, 160)
         Me.label_status1.Name = "label_status1"
         Me.label_status1.Size = New System.Drawing.Size(173, 45)
@@ -407,55 +407,55 @@ Partial Class MainForm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(337, 438)
+        Me.Label11.Location = New System.Drawing.Point(343, 438)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(139, 43)
+        Me.Label11.Size = New System.Drawing.Size(132, 45)
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Storage"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(308, 367)
+        Me.Label10.Location = New System.Drawing.Point(314, 367)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(168, 43)
+        Me.Label10.Size = New System.Drawing.Size(160, 45)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Inventory"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(211, 298)
+        Me.Label9.Location = New System.Drawing.Point(217, 298)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(271, 43)
+        Me.Label9.Size = New System.Drawing.Size(257, 45)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Saveword Part 3"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(211, 229)
+        Me.Label8.Location = New System.Drawing.Point(217, 229)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(271, 43)
+        Me.Label8.Size = New System.Drawing.Size(257, 45)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Saveword Part 2"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Open Sans Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(211, 160)
+        Me.Label7.Location = New System.Drawing.Point(217, 160)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(271, 43)
+        Me.Label7.Size = New System.Drawing.Size(252, 45)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Saveword Part 1"
         '
@@ -476,11 +476,11 @@ Partial Class MainForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(36, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(381, 54)
+        Me.Label1.Size = New System.Drawing.Size(387, 53)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Welcome to FlexEdit"
         '
@@ -1420,7 +1420,7 @@ Partial Class MainForm
         Me.buttontab_6.ButtonText = "              Storage"
         Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_6.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
         Me.buttontab_6.Iconimage_right = Nothing
@@ -1433,19 +1433,19 @@ Partial Class MainForm
         Me.buttontab_6.IconVisible = True
         Me.buttontab_6.IconZoom = 50.0R
         Me.buttontab_6.IsTab = True
-        Me.buttontab_6.Location = New System.Drawing.Point(0, 636)
+        Me.buttontab_6.Location = New System.Drawing.Point(0, 658)
         Me.buttontab_6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_6.Name = "buttontab_6"
         Me.buttontab_6.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_6.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_6.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_6.selected = False
-        Me.buttontab_6.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_6.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_6.TabIndex = 8
         Me.buttontab_6.Text = "              Storage"
         Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_6.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_6.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_5
         '
@@ -1456,7 +1456,7 @@ Partial Class MainForm
         Me.buttontab_5.ButtonText = "              Inventory"
         Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_5.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
         Me.buttontab_5.Iconimage_right = Nothing
@@ -1469,19 +1469,19 @@ Partial Class MainForm
         Me.buttontab_5.IconVisible = True
         Me.buttontab_5.IconZoom = 50.0R
         Me.buttontab_5.IsTab = True
-        Me.buttontab_5.Location = New System.Drawing.Point(0, 553)
+        Me.buttontab_5.Location = New System.Drawing.Point(0, 567)
         Me.buttontab_5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_5.Name = "buttontab_5"
         Me.buttontab_5.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_5.selected = False
-        Me.buttontab_5.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_5.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_5.TabIndex = 7
         Me.buttontab_5.Text = "              Inventory"
         Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_5.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_5.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_7
         '
@@ -1492,7 +1492,7 @@ Partial Class MainForm
         Me.buttontab_7.ButtonText = "              Raw"
         Me.buttontab_7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_7.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_7.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_7.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_7.Iconimage = CType(resources.GetObject("buttontab_7.Iconimage"), System.Drawing.Image)
         Me.buttontab_7.Iconimage_right = Nothing
@@ -1505,19 +1505,19 @@ Partial Class MainForm
         Me.buttontab_7.IconVisible = True
         Me.buttontab_7.IconZoom = 50.0R
         Me.buttontab_7.IsTab = True
-        Me.buttontab_7.Location = New System.Drawing.Point(0, 719)
+        Me.buttontab_7.Location = New System.Drawing.Point(0, 749)
         Me.buttontab_7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_7.Name = "buttontab_7"
         Me.buttontab_7.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_7.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_7.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_7.selected = False
-        Me.buttontab_7.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_7.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_7.TabIndex = 6
         Me.buttontab_7.Text = "              Raw"
         Me.buttontab_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_7.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_7.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_7.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_4
         '
@@ -1528,7 +1528,7 @@ Partial Class MainForm
         Me.buttontab_4.ButtonText = "              Infections"
         Me.buttontab_4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_4.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_4.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_4.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_4.Iconimage = CType(resources.GetObject("buttontab_4.Iconimage"), System.Drawing.Image)
         Me.buttontab_4.Iconimage_right = Nothing
@@ -1541,19 +1541,19 @@ Partial Class MainForm
         Me.buttontab_4.IconVisible = True
         Me.buttontab_4.IconZoom = 50.0R
         Me.buttontab_4.IsTab = True
-        Me.buttontab_4.Location = New System.Drawing.Point(0, 470)
+        Me.buttontab_4.Location = New System.Drawing.Point(0, 476)
         Me.buttontab_4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_4.Name = "buttontab_4"
         Me.buttontab_4.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_4.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_4.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_4.selected = False
-        Me.buttontab_4.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_4.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_4.TabIndex = 5
         Me.buttontab_4.Text = "              Infections"
         Me.buttontab_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_4.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_4.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_3
         '
@@ -1564,7 +1564,7 @@ Partial Class MainForm
         Me.buttontab_3.ButtonText = "              Body"
         Me.buttontab_3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_3.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_3.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_3.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_3.Iconimage = CType(resources.GetObject("buttontab_3.Iconimage"), System.Drawing.Image)
         Me.buttontab_3.Iconimage_right = Nothing
@@ -1577,19 +1577,19 @@ Partial Class MainForm
         Me.buttontab_3.IconVisible = True
         Me.buttontab_3.IconZoom = 50.0R
         Me.buttontab_3.IsTab = True
-        Me.buttontab_3.Location = New System.Drawing.Point(0, 387)
+        Me.buttontab_3.Location = New System.Drawing.Point(0, 385)
         Me.buttontab_3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_3.Name = "buttontab_3"
         Me.buttontab_3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_3.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_3.selected = False
-        Me.buttontab_3.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_3.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_3.TabIndex = 4
         Me.buttontab_3.Text = "              Body"
         Me.buttontab_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_3.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_3.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_2
         '
@@ -1600,7 +1600,7 @@ Partial Class MainForm
         Me.buttontab_2.ButtonText = "              General"
         Me.buttontab_2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_2.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_2.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_2.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_2.Iconimage = CType(resources.GetObject("buttontab_2.Iconimage"), System.Drawing.Image)
         Me.buttontab_2.Iconimage_right = Nothing
@@ -1613,19 +1613,19 @@ Partial Class MainForm
         Me.buttontab_2.IconVisible = True
         Me.buttontab_2.IconZoom = 50.0R
         Me.buttontab_2.IsTab = True
-        Me.buttontab_2.Location = New System.Drawing.Point(0, 304)
+        Me.buttontab_2.Location = New System.Drawing.Point(0, 294)
         Me.buttontab_2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_2.Name = "buttontab_2"
         Me.buttontab_2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_2.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_2.selected = False
-        Me.buttontab_2.Size = New System.Drawing.Size(368, 73)
+        Me.buttontab_2.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_2.TabIndex = 3
         Me.buttontab_2.Text = "              General"
         Me.buttontab_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_2.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_2.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'buttontab_1
         '
@@ -1636,7 +1636,7 @@ Partial Class MainForm
         Me.buttontab_1.ButtonText = "              Import/Export"
         Me.buttontab_1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.buttontab_1.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_1.Font = New System.Drawing.Font("Google Sans", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttontab_1.Iconcolor = System.Drawing.Color.Transparent
         Me.buttontab_1.Iconimage = CType(resources.GetObject("buttontab_1.Iconimage"), System.Drawing.Image)
         Me.buttontab_1.Iconimage_right = Nothing
@@ -1649,19 +1649,19 @@ Partial Class MainForm
         Me.buttontab_1.IconVisible = True
         Me.buttontab_1.IconZoom = 50.0R
         Me.buttontab_1.IsTab = True
-        Me.buttontab_1.Location = New System.Drawing.Point(3, 221)
+        Me.buttontab_1.Location = New System.Drawing.Point(3, 203)
         Me.buttontab_1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.buttontab_1.Name = "buttontab_1"
         Me.buttontab_1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.buttontab_1.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.buttontab_1.selected = False
-        Me.buttontab_1.Size = New System.Drawing.Size(365, 73)
+        Me.buttontab_1.Size = New System.Drawing.Size(365, 91)
         Me.buttontab_1.TabIndex = 2
         Me.buttontab_1.Text = "              Import/Export"
         Me.buttontab_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttontab_1.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_1.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BarImageButton_Info
         '
@@ -1691,7 +1691,7 @@ Partial Class MainForm
         'picbox_status5
         '
         Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
-        Me.picbox_status5.Location = New System.Drawing.Point(499, 440)
+        Me.picbox_status5.Location = New System.Drawing.Point(496, 440)
         Me.picbox_status5.Name = "picbox_status5"
         Me.picbox_status5.Size = New System.Drawing.Size(54, 49)
         Me.picbox_status5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1701,7 +1701,7 @@ Partial Class MainForm
         'picbox_status4
         '
         Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
-        Me.picbox_status4.Location = New System.Drawing.Point(499, 370)
+        Me.picbox_status4.Location = New System.Drawing.Point(496, 370)
         Me.picbox_status4.Name = "picbox_status4"
         Me.picbox_status4.Size = New System.Drawing.Size(54, 49)
         Me.picbox_status4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1711,7 +1711,7 @@ Partial Class MainForm
         'picbox_status3
         '
         Me.picbox_status3.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status3.Location = New System.Drawing.Point(499, 300)
+        Me.picbox_status3.Location = New System.Drawing.Point(496, 300)
         Me.picbox_status3.Name = "picbox_status3"
         Me.picbox_status3.Size = New System.Drawing.Size(54, 49)
         Me.picbox_status3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1721,7 +1721,7 @@ Partial Class MainForm
         'picbox_status2
         '
         Me.picbox_status2.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status2.Location = New System.Drawing.Point(499, 230)
+        Me.picbox_status2.Location = New System.Drawing.Point(496, 230)
         Me.picbox_status2.Name = "picbox_status2"
         Me.picbox_status2.Size = New System.Drawing.Size(54, 49)
         Me.picbox_status2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1731,7 +1731,7 @@ Partial Class MainForm
         'picbox_status1
         '
         Me.picbox_status1.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status1.Location = New System.Drawing.Point(499, 160)
+        Me.picbox_status1.Location = New System.Drawing.Point(496, 160)
         Me.picbox_status1.Name = "picbox_status1"
         Me.picbox_status1.Size = New System.Drawing.Size(54, 49)
         Me.picbox_status1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
