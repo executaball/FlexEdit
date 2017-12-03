@@ -220,9 +220,8 @@ Public Class MainForm
             HandlingInstructions_StringLimit3 = ReadLine(17, allLines)
             HandlingInstructions_StringLimit4 = ReadLine(20, allLines)
 
-            MsgBox(allLines.Count)
             'Annotations to table
-            For i = 0 To allLines.Count - 1
+            For i = 1 To allLines.Count
                 If ReadLine(i, allLines).StartsWith("SAVEWORD-") Then
                     If My.Settings.xAnnote1 = "" Then
                         My.Settings.xAnnote1 = ReadLine(i + 2, allLines)
@@ -286,11 +285,6 @@ Public Class MainForm
 
         'Fill datatable
 
-        MsgBox(yValues.Length)
-        MsgBox(xA1Values.Length)
-        MsgBox(xA2Values.Length)
-        MsgBox(xA3Values.Length)
-
         For count = 0 To yValues.Length - 1
             If count >= 0 Then
                 RefTable.Rows.Add(yValues(count), y2Values(count), y3Values(count), y4Values(count), y5Values(count), xA1Values(count), xA2Values(count), xA3Values(count))
@@ -303,8 +297,6 @@ Public Class MainForm
         'Dim ln2() As String = My.Settings.ckSWV_EarliestVersion.Split("}")
         'For count = 0 To ln2.Length - 1
         '    RefTable.Rows(count).Cells(2).Value = ln2(count)
-        '    DataSet.RefTable(0).Rows(4).Item(0) = "Updated Company Name"
-        '    DataSet.RefTable(0).Rows(4).Item(1) = "Seattle"
         'Next
 
         'ok now that's all over... actually set the bottom bar (logic handling below)
