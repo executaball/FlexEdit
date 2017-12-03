@@ -14,7 +14,7 @@ Option Explicit On
 
 
 <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
- Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0"),  _
+ Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0"),  _
  Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
 Partial Friend NotInheritable Class Settings
     Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -139,10 +139,10 @@ Partial Friend NotInheritable Class Settings
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
     Public Property Supported_SWVersion() As String
         Get
-            Return CType(Me("ckSWV_FEVersion"),String)
+            Return CType(Me("Supported_SWVersion"),String)
         End Get
         Set
-            Me("ckSWV_FEVersion") = value
+            Me("Supported_SWVersion") = value
         End Set
     End Property
     
