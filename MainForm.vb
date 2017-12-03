@@ -168,8 +168,10 @@ Public Class MainForm
 
         Startup.ShowDialog()
 
+        Startup2.ShowDialog()
+
         'Autoupdater consent
-        Select Case MsgBox("FlexEdit uses an Autoupdater that checks for new application updates. It will only ever notify you, never install anything on its own. Do you consent to this? This can later be disabled/enabled in settings", MsgBoxStyle.YesNo, "One last thing...")
+        Select Case MsgBox("Would you like to enable FlexEdit's Autoupdater? It will only ever notify you, never install anything on its own. You can always modify this setting later within options. It's perfectly alright if you choose no, there's a button to manually check for updates within FlexEdit.", MsgBoxStyle.YesNo, "One last thing...")
             Case MsgBoxResult.Yes
                     'Do nothing, carry on
             Case MsgBoxResult.No

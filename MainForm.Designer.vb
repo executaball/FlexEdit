@@ -23,26 +23,12 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Dim MainColorScheme1 As MetroSuite.MetroTabControl.MainColorScheme = New MetroSuite.MetroTabControl.MainColorScheme()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Sidepanel = New System.Windows.Forms.Panel()
         Me.SecretTables = New System.Windows.Forms.Button()
-        Me.BarImageButton_Update = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.BarImageButton_Cog = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_5 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_7 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_3 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_2 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.buttontab_1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BarImageButton_Info = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.logo = New System.Windows.Forms.PictureBox()
         Me.Header = New System.Windows.Forms.Panel()
-        Me.topbarbutton_min = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.topbarbutton_exit = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.MetroTabControl1 = New MetroSuite.MetroTabControl()
@@ -52,21 +38,12 @@ Partial Class MainForm
         Me.label_status3 = New System.Windows.Forms.Label()
         Me.label_status2 = New System.Windows.Forms.Label()
         Me.label_status1 = New System.Windows.Forms.Label()
-        Me.picbox_status5 = New System.Windows.Forms.PictureBox()
-        Me.picbox_status4 = New System.Windows.Forms.PictureBox()
-        Me.picbox_status3 = New System.Windows.Forms.PictureBox()
-        Me.picbox_status2 = New System.Windows.Forms.PictureBox()
-        Me.picbox_status1 = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TileLoadToCode = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.TileLoadFromCode = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.TileSaveToFile = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.TileLoadFromFile = New Bunifu.Framework.UI.BunifuTileButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Tab2Gen = New System.Windows.Forms.TabPage()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -156,22 +133,33 @@ Partial Class MainForm
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.BarImageButton_Update = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.BarImageButton_Cog = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.buttontab_6 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_5 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_7 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_4 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_3 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.buttontab_1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BarImageButton_Info = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.logo = New System.Windows.Forms.PictureBox()
+        Me.picbox_status5 = New System.Windows.Forms.PictureBox()
+        Me.picbox_status4 = New System.Windows.Forms.PictureBox()
+        Me.picbox_status3 = New System.Windows.Forms.PictureBox()
+        Me.picbox_status2 = New System.Windows.Forms.PictureBox()
+        Me.picbox_status1 = New System.Windows.Forms.PictureBox()
+        Me.TileLoadToCode = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileLoadFromCode = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileSaveToFile = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TileLoadFromFile = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.topbarbutton_min = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.topbarbutton_exit = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Sidepanel.SuspendLayout()
-        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
-        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroTabControl1.SuspendLayout()
         Me.Tab1Save.SuspendLayout()
-        CType(Me.picbox_status5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picbox_status4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picbox_status3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picbox_status2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picbox_status1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Tab2Gen.SuspendLayout()
         CType(Me.nudScr, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,6 +198,18 @@ Partial Class MainForm
         Me.Panel_PreReleaseWarning.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picbox_status5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picbox_status4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picbox_status3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picbox_status2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picbox_status1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -248,313 +248,6 @@ Partial Class MainForm
         Me.SecretTables.UseVisualStyleBackColor = True
         Me.SecretTables.Visible = False
         '
-        'BarImageButton_Update
-        '
-        Me.BarImageButton_Update.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BarImageButton_Update.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BarImageButton_Update.Image = CType(resources.GetObject("BarImageButton_Update.Image"), System.Drawing.Image)
-        Me.BarImageButton_Update.ImageActive = Nothing
-        Me.BarImageButton_Update.Location = New System.Drawing.Point(207, 47)
-        Me.BarImageButton_Update.Name = "BarImageButton_Update"
-        Me.BarImageButton_Update.Size = New System.Drawing.Size(43, 49)
-        Me.BarImageButton_Update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BarImageButton_Update.TabIndex = 10
-        Me.BarImageButton_Update.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.BarImageButton_Update, "Check for updates")
-        Me.BarImageButton_Update.Zoom = 10
-        '
-        'BarImageButton_Cog
-        '
-        Me.BarImageButton_Cog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BarImageButton_Cog.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BarImageButton_Cog.Image = CType(resources.GetObject("BarImageButton_Cog.Image"), System.Drawing.Image)
-        Me.BarImageButton_Cog.ImageActive = Nothing
-        Me.BarImageButton_Cog.Location = New System.Drawing.Point(158, 47)
-        Me.BarImageButton_Cog.Name = "BarImageButton_Cog"
-        Me.BarImageButton_Cog.Size = New System.Drawing.Size(43, 49)
-        Me.BarImageButton_Cog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BarImageButton_Cog.TabIndex = 9
-        Me.BarImageButton_Cog.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.BarImageButton_Cog, "Settings")
-        Me.BarImageButton_Cog.Zoom = 10
-        '
-        'buttontab_6
-        '
-        Me.buttontab_6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_6.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_6.BorderRadius = 0
-        Me.buttontab_6.ButtonText = "              Storage"
-        Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
-        Me.buttontab_6.Iconimage_right = Nothing
-        Me.buttontab_6.Iconimage_right_Selected = Nothing
-        Me.buttontab_6.Iconimage_Selected = Nothing
-        Me.buttontab_6.IconMarginLeft = 0
-        Me.buttontab_6.IconMarginRight = 0
-        Me.buttontab_6.IconRightVisible = True
-        Me.buttontab_6.IconRightZoom = 0R
-        Me.buttontab_6.IconVisible = True
-        Me.buttontab_6.IconZoom = 50.0R
-        Me.buttontab_6.IsTab = True
-        Me.buttontab_6.Location = New System.Drawing.Point(0, 658)
-        Me.buttontab_6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_6.Name = "buttontab_6"
-        Me.buttontab_6.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_6.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_6.selected = False
-        Me.buttontab_6.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_6.TabIndex = 8
-        Me.buttontab_6.Text = "              Storage"
-        Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_6.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_5
-        '
-        Me.buttontab_5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_5.BorderRadius = 0
-        Me.buttontab_5.ButtonText = "              Inventory"
-        Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
-        Me.buttontab_5.Iconimage_right = Nothing
-        Me.buttontab_5.Iconimage_right_Selected = Nothing
-        Me.buttontab_5.Iconimage_Selected = Nothing
-        Me.buttontab_5.IconMarginLeft = 0
-        Me.buttontab_5.IconMarginRight = 0
-        Me.buttontab_5.IconRightVisible = True
-        Me.buttontab_5.IconRightZoom = 0R
-        Me.buttontab_5.IconVisible = True
-        Me.buttontab_5.IconZoom = 50.0R
-        Me.buttontab_5.IsTab = True
-        Me.buttontab_5.Location = New System.Drawing.Point(0, 567)
-        Me.buttontab_5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_5.Name = "buttontab_5"
-        Me.buttontab_5.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_5.selected = False
-        Me.buttontab_5.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_5.TabIndex = 7
-        Me.buttontab_5.Text = "              Inventory"
-        Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_5.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_7
-        '
-        Me.buttontab_7.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_7.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_7.BorderRadius = 0
-        Me.buttontab_7.ButtonText = "              Raw"
-        Me.buttontab_7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_7.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_7.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_7.Iconimage = CType(resources.GetObject("buttontab_7.Iconimage"), System.Drawing.Image)
-        Me.buttontab_7.Iconimage_right = Nothing
-        Me.buttontab_7.Iconimage_right_Selected = Nothing
-        Me.buttontab_7.Iconimage_Selected = Nothing
-        Me.buttontab_7.IconMarginLeft = 0
-        Me.buttontab_7.IconMarginRight = 0
-        Me.buttontab_7.IconRightVisible = True
-        Me.buttontab_7.IconRightZoom = 0R
-        Me.buttontab_7.IconVisible = True
-        Me.buttontab_7.IconZoom = 50.0R
-        Me.buttontab_7.IsTab = True
-        Me.buttontab_7.Location = New System.Drawing.Point(0, 749)
-        Me.buttontab_7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_7.Name = "buttontab_7"
-        Me.buttontab_7.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_7.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_7.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_7.selected = False
-        Me.buttontab_7.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_7.TabIndex = 6
-        Me.buttontab_7.Text = "              Raw"
-        Me.buttontab_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_7.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_7.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_4
-        '
-        Me.buttontab_4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_4.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_4.BorderRadius = 0
-        Me.buttontab_4.ButtonText = "              Infections"
-        Me.buttontab_4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_4.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_4.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_4.Iconimage = CType(resources.GetObject("buttontab_4.Iconimage"), System.Drawing.Image)
-        Me.buttontab_4.Iconimage_right = Nothing
-        Me.buttontab_4.Iconimage_right_Selected = Nothing
-        Me.buttontab_4.Iconimage_Selected = Nothing
-        Me.buttontab_4.IconMarginLeft = 0
-        Me.buttontab_4.IconMarginRight = 0
-        Me.buttontab_4.IconRightVisible = True
-        Me.buttontab_4.IconRightZoom = 0R
-        Me.buttontab_4.IconVisible = True
-        Me.buttontab_4.IconZoom = 50.0R
-        Me.buttontab_4.IsTab = True
-        Me.buttontab_4.Location = New System.Drawing.Point(0, 476)
-        Me.buttontab_4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_4.Name = "buttontab_4"
-        Me.buttontab_4.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_4.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_4.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_4.selected = False
-        Me.buttontab_4.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_4.TabIndex = 5
-        Me.buttontab_4.Text = "              Infections"
-        Me.buttontab_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_4.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_4.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_3
-        '
-        Me.buttontab_3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_3.BorderRadius = 0
-        Me.buttontab_3.ButtonText = "              Body"
-        Me.buttontab_3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_3.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_3.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_3.Iconimage = CType(resources.GetObject("buttontab_3.Iconimage"), System.Drawing.Image)
-        Me.buttontab_3.Iconimage_right = Nothing
-        Me.buttontab_3.Iconimage_right_Selected = Nothing
-        Me.buttontab_3.Iconimage_Selected = Nothing
-        Me.buttontab_3.IconMarginLeft = 0
-        Me.buttontab_3.IconMarginRight = 0
-        Me.buttontab_3.IconRightVisible = True
-        Me.buttontab_3.IconRightZoom = 0R
-        Me.buttontab_3.IconVisible = True
-        Me.buttontab_3.IconZoom = 50.0R
-        Me.buttontab_3.IsTab = True
-        Me.buttontab_3.Location = New System.Drawing.Point(0, 385)
-        Me.buttontab_3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_3.Name = "buttontab_3"
-        Me.buttontab_3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_3.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_3.selected = False
-        Me.buttontab_3.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_3.TabIndex = 4
-        Me.buttontab_3.Text = "              Body"
-        Me.buttontab_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_3.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_3.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_2
-        '
-        Me.buttontab_2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_2.BorderRadius = 0
-        Me.buttontab_2.ButtonText = "              General"
-        Me.buttontab_2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_2.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_2.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_2.Iconimage = CType(resources.GetObject("buttontab_2.Iconimage"), System.Drawing.Image)
-        Me.buttontab_2.Iconimage_right = Nothing
-        Me.buttontab_2.Iconimage_right_Selected = Nothing
-        Me.buttontab_2.Iconimage_Selected = Nothing
-        Me.buttontab_2.IconMarginLeft = 0
-        Me.buttontab_2.IconMarginRight = 0
-        Me.buttontab_2.IconRightVisible = True
-        Me.buttontab_2.IconRightZoom = 0R
-        Me.buttontab_2.IconVisible = True
-        Me.buttontab_2.IconZoom = 50.0R
-        Me.buttontab_2.IsTab = True
-        Me.buttontab_2.Location = New System.Drawing.Point(0, 294)
-        Me.buttontab_2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_2.Name = "buttontab_2"
-        Me.buttontab_2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_2.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_2.selected = False
-        Me.buttontab_2.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_2.TabIndex = 3
-        Me.buttontab_2.Text = "              General"
-        Me.buttontab_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_2.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_2.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'buttontab_1
-        '
-        Me.buttontab_1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.buttontab_1.BorderRadius = 0
-        Me.buttontab_1.ButtonText = "              Import/Export"
-        Me.buttontab_1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.buttontab_1.DisabledColor = System.Drawing.Color.Gray
-        Me.buttontab_1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttontab_1.Iconcolor = System.Drawing.Color.Transparent
-        Me.buttontab_1.Iconimage = CType(resources.GetObject("buttontab_1.Iconimage"), System.Drawing.Image)
-        Me.buttontab_1.Iconimage_right = Nothing
-        Me.buttontab_1.Iconimage_right_Selected = Nothing
-        Me.buttontab_1.Iconimage_Selected = Nothing
-        Me.buttontab_1.IconMarginLeft = 0
-        Me.buttontab_1.IconMarginRight = 0
-        Me.buttontab_1.IconRightVisible = True
-        Me.buttontab_1.IconRightZoom = 0R
-        Me.buttontab_1.IconVisible = True
-        Me.buttontab_1.IconZoom = 50.0R
-        Me.buttontab_1.IsTab = True
-        Me.buttontab_1.Location = New System.Drawing.Point(3, 203)
-        Me.buttontab_1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.buttontab_1.Name = "buttontab_1"
-        Me.buttontab_1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.buttontab_1.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.buttontab_1.selected = False
-        Me.buttontab_1.Size = New System.Drawing.Size(365, 91)
-        Me.buttontab_1.TabIndex = 2
-        Me.buttontab_1.Text = "              Import/Export"
-        Me.buttontab_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.buttontab_1.Textcolor = System.Drawing.Color.Silver
-        Me.buttontab_1.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BarImageButton_Info
-        '
-        Me.BarImageButton_Info.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BarImageButton_Info.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BarImageButton_Info.Image = CType(resources.GetObject("BarImageButton_Info.Image"), System.Drawing.Image)
-        Me.BarImageButton_Info.ImageActive = Nothing
-        Me.BarImageButton_Info.Location = New System.Drawing.Point(256, 47)
-        Me.BarImageButton_Info.Name = "BarImageButton_Info"
-        Me.BarImageButton_Info.Size = New System.Drawing.Size(43, 49)
-        Me.BarImageButton_Info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BarImageButton_Info.TabIndex = 1
-        Me.BarImageButton_Info.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.BarImageButton_Info, "FlexEdit info")
-        Me.BarImageButton_Info.Zoom = 10
-        '
-        'logo
-        '
-        Me.logo.Image = CType(resources.GetObject("logo.Image"), System.Drawing.Image)
-        Me.logo.Location = New System.Drawing.Point(21, 43)
-        Me.logo.Name = "logo"
-        Me.logo.Size = New System.Drawing.Size(130, 122)
-        Me.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.logo.TabIndex = 0
-        Me.logo.TabStop = False
-        '
         'Header
         '
         Me.Header.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -567,44 +260,6 @@ Partial Class MainForm
         Me.Header.Name = "Header"
         Me.Header.Size = New System.Drawing.Size(1422, 49)
         Me.Header.TabIndex = 1
-        '
-        'topbarbutton_min
-        '
-        Me.topbarbutton_min.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.topbarbutton_min.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.topbarbutton_min.Image = CType(resources.GetObject("topbarbutton_min.Image"), System.Drawing.Image)
-        Me.topbarbutton_min.ImageActive = Nothing
-        Me.topbarbutton_min.Location = New System.Drawing.Point(1345, 10)
-        Me.topbarbutton_min.Name = "topbarbutton_min"
-        Me.topbarbutton_min.Size = New System.Drawing.Size(31, 40)
-        Me.topbarbutton_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.topbarbutton_min.TabIndex = 4
-        Me.topbarbutton_min.TabStop = False
-        Me.topbarbutton_min.Zoom = 20
-        '
-        'topbarbutton_exit
-        '
-        Me.topbarbutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.topbarbutton_exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.topbarbutton_exit.Image = CType(resources.GetObject("topbarbutton_exit.Image"), System.Drawing.Image)
-        Me.topbarbutton_exit.ImageActive = Nothing
-        Me.topbarbutton_exit.Location = New System.Drawing.Point(1385, 16)
-        Me.topbarbutton_exit.Name = "topbarbutton_exit"
-        Me.topbarbutton_exit.Size = New System.Drawing.Size(25, 25)
-        Me.topbarbutton_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.topbarbutton_exit.TabIndex = 3
-        Me.topbarbutton_exit.TabStop = False
-        Me.topbarbutton_exit.Zoom = 20
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(25, 10)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 34)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'BunifuCustomLabel1
         '
@@ -747,56 +402,6 @@ Partial Class MainForm
         Me.label_status1.TabIndex = 13
         Me.label_status1.Text = "Not loaded"
         '
-        'picbox_status5
-        '
-        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
-        Me.picbox_status5.Location = New System.Drawing.Point(496, 440)
-        Me.picbox_status5.Name = "picbox_status5"
-        Me.picbox_status5.Size = New System.Drawing.Size(54, 49)
-        Me.picbox_status5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbox_status5.TabIndex = 12
-        Me.picbox_status5.TabStop = False
-        '
-        'picbox_status4
-        '
-        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
-        Me.picbox_status4.Location = New System.Drawing.Point(496, 370)
-        Me.picbox_status4.Name = "picbox_status4"
-        Me.picbox_status4.Size = New System.Drawing.Size(54, 49)
-        Me.picbox_status4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbox_status4.TabIndex = 11
-        Me.picbox_status4.TabStop = False
-        '
-        'picbox_status3
-        '
-        Me.picbox_status3.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status3.Location = New System.Drawing.Point(496, 300)
-        Me.picbox_status3.Name = "picbox_status3"
-        Me.picbox_status3.Size = New System.Drawing.Size(54, 49)
-        Me.picbox_status3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbox_status3.TabIndex = 10
-        Me.picbox_status3.TabStop = False
-        '
-        'picbox_status2
-        '
-        Me.picbox_status2.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status2.Location = New System.Drawing.Point(496, 230)
-        Me.picbox_status2.Name = "picbox_status2"
-        Me.picbox_status2.Size = New System.Drawing.Size(54, 49)
-        Me.picbox_status2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbox_status2.TabIndex = 9
-        Me.picbox_status2.TabStop = False
-        '
-        'picbox_status1
-        '
-        Me.picbox_status1.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
-        Me.picbox_status1.Location = New System.Drawing.Point(496, 160)
-        Me.picbox_status1.Name = "picbox_status1"
-        Me.picbox_status1.Size = New System.Drawing.Size(54, 49)
-        Me.picbox_status1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picbox_status1.TabIndex = 8
-        Me.picbox_status1.TabStop = False
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -865,90 +470,6 @@ Partial Class MainForm
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1058, 365)
         Me.Panel2.TabIndex = 2
-        '
-        'TileLoadToCode
-        '
-        Me.TileLoadToCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TileLoadToCode.AutoSize = True
-        Me.TileLoadToCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadToCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadToCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.TileLoadToCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadToCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TileLoadToCode.ForeColor = System.Drawing.Color.White
-        Me.TileLoadToCode.Image = CType(resources.GetObject("TileLoadToCode.Image"), System.Drawing.Image)
-        Me.TileLoadToCode.ImagePosition = 17
-        Me.TileLoadToCode.ImageZoom = 50
-        Me.TileLoadToCode.LabelPosition = 36
-        Me.TileLoadToCode.LabelText = "Export to Code"
-        Me.TileLoadToCode.Location = New System.Drawing.Point(788, 75)
-        Me.TileLoadToCode.Margin = New System.Windows.Forms.Padding(4)
-        Me.TileLoadToCode.Name = "TileLoadToCode"
-        Me.TileLoadToCode.Size = New System.Drawing.Size(224, 214)
-        Me.TileLoadToCode.TabIndex = 3
-        '
-        'TileLoadFromCode
-        '
-        Me.TileLoadFromCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TileLoadFromCode.AutoSize = True
-        Me.TileLoadFromCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadFromCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadFromCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.TileLoadFromCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadFromCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TileLoadFromCode.ForeColor = System.Drawing.Color.White
-        Me.TileLoadFromCode.Image = CType(resources.GetObject("TileLoadFromCode.Image"), System.Drawing.Image)
-        Me.TileLoadFromCode.ImagePosition = 17
-        Me.TileLoadFromCode.ImageZoom = 50
-        Me.TileLoadFromCode.LabelPosition = 36
-        Me.TileLoadFromCode.LabelText = "Import from Code"
-        Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 75)
-        Me.TileLoadFromCode.Margin = New System.Windows.Forms.Padding(4)
-        Me.TileLoadFromCode.Name = "TileLoadFromCode"
-        Me.TileLoadFromCode.Size = New System.Drawing.Size(224, 214)
-        Me.TileLoadFromCode.TabIndex = 2
-        '
-        'TileSaveToFile
-        '
-        Me.TileSaveToFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TileSaveToFile.AutoSize = True
-        Me.TileSaveToFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileSaveToFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileSaveToFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.TileSaveToFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileSaveToFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TileSaveToFile.ForeColor = System.Drawing.Color.White
-        Me.TileSaveToFile.Image = CType(resources.GetObject("TileSaveToFile.Image"), System.Drawing.Image)
-        Me.TileSaveToFile.ImagePosition = 17
-        Me.TileSaveToFile.ImageZoom = 50
-        Me.TileSaveToFile.LabelPosition = 36
-        Me.TileSaveToFile.LabelText = "Export to File"
-        Me.TileSaveToFile.Location = New System.Drawing.Point(294, 75)
-        Me.TileSaveToFile.Margin = New System.Windows.Forms.Padding(4)
-        Me.TileSaveToFile.Name = "TileSaveToFile"
-        Me.TileSaveToFile.Size = New System.Drawing.Size(224, 214)
-        Me.TileSaveToFile.TabIndex = 1
-        '
-        'TileLoadFromFile
-        '
-        Me.TileLoadFromFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TileLoadFromFile.AutoSize = True
-        Me.TileLoadFromFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadFromFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.TileLoadFromFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.TileLoadFromFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TileLoadFromFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TileLoadFromFile.ForeColor = System.Drawing.Color.White
-        Me.TileLoadFromFile.Image = CType(resources.GetObject("TileLoadFromFile.Image"), System.Drawing.Image)
-        Me.TileLoadFromFile.ImagePosition = 17
-        Me.TileLoadFromFile.ImageZoom = 50
-        Me.TileLoadFromFile.LabelPosition = 36
-        Me.TileLoadFromFile.LabelText = "Import from File"
-        Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 75)
-        Me.TileLoadFromFile.Margin = New System.Windows.Forms.Padding(4)
-        Me.TileLoadFromFile.Name = "TileLoadFromFile"
-        Me.TileLoadFromFile.Size = New System.Drawing.Size(224, 214)
-        Me.TileLoadFromFile.TabIndex = 0
         '
         'Label1
         '
@@ -1843,6 +1364,485 @@ Partial Class MainForm
         Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(228, 30)
         Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
         '
+        'BarImageButton_Update
+        '
+        Me.BarImageButton_Update.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Update.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Update.Image = CType(resources.GetObject("BarImageButton_Update.Image"), System.Drawing.Image)
+        Me.BarImageButton_Update.ImageActive = Nothing
+        Me.BarImageButton_Update.Location = New System.Drawing.Point(207, 47)
+        Me.BarImageButton_Update.Name = "BarImageButton_Update"
+        Me.BarImageButton_Update.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Update.TabIndex = 10
+        Me.BarImageButton_Update.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Update, "Check for updates")
+        Me.BarImageButton_Update.Zoom = 10
+        '
+        'BarImageButton_Cog
+        '
+        Me.BarImageButton_Cog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Cog.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Cog.Image = CType(resources.GetObject("BarImageButton_Cog.Image"), System.Drawing.Image)
+        Me.BarImageButton_Cog.ImageActive = Nothing
+        Me.BarImageButton_Cog.Location = New System.Drawing.Point(158, 47)
+        Me.BarImageButton_Cog.Name = "BarImageButton_Cog"
+        Me.BarImageButton_Cog.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Cog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Cog.TabIndex = 9
+        Me.BarImageButton_Cog.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Cog, "Settings")
+        Me.BarImageButton_Cog.Zoom = 10
+        '
+        'buttontab_6
+        '
+        Me.buttontab_6.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_6.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_6.BorderRadius = 0
+        Me.buttontab_6.ButtonText = "              Storage"
+        Me.buttontab_6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_6.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_6.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_6.Iconimage = CType(resources.GetObject("buttontab_6.Iconimage"), System.Drawing.Image)
+        Me.buttontab_6.Iconimage_right = Nothing
+        Me.buttontab_6.Iconimage_right_Selected = Nothing
+        Me.buttontab_6.Iconimage_Selected = Nothing
+        Me.buttontab_6.IconMarginLeft = 0
+        Me.buttontab_6.IconMarginRight = 0
+        Me.buttontab_6.IconRightVisible = True
+        Me.buttontab_6.IconRightZoom = 0R
+        Me.buttontab_6.IconVisible = True
+        Me.buttontab_6.IconZoom = 50.0R
+        Me.buttontab_6.IsTab = True
+        Me.buttontab_6.Location = New System.Drawing.Point(0, 658)
+        Me.buttontab_6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_6.Name = "buttontab_6"
+        Me.buttontab_6.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_6.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_6.selected = False
+        Me.buttontab_6.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_6.TabIndex = 8
+        Me.buttontab_6.Text = "              Storage"
+        Me.buttontab_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_6.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_6.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_5
+        '
+        Me.buttontab_5.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_5.BorderRadius = 0
+        Me.buttontab_5.ButtonText = "              Inventory"
+        Me.buttontab_5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_5.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_5.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_5.Iconimage = CType(resources.GetObject("buttontab_5.Iconimage"), System.Drawing.Image)
+        Me.buttontab_5.Iconimage_right = Nothing
+        Me.buttontab_5.Iconimage_right_Selected = Nothing
+        Me.buttontab_5.Iconimage_Selected = Nothing
+        Me.buttontab_5.IconMarginLeft = 0
+        Me.buttontab_5.IconMarginRight = 0
+        Me.buttontab_5.IconRightVisible = True
+        Me.buttontab_5.IconRightZoom = 0R
+        Me.buttontab_5.IconVisible = True
+        Me.buttontab_5.IconZoom = 50.0R
+        Me.buttontab_5.IsTab = True
+        Me.buttontab_5.Location = New System.Drawing.Point(0, 567)
+        Me.buttontab_5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_5.Name = "buttontab_5"
+        Me.buttontab_5.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_5.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_5.selected = False
+        Me.buttontab_5.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_5.TabIndex = 7
+        Me.buttontab_5.Text = "              Inventory"
+        Me.buttontab_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_5.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_5.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_7
+        '
+        Me.buttontab_7.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_7.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_7.BorderRadius = 0
+        Me.buttontab_7.ButtonText = "              Raw"
+        Me.buttontab_7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_7.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_7.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_7.Iconimage = CType(resources.GetObject("buttontab_7.Iconimage"), System.Drawing.Image)
+        Me.buttontab_7.Iconimage_right = Nothing
+        Me.buttontab_7.Iconimage_right_Selected = Nothing
+        Me.buttontab_7.Iconimage_Selected = Nothing
+        Me.buttontab_7.IconMarginLeft = 0
+        Me.buttontab_7.IconMarginRight = 0
+        Me.buttontab_7.IconRightVisible = True
+        Me.buttontab_7.IconRightZoom = 0R
+        Me.buttontab_7.IconVisible = True
+        Me.buttontab_7.IconZoom = 50.0R
+        Me.buttontab_7.IsTab = True
+        Me.buttontab_7.Location = New System.Drawing.Point(0, 749)
+        Me.buttontab_7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_7.Name = "buttontab_7"
+        Me.buttontab_7.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_7.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_7.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_7.selected = False
+        Me.buttontab_7.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_7.TabIndex = 6
+        Me.buttontab_7.Text = "              Raw"
+        Me.buttontab_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_7.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_7.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_4
+        '
+        Me.buttontab_4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_4.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_4.BorderRadius = 0
+        Me.buttontab_4.ButtonText = "              Infections"
+        Me.buttontab_4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_4.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_4.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_4.Iconimage = CType(resources.GetObject("buttontab_4.Iconimage"), System.Drawing.Image)
+        Me.buttontab_4.Iconimage_right = Nothing
+        Me.buttontab_4.Iconimage_right_Selected = Nothing
+        Me.buttontab_4.Iconimage_Selected = Nothing
+        Me.buttontab_4.IconMarginLeft = 0
+        Me.buttontab_4.IconMarginRight = 0
+        Me.buttontab_4.IconRightVisible = True
+        Me.buttontab_4.IconRightZoom = 0R
+        Me.buttontab_4.IconVisible = True
+        Me.buttontab_4.IconZoom = 50.0R
+        Me.buttontab_4.IsTab = True
+        Me.buttontab_4.Location = New System.Drawing.Point(0, 476)
+        Me.buttontab_4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_4.Name = "buttontab_4"
+        Me.buttontab_4.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_4.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_4.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_4.selected = False
+        Me.buttontab_4.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_4.TabIndex = 5
+        Me.buttontab_4.Text = "              Infections"
+        Me.buttontab_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_4.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_4.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_3
+        '
+        Me.buttontab_3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_3.BorderRadius = 0
+        Me.buttontab_3.ButtonText = "              Body"
+        Me.buttontab_3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_3.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_3.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_3.Iconimage = CType(resources.GetObject("buttontab_3.Iconimage"), System.Drawing.Image)
+        Me.buttontab_3.Iconimage_right = Nothing
+        Me.buttontab_3.Iconimage_right_Selected = Nothing
+        Me.buttontab_3.Iconimage_Selected = Nothing
+        Me.buttontab_3.IconMarginLeft = 0
+        Me.buttontab_3.IconMarginRight = 0
+        Me.buttontab_3.IconRightVisible = True
+        Me.buttontab_3.IconRightZoom = 0R
+        Me.buttontab_3.IconVisible = True
+        Me.buttontab_3.IconZoom = 50.0R
+        Me.buttontab_3.IsTab = True
+        Me.buttontab_3.Location = New System.Drawing.Point(0, 385)
+        Me.buttontab_3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_3.Name = "buttontab_3"
+        Me.buttontab_3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_3.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_3.selected = False
+        Me.buttontab_3.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_3.TabIndex = 4
+        Me.buttontab_3.Text = "              Body"
+        Me.buttontab_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_3.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_3.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_2
+        '
+        Me.buttontab_2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_2.BorderRadius = 0
+        Me.buttontab_2.ButtonText = "              General"
+        Me.buttontab_2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_2.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_2.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_2.Iconimage = CType(resources.GetObject("buttontab_2.Iconimage"), System.Drawing.Image)
+        Me.buttontab_2.Iconimage_right = Nothing
+        Me.buttontab_2.Iconimage_right_Selected = Nothing
+        Me.buttontab_2.Iconimage_Selected = Nothing
+        Me.buttontab_2.IconMarginLeft = 0
+        Me.buttontab_2.IconMarginRight = 0
+        Me.buttontab_2.IconRightVisible = True
+        Me.buttontab_2.IconRightZoom = 0R
+        Me.buttontab_2.IconVisible = True
+        Me.buttontab_2.IconZoom = 50.0R
+        Me.buttontab_2.IsTab = True
+        Me.buttontab_2.Location = New System.Drawing.Point(0, 294)
+        Me.buttontab_2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_2.Name = "buttontab_2"
+        Me.buttontab_2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_2.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_2.selected = False
+        Me.buttontab_2.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_2.TabIndex = 3
+        Me.buttontab_2.Text = "              General"
+        Me.buttontab_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_2.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_2.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'buttontab_1
+        '
+        Me.buttontab_1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.buttontab_1.BorderRadius = 0
+        Me.buttontab_1.ButtonText = "              Import/Export"
+        Me.buttontab_1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.buttontab_1.DisabledColor = System.Drawing.Color.Gray
+        Me.buttontab_1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttontab_1.Iconcolor = System.Drawing.Color.Transparent
+        Me.buttontab_1.Iconimage = CType(resources.GetObject("buttontab_1.Iconimage"), System.Drawing.Image)
+        Me.buttontab_1.Iconimage_right = Nothing
+        Me.buttontab_1.Iconimage_right_Selected = Nothing
+        Me.buttontab_1.Iconimage_Selected = Nothing
+        Me.buttontab_1.IconMarginLeft = 0
+        Me.buttontab_1.IconMarginRight = 0
+        Me.buttontab_1.IconRightVisible = True
+        Me.buttontab_1.IconRightZoom = 0R
+        Me.buttontab_1.IconVisible = True
+        Me.buttontab_1.IconZoom = 50.0R
+        Me.buttontab_1.IsTab = True
+        Me.buttontab_1.Location = New System.Drawing.Point(3, 203)
+        Me.buttontab_1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.buttontab_1.Name = "buttontab_1"
+        Me.buttontab_1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.buttontab_1.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.buttontab_1.selected = False
+        Me.buttontab_1.Size = New System.Drawing.Size(365, 91)
+        Me.buttontab_1.TabIndex = 2
+        Me.buttontab_1.Text = "              Import/Export"
+        Me.buttontab_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.buttontab_1.Textcolor = System.Drawing.Color.Silver
+        Me.buttontab_1.TextFont = New System.Drawing.Font("Google Sans", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BarImageButton_Info
+        '
+        Me.BarImageButton_Info.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BarImageButton_Info.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BarImageButton_Info.Image = CType(resources.GetObject("BarImageButton_Info.Image"), System.Drawing.Image)
+        Me.BarImageButton_Info.ImageActive = Nothing
+        Me.BarImageButton_Info.Location = New System.Drawing.Point(256, 47)
+        Me.BarImageButton_Info.Name = "BarImageButton_Info"
+        Me.BarImageButton_Info.Size = New System.Drawing.Size(43, 49)
+        Me.BarImageButton_Info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BarImageButton_Info.TabIndex = 1
+        Me.BarImageButton_Info.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BarImageButton_Info, "FlexEdit info")
+        Me.BarImageButton_Info.Zoom = 10
+        '
+        'logo
+        '
+        Me.logo.Image = CType(resources.GetObject("logo.Image"), System.Drawing.Image)
+        Me.logo.Location = New System.Drawing.Point(21, 43)
+        Me.logo.Name = "logo"
+        Me.logo.Size = New System.Drawing.Size(130, 122)
+        Me.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo.TabIndex = 0
+        Me.logo.TabStop = False
+        '
+        'picbox_status5
+        '
+        Me.picbox_status5.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
+        Me.picbox_status5.Location = New System.Drawing.Point(496, 440)
+        Me.picbox_status5.Name = "picbox_status5"
+        Me.picbox_status5.Size = New System.Drawing.Size(54, 49)
+        Me.picbox_status5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbox_status5.TabIndex = 12
+        Me.picbox_status5.TabStop = False
+        '
+        'picbox_status4
+        '
+        Me.picbox_status4.Image = Global.FlexEdit.My.Resources.Resources.Do_Not_Disturb
+        Me.picbox_status4.Location = New System.Drawing.Point(496, 370)
+        Me.picbox_status4.Name = "picbox_status4"
+        Me.picbox_status4.Size = New System.Drawing.Size(54, 49)
+        Me.picbox_status4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbox_status4.TabIndex = 11
+        Me.picbox_status4.TabStop = False
+        '
+        'picbox_status3
+        '
+        Me.picbox_status3.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
+        Me.picbox_status3.Location = New System.Drawing.Point(496, 300)
+        Me.picbox_status3.Name = "picbox_status3"
+        Me.picbox_status3.Size = New System.Drawing.Size(54, 49)
+        Me.picbox_status3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbox_status3.TabIndex = 10
+        Me.picbox_status3.TabStop = False
+        '
+        'picbox_status2
+        '
+        Me.picbox_status2.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
+        Me.picbox_status2.Location = New System.Drawing.Point(496, 230)
+        Me.picbox_status2.Name = "picbox_status2"
+        Me.picbox_status2.Size = New System.Drawing.Size(54, 49)
+        Me.picbox_status2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbox_status2.TabIndex = 9
+        Me.picbox_status2.TabStop = False
+        '
+        'picbox_status1
+        '
+        Me.picbox_status1.Image = Global.FlexEdit.My.Resources.Resources.Red_Cross
+        Me.picbox_status1.Location = New System.Drawing.Point(496, 160)
+        Me.picbox_status1.Name = "picbox_status1"
+        Me.picbox_status1.Size = New System.Drawing.Size(54, 49)
+        Me.picbox_status1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picbox_status1.TabIndex = 8
+        Me.picbox_status1.TabStop = False
+        '
+        'TileLoadToCode
+        '
+        Me.TileLoadToCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadToCode.AutoSize = True
+        Me.TileLoadToCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadToCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadToCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadToCode.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadToCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadToCode.ForeColor = System.Drawing.Color.White
+        Me.TileLoadToCode.Image = CType(resources.GetObject("TileLoadToCode.Image"), System.Drawing.Image)
+        Me.TileLoadToCode.ImagePosition = 17
+        Me.TileLoadToCode.ImageZoom = 50
+        Me.TileLoadToCode.LabelPosition = 36
+        Me.TileLoadToCode.LabelText = "Export to Code"
+        Me.TileLoadToCode.Location = New System.Drawing.Point(788, 75)
+        Me.TileLoadToCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadToCode.Name = "TileLoadToCode"
+        Me.TileLoadToCode.Size = New System.Drawing.Size(224, 214)
+        Me.TileLoadToCode.TabIndex = 3
+        '
+        'TileLoadFromCode
+        '
+        Me.TileLoadFromCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadFromCode.AutoSize = True
+        Me.TileLoadFromCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromCode.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromCode.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadFromCode.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadFromCode.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromCode.ForeColor = System.Drawing.Color.White
+        Me.TileLoadFromCode.Image = CType(resources.GetObject("TileLoadFromCode.Image"), System.Drawing.Image)
+        Me.TileLoadFromCode.ImagePosition = 17
+        Me.TileLoadFromCode.ImageZoom = 50
+        Me.TileLoadFromCode.LabelPosition = 36
+        Me.TileLoadFromCode.LabelText = "Import from Code"
+        Me.TileLoadFromCode.Location = New System.Drawing.Point(541, 75)
+        Me.TileLoadFromCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadFromCode.Name = "TileLoadFromCode"
+        Me.TileLoadFromCode.Size = New System.Drawing.Size(224, 214)
+        Me.TileLoadFromCode.TabIndex = 2
+        '
+        'TileSaveToFile
+        '
+        Me.TileSaveToFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileSaveToFile.AutoSize = True
+        Me.TileSaveToFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileSaveToFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileSaveToFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileSaveToFile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileSaveToFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileSaveToFile.ForeColor = System.Drawing.Color.White
+        Me.TileSaveToFile.Image = CType(resources.GetObject("TileSaveToFile.Image"), System.Drawing.Image)
+        Me.TileSaveToFile.ImagePosition = 17
+        Me.TileSaveToFile.ImageZoom = 50
+        Me.TileSaveToFile.LabelPosition = 36
+        Me.TileSaveToFile.LabelText = "Export to File"
+        Me.TileSaveToFile.Location = New System.Drawing.Point(294, 75)
+        Me.TileSaveToFile.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileSaveToFile.Name = "TileSaveToFile"
+        Me.TileSaveToFile.Size = New System.Drawing.Size(224, 214)
+        Me.TileSaveToFile.TabIndex = 1
+        '
+        'TileLoadFromFile
+        '
+        Me.TileLoadFromFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TileLoadFromFile.AutoSize = True
+        Me.TileLoadFromFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromFile.color = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TileLoadFromFile.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.TileLoadFromFile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TileLoadFromFile.Font = New System.Drawing.Font("Open Sans", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TileLoadFromFile.ForeColor = System.Drawing.Color.White
+        Me.TileLoadFromFile.Image = CType(resources.GetObject("TileLoadFromFile.Image"), System.Drawing.Image)
+        Me.TileLoadFromFile.ImagePosition = 17
+        Me.TileLoadFromFile.ImageZoom = 50
+        Me.TileLoadFromFile.LabelPosition = 36
+        Me.TileLoadFromFile.LabelText = "Import from File"
+        Me.TileLoadFromFile.Location = New System.Drawing.Point(47, 75)
+        Me.TileLoadFromFile.Margin = New System.Windows.Forms.Padding(4)
+        Me.TileLoadFromFile.Name = "TileLoadFromFile"
+        Me.TileLoadFromFile.Size = New System.Drawing.Size(224, 214)
+        Me.TileLoadFromFile.TabIndex = 0
+        '
+        'topbarbutton_min
+        '
+        Me.topbarbutton_min.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.topbarbutton_min.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.topbarbutton_min.Image = CType(resources.GetObject("topbarbutton_min.Image"), System.Drawing.Image)
+        Me.topbarbutton_min.ImageActive = Nothing
+        Me.topbarbutton_min.Location = New System.Drawing.Point(1345, 10)
+        Me.topbarbutton_min.Name = "topbarbutton_min"
+        Me.topbarbutton_min.Size = New System.Drawing.Size(31, 40)
+        Me.topbarbutton_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.topbarbutton_min.TabIndex = 4
+        Me.topbarbutton_min.TabStop = False
+        Me.topbarbutton_min.Zoom = 20
+        '
+        'topbarbutton_exit
+        '
+        Me.topbarbutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.topbarbutton_exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.topbarbutton_exit.Image = CType(resources.GetObject("topbarbutton_exit.Image"), System.Drawing.Image)
+        Me.topbarbutton_exit.ImageActive = Nothing
+        Me.topbarbutton_exit.Location = New System.Drawing.Point(1385, 16)
+        Me.topbarbutton_exit.Name = "topbarbutton_exit"
+        Me.topbarbutton_exit.Size = New System.Drawing.Size(25, 25)
+        Me.topbarbutton_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.topbarbutton_exit.TabIndex = 3
+        Me.topbarbutton_exit.TabStop = False
+        Me.topbarbutton_exit.Zoom = 20
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(25, 10)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(23, 34)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
@@ -1858,23 +1858,11 @@ Partial Class MainForm
         Me.Name = "MainForm"
         Me.Text = "FlexEdit"
         Me.Sidepanel.ResumeLayout(False)
-        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
-        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroTabControl1.ResumeLayout(False)
         Me.Tab1Save.ResumeLayout(False)
         Me.Tab1Save.PerformLayout()
-        CType(Me.picbox_status5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picbox_status4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picbox_status3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picbox_status2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picbox_status1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Tab2Gen.ResumeLayout(False)
@@ -1922,6 +1910,18 @@ Partial Class MainForm
         Me.Panel_PreReleaseWarning.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.BarImageButton_Update, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarImageButton_Cog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarImageButton_Info, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picbox_status5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picbox_status4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picbox_status3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picbox_status2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picbox_status1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.topbarbutton_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.topbarbutton_exit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
