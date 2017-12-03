@@ -193,6 +193,42 @@ Partial Friend NotInheritable Class Settings
             Me("HandlingInstructions_StringLimit4") = value
         End Set
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property xAnnote1() As String
+        Get
+            Return CType(Me("xAnnote1"),String)
+        End Get
+        Set
+            Me("xAnnote1") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property xAnnote2() As String
+        Get
+            Return CType(Me("xAnnote2"),String)
+        End Get
+        Set
+            Me("xAnnote2") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property xAnnote3() As String
+        Get
+            Return CType(Me("xAnnote3"),String)
+        End Get
+        Set
+            Me("xAnnote3") = value
+        End Set
+    End Property
 End Class
 
 Namespace My

@@ -88,7 +88,6 @@ Public Class MainForm
     'Dim data As New DataSet1
     Dim table As New DataTable("Table")
     Dim RefTable As New DataTable("RefTable")
-    Dim Ref2Table As New DataTable("Ref2Table")
 
 
     Private Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -221,19 +220,40 @@ Public Class MainForm
             HandlingInstructions_StringLimit3 = ReadLine(17, allLines)
             HandlingInstructions_StringLimit4 = ReadLine(20, allLines)
 
+            MsgBox(allLines.Count)
+            'Annotations to table
+            For i = 0 To allLines.Count - 1
+                If ReadLine(i, allLines).StartsWith("SAVEWORD-") Then
+                    If My.Settings.xAnnote1 = "" Then
+                        My.Settings.xAnnote1 = ReadLine(i + 2, allLines)
+                        My.Settings.xAnnote2 = ReadLine(i + 3, allLines)
+                        My.Settings.xAnnote3 = ReadLine(i + 4, allLines)
+                    Else
+                        My.Settings.xAnnote1 += ","
+                        My.Settings.xAnnote1 += ReadLine(i + 2, allLines)
+                        My.Settings.xAnnote2 += ","
+                        My.Settings.xAnnote2 += ReadLine(i + 3, allLines)
+                        My.Settings.xAnnote3 += ","
+                        My.Settings.xAnnote3 += ReadLine(i + 4, allLines)
+                    End If
+
+                    My.Settings.Save()
+
+                End If
+            Next
+
             'Vars into SETTINGS (persistent)
 
             My.Settings.Supported_SWVersion = Supported_SWVersion
             My.Settings.HandlingInstructions_StringLimit1 = HandlingInstructions_StringLimit1
             My.Settings.HandlingInstructions_StringLimit2 = HandlingInstructions_StringLimit2
-
             My.Settings.HandlingInstructions_StringLimit3 = HandlingInstructions_StringLimit3
             My.Settings.HandlingInstructions_StringLimit4 = HandlingInstructions_StringLimit4
 
             My.Settings.Save()
 
         Catch z As Exception
-            MsgBox("FlexEdit has failed to update its saveword resolution database. Either you're not connected to the internet or Google services are inaccessible from your location. FlexEdit can still be used but will not be updated to support newer FS savewords.", vbCritical, "Error")
+            MsgBox("FlexEdit has failed To update its saveword resolution database. Either you're not connected to the internet or Google services are inaccessible from your location. FlexEdit can still be used but will not be updated to support newer FS savewords." & z.Message, vbCritical, "Error")
         End Try
         'MsgBox(AllRefDownload)
 
@@ -249,11 +269,35 @@ Public Class MainForm
         Dim r3input As String = My.Settings.HandlingInstructions_StringLimit2
         Dim y3Values() As String = r3input.Split(",")
 
+        Dim r4input As String = My.Settings.HandlingInstructions_StringLimit3
+        Dim y4Values() As String = r4input.Split(",")
+
+        Dim r5input As String = My.Settings.HandlingInstructions_StringLimit4
+        Dim y5Values() As String = r5input.Split(",")
+
+        Dim xA1input As String = My.Settings.xAnnote1
+        Dim xA1Values() As String = xA1input.Split(",")
+
+        Dim xA2input As String = My.Settings.xAnnote2
+        Dim xA2Values() As String = xA2input.Split(",")
+
+        Dim xA3input As String = My.Settings.xAnnote3
+        Dim xA3Values() As String = xA3input.Split(",")
+
+        'Fill datatable
+
+        MsgBox(yValues.Length)
+        MsgBox(xA1Values.Length)
+        MsgBox(xA2Values.Length)
+        MsgBox(xA3Values.Length)
+
         For count = 0 To yValues.Length - 1
             If count >= 0 Then
-                RefTable.Rows.Add(yValues(count), y2Values(count), y3Values(count))
+                RefTable.Rows.Add(yValues(count), y2Values(count), y3Values(count), y4Values(count), y5Values(count), xA1Values(count), xA2Values(count), xA3Values(count))
             End If
         Next
+
+
         'second line onwards
 
         'Dim ln2() As String = My.Settings.ckSWV_EarliestVersion.Split("}")
@@ -327,18 +371,11 @@ Public Class MainForm
         'assinging the datagridview to use 'table' as data source
         DataGridViewVars.DataSource = table
         DataGridViewVars2.DataSource = RefTable
-        DataGridViewVars3.DataSource = Ref2Table
 
         'calling function to resize, will use function in all edits
         resizeDataTable()
         Me.DataGridViewVars.Font = New Font("Segoe UI", 10, FontStyle.Regular)
         DataGridViewVars.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
-
-        Me.DataGridViewVars2.Font = New Font("Segoe UI", 10, FontStyle.Regular)
-        DataGridViewVars2.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
-
-        Me.DataGridViewVars3.Font = New Font("Segoe UI", 10, FontStyle.Regular)
-        DataGridViewVars3.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204)
 
         textbox_value_editor.DataBindings.Add("Text", table, "Value")
 
@@ -351,12 +388,15 @@ Public Class MainForm
         RefTable.Columns.Add("HandlingInstructions_StringLimit3", Type.GetType("System.String"))
         RefTable.Columns.Add("HandlingInstructions_StringLimit4", Type.GetType("System.String"))
 
+        RefTable.Columns.Add("xAnnote1", Type.GetType("System.String"))
+        RefTable.Columns.Add("xAnnote2", Type.GetType("System.String"))
+        RefTable.Columns.Add("xAnnote3", Type.GetType("System.String"))
+
         'before doing anything, we assume user is doing this second time.
         'perform cleanup for datatable here
         'Care errors, added error handling as of rev 3
         Try
             RefTable.Clear()
-            Ref2Table.Clear()
         Catch f As DataException
             ' Process exception below
             MsgBox("Exception occurred while setting up RefTables 1 and 2. Please report this to the developer. Error Msg:",
