@@ -137,7 +137,7 @@ Partial Friend NotInheritable Class Settings
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ckSWV_FEVersion() As String
+    Public Property Supported_SWVersion() As String
         Get
             Return CType(Me("ckSWV_FEVersion"),String)
         End Get

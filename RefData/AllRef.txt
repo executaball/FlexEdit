@@ -4,8 +4,20 @@
 
 =ckSWV=
 
-Supported.SWVersion=
+Supported_SWVersion=
 223,224
+
+HandlingInstructions_StringLimit1=
+0,0
+
+HandlingInstructions_StringLimit2=
+59,59
+
+HandlingInstructions_StringLimit3=
+161,161
+
+HandlingInstructions_StringLimit4=
+226,226
 
 =ANNOTATION REFERENCE=
 
