@@ -5,7 +5,7 @@
 =ckSWV=
 
 Supported.SWVersion=
-223,223
+223,224
 
 =ANNOTATION REFERENCE=
 
