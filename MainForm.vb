@@ -345,8 +345,17 @@ Public Class MainForm
 
         'WORK SCALING BUTTONS
         Dim TotalWidth As Int32 = Panel2.Width
-        Dim ButtonS_Width As Int32 = TotalWidth * 0.2
+        Dim ButtonS_Width As Int32 = TotalWidth * 0.222
         Dim ButtonS_Height As Int32 = ButtonS_Width * 0.96
+        Dim ButtonS_LabelPos As Int32 = TotalWidth * 0.038
+
+        Dim ButtonS_POS As Int32 = (TotalWidth - 20) / 4
+
+        Dim BTPoint1 As New Point(TotalWidth * 0.042, 75)
+        Dim BTPoint2 As New Point(ButtonS_POS + 20, 75)
+        Dim BTPoint3 As New Point(ButtonS_POS * 2 + 20, 75)
+        Dim BTPoint4 As New Point(ButtonS_POS * 3 + 20, 75)
+
 
         'BunifuTileButton1.Size = ButtonSize, ButtonSize
 
@@ -364,6 +373,17 @@ Public Class MainForm
         TileSaveToFile.Height = ButtonS_Height
         TileLoadFromCode.Height = ButtonS_Height
         TileLoadToCode.Height = ButtonS_Height
+        'Position
+        TileLoadFromFile.Location = BTPoint1
+        TileSaveToFile.Location = BTPoint2
+        TileLoadFromCode.Location = BTPoint3
+        TileLoadToCode.Location = BTPoint4
+
+        'Label
+        TileLoadFromFile.LabelPosition = ButtonS_LabelPos
+        TileSaveToFile.LabelPosition = ButtonS_LabelPos
+        TileLoadFromCode.LabelPosition = ButtonS_LabelPos
+        TileLoadToCode.LabelPosition = ButtonS_LabelPos
 
     End Sub
 

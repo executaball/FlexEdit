@@ -128,7 +128,7 @@ Partial Class Startup2
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Startup2"
-        Me.Text = "Form1"
+        Me.Text = "Notice"
         Me.Header.ResumeLayout(False)
         Me.Header.PerformLayout()
         Me.ResumeLayout(False)
