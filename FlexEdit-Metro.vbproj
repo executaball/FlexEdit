@@ -32,7 +32,7 @@
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.1.4.0</ApplicationVersion>
+    <ApplicationVersion>2.2.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -102,13 +102,11 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FS Work Local\FlexEdit Work\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\FS Work Local\FlexEdit Work\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="MetroSuite, Version=1.7.5940.31582, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FS Work Local\FlexEdit Work\MetroSuite.dll</HintPath>
+    <Reference Include="MetroSuite">
+      <HintPath>..\..\..\FS Work Local\FlexEdit Work\MetroSuite.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

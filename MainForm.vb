@@ -12,7 +12,7 @@ Imports System.Net
 
 Public Class MainForm
     'Secret Debug Mode
-    Public SecretDebugMode As Boolean = True
+    Public SecretDebugMode As Boolean = False
     'Vars
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
@@ -345,12 +345,25 @@ Public Class MainForm
 
         'WORK SCALING BUTTONS
         Dim TotalWidth As Int32 = Panel2.Width
-        Dim ButtonSize As Int32 = TotalWidth * 0.2
+        Dim ButtonS_Width As Int32 = TotalWidth * 0.2
+        Dim ButtonS_Height As Int32 = ButtonS_Width * 0.96
 
         'BunifuTileButton1.Size = ButtonSize, ButtonSize
 
         MetroTabControl1.Margin = New Padding(0)
         Panel1.Margin = New Padding(0)
+
+        'Tile Button scaling
+        'Width
+        TileLoadFromFile.Width = ButtonS_Width
+        TileSaveToFile.Width = ButtonS_Width
+        TileLoadFromCode.Width = ButtonS_Width
+        TileLoadToCode.Width = ButtonS_Width
+        'Length
+        TileLoadFromFile.Height = ButtonS_Height
+        TileSaveToFile.Height = ButtonS_Height
+        TileLoadFromCode.Height = ButtonS_Height
+        TileLoadToCode.Height = ButtonS_Height
 
     End Sub
 
