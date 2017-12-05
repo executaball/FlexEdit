@@ -33,7 +33,7 @@ Partial Class Startup
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,28 +119,29 @@ Partial Class Startup
         Me.Label6.TabIndex = 22
         Me.Label6.Text = resources.GetString("Label6.Text")
         '
-        'MaterialRaisedButton1
+        'MaterialFlatButton1
         '
-        Me.MaterialRaisedButton1.AutoSize = True
-        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(589, 580)
-        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
-        Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(123, 36)
-        Me.MaterialRaisedButton1.TabIndex = 24
-        Me.MaterialRaisedButton1.Text = "Continue"
-        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        Me.MaterialFlatButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialFlatButton1.AutoSize = True
+        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton1.Depth = 0
+        Me.MaterialFlatButton1.Icon = Nothing
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(595, 586)
+        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
+        Me.MaterialFlatButton1.Primary = False
+        Me.MaterialFlatButton1.Size = New System.Drawing.Size(123, 36)
+        Me.MaterialFlatButton1.TabIndex = 25
+        Me.MaterialFlatButton1.Text = "CONTINUE"
+        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
         'Startup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 655)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
+        Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -166,5 +167,5 @@ Partial Class Startup
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
 End Class

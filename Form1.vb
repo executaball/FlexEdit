@@ -4,7 +4,7 @@
         Me.Activate()
     End Sub
 
-    Private Sub metrobutton_exit_Click(sender As Object, e As EventArgs) Handles metrobutton_exit.Click
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
         Me.Close()
     End Sub
 End Class

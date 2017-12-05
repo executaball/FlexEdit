@@ -1,5 +1,5 @@
 ﻿Public Class SettingsForm
-    Private Sub metrobutton_exit_Click(sender As Object, e As EventArgs) Handles metrobutton_exit.Click
+    Private Sub metrobutton_exit_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -148,4 +148,7 @@
 
     End Sub
 
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+        Me.Close()
+    End Sub
 End Class

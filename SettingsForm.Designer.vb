@@ -23,7 +23,6 @@ Partial Class SettingsForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme5 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
         Dim MainColorScheme4 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme3 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
         Dim MainColorScheme2 As MetroSuite.MetroSwitch.MainColorScheme = New MetroSuite.MetroSwitch.MainColorScheme()
@@ -32,7 +31,6 @@ Partial Class SettingsForm
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.metrobutton_exit = New MetroSuite.MetroButton()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.MetroSwitch1 = New MetroSuite.MetroSwitch()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,7 +40,7 @@ Partial Class SettingsForm
         Me.MetroSwitch3 = New MetroSuite.MetroSwitch()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.MetroSwitch4 = New MetroSuite.MetroSwitch()
-        Me.BunifuCustomTextbox1 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,24 +69,6 @@ Partial Class SettingsForm
         Me.Label2.Size = New System.Drawing.Size(151, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "FlexEdit Settings"
-        '
-        'metrobutton_exit
-        '
-        Me.metrobutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme5.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme5.FillColor = System.Drawing.Color.White
-        MainColorScheme5.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme5.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme5.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_exit.ColorScheme = MainColorScheme5
-        Me.metrobutton_exit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.metrobutton_exit.ForeColor = System.Drawing.Color.Black
-        Me.metrobutton_exit.Location = New System.Drawing.Point(624, 460)
-        Me.metrobutton_exit.Name = "metrobutton_exit"
-        Me.metrobutton_exit.Size = New System.Drawing.Size(147, 38)
-        Me.metrobutton_exit.TabIndex = 17
-        Me.metrobutton_exit.Text = "Close"
         '
         'BunifuDragControl1
         '
@@ -206,20 +186,29 @@ Partial Class SettingsForm
         Me.MetroSwitch4.UseFixedSwitchSize = False
         Me.MetroSwitch4.UseMiddleStatus = False
         '
-        'BunifuCustomTextbox1
+        'MaterialFlatButton1
         '
-        Me.BunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(-22, -22)
-        Me.BunifuCustomTextbox1.Name = "BunifuCustomTextbox1"
-        Me.BunifuCustomTextbox1.Size = New System.Drawing.Size(100, 26)
-        Me.BunifuCustomTextbox1.TabIndex = 26
+        Me.MaterialFlatButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialFlatButton1.AutoSize = True
+        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton1.Depth = 0
+        Me.MaterialFlatButton1.Icon = Nothing
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(664, 464)
+        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
+        Me.MaterialFlatButton1.Primary = False
+        Me.MaterialFlatButton1.Size = New System.Drawing.Size(86, 36)
+        Me.MaterialFlatButton1.TabIndex = 27
+        Me.MaterialFlatButton1.Text = "CLOSE"
+        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
         'SettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
-        Me.Controls.Add(Me.BunifuCustomTextbox1)
+        Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.MetroSwitch4)
         Me.Controls.Add(Me.Label4)
@@ -228,7 +217,6 @@ Partial Class SettingsForm
         Me.Controls.Add(Me.MetroSwitch2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MetroSwitch1)
-        Me.Controls.Add(Me.metrobutton_exit)
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -244,7 +232,6 @@ Partial Class SettingsForm
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents Header As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents metrobutton_exit As MetroSuite.MetroButton
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents MetroSwitch1 As MetroSuite.MetroSwitch
     Friend WithEvents Label1 As Label
@@ -254,5 +241,5 @@ Partial Class SettingsForm
     Friend WithEvents MetroSwitch2 As MetroSuite.MetroSwitch
     Friend WithEvents Label5 As Label
     Friend WithEvents MetroSwitch4 As MetroSuite.MetroSwitch
-    Friend WithEvents BunifuCustomTextbox1 As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
 End Class
