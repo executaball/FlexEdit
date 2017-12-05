@@ -23,19 +23,16 @@ Partial Class Startup
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim MainColorScheme1 As MetroSuite.MetroButton.MainColorScheme = New MetroSuite.MetroButton.MainColorScheme()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Startup))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.Header = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.metrobutton_exit = New MetroSuite.MetroButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
@@ -73,27 +70,9 @@ Partial Class Startup
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Welcome :)"
         '
-        'metrobutton_exit
-        '
-        Me.metrobutton_exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        MainColorScheme1.AccentColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(240, Byte), Integer))
-        MainColorScheme1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(98, Byte), Integer))
-        MainColorScheme1.FillColor = System.Drawing.Color.White
-        MainColorScheme1.HoverFillColor = System.Drawing.Color.White
-        MainColorScheme1.PressAccentColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        MainColorScheme1.PressFillColor = System.Drawing.Color.FromArgb(CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(101, Byte), Integer))
-        Me.metrobutton_exit.ColorScheme = MainColorScheme1
-        Me.metrobutton_exit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.metrobutton_exit.ForeColor = System.Drawing.Color.Black
-        Me.metrobutton_exit.Location = New System.Drawing.Point(508, 553)
-        Me.metrobutton_exit.Name = "metrobutton_exit"
-        Me.metrobutton_exit.Size = New System.Drawing.Size(206, 57)
-        Me.metrobutton_exit.TabIndex = 17
-        Me.metrobutton_exit.Text = "Continue"
-        '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(30, 120)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(701, 90)
@@ -105,16 +84,16 @@ Partial Class Startup
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Google Sans", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(30, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(420, 43)
+        Me.Label1.Size = New System.Drawing.Size(422, 40)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "A few things before we start"
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(30, 269)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(701, 119)
@@ -124,51 +103,36 @@ Partial Class Startup
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Google Sans", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(30, 223)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(222, 43)
+        Me.Label5.Size = New System.Drawing.Size(217, 40)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "A small notice"
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(30, 384)
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(30, 364)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(701, 118)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = resources.GetString("Label6.Text")
-        '
-        'MaterialFlatButton1
-        '
-        Me.MaterialFlatButton1.AutoSize = True
-        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialFlatButton1.Depth = 0
-        Me.MaterialFlatButton1.Icon = Nothing
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(187, 565)
-        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
-        Me.MaterialFlatButton1.Primary = False
-        Me.MaterialFlatButton1.Size = New System.Drawing.Size(263, 36)
-        Me.MaterialFlatButton1.TabIndex = 23
-        Me.MaterialFlatButton1.Text = "MaterialFlatButton1"
-        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.AutoSize = True
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(64, 506)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(589, 580)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
-        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(284, 36)
+        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(123, 36)
         Me.MaterialRaisedButton1.TabIndex = 24
-        Me.MaterialRaisedButton1.Text = "MaterialRaisedButton1"
+        Me.MaterialRaisedButton1.Text = "Continue"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
         'Startup
@@ -177,13 +141,11 @@ Partial Class Startup
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 655)
         Me.Controls.Add(Me.MaterialRaisedButton1)
-        Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.metrobutton_exit)
         Me.Controls.Add(Me.Header)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Startup"
@@ -199,12 +161,10 @@ Partial Class Startup
     Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents Header As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents metrobutton_exit As MetroSuite.MetroButton
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
 End Class
