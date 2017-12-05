@@ -9,10 +9,13 @@ Imports System.Diagnostics
 'Connectivity
 Imports System.Text
 Imports System.Net
+'Material
+Imports MaterialSkin
+Imports MaterialSkin.Controls
 
 Public Class MainForm
     'Secret Debug Mode
-    Public SecretDebugMode As Boolean = False
+    Public SecretDebugMode As Boolean = True
     'Vars
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
@@ -91,8 +94,11 @@ Public Class MainForm
 
 
     Private Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'dim mysplashscreen = directcast(my.application.splashscreen, form2)
-        'my.application.mysplashscreen.invoke(new methodinvoker(addressof my.application.mysplashscreen.incrementprogress))
+        'Material Design Colors
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.AddFormToManage(Me)
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
 
         'bugfix 1 for metrotab
         Dim speed As Integer = MetroTabControl1.Speed : MetroTabControl1.Speed = 20
@@ -101,13 +107,6 @@ Public Class MainForm
         Next
         MetroTabControl1.SelectedIndex = 0 : MetroTabControl1.Speed = speed
         'bugfix over
-
-        'show pre-release warning
-        Panel_PreReleaseWarning.Visible = False
-        '(Out of beta!)
-
-        'highlight first option
-        buttontab_1.selected = True
 
         'do datatable tasks
         Load_DoDatabaseTasks()
@@ -122,6 +121,7 @@ Public Class MainForm
         If SecretDebugMode = True Then
             My.Settings.FlexBoot = 0
             My.Settings.AutoupdatePref = True
+            SecretTables.Visible = True
         End If
 
         'First boot welcome
@@ -144,23 +144,19 @@ Public Class MainForm
             End If
         End If
 
-        'center main form to screen
-        Me.CenterToScreen()
-
         'Counter
         WebBrowser1.Navigate(New Uri(GrabAddress))
 
         'Updates versioning bar in relation to web update
         Load_Metrics()
 
-        'Debugging stuff
-        If SecretDebugMode = True Then
-            SecretTables.Visible = True
-        End If
-
         'increment flex boot counter
         My.Settings.FlexBoot += 1
         My.Settings.Save()
+
+        'center main form to screen
+        Me.CenterToScreen()
+
     End Sub
 
     'First boot operations
@@ -352,9 +348,9 @@ Public Class MainForm
         Dim ButtonS_POS As Int32 = (TotalWidth - 20) / 4
 
         Dim BTPoint1 As New Point(TotalWidth * 0.042, 75)
-        Dim BTPoint2 As New Point(ButtonS_POS + 20, 75)
-        Dim BTPoint3 As New Point(ButtonS_POS * 2 + 20, 75)
-        Dim BTPoint4 As New Point(ButtonS_POS * 3 + 20, 75)
+        Dim BTPoint2 As New Point(TotalWidth * 0.042 + ButtonS_POS + 17, 75)
+        Dim BTPoint3 As New Point(TotalWidth * 0.042 + (ButtonS_POS + 17) * 2, 75)
+        Dim BTPoint4 As New Point(TotalWidth * 0.042 + (ButtonS_POS + 17) * 3, 75)
 
 
         'BunifuTileButton1.Size = ButtonSize, ButtonSize
@@ -374,10 +370,10 @@ Public Class MainForm
         TileLoadFromCode.Height = ButtonS_Height
         TileLoadToCode.Height = ButtonS_Height
         'Position
-        TileLoadFromFile.Location = BTPoint1
-        TileSaveToFile.Location = BTPoint2
-        TileLoadFromCode.Location = BTPoint3
-        TileLoadToCode.Location = BTPoint4
+        'TileLoadFromFile.Location = BTPoint1
+        'TileSaveToFile.Location = BTPoint2
+        'TileLoadFromCode.Location = BTPoint3
+        'TileLoadToCode.Location = BTPoint4
 
         'Label
         TileLoadFromFile.LabelPosition = ButtonS_LabelPos
@@ -448,11 +444,6 @@ Public Class MainForm
             .Columns(2).Width = .Width - .Columns(0).Width - .Columns(1).Width
         End With
 
-    End Sub
-
-    'Simple delay function
-    Private Sub funcdelay100()
-        Threading.Thread.Sleep(100)
     End Sub
 
     'top right exit button
@@ -698,8 +689,6 @@ Public Class MainForm
 
     'Load saveword control sub
     Public Sub RunLoadSaveword()
-
-        'funcdelay100()
 
 
         'before doing anything, we assume user is doing this second time.

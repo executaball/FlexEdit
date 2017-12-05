@@ -60,8 +60,33 @@
     End Sub
 
     Private Sub MetroSwitch2_Click(sender As Object, e As EventArgs) Handles MetroSwitch2.Click
-        MsgBox("Sorry, Saveword versioning is not implemented yet.", vbInformation, "FlexEdit")
-        MetroSwitch2.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+
+        If MetroSwitch2.Status = MetroSuite.MetroSwitch.CurrentStatus.Right Then
+
+            If My.Settings.SavewordVersionOVERRIDE = False Then
+
+                Select Case MsgBox("Are you sure you want to enable the loading of saveword versions that FlexEdit is not yet designed to handle? Please backup your saves and expect loss of some quest progress for newer content.", MsgBoxStyle.YesNo + vbExclamation, "Are you sure")
+                    Case MsgBoxResult.Yes
+                        My.Settings.SavewordVersionOVERRIDE = True
+                        'saving
+                        My.Settings.Save()
+            ' Do something if yes
+                    Case MsgBoxResult.No
+                        'if user does not agree, change button back
+                        MetroSwitch2.Status = MetroSuite.MetroSwitch.CurrentStatus.Left
+                End Select
+
+            End If
+
+        End If
+
+        If MetroSwitch2.Status = MetroSuite.MetroSwitch.CurrentStatus.Left Then
+
+            My.Settings.SavewordVersionOVERRIDE = False
+            'saving
+            My.Settings.Save()
+
+        End If
     End Sub
 
     Private Sub MetroSwitch3_Click(sender As Object, e As EventArgs) Handles MetroSwitch3.Click

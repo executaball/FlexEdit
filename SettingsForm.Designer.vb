@@ -42,6 +42,7 @@ Partial Class SettingsForm
         Me.MetroSwitch3 = New MetroSuite.MetroSwitch()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.MetroSwitch4 = New MetroSuite.MetroSwitch()
+        Me.BunifuCustomTextbox1 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.Header.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -127,7 +128,7 @@ Partial Class SettingsForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(110, 139)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(382, 32)
@@ -205,11 +206,20 @@ Partial Class SettingsForm
         Me.MetroSwitch4.UseFixedSwitchSize = False
         Me.MetroSwitch4.UseMiddleStatus = False
         '
+        'BunifuCustomTextbox1
+        '
+        Me.BunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen
+        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(-22, -22)
+        Me.BunifuCustomTextbox1.Name = "BunifuCustomTextbox1"
+        Me.BunifuCustomTextbox1.Size = New System.Drawing.Size(100, 26)
+        Me.BunifuCustomTextbox1.TabIndex = 26
+        '
         'SettingsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 528)
+        Me.Controls.Add(Me.BunifuCustomTextbox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.MetroSwitch4)
         Me.Controls.Add(Me.Label4)
@@ -244,4 +254,5 @@ Partial Class SettingsForm
     Friend WithEvents MetroSwitch2 As MetroSuite.MetroSwitch
     Friend WithEvents Label5 As Label
     Friend WithEvents MetroSwitch4 As MetroSuite.MetroSwitch
+    Friend WithEvents BunifuCustomTextbox1 As WindowsFormsControlLibrary1.BunifuCustomTextbox
 End Class
