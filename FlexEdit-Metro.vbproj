@@ -255,6 +255,8 @@
   <ItemGroup>
     <Content Include="f_icon.ico" />
     <Content Include="README.txt" />
+    <None Include="Resources\code.png" />
+    <None Include="Resources\download-button.png" />
     <None Include="Resources\material do not disturb.png" />
     <None Include="Resources\wt cross-symbol.png" />
     <None Include="Resources\wt success.png" />
