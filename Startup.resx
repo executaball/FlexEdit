@@ -121,7 +121,7 @@
     <value>26, 19</value>
   </metadata>
   <data name="Label6.Text" xml:space="preserve">
-    <value>       Unfortunately, if your saveword does not have this function (Flexible Survival version before 2017 November) it cannot be loaded or processed by FlexEdit. In this case simply manually load your saveword into a new version of FS and export a new, compatible saveword.</value>
+    <value>       Unfortunately, if your saveword does not have this function (Flexible Survival version before 2017 November) it cannot be loaded or processed by FlexEdit. In this case simply manually load your saveword into a new version of FS and export a new, compatible saveword. Or, optionally, you may enable 'saveword version mismatch' within the settings.</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
     <value>       Flexible Survival has now implemented saveword versioning. As such FlexEdit will recognize your saveword version and automatically apply the correct handling method. FlexEdit will support all future 'versioned' savewords.</value>

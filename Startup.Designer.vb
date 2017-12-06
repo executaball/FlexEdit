@@ -115,7 +115,7 @@ Partial Class Startup
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(30, 364)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(701, 118)
+        Me.Label6.Size = New System.Drawing.Size(701, 193)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = resources.GetString("Label6.Text")
         '

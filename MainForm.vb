@@ -1055,7 +1055,7 @@ Public Class MainForm
 
         If Status1 = False Then
 
-            MsgBox("No saveword detected in memory. Please load a saveword first.", vbExclamation, "Error")
+            MsgBox("Please load a saveword first", vbExclamation, "Error")
 
             Return
 
