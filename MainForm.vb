@@ -12,10 +12,17 @@ Imports System.Net
 'Material
 Imports MaterialSkin
 Imports MaterialSkin.Controls
+'Fonts
+Imports System.Runtime.InteropServices
 
 Public Class MainForm
     'Secret Debug Mode
     Public SecretDebugMode As Boolean = True
+
+    'Font Vars
+    Public privateFontCollection As New Drawing.Text.PrivateFontCollection
+    Public FamilyName As String
+
     'Vars
     Public i As Integer = 0
     Public mySplashScreen = DirectCast(My.Application.SplashScreen, Splash)
@@ -93,13 +100,38 @@ Public Class MainForm
     Dim RefTable As New DataTable("RefTable")
 
 
-    Private Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Public Sub form1_load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Material Design Colors
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
 
+        'FONT
+
+        ' Name embedded resource font file Airmole_Shaded.TTF
+
+        Dim data As System.IntPtr = Marshal.AllocCoTaskMem(My.Resources.GSans_Regular.Length - 1)
+
+        'copy the bytes to the unsafe memory block
+        Marshal.Copy(My.Resources.GSans_Regular, 0, data, My.Resources.GSans_Regular.Length)
+
+        'pass the font to the font collection
+        privateFontCollection.AddMemoryFont(data, My.Resources.GSans_Regular.Length)
+
+        'free the unsafe memory
+        Marshal.FreeCoTaskMem(data)
+
+        Dim fnt As Font = New Font(privateFontCollection.Families(0), 30)
+
+        'For Each lbl As Label In Me.Controls.OfType(Of Label)()
+        'lbl.UseCompatibleTextRendering = True
+        'Next
+
+        label_status1.Font = fnt
+
+        'FONT END
         'bugfix 1 for metrotab
         Dim speed As Integer = MetroTabControl1.Speed : MetroTabControl1.Speed = 20
         For i As Integer = 0 To MetroTabControl1.TabPages.Count

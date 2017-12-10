@@ -155,7 +155,6 @@
     <Compile Include="Info.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
     <Compile Include="Output_Saveword_Form.Designer.vb">
       <DependentUpon>Output_Saveword_Form.vb</DependentUpon>
     </Compile>
@@ -261,14 +260,14 @@
     <Content Include="README.txt" />
     <None Include="Resources\code.png" />
     <None Include="Resources\download-button.png" />
-    <EmbeddedResource Include="Resources\GoogleSans-Bold.ttf" />
-    <EmbeddedResource Include="Resources\GoogleSans-BoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\GoogleSans-Italic.ttf" />
-    <EmbeddedResource Include="Resources\GoogleSans-Medium.ttf" />
-    <EmbeddedResource Include="Resources\GoogleSans-MediumItalic.ttf" />
-    <EmbeddedResource Include="Resources\GoogleSans-Regular.ttf" />
+    <None Include="Resources\GSans_Bold.ttf" />
+    <None Include="Resources\GSans_BoldItalic.ttf" />
+    <None Include="Resources\GSans_Italic.ttf" />
+    <None Include="Resources\GSans_Medium.ttf" />
+    <None Include="Resources\GSans_MediumItalic.ttf" />
+    <None Include="Resources\GSans_Regular.ttf" />
     <None Include="Resources\material do not disturb.png" />
-    <EmbeddedResource Include="Resources\Roboto-Regular.ttf" />
+    <None Include="Resources\Roboto_Regular.ttf" />
     <None Include="Resources\wt cross-symbol.png" />
     <None Include="Resources\wt success.png" />
     <None Include="Resources\full success.png" />

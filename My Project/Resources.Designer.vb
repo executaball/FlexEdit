@@ -101,12 +101,82 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_Bold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_Bold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_BoldItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_BoldItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_Italic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_Italic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_Medium() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_Medium", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_MediumItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_MediumItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property GSans_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GSans_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Red_Cross() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Red_Cross", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_Regular", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         
